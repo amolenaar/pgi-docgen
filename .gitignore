@@ -1,4 +1,6 @@
 *.pyc
+.venv/
+.vscode/
 _docs
 pgi
 _venv
