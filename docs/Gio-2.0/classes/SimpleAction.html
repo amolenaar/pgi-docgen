@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gio.SimpleAction -
+    
+      Classes -
+    
+    Gio 2.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gio 2.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gio.SimpleActionGroup" href="SimpleActionGroup.html"/>
+        <link rel="prev" title="Gio.SettingsBackend" href="SettingsBackend.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/SimpleAction.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.SimpleAction</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="SettingsBackend.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="SimpleActionGroup.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.SimpleAction</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/SimpleAction.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.SimpleAction</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="SettingsBackend.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="SimpleActionGroup.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.SimpleAction</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gio-simpleaction">
+<h1>Gio.SimpleAction<a class="headerlink" href="#gio-simpleaction" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="185pt" height="134pt"
+ viewBox="0.00 0.00 185.00 134.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-126C92,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 92,-108 92,-108 95,-108 98,-111 98,-114 98,-114 98,-120 98,-120 98,-123 95,-126 92,-126"/>
+<text text-anchor="middle" x="49" y="-114.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gio.Action -->
+<g id="node3" class="node">
+<title>Gio.Action</title>
+<g id="a_node3"><a xlink:href="Action.html#Gio.Action" xlink:title="Gio.Action">
+<path fill="none" stroke="#3091d1" d="M73,-72C73,-72 25,-72 25,-72 22,-72 19,-69 19,-66 19,-66 19,-60 19,-60 19,-57 22,-54 25,-54 25,-54 73,-54 73,-54 76,-54 79,-57 79,-60 79,-60 79,-66 79,-66 79,-69 76,-72 73,-72"/>
+<text text-anchor="middle" x="49" y="-60.7" font-family="inherit" font-size="8.50">Gio.Action</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gio.Action -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gio.Action</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-107.88C49,-99.76 49,-87.13 49,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-77.24 49,-72.24 47.25,-77.24 50.75,-77.24"/>
+</g>
+<!-- GObject.Object -->
+<g id="node2" class="node">
+<title>GObject.Object</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M171,-72C171,-72 103,-72 103,-72 100,-72 97,-69 97,-66 97,-66 97,-60 97,-60 97,-57 100,-54 103,-54 103,-54 171,-54 171,-54 174,-54 177,-57 177,-60 177,-60 177,-66 177,-66 177,-69 174,-72 171,-72"/>
+<text text-anchor="middle" x="137" y="-60.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gio.SimpleAction -->
+<g id="node4" class="node">
+<title>Gio.SimpleAction</title>
+<g id="a_node4"><a xlink:href="#Gio.SimpleAction" xlink:title="Gio.SimpleAction">
+<path fill="none" stroke="#75507b" d="M131.5,-18C131.5,-18 54.5,-18 54.5,-18 51.5,-18 48.5,-15 48.5,-12 48.5,-12 48.5,-6 48.5,-6 48.5,-3 51.5,0 54.5,0 54.5,0 131.5,0 131.5,0 134.5,0 137.5,-3 137.5,-6 137.5,-6 137.5,-12 137.5,-12 137.5,-15 134.5,-18 131.5,-18"/>
+<text text-anchor="middle" x="93" y="-6.7" font-family="inherit" font-size="8.50">Gio.SimpleAction</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gio.SimpleAction -->
+<g id="edge2" class="edge">
+<title>GObject.Object&#45;&gt;Gio.SimpleAction</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M130.12,-53.88C122.93,-45.38 111.57,-31.94 103.3,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="104.54,-20.93 99.97,-18.24 101.87,-23.19 104.54,-20.93"/>
+</g>
+<!-- Gio.Action&#45;&gt;Gio.SimpleAction -->
+<g id="edge3" class="edge">
+<title>Gio.Action&#45;&gt;Gio.SimpleAction</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M55.88,-53.88C63.07,-45.38 74.43,-31.94 82.7,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="84.13,-23.19 86.03,-18.24 81.46,-20.93 84.13,-23.19"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gio-simpleaction-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Action.html#gio-action-methods"><span class="std std-ref">Gio.Action (11)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gio.SimpleAction.new" title="Gio.SimpleAction.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (name, parameter_type)</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gio.SimpleAction.new_stateful" title="Gio.SimpleAction.new_stateful"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_stateful</span></code></a> (name, parameter_type, state)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.SimpleAction.set_enabled" title="Gio.SimpleAction.set_enabled"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_enabled</span></code></a> (enabled)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.SimpleAction.set_state" title="Gio.SimpleAction.set_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_state</span></code></a> (value)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.SimpleAction.set_state_hint" title="Gio.SimpleAction.set_state_hint"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_state_hint</span></code></a> (state_hint)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gio-simpleaction-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Action.html#gio-action-vfuncs"><span class="std std-ref">Gio.Action (8)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gio-simpleaction-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Action.html#gio-action-props"><span class="std std-ref">Gio.Action (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gio-simpleaction-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gio.SimpleAction.signals.activate" title="Gio.SimpleAction.signals.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">activate</span></code></a></td>
+<td>Indicates that the action was just activated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gio.SimpleAction.signals.change_state" title="Gio.SimpleAction.signals.change_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">change-state</span></code></a></td>
+<td>Indicates that the action just received a request to change its state.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gio-simpleaction-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gio.SimpleAction">
+<em class="property">class </em><code class="descclassname">Gio.</code><code class="descname">SimpleAction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>,         <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.Action</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> is the obvious simple implementation of the <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action</span></code></a>
+interface. This is the easiest way to create an action for purposes of
+adding it to a <a class="reference internal" href="SimpleActionGroup.html#Gio.SimpleActionGroup" title="Gio.SimpleActionGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleActionGroup</span></code></a>.</p>
+<p>See also #GtkAction.</p>
+<dl class="classmethod">
+<dt id="Gio.SimpleAction.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>name</em>, <em>parameter_type</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the name of the action</li>
+<li><strong>parameter_type</strong> (<a class="reference external" href="../../GLib-2.0/classes/VariantType.html#GLib.VariantType" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.VariantType</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the type of parameter that will be passed to
+handlers for the <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> <a class="reference internal" href="#Gio.SimpleAction.signals.activate" title="Gio.SimpleAction.signals.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">::activate</span></code></a> signal, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> for no parameter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a new <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new action.</p>
+<p>The created action is stateless. See <a class="reference internal" href="#Gio.SimpleAction.new_stateful" title="Gio.SimpleAction.new_stateful"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction.new_stateful</span></code></a>() to create
+an action that has state.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.28.</span></p>
+</div>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gio.SimpleAction.new_stateful">
+<em class="property">classmethod </em><code class="descname">new_stateful</code><span class="sig-paren">(</span><em>name</em>, <em>parameter_type</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.new_stateful" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the name of the action</li>
+<li><strong>parameter_type</strong> (<a class="reference external" href="../../GLib-2.0/classes/VariantType.html#GLib.VariantType" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.VariantType</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the type of the parameter that will be passed to
+handlers for the <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> <a class="reference internal" href="#Gio.SimpleAction.signals.activate" title="Gio.SimpleAction.signals.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">::activate</span></code></a> signal, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> for no parameter</li>
+<li><strong>state</strong> (<a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a>) – the initial state of the action</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a new <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new stateful action.</p>
+<p>All future state values must have the same <a class="reference external" href="../../GLib-2.0/classes/VariantType.html#GLib.VariantType" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.VariantType</span></code></a> as the initial
+<cite>state</cite>.</p>
+<p>If the <cite>state</cite> <a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> is floating, it is consumed.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.28.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.SimpleAction.set_enabled">
+<code class="descname">set_enabled</code><span class="sig-paren">(</span><em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.set_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enabled</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether the action is enabled</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the action as enabled or not.</p>
+<p>An action must be enabled in order to be activated or in order to
+have its state changed from outside callers.</p>
+<p>This should only be called by the implementor of the action.  Users
+of the action should not attempt to modify its enabled flag.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.28.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.SimpleAction.set_state">
+<code class="descname">set_state</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.set_state" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a>) – the new <a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> for the state</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the state of the action.</p>
+<p>This directly updates the ‘state’ property to the given value.</p>
+<p>This should only be called by the implementor of the action.  Users
+of the action should not attempt to directly modify the ‘state’
+property.  Instead, they should call <a class="reference internal" href="Action.html#Gio.Action.change_state" title="Gio.Action.change_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action.change_state</span></code></a>() to
+request the change.</p>
+<p>If the <cite>value</cite> <a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> is floating, it is consumed.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.30.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.SimpleAction.set_state_hint">
+<code class="descname">set_state_hint</code><span class="sig-paren">(</span><em>state_hint</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.set_state_hint" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state_hint</strong> (<a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> representing the state hint</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the state hint for the action.</p>
+<p>See <a class="reference internal" href="Action.html#Gio.Action.get_state_hint" title="Gio.Action.get_state_hint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action.get_state_hint</span></code></a>() for more information about
+action state hints.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.44.</span></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gio.SimpleAction.signals.activate">
+<code class="descclassname">Gio.SimpleAction.signals.</code><code class="descname">activate</code><span class="sig-paren">(</span><em>simple_action</em>, <em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.signals.activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">activate</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.MUST_COLLECT" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MUST_COLLECT</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simple_action</strong> (<a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a>) – The object which received the signal</li>
+<li><strong>parameter</strong> (<a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the parameter to the activation, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if it has
+no parameter</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Indicates that the action was just activated.</p>
+<p><cite>parameter</cite> will always be of the expected type, i.e. the parameter type
+specified when the action was created. If an incorrect type is given when
+activating the action, this signal is not emitted.</p>
+<p>Since GLib 2.40, if no handler is connected to this signal then the
+default behaviour for boolean-stated actions with a <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> parameter
+type is to toggle them via the <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> <a class="reference internal" href="#Gio.SimpleAction.signals.change_state" title="Gio.SimpleAction.signals.change_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">::change-state</span></code></a> signal.
+For stateful actions where the state type is equal to the parameter
+type, the default is to forward them directly to
+<a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> <a class="reference internal" href="#Gio.SimpleAction.signals.change_state" title="Gio.SimpleAction.signals.change_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">::change-state</span></code></a>.  This should allow almost all users
+of <a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a> to connect only one handler or the other.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.28.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gio.SimpleAction.signals.change_state">
+<code class="descclassname">Gio.SimpleAction.signals.</code><code class="descname">change_state</code><span class="sig-paren">(</span><em>simple_action</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.SimpleAction.signals.change_state" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">change-state</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.MUST_COLLECT" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MUST_COLLECT</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>simple_action</strong> (<a class="reference internal" href="#Gio.SimpleAction" title="Gio.SimpleAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction</span></code></a>) – The object which received the signal</li>
+<li><strong>value</strong> (<a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the requested value for the state</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Indicates that the action just received a request to change its
+state.</p>
+<p><cite>value</cite> will always be of the correct state type, i.e. the type of the
+initial state passed to <a class="reference internal" href="#Gio.SimpleAction.new_stateful" title="Gio.SimpleAction.new_stateful"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction.new_stateful</span></code></a>(). If an incorrect
+type is given when requesting to change the state, this signal is not
+emitted.</p>
+<p>If no handler is connected to this signal then the default
+behaviour is to call <a class="reference internal" href="#Gio.SimpleAction.set_state" title="Gio.SimpleAction.set_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction.set_state</span></code></a>() to set the state
+to the requested value. If you connect a signal handler then no
+default action is taken. If the state should change then you must
+call <a class="reference internal" href="#Gio.SimpleAction.set_state" title="Gio.SimpleAction.set_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.SimpleAction.set_state</span></code></a>() from the handler.</p>
+<p>An example of a ‘change-state’ handler:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span>
+<span class="nf">change_volume_state</span> <span class="p">(</span><span class="n">GSimpleAction</span> <span class="o">*</span><span class="n">action</span><span class="p">,</span>
+                     <span class="n">GVariant</span>      <span class="o">*</span><span class="n">value</span><span class="p">,</span>
+                     <span class="n">gpointer</span>       <span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">gint</span> <span class="n">requested</span><span class="p">;</span>
+
+  <span class="n">requested</span> <span class="o">=</span> <span class="n">g_variant_get_int32</span> <span class="p">(</span><span class="n">value</span><span class="p">);</span>
+
+  <span class="c1">// Volume only goes from 0 to 10</span>
+  <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">requested</span> <span class="o">&amp;&amp;</span> <span class="n">requested</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">g_simple_action_set_state</span> <span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The handler need not set the state to the requested value.
+It could set it to any value at all, or take some other action.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.30.</span></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

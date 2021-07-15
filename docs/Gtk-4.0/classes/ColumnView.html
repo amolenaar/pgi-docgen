@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.ColumnView -
+    
+      Classes -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gtk.ColumnViewColumn" href="ColumnViewColumn.html"/>
+        <link rel="prev" title="Gtk.ColorChooserWidget" href="ColorChooserWidget.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/ColumnView.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.ColumnView</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ColorChooserWidget.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ColumnViewColumn.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.ColumnView</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/ColumnView.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.ColumnView</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ColorChooserWidget.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ColumnViewColumn.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.ColumnView</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-columnview">
+<h1>Gtk.ColumnView<a class="headerlink" href="#gtk-columnview" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="458pt" height="188pt"
+ viewBox="0.00 0.00 457.50 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M371,-180C371,-180 285,-180 285,-180 282,-180 279,-177 279,-174 279,-174 279,-168 279,-168 279,-165 282,-162 285,-162 285,-162 371,-162 371,-162 374,-162 377,-165 377,-168 377,-168 377,-174 377,-174 377,-177 374,-180 371,-180"/>
+<text text-anchor="middle" x="328" y="-168.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node4" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node4"><a xlink:href="Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M213.5,-126C213.5,-126 146.5,-126 146.5,-126 143.5,-126 140.5,-123 140.5,-120 140.5,-120 140.5,-114 140.5,-114 140.5,-111 143.5,-108 146.5,-108 146.5,-108 213.5,-108 213.5,-108 216.5,-108 219.5,-111 219.5,-114 219.5,-114 219.5,-120 219.5,-120 219.5,-123 216.5,-126 213.5,-126"/>
+<text text-anchor="middle" x="180" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M305.2,-161.99C278.99,-152.78 235.96,-137.66 207.8,-127.77"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="208.37,-126.11 203.07,-126.11 207.21,-129.41 208.37,-126.11"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node5" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node5"><a xlink:href="Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M306,-126C306,-126 244,-126 244,-126 241,-126 238,-123 238,-120 238,-120 238,-114 238,-114 238,-111 241,-108 244,-108 244,-108 306,-108 306,-108 309,-108 312,-111 312,-114 312,-114 312,-120 312,-120 312,-123 309,-126 306,-126"/>
+<text text-anchor="middle" x="275" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M319.72,-161.88C310.98,-153.3 297.12,-139.7 287.14,-129.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="288.19,-128.49 283.4,-126.24 285.74,-130.99 288.19,-128.49"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node7" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node7"><a xlink:href="ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M428,-126C428,-126 336,-126 336,-126 333,-126 330,-123 330,-120 330,-120 330,-114 330,-114 330,-111 333,-108 336,-108 336,-108 428,-108 428,-108 431,-108 434,-111 434,-114 434,-114 434,-120 434,-120 434,-123 431,-126 428,-126"/>
+<text text-anchor="middle" x="382" y="-114.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M336.44,-161.88C345.34,-153.3 359.46,-139.7 369.63,-129.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="371.06,-130.97 373.44,-126.24 368.63,-128.45 371.06,-130.97"/>
+</g>
+<!-- Gtk.Scrollable -->
+<g id="node8" class="node">
+<title>Gtk.Scrollable</title>
+<g id="a_node8"><a xlink:href="Scrollable.html#Gtk.Scrollable" xlink:title="Gtk.Scrollable">
+<path fill="none" stroke="#3091d1" d="M443.5,-72C443.5,-72 380.5,-72 380.5,-72 377.5,-72 374.5,-69 374.5,-66 374.5,-66 374.5,-60 374.5,-60 374.5,-57 377.5,-54 380.5,-54 380.5,-54 443.5,-54 443.5,-54 446.5,-54 449.5,-57 449.5,-60 449.5,-60 449.5,-66 449.5,-66 449.5,-69 446.5,-72 443.5,-72"/>
+<text text-anchor="middle" x="412" y="-60.7" font-family="inherit" font-size="8.50">Gtk.Scrollable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Scrollable -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Scrollable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M377.09,-164.18C401.19,-158.57 428.16,-147.57 443,-126 454.25,-109.65 438.14,-88.63 425.25,-75.75"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="426.2,-74.23 421.39,-72.02 423.77,-76.75 426.2,-74.23"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node2" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M116,-126C116,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 116,-108 116,-108 119,-108 122,-111 122,-114 122,-114 122,-120 122,-120 122,-123 119,-126 116,-126"/>
+<text text-anchor="middle" x="61" y="-114.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node9" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node9"><a xlink:href="Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M301,-72C301,-72 249,-72 249,-72 246,-72 243,-69 243,-66 243,-66 243,-60 243,-60 243,-57 246,-54 249,-54 249,-54 301,-54 301,-54 304,-54 307,-57 307,-60 307,-60 307,-66 307,-66 307,-69 304,-72 301,-72"/>
+<text text-anchor="middle" x="275" y="-60.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge5" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M93.97,-107.99C132.68,-98.58 196.75,-83.01 237.37,-73.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="238.25,-74.73 242.69,-71.85 237.42,-71.33 238.25,-74.73"/>
+</g>
+<!-- GObject.Object -->
+<g id="node3" class="node">
+<title>GObject.Object</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M95,-180C95,-180 27,-180 27,-180 24,-180 21,-177 21,-174 21,-174 21,-168 21,-168 21,-165 24,-162 27,-162 27,-162 95,-162 95,-162 98,-162 101,-165 101,-168 101,-168 101,-174 101,-174 101,-177 98,-180 95,-180"/>
+<text text-anchor="middle" x="61" y="-168.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge6" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M61,-161.88C61,-153.76 61,-141.13 61,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="62.75,-131.24 61,-126.24 59.25,-131.24 62.75,-131.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge7" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M194.84,-107.88C211.16,-98.95 237.43,-84.56 255.42,-74.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.71,-76 260.26,-72.07 255.03,-72.93 256.71,-76"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge8" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M275,-107.88C275,-99.76 275,-87.13 275,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="276.75,-77.24 275,-72.24 273.25,-77.24 276.75,-77.24"/>
+</g>
+<!-- Gtk.ColumnView -->
+<g id="node6" class="node">
+<title>Gtk.ColumnView</title>
+<g id="a_node6"><a xlink:href="#Gtk.ColumnView" xlink:title="Gtk.ColumnView">
+<path fill="none" stroke="#75507b" d="M356.5,-18C356.5,-18 281.5,-18 281.5,-18 278.5,-18 275.5,-15 275.5,-12 275.5,-12 275.5,-6 275.5,-6 275.5,-3 278.5,0 281.5,0 281.5,0 356.5,0 356.5,0 359.5,0 362.5,-3 362.5,-6 362.5,-6 362.5,-12 362.5,-12 362.5,-15 359.5,-18 356.5,-18"/>
+<text text-anchor="middle" x="319" y="-6.7" font-family="inherit" font-size="8.50">Gtk.ColumnView</text>
+</a>
+</g>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge9" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M365.28,-107.88C346.67,-98.83 316.55,-84.19 296.28,-74.34"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="296.86,-72.68 291.6,-72.07 295.33,-75.83 296.86,-72.68"/>
+</g>
+<!-- Gtk.Scrollable&#45;&gt;Gtk.ColumnView -->
+<g id="edge10" class="edge">
+<title>Gtk.Scrollable&#45;&gt;Gtk.ColumnView</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M397.47,-53.88C381.5,-44.95 355.78,-30.56 338.17,-20.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="338.65,-18.98 333.43,-18.07 336.94,-22.04 338.65,-18.98"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.ColumnView -->
+<g id="edge11" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.ColumnView</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M281.88,-53.88C289.07,-45.38 300.43,-31.94 308.7,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="310.13,-23.19 312.03,-18.24 307.46,-20.93 310.13,-23.19"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gtk-columnview-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference internal" href="Scrollable.html#gtk-scrollable-methods"><span class="std std-ref">Gtk.Scrollable (9)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.ColumnView.new" title="Gtk.ColumnView.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (model)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.append_column" title="Gtk.ColumnView.append_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">append_column</span></code></a> (column)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_columns" title="Gtk.ColumnView.get_columns"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_columns</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_enable_rubberband" title="Gtk.ColumnView.get_enable_rubberband"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_enable_rubberband</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_model" title="Gtk.ColumnView.get_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_model</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_reorderable" title="Gtk.ColumnView.get_reorderable"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_reorderable</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_show_column_separators" title="Gtk.ColumnView.get_show_column_separators"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_show_column_separators</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_show_row_separators" title="Gtk.ColumnView.get_show_row_separators"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_show_row_separators</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_single_click_activate" title="Gtk.ColumnView.get_single_click_activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_single_click_activate</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.get_sorter" title="Gtk.ColumnView.get_sorter"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_sorter</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.insert_column" title="Gtk.ColumnView.insert_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">insert_column</span></code></a> (position, column)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.remove_column" title="Gtk.ColumnView.remove_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_column</span></code></a> (column)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_enable_rubberband" title="Gtk.ColumnView.set_enable_rubberband"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_enable_rubberband</span></code></a> (enable_rubberband)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_model" title="Gtk.ColumnView.set_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_model</span></code></a> (model)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_reorderable" title="Gtk.ColumnView.set_reorderable"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_reorderable</span></code></a> (reorderable)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_show_column_separators" title="Gtk.ColumnView.set_show_column_separators"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_show_column_separators</span></code></a> (show_column_separators)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_show_row_separators" title="Gtk.ColumnView.set_show_row_separators"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_show_row_separators</span></code></a> (show_row_separators)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.set_single_click_activate" title="Gtk.ColumnView.set_single_click_activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_single_click_activate</span></code></a> (single_click_activate)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ColumnView.sort_by_column" title="Gtk.ColumnView.sort_by_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">sort_by_column</span></code></a> (column, direction)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gtk-columnview-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-vfuncs"><span class="std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-vfuncs"><span class="std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference internal" href="Scrollable.html#gtk-scrollable-vfuncs"><span class="std std-ref">Gtk.Scrollable (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gtk-columnview-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-props"><span class="std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-props"><span class="std std-ref">Gtk.Accessible (1)</span></a>,     <a class="reference internal" href="Scrollable.html#gtk-scrollable-props"><span class="std std-ref">Gtk.Scrollable (4)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ColumnView.props.columns" title="Gtk.ColumnView.props.columns"><code class="xref py py-data docutils literal notranslate"><span class="pre">columns</span></code></a></td>
+<td><a class="reference external" href="../../Gio-2.0/classes/ListModel.html#Gio.ListModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ListModel</span></code></a></td>
+<td>r/en</td>
+<td>List of columns</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ColumnView.props.enable_rubberband" title="Gtk.ColumnView.props.enable_rubberband"><code class="xref py py-data docutils literal notranslate"><span class="pre">enable-rubberband</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Allow selecting items by dragging with the mouse</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ColumnView.props.model" title="Gtk.ColumnView.props.model"><code class="xref py py-data docutils literal notranslate"><span class="pre">model</span></code></a></td>
+<td><a class="reference internal" href="SelectionModel.html#Gtk.SelectionModel" title="Gtk.SelectionModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a></td>
+<td>r/w/en</td>
+<td>Model for the items displayed</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ColumnView.props.reorderable" title="Gtk.ColumnView.props.reorderable"><code class="xref py py-data docutils literal notranslate"><span class="pre">reorderable</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether columns are reorderable</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ColumnView.props.show_column_separators" title="Gtk.ColumnView.props.show_column_separators"><code class="xref py py-data docutils literal notranslate"><span class="pre">show-column-separators</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Show separators between columns</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ColumnView.props.show_row_separators" title="Gtk.ColumnView.props.show_row_separators"><code class="xref py py-data docutils literal notranslate"><span class="pre">show-row-separators</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Show separators between rows</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ColumnView.props.single_click_activate" title="Gtk.ColumnView.props.single_click_activate"><code class="xref py py-data docutils literal notranslate"><span class="pre">single-click-activate</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Activate rows on single click</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ColumnView.props.sorter" title="Gtk.ColumnView.props.sorter"><code class="xref py py-data docutils literal notranslate"><span class="pre">sorter</span></code></a></td>
+<td><a class="reference internal" href="Sorter.html#Gtk.Sorter" title="Gtk.Sorter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Sorter</span></code></a></td>
+<td>r/en</td>
+<td>Sorter with sorting choices of the user</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gtk-columnview-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-signals"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ColumnView.signals.activate" title="Gtk.ColumnView.signals.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">activate</span></code></a></td>
+<td>Emitted when a row has been activated by the user, usually via activating the <a class="reference internal" href="ListBase.html#Gtk.ListBase" title="Gtk.ListBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListBase</span></code></a>|list.activate-item action.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gtk-columnview-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-fields"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.ColumnView">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">ColumnView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>,         <a class="reference internal" href="Scrollable.html#Gtk.Scrollable" title="Gtk.Scrollable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Scrollable</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="ColumnViewClass.html#Gtk.ColumnViewClass" title="Gtk.ColumnViewClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ColumnViewClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> presents a large dynamic list of items using multiple columns
+with headers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> uses the factories of its columns to generate a cell widget for
+each column, for each visible item and displays them together as the row for
+this item.</p>
+<p>The [property`Gtk`.ColumnView:show-row-separators] and
+[propertyGtk.ColumnView:show-column-separators] properties offer a simple way
+to display separators between the rows or columns.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> allows the user to select items according to the selection
+characteristics of the model. For models that allow multiple selected items,
+it is possible to turn on *rubberband selection*, using
+[property`Gtk`.ColumnView:enable-rubberband].</p>
+<p>The column view supports sorting that can be customized by the user by
+clicking on column headers. To set this up, the <code class="docutils literal notranslate"><span class="pre">GtkSorter</span></code> returned by
+[method`Gtk`.ColumnView.get_sorter] must be attached to a sort model for the
+data that the view is showing, and the columns must have sorters attached to
+them by calling [method`Gtk`.ColumnViewColumn.set_sorter]. The initial sort
+order can be set with [method`Gtk`.ColumnView.sort_by_column].</p>
+<p>The column view also supports interactive resizing and reordering of
+columns, via Drag-and-Drop of the column headers. This can be enabled or
+disabled with the [property`Gtk`.ColumnView:reorderable] and
+[property`Gtk`.ColumnViewColumn:resizable] properties.</p>
+<p>To learn more about the list widget framework, see the
+<a class="reference external" href="section-list-widget.html">overview</a>.</p>
+<dl class="docutils">
+<dt>CSS nodes</dt>
+<dd></dd>
+</dl>
+<p>``
+columnview[.column-separators][.rich-list][.navigation-sidebar][.data-table]
+├── header
+│   ├── &lt;column header&gt;
+┊   ┊
+│   ╰── &lt;column header&gt;
+│
+├── listview
+│
+┊
+╰── [rubberband]
+``</p>
+<p><code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> uses a single CSS node named columnview. It may carry the
+.column-separators style class, when [property`Gtk`.ColumnView:show-column-separators]
+property is set. Header widgets appear below a node with name header.
+The rows are contained in a <code class="docutils literal notranslate"><span class="pre">GtkListView</span></code> widget, so there is a listview
+node with the same structure as for a standalone <code class="docutils literal notranslate"><span class="pre">GtkListView</span></code> widget.
+If [property`Gtk`.ColumnView:show-row-separators] is set, it will be passed
+on to the list view, causing its CSS node to carry the .separators style class.
+For rubberband selection, a node with name rubberband is used.</p>
+<p>The main columnview node may also carry style classes to select
+the style of <a class="reference external" href="section-list-widget.html#list-styles">list presentation</a> :
+.rich-list, .navigation-sidebar or .data-table.</p>
+<dl class="docutils">
+<dt>Accessibility</dt>
+<dd></dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> uses the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.TREE_GRID" title="Gtk.AccessibleRole.TREE_GRID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.TREE_GRID</span></code></a> role, header title
+widgets are using the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.COLUMN_HEADER" title="Gtk.AccessibleRole.COLUMN_HEADER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.COLUMN_HEADER</span></code></a> role. The row widgets
+are using the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.ROW" title="Gtk.AccessibleRole.ROW"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.ROW</span></code></a> role, and individual cells are using
+the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.GRID_CELL" title="Gtk.AccessibleRole.GRID_CELL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.GRID_CELL</span></code></a> role</p>
+<dl class="classmethod">
+<dt id="Gtk.ColumnView.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference internal" href="SelectionModel.html#Gtk.SelectionModel" title="Gtk.SelectionModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the list model to use, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a new <code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code>.</p>
+<p>You most likely want to call [method`Gtk`.ColumnView.append_column]
+to add columns next.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.append_column">
+<code class="descname">append_column</code><span class="sig-paren">(</span><em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.append_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>column</strong> (<a class="reference internal" href="ColumnViewColumn.html#Gtk.ColumnViewColumn" title="Gtk.ColumnViewColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ColumnViewColumn</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkColumnViewColumn</span></code> that hasn’t been added to a
+<code class="docutils literal notranslate"><span class="pre">GtkColumnView</span></code> yet</td>
+</tr>
+</tbody>
+</table>
+<p>Appends the <cite>column</cite> to the end of the columns in <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_columns">
+<code class="descname">get_columns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_columns" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The list managing the columns</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="../../Gio-2.0/classes/ListModel.html#Gio.ListModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ListModel</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the list of columns in this column view.</p>
+<p>This list is constant over the lifetime of <cite>self</cite> and can be used to
+monitor changes to the columns of <cite>self</cite> by connecting to the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">::items-changed</span></code> signal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_enable_rubberband">
+<code class="descname">get_enable_rubberband</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_enable_rubberband" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if rubberband selection is enabled</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether rows can be selected by dragging with the mouse.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_model">
+<code class="descname">get_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The model in use</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="SelectionModel.html#Gtk.SelectionModel" title="Gtk.SelectionModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the model that’s currently used to read the items displayed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_reorderable">
+<code class="descname">get_reorderable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_reorderable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if columns are reorderable</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether columns are reorderable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_show_column_separators">
+<code class="descname">get_show_column_separators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_show_column_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the list shows column separators</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the list should show separators
+between columns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_show_row_separators">
+<code class="descname">get_show_row_separators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_show_row_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the list shows separators</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the list should show separators
+between rows.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_single_click_activate">
+<code class="descname">get_single_click_activate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_single_click_activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if rows are activated on single click</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether rows will be activated on single click and
+selected on hover.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.get_sorter">
+<code class="descname">get_sorter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.get_sorter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the <code class="docutils literal notranslate"><span class="pre">GtkSorter</span></code> of <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Sorter.html#Gtk.Sorter" title="Gtk.Sorter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Sorter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns a special sorter that reflects the users sorting
+choices in the column view.</p>
+<p>To allow users to customizable sorting by clicking on column
+headers, this sorter needs to be set on the sort model underneath
+the model that is displayed by the view.</p>
+<p>See [method`Gtk`.ColumnViewColumn.set_sorter] for setting up
+per-column sorting.</p>
+<p>Here is an example:
+<a href="#id1"><span class="problematic" id="id2">``</span></a>c
+gtk_column_view_column_set_sorter (column, sorter);
+gtk_column_view_append_column (view, column);
+sorter = g_object_ref (gtk_column_view_get_sorter (view)));
+model = gtk_sort_list_model_new (store, sorter);
+selection = gtk_no_selection_new (model);
+gtk_column_view_set_model (view, selection);
+``</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.insert_column">
+<code class="descname">insert_column</code><span class="sig-paren">(</span><em>position</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.insert_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to insert <cite>column</cite> at</li>
+<li><strong>column</strong> (<a class="reference internal" href="ColumnViewColumn.html#Gtk.ColumnViewColumn" title="Gtk.ColumnViewColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ColumnViewColumn</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkColumnViewColumn</span></code> to insert</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Inserts a column at the given position in the columns of <cite>self</cite>.</p>
+<p>If <cite>column</cite> is already a column of <cite>self</cite>, it will be repositioned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.remove_column">
+<code class="descname">remove_column</code><span class="sig-paren">(</span><em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.remove_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>column</strong> (<a class="reference internal" href="ColumnViewColumn.html#Gtk.ColumnViewColumn" title="Gtk.ColumnViewColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ColumnViewColumn</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkColumnViewColumn</span></code> that’s part of <cite>self</cite></td>
+</tr>
+</tbody>
+</table>
+<p>Removes the <cite>column</cite> from the list of columns of <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_enable_rubberband">
+<code class="descname">set_enable_rubberband</code><span class="sig-paren">(</span><em>enable_rubberband</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_enable_rubberband" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable_rubberband</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to enable rubberband selection</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether selections can be changed by dragging with the mouse.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_model">
+<code class="descname">set_model</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference internal" href="SelectionModel.html#Gtk.SelectionModel" title="Gtk.SelectionModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the model to use or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> for none</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the model to use.</p>
+<p>This must be a [iface`Gtk`.SelectionModel].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_reorderable">
+<code class="descname">set_reorderable</code><span class="sig-paren">(</span><em>reorderable</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_reorderable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reorderable</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether columns should be reorderable</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether columns should be reorderable by dragging.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_show_column_separators">
+<code class="descname">set_show_column_separators</code><span class="sig-paren">(</span><em>show_column_separators</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_show_column_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>show_column_separators</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to show column separators</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the list should show separators
+between columns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_show_row_separators">
+<code class="descname">set_show_row_separators</code><span class="sig-paren">(</span><em>show_row_separators</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_show_row_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>show_row_separators</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to show row separators</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the list should show separators
+between rows.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.set_single_click_activate">
+<code class="descname">set_single_click_activate</code><span class="sig-paren">(</span><em>single_click_activate</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.set_single_click_activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>single_click_activate</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to activate items on single click</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether rows should be activated on single click and
+selected on hover.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ColumnView.sort_by_column">
+<code class="descname">sort_by_column</code><span class="sig-paren">(</span><em>column</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.sort_by_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>column</strong> (<a class="reference internal" href="ColumnViewColumn.html#Gtk.ColumnViewColumn" title="Gtk.ColumnViewColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ColumnViewColumn</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkColumnViewColumn</span></code> to sort by, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></li>
+<li><strong>direction</strong> (<a class="reference internal" href="../enums.html#Gtk.SortType" title="Gtk.SortType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SortType</span></code></a>) – the direction to sort in</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the sorting of the view.</p>
+<p>This function should be used to set up the initial sorting.
+At runtime, users can change the sorting of a column view
+by clicking on the list headers.</p>
+<p>This call only has an effect if the sorter returned by
+[method`Gtk`.ColumnView.get_sorter] is set on a sort model,
+and [method`Gtk`.ColumnViewColumn.set_sorter] has been called
+on <cite>column</cite> to associate a sorter with the column.</p>
+<p>If <cite>column</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, the view will be unsorted.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gtk.ColumnView.signals.activate">
+<code class="descclassname">Gtk.ColumnView.signals.</code><code class="descname">activate</code><span class="sig-paren">(</span><em>column_view</em>, <em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ColumnView.signals.activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">activate</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>column_view</strong> (<a class="reference internal" href="#Gtk.ColumnView" title="Gtk.ColumnView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ColumnView</span></code></a>) – The object which received the signal</li>
+<li><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position of item to activate</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted when a row has been activated by the user, usually via activating
+the <a class="reference internal" href="ListBase.html#Gtk.ListBase" title="Gtk.ListBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListBase</span></code></a>|list.activate-item action.</p>
+<p>This allows for a convenient way to handle activation in a columnview.
+See [method`Gtk`.ListItem.set_activatable] for details on how to use this
+signal.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gtk.ColumnView.props.columns">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">columns</code><a class="headerlink" href="#Gtk.ColumnView.props.columns" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">columns</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="../../Gio-2.0/classes/ListModel.html#Gio.ListModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ListModel</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The list of columns.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.enable_rubberband">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">enable_rubberband</code><a class="headerlink" href="#Gtk.ColumnView.props.enable_rubberband" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">enable-rubberband</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Allow rubberband selection.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.model">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">model</code><a class="headerlink" href="#Gtk.ColumnView.props.model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">model</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="SelectionModel.html#Gtk.SelectionModel" title="Gtk.SelectionModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Model for the items displayed.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.reorderable">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">reorderable</code><a class="headerlink" href="#Gtk.ColumnView.props.reorderable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">reorderable</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether columns are reorderable.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.show_column_separators">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">show_column_separators</code><a class="headerlink" href="#Gtk.ColumnView.props.show_column_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">show-column-separators</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Show separators between columns.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.show_row_separators">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">show_row_separators</code><a class="headerlink" href="#Gtk.ColumnView.props.show_row_separators" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">show-row-separators</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Show separators between rows.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.single_click_activate">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">single_click_activate</code><a class="headerlink" href="#Gtk.ColumnView.props.single_click_activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">single-click-activate</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Activate rows on single click and select them on hover.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ColumnView.props.sorter">
+<code class="descclassname">Gtk.ColumnView.props.</code><code class="descname">sorter</code><a class="headerlink" href="#Gtk.ColumnView.props.sorter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">sorter</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="Sorter.html#Gtk.Sorter" title="Gtk.Sorter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Sorter</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Sorter with the sorting choices of the user.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.DropTargetAsync -
+    
+      Classes -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gtk.EditableLabel" href="EditableLabel.html"/>
+        <link rel="prev" title="Gtk.DropTarget" href="DropTarget.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/DropTargetAsync.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.DropTargetAsync</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="DropTarget.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="EditableLabel.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.DropTargetAsync</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/DropTargetAsync.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.DropTargetAsync</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="DropTarget.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="EditableLabel.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.DropTargetAsync</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-droptargetasync">
+<h1>Gtk.DropTargetAsync<a class="headerlink" href="#gtk-droptargetasync" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="114pt" height="134pt"
+ viewBox="0.00 0.00 114.00 134.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<title>g</title>
+<!-- GObject.Object -->
+<g id="node1" class="node">
+<title>GObject.Object</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M87,-126C87,-126 19,-126 19,-126 16,-126 13,-123 13,-120 13,-120 13,-114 13,-114 13,-111 16,-108 19,-108 19,-108 87,-108 87,-108 90,-108 93,-111 93,-114 93,-114 93,-120 93,-120 93,-123 90,-126 87,-126"/>
+<text text-anchor="middle" x="53" y="-114.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gtk.EventController -->
+<g id="node3" class="node">
+<title>Gtk.EventController</title>
+<g id="a_node3"><a xlink:href="EventController.html#Gtk.EventController" xlink:title="Gtk.EventController">
+<path fill="none" stroke="#aaaaaa" d="M97,-72C97,-72 9,-72 9,-72 6,-72 3,-69 3,-66 3,-66 3,-60 3,-60 3,-57 6,-54 9,-54 9,-54 97,-54 97,-54 100,-54 103,-57 103,-60 103,-60 103,-66 103,-66 103,-69 100,-72 97,-72"/>
+<text text-anchor="middle" x="53" y="-60.7" font-family="inherit" font-size="8.50">Gtk.EventController</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gtk.EventController -->
+<g id="edge1" class="edge">
+<title>GObject.Object&#45;&gt;Gtk.EventController</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M53,-107.88C53,-99.76 53,-87.13 53,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="54.75,-77.24 53,-72.24 51.25,-77.24 54.75,-77.24"/>
+</g>
+<!-- Gtk.DropTargetAsync -->
+<g id="node2" class="node">
+<title>Gtk.DropTargetAsync</title>
+<g id="a_node2"><a xlink:href="#Gtk.DropTargetAsync" xlink:title="Gtk.DropTargetAsync">
+<path fill="none" stroke="#75507b" d="M100,-18C100,-18 6,-18 6,-18 3,-18 0,-15 0,-12 0,-12 0,-6 0,-6 0,-3 3,0 6,0 6,0 100,0 100,0 103,0 106,-3 106,-6 106,-6 106,-12 106,-12 106,-15 103,-18 100,-18"/>
+<text text-anchor="middle" x="53" y="-6.7" font-family="inherit" font-size="8.50">Gtk.DropTargetAsync</text>
+</a>
+</g>
+</g>
+<!-- Gtk.EventController&#45;&gt;Gtk.DropTargetAsync -->
+<g id="edge2" class="edge">
+<title>Gtk.EventController&#45;&gt;Gtk.DropTargetAsync</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M53,-53.88C53,-45.76 53,-33.13 53,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="54.75,-23.24 53,-18.24 51.25,-23.24 54.75,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gtk-droptargetasync-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (12)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.new" title="Gtk.DropTargetAsync.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (formats, actions)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.get_actions" title="Gtk.DropTargetAsync.get_actions"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_actions</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.get_formats" title="Gtk.DropTargetAsync.get_formats"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_formats</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.reject_drop" title="Gtk.DropTargetAsync.reject_drop"><code class="xref py py-func docutils literal notranslate"><span class="pre">reject_drop</span></code></a> (drop)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.set_actions" title="Gtk.DropTargetAsync.set_actions"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_actions</span></code></a> (actions)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.DropTargetAsync.set_formats" title="Gtk.DropTargetAsync.set_formats"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_formats</span></code></a> (formats)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gtk-droptargetasync-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gtk-droptargetasync-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="EventController.html#gtk-eventcontroller-props"><span class="std std-ref">Gtk.EventController (4)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.DropTargetAsync.props.actions" title="Gtk.DropTargetAsync.props.actions"><code class="xref py py-data docutils literal notranslate"><span class="pre">actions</span></code></a></td>
+<td><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a></td>
+<td>r/w/en</td>
+<td>Actions</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.DropTargetAsync.props.formats" title="Gtk.DropTargetAsync.props.formats"><code class="xref py py-data docutils literal notranslate"><span class="pre">formats</span></code></a></td>
+<td><a class="reference external" href="../../Gdk-4.0/classes/ContentFormats.html#Gdk.ContentFormats" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ContentFormats</span></code></a></td>
+<td>r/w/en</td>
+<td>Formats</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gtk-droptargetasync-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.DropTargetAsync.signals.accept" title="Gtk.DropTargetAsync.signals.accept"><code class="xref py py-func docutils literal notranslate"><span class="pre">accept</span></code></a></td>
+<td>Emitted on the drop site when a drop operation is about to begin.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_enter" title="Gtk.DropTargetAsync.signals.drag_enter"><code class="xref py py-func docutils literal notranslate"><span class="pre">drag-enter</span></code></a></td>
+<td>Emitted on the drop site when the pointer enters the widget.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_leave" title="Gtk.DropTargetAsync.signals.drag_leave"><code class="xref py py-func docutils literal notranslate"><span class="pre">drag-leave</span></code></a></td>
+<td>Emitted on the drop site when the pointer leaves the widget.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_motion" title="Gtk.DropTargetAsync.signals.drag_motion"><code class="xref py py-func docutils literal notranslate"><span class="pre">drag-motion</span></code></a></td>
+<td>Emitted while the pointer is moving over the drop target.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.DropTargetAsync.signals.drop" title="Gtk.DropTargetAsync.signals.drop"><code class="xref py py-func docutils literal notranslate"><span class="pre">drop</span></code></a></td>
+<td>Emitted on the drop site when the user drops the data onto the widget.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gtk-droptargetasync-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.DropTargetAsync">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">DropTargetAsync</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="EventController.html#Gtk.EventController" title="Gtk.EventController"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.EventController</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="DropTargetAsyncClass.html#Gtk.DropTargetAsyncClass" title="Gtk.DropTargetAsyncClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.DropTargetAsyncClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code> is an event controller to receive Drag-and-Drop
+operations, asynchronously.</p>
+<p>It is the more complete but also more complex method of handling drop
+operations compared to [class`Gtk`.DropTarget], and you should only use
+it if <code class="docutils literal notranslate"><span class="pre">GtkDropTarget</span></code> doesn’t provide all the features you need.</p>
+<p>To use a <code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code> to receive drops on a widget, you create
+a <code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code> object, configure which data formats and actions
+you support, connect to its signals, and then attach it to the widget
+with [method`Gtk`.Widget.add_controller].</p>
+<p>During a drag operation, the first signal that a <code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code>
+emits is [signal`Gtk`.DropTargetAsync::accept], which is meant to determine
+whether the target is a possible drop site for the ongoing drop. The
+default handler for the <a class="reference internal" href="#Gtk.DropTargetAsync.signals.accept" title="Gtk.DropTargetAsync.signals.accept"><code class="xref py py-func docutils literal notranslate"><span class="pre">::accept</span></code></a> signal accepts the drop if it finds
+a compatible data format and an action that is supported on both sides.</p>
+<p>If it is, and the widget becomes a target, you will receive a
+[signal`Gtk`.DropTargetAsync::drag-enter] signal, followed by
+[signal`Gtk`.DropTargetAsync::drag-motion] signals as the pointer moves,
+optionally a [signal`Gtk`.DropTargetAsync::drop] signal when a drop happens,
+and finally a [signal`Gtk`.DropTargetAsync::drag-leave] signal when the
+pointer moves off the widget.</p>
+<p>The <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_enter" title="Gtk.DropTargetAsync.signals.drag_enter"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drag-enter</span></code></a> and <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_motion" title="Gtk.DropTargetAsync.signals.drag_motion"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drag-motion</span></code></a> handler return a <code class="docutils literal notranslate"><span class="pre">GdkDragAction</span></code>
+to update the status of the ongoing operation. The <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drop" title="Gtk.DropTargetAsync.signals.drop"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drop</span></code></a> handler
+should decide if it ultimately accepts the drop and if it does, it
+should initiate the data transfer and finish the operation by calling
+[method`Gdk`.Drop.finish].</p>
+<p>Between the <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_enter" title="Gtk.DropTargetAsync.signals.drag_enter"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drag-enter</span></code></a> and <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_leave" title="Gtk.DropTargetAsync.signals.drag_leave"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drag-leave</span></code></a> signals the widget is a
+current drop target, and will receive the <a class="reference internal" href="../flags.html#Gtk.StateFlags.DROP_ACTIVE" title="Gtk.StateFlags.DROP_ACTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.StateFlags.DROP_ACTIVE</span></code></a>
+state, which can be used by themes to style the widget as a drop target.</p>
+<dl class="classmethod">
+<dt id="Gtk.DropTargetAsync.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>formats</em>, <em>actions</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>formats</strong> (<a class="reference external" href="../../Gdk-4.0/classes/ContentFormats.html#Gdk.ContentFormats" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ContentFormats</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the supported data formats</li>
+<li><strong>actions</strong> (<a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a>) – the supported actions</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the new <code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code> object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.DropTargetAsync.get_actions">
+<code class="descname">get_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.get_actions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the actions that this drop target supports</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the actions that this drop target supports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.DropTargetAsync.get_formats">
+<code class="descname">get_formats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.get_formats" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the supported data formats</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="../../Gdk-4.0/classes/ContentFormats.html#Gdk.ContentFormats" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ContentFormats</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the data formats that this drop target accepts.</p>
+<p>If the result is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, all formats are expected to be supported.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.DropTargetAsync.reject_drop">
+<code class="descname">reject_drop</code><span class="sig-paren">(</span><em>drop</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.reject_drop" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a> of an ongoing drag operation</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the <cite>drop</cite> as not accepted on this drag site.</p>
+<p>This function should be used when delaying the decision
+on whether to accept a drag or not until after reading
+the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.DropTargetAsync.set_actions">
+<code class="descname">set_actions</code><span class="sig-paren">(</span><em>actions</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.set_actions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>actions</strong> (<a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a>) – the supported actions</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the actions that this drop target supports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.DropTargetAsync.set_formats">
+<code class="descname">set_formats</code><span class="sig-paren">(</span><em>formats</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.set_formats" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>formats</strong> (<a class="reference external" href="../../Gdk-4.0/classes/ContentFormats.html#Gdk.ContentFormats" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ContentFormats</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the supported data formats or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> for
+any format.</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the data formats that this drop target will accept.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gtk.DropTargetAsync.signals.accept">
+<code class="descclassname">Gtk.DropTargetAsync.signals.</code><code class="descname">accept</code><span class="sig-paren">(</span><em>drop_target_async</em>, <em>drop</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.signals.accept" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">accept</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>drop_target_async</strong> (<a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a>) – The object which received the signal</li>
+<li><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>drop</cite> is accepted</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted on the drop site when a drop operation is about to begin.</p>
+<p>If the drop is not accepted, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> will be returned and the drop target
+will ignore the drop. If <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> is returned, the drop is accepted for now
+but may be rejected later via a call to [method`Gtk`.DropTargetAsync.reject_drop]
+or ultimately by returning <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> from a [signal`Gtk`.DropTargetAsync::drop]
+handler.</p>
+<p>The default handler for this signal decides whether to accept the drop
+based on the formats provided by the <cite>drop</cite>.</p>
+<p>If the decision whether the drop will be accepted or rejected needs
+further processing, such as inspecting the data, this function should
+return <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> and proceed as is <cite>drop</cite> was accepted and if it decides to
+reject the drop later, it should call [method`Gtk`.DropTargetAsync.reject_drop].</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.DropTargetAsync.signals.drag_enter">
+<code class="descclassname">Gtk.DropTargetAsync.signals.</code><code class="descname">drag_enter</code><span class="sig-paren">(</span><em>drop_target_async</em>, <em>drop</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.signals.drag_enter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">drag-enter</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>drop_target_async</strong> (<a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a>) – The object which received the signal</li>
+<li><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></li>
+<li><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the x coordinate of the current pointer position</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the y coordinate of the current pointer position</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Preferred action for this drag operation.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted on the drop site when the pointer enters the widget.</p>
+<p>It can be used to set up custom highlighting.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.DropTargetAsync.signals.drag_leave">
+<code class="descclassname">Gtk.DropTargetAsync.signals.</code><code class="descname">drag_leave</code><span class="sig-paren">(</span><em>drop_target_async</em>, <em>drop</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.signals.drag_leave" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">drag-leave</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>drop_target_async</strong> (<a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a>) – The object which received the signal</li>
+<li><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted on the drop site when the pointer leaves the widget.</p>
+<p>Its main purpose it to undo things done in
+<code class="docutils literal notranslate"><span class="pre">GtkDropTargetAsync</span></code> <a class="reference internal" href="#Gtk.DropTargetAsync.signals.drag_enter" title="Gtk.DropTargetAsync.signals.drag_enter"><code class="xref py py-func docutils literal notranslate"><span class="pre">::drag-enter</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.DropTargetAsync.signals.drag_motion">
+<code class="descclassname">Gtk.DropTargetAsync.signals.</code><code class="descname">drag_motion</code><span class="sig-paren">(</span><em>drop_target_async</em>, <em>drop</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.signals.drag_motion" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">drag-motion</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>drop_target_async</strong> (<a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a>) – The object which received the signal</li>
+<li><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></li>
+<li><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the x coordinate of the current pointer position</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the y coordinate of the current pointer position</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Preferred action for this drag operation.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted while the pointer is moving over the drop target.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.DropTargetAsync.signals.drop">
+<code class="descclassname">Gtk.DropTargetAsync.signals.</code><code class="descname">drop</code><span class="sig-paren">(</span><em>drop_target_async</em>, <em>drop</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropTargetAsync.signals.drop" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">drop</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>drop_target_async</strong> (<a class="reference internal" href="#Gtk.DropTargetAsync" title="Gtk.DropTargetAsync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropTargetAsync</span></code></a>) – The object which received the signal</li>
+<li><strong>drop</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a>) – the <a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></li>
+<li><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the x coordinate of the current pointer position</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the y coordinate of the current pointer position</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">whether the drop is accepted at the given pointer position</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted on the drop site when the user drops the data onto the widget.</p>
+<p>The signal handler must determine whether the pointer position is in a
+drop zone or not. If it is not in a drop zone, it returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> and no
+further processing is necessary.</p>
+<p>Otherwise, the handler returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>. In this case, this handler will
+accept the drop. The handler must ensure that [method`Gdk`.Drop.finish]
+is called to let the source know that the drop is done. The call to
+[method`Gdk`.Drop.finish] must only be done when all data has been received.</p>
+<p>To receive the data, use one of the read functions provided by
+[class`Gdk`.Drop] such as [method`Gdk`.Drop.read_async] or
+[method`Gdk`.Drop.read_value_async].</p>
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gtk.DropTargetAsync.props.actions">
+<code class="descclassname">Gtk.DropTargetAsync.props.</code><code class="descname">actions</code><a class="headerlink" href="#Gtk.DropTargetAsync.props.actions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">actions</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.DragAction" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.DragAction</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkDragActions</span></code> that this drop target supports.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.DropTargetAsync.props.formats">
+<code class="descclassname">Gtk.DropTargetAsync.props.</code><code class="descname">formats</code><a class="headerlink" href="#Gtk.DropTargetAsync.props.formats" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">formats</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="../../Gdk-4.0/classes/ContentFormats.html#Gdk.ContentFormats" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ContentFormats</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkContentFormats</span></code> that determines the supported data formats.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

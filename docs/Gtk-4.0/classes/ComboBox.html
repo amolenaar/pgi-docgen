@@ -1,0 +1,1620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.ComboBox -
+    
+      Classes -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gtk.ComboBoxText" href="ComboBoxText.html"/>
+        <link rel="prev" title="Gtk.ColumnViewColumn" href="ColumnViewColumn.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/ComboBox.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.ComboBox</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ColumnViewColumn.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ComboBoxText.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.ComboBox</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/ComboBox.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.ComboBox</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ColumnViewColumn.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ComboBoxText.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.ComboBox</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-combobox">
+<h1>Gtk.ComboBox<a class="headerlink" href="#gtk-combobox" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="493pt" height="188pt"
+ viewBox="0.00 0.00 493.27 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M191.27,-180C191.27,-180 105.27,-180 105.27,-180 102.27,-180 99.27,-177 99.27,-174 99.27,-174 99.27,-168 99.27,-168 99.27,-165 102.27,-162 105.27,-162 105.27,-162 191.27,-162 191.27,-162 194.27,-162 197.27,-165 197.27,-168 197.27,-168 197.27,-174 197.27,-174 197.27,-177 194.27,-180 191.27,-180"/>
+<text text-anchor="middle" x="148.27" y="-168.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node4" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node4"><a xlink:href="Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M86.77,-126C86.77,-126 19.77,-126 19.77,-126 16.77,-126 13.77,-123 13.77,-120 13.77,-120 13.77,-114 13.77,-114 13.77,-111 16.77,-108 19.77,-108 19.77,-108 86.77,-108 86.77,-108 89.77,-108 92.77,-111 92.77,-114 92.77,-114 92.77,-120 92.77,-120 92.77,-123 89.77,-126 86.77,-126"/>
+<text text-anchor="middle" x="53.27" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M133.43,-161.88C117.12,-152.95 90.84,-138.56 72.85,-128.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="73.24,-126.93 68.01,-126.07 71.56,-130 73.24,-126.93"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node5" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node5"><a xlink:href="Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M179.27,-126C179.27,-126 117.27,-126 117.27,-126 114.27,-126 111.27,-123 111.27,-120 111.27,-120 111.27,-114 111.27,-114 111.27,-111 114.27,-108 117.27,-108 117.27,-108 179.27,-108 179.27,-108 182.27,-108 185.27,-111 185.27,-114 185.27,-114 185.27,-120 185.27,-120 185.27,-123 182.27,-126 179.27,-126"/>
+<text text-anchor="middle" x="148.27" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M148.27,-161.88C148.27,-153.76 148.27,-141.13 148.27,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="150.02,-131.24 148.27,-126.24 146.52,-131.24 150.02,-131.24"/>
+</g>
+<!-- Gtk.CellEditable -->
+<g id="node6" class="node">
+<title>Gtk.CellEditable</title>
+<g id="a_node6"><a xlink:href="CellEditable.html#Gtk.CellEditable" xlink:title="Gtk.CellEditable">
+<path fill="none" stroke="#3091d1" d="M81.27,-72C81.27,-72 9.27,-72 9.27,-72 6.27,-72 3.27,-69 3.27,-66 3.27,-66 3.27,-60 3.27,-60 3.27,-57 6.27,-54 9.27,-54 9.27,-54 81.27,-54 81.27,-54 84.27,-54 87.27,-57 87.27,-60 87.27,-60 87.27,-66 87.27,-66 87.27,-69 84.27,-72 81.27,-72"/>
+<text text-anchor="middle" x="45.27" y="-60.7" font-family="inherit" font-size="8.50">Gtk.CellEditable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.CellEditable -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.CellEditable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M99.08,-169.13C66.48,-165.67 25.89,-155.21 4.27,-126 -8.54,-108.69 12.77,-87.61 29.16,-75.02"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="30.24,-76.4 33.2,-72.01 28.14,-73.6 30.24,-76.4"/>
+</g>
+<!-- Gtk.CellLayout -->
+<g id="node7" class="node">
+<title>Gtk.CellLayout</title>
+<g id="a_node7"><a xlink:href="CellLayout.html#Gtk.CellLayout" xlink:title="Gtk.CellLayout">
+<path fill="none" stroke="#3091d1" d="M343.77,-72C343.77,-72 276.77,-72 276.77,-72 273.77,-72 270.77,-69 270.77,-66 270.77,-66 270.77,-60 270.77,-60 270.77,-57 273.77,-54 276.77,-54 276.77,-54 343.77,-54 343.77,-54 346.77,-54 349.77,-57 349.77,-60 349.77,-60 349.77,-66 349.77,-66 349.77,-69 346.77,-72 343.77,-72"/>
+<text text-anchor="middle" x="310.27" y="-60.7" font-family="inherit" font-size="8.50">Gtk.CellLayout</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.CellLayout -->
+<g id="edge5" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.CellLayout</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.3,-163.82C241.52,-157.12 301.77,-144.8 316.27,-126 327.1,-111.97 321.61,-90.5 316.25,-76.86"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="317.85,-76.16 314.31,-72.22 314.62,-77.5 317.85,-76.16"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node9" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node9"><a xlink:href="ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M301.27,-126C301.27,-126 209.27,-126 209.27,-126 206.27,-126 203.27,-123 203.27,-120 203.27,-120 203.27,-114 203.27,-114 203.27,-111 206.27,-108 209.27,-108 209.27,-108 301.27,-108 301.27,-108 304.27,-108 307.27,-111 307.27,-114 307.27,-114 307.27,-120 307.27,-120 307.27,-123 304.27,-126 301.27,-126"/>
+<text text-anchor="middle" x="255.27" y="-114.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M164.99,-161.88C183.6,-152.83 213.72,-138.19 234,-128.34"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="234.94,-129.83 238.67,-126.07 233.41,-126.68 234.94,-129.83"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node2" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M479.27,-126C479.27,-126 369.27,-126 369.27,-126 366.27,-126 363.27,-123 363.27,-120 363.27,-120 363.27,-114 363.27,-114 363.27,-111 366.27,-108 369.27,-108 369.27,-108 479.27,-108 479.27,-108 482.27,-108 485.27,-111 485.27,-114 485.27,-114 485.27,-120 485.27,-120 485.27,-123 482.27,-126 479.27,-126"/>
+<text text-anchor="middle" x="424.27" y="-114.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node10" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node10"><a xlink:href="Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M198.27,-72C198.27,-72 146.27,-72 146.27,-72 143.27,-72 140.27,-69 140.27,-66 140.27,-66 140.27,-60 140.27,-60 140.27,-57 143.27,-54 146.27,-54 146.27,-54 198.27,-54 198.27,-54 201.27,-54 204.27,-57 204.27,-60 204.27,-60 204.27,-66 204.27,-66 204.27,-69 201.27,-72 198.27,-72"/>
+<text text-anchor="middle" x="172.27" y="-60.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge6" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M385.45,-107.99C337.49,-98.09 256.49,-81.38 209.36,-71.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="209.59,-69.91 204.34,-70.62 208.88,-73.34 209.59,-69.91"/>
+</g>
+<!-- GObject.Object -->
+<g id="node3" class="node">
+<title>GObject.Object</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M458.27,-180C458.27,-180 390.27,-180 390.27,-180 387.27,-180 384.27,-177 384.27,-174 384.27,-174 384.27,-168 384.27,-168 384.27,-165 387.27,-162 390.27,-162 390.27,-162 458.27,-162 458.27,-162 461.27,-162 464.27,-165 464.27,-168 464.27,-168 464.27,-174 464.27,-174 464.27,-177 461.27,-180 458.27,-180"/>
+<text text-anchor="middle" x="424.27" y="-168.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge7" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M424.27,-161.88C424.27,-153.76 424.27,-141.13 424.27,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="426.02,-131.24 424.27,-126.24 422.52,-131.24 426.02,-131.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge8" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M71.61,-107.99C92.42,-98.89 126.42,-84.03 149.07,-74.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="149.84,-75.71 153.72,-72.11 148.44,-72.5 149.84,-75.71"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge9" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M152.02,-107.88C155.84,-99.6 161.82,-86.66 166.29,-76.97"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="167.96,-77.51 168.47,-72.24 164.79,-76.05 167.96,-77.51"/>
+</g>
+<!-- Gtk.ComboBox -->
+<g id="node8" class="node">
+<title>Gtk.ComboBox</title>
+<g id="a_node8"><a xlink:href="#Gtk.ComboBox" xlink:title="Gtk.ComboBox">
+<path fill="none" stroke="#75507b" d="M206.77,-18C206.77,-18 137.77,-18 137.77,-18 134.77,-18 131.77,-15 131.77,-12 131.77,-12 131.77,-6 131.77,-6 131.77,-3 134.77,0 137.77,0 137.77,0 206.77,0 206.77,0 209.77,0 212.77,-3 212.77,-6 212.77,-6 212.77,-12 212.77,-12 212.77,-15 209.77,-18 206.77,-18"/>
+<text text-anchor="middle" x="172.27" y="-6.7" font-family="inherit" font-size="8.50">Gtk.ComboBox</text>
+</a>
+</g>
+</g>
+<!-- Gtk.CellEditable&#45;&gt;Gtk.ComboBox -->
+<g id="edge10" class="edge">
+<title>Gtk.CellEditable&#45;&gt;Gtk.ComboBox</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M64.84,-53.99C87.15,-44.85 123.65,-29.91 147.81,-20.01"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="148.51,-21.62 152.48,-18.11 147.19,-18.38 148.51,-21.62"/>
+</g>
+<!-- Gtk.CellLayout&#45;&gt;Gtk.ComboBox -->
+<g id="edge11" class="edge">
+<title>Gtk.CellLayout&#45;&gt;Gtk.ComboBox</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M289.01,-53.99C264.67,-44.82 224.78,-29.79 198.52,-19.89"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="199.08,-18.23 193.78,-18.11 197.85,-21.51 199.08,-18.23"/>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge12" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M242.3,-107.88C228.17,-99.02 205.49,-84.81 189.78,-74.97"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="190.32,-73.24 185.15,-72.07 188.46,-76.21 190.32,-73.24"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.ComboBox -->
+<g id="edge13" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.ComboBox</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M172.27,-53.88C172.27,-45.76 172.27,-33.13 172.27,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="174.02,-23.24 172.27,-18.24 170.52,-23.24 174.02,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body"><a class="reference internal" href="ComboBoxText.html#Gtk.ComboBoxText" title="Gtk.ComboBoxText"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ComboBoxText</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gtk-combobox-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference internal" href="CellEditable.html#gtk-celleditable-methods"><span class="std std-ref">Gtk.CellEditable (3)</span></a>,     <a class="reference internal" href="CellLayout.html#gtk-celllayout-methods"><span class="std std-ref">Gtk.CellLayout (9)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.ComboBox.new" title="Gtk.ComboBox.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.ComboBox.new_with_entry" title="Gtk.ComboBox.new_with_entry"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_with_entry</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.ComboBox.new_with_model" title="Gtk.ComboBox.new_with_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_with_model</span></code></a> (model)</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.ComboBox.new_with_model_and_entry" title="Gtk.ComboBox.new_with_model_and_entry"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_with_model_and_entry</span></code></a> (model)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_active" title="Gtk.ComboBox.get_active"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_active</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_active_id" title="Gtk.ComboBox.get_active_id"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_active_id</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_active_iter" title="Gtk.ComboBox.get_active_iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_active_iter</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_button_sensitivity" title="Gtk.ComboBox.get_button_sensitivity"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_button_sensitivity</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_child" title="Gtk.ComboBox.get_child"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_child</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_entry_text_column" title="Gtk.ComboBox.get_entry_text_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_entry_text_column</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_has_entry" title="Gtk.ComboBox.get_has_entry"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_has_entry</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_id_column" title="Gtk.ComboBox.get_id_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_id_column</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_model" title="Gtk.ComboBox.get_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_model</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.get_popup_fixed_width" title="Gtk.ComboBox.get_popup_fixed_width"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_popup_fixed_width</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.popdown" title="Gtk.ComboBox.popdown"><code class="xref py py-func docutils literal notranslate"><span class="pre">popdown</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.popup" title="Gtk.ComboBox.popup"><code class="xref py py-func docutils literal notranslate"><span class="pre">popup</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.popup_for_device" title="Gtk.ComboBox.popup_for_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">popup_for_device</span></code></a> (device)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_active" title="Gtk.ComboBox.set_active"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_active</span></code></a> (index_)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_active_id" title="Gtk.ComboBox.set_active_id"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_active_id</span></code></a> (active_id)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_active_iter" title="Gtk.ComboBox.set_active_iter"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_active_iter</span></code></a> (iter)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_button_sensitivity" title="Gtk.ComboBox.set_button_sensitivity"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_button_sensitivity</span></code></a> (sensitivity)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_child" title="Gtk.ComboBox.set_child"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_child</span></code></a> (child)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_entry_text_column" title="Gtk.ComboBox.set_entry_text_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_entry_text_column</span></code></a> (text_column)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_id_column" title="Gtk.ComboBox.set_id_column"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_id_column</span></code></a> (id_column)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_model" title="Gtk.ComboBox.set_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_model</span></code></a> (model)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_popup_fixed_width" title="Gtk.ComboBox.set_popup_fixed_width"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_popup_fixed_width</span></code></a> (fixed)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.set_row_separator_func" title="Gtk.ComboBox.set_row_separator_func"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_row_separator_func</span></code></a> (func, *data)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gtk-combobox-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-vfuncs"><span class="std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-vfuncs"><span class="std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference internal" href="CellEditable.html#gtk-celleditable-vfuncs"><span class="std std-ref">Gtk.CellEditable (3)</span></a>,     <a class="reference internal" href="CellLayout.html#gtk-celllayout-vfuncs"><span class="std std-ref">Gtk.CellLayout (9)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.do_changed" title="Gtk.ComboBox.do_changed"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_changed</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.ComboBox.do_format_entry_text" title="Gtk.ComboBox.do_format_entry_text"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_format_entry_text</span></code></a> (path)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gtk-combobox-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-props"><span class="std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-props"><span class="std std-ref">Gtk.Accessible (1)</span></a>,     <a class="reference internal" href="CellEditable.html#gtk-celleditable-props"><span class="std std-ref">Gtk.CellEditable (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.active" title="Gtk.ComboBox.props.active"><code class="xref py py-data docutils literal notranslate"><span class="pre">active</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/w/en</td>
+<td>The item which is currently active</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.props.active_id" title="Gtk.ComboBox.props.active_id"><code class="xref py py-data docutils literal notranslate"><span class="pre">active-id</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<td>r/w/en</td>
+<td>The value of the id column for the active row</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.button_sensitivity" title="Gtk.ComboBox.props.button_sensitivity"><code class="xref py py-data docutils literal notranslate"><span class="pre">button-sensitivity</span></code></a></td>
+<td><a class="reference internal" href="../enums.html#Gtk.SensitivityType" title="Gtk.SensitivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the dropdown button is sensitive when the model is empty</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.props.child" title="Gtk.ComboBox.props.child"><code class="xref py py-data docutils literal notranslate"><span class="pre">child</span></code></a></td>
+<td><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+<td>r/w/en</td>
+<td>The child_widget</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.entry_text_column" title="Gtk.ComboBox.props.entry_text_column"><code class="xref py py-data docutils literal notranslate"><span class="pre">entry-text-column</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/w/en</td>
+<td>The column in the combo box’s model to associate with strings from the entry if the combo was created with <a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a> <a class="reference internal" href="#Gtk.ComboBox.props.has_entry" title="Gtk.ComboBox.props.has_entry"><code class="xref py py-data docutils literal notranslate"><span class="pre">:has-entry</span></code></a> = <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.props.has_entry" title="Gtk.ComboBox.props.has_entry"><code class="xref py py-data docutils literal notranslate"><span class="pre">has-entry</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/co</td>
+<td>Whether combo box has an entry</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.has_frame" title="Gtk.ComboBox.props.has_frame"><code class="xref py py-data docutils literal notranslate"><span class="pre">has-frame</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the combo box draws a frame around the child</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.props.id_column" title="Gtk.ComboBox.props.id_column"><code class="xref py py-data docutils literal notranslate"><span class="pre">id-column</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/w/en</td>
+<td>The column in the combo box’s model that provides string IDs for the values in the model</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.model" title="Gtk.ComboBox.props.model"><code class="xref py py-data docutils literal notranslate"><span class="pre">model</span></code></a></td>
+<td><a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a></td>
+<td>r/w/en</td>
+<td>The model for the combo box</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.props.popup_fixed_width" title="Gtk.ComboBox.props.popup_fixed_width"><code class="xref py py-data docutils literal notranslate"><span class="pre">popup-fixed-width</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the popup’s width should be a fixed width matching the allocated width of the combo box</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.props.popup_shown" title="Gtk.ComboBox.props.popup_shown"><code class="xref py py-data docutils literal notranslate"><span class="pre">popup-shown</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r</td>
+<td>Whether the combo’s dropdown is shown</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gtk-combobox-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-signals"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference internal" href="CellEditable.html#gtk-celleditable-signals"><span class="std std-ref">Gtk.CellEditable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.signals.changed" title="Gtk.ComboBox.signals.changed"><code class="xref py py-func docutils literal notranslate"><span class="pre">changed</span></code></a></td>
+<td>Emitted when the active item is changed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.signals.format_entry_text" title="Gtk.ComboBox.signals.format_entry_text"><code class="xref py py-func docutils literal notranslate"><span class="pre">format-entry-text</span></code></a></td>
+<td>Emitted to allow changing how the text in a combo box’s entry is displayed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.signals.move_active" title="Gtk.ComboBox.signals.move_active"><code class="xref py py-func docutils literal notranslate"><span class="pre">move-active</span></code></a></td>
+<td>Emitted to move the active selection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.ComboBox.signals.popdown" title="Gtk.ComboBox.signals.popdown"><code class="xref py py-func docutils literal notranslate"><span class="pre">popdown</span></code></a></td>
+<td>Emitted to popdown the combo box list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.ComboBox.signals.popup" title="Gtk.ComboBox.signals.popup"><code class="xref py py-func docutils literal notranslate"><span class="pre">popup</span></code></a></td>
+<td>Emitted to popup the combo box list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gtk-combobox-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-fields"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference internal" href="CellEditable.html#gtk-celleditable-fields"><span class="std std-ref">Gtk.CellEditable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="16%" />
+<col width="1%" />
+<col width="1%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>parent_instance</td>
+<td><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+<td>r</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.ComboBox">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">ComboBox</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>,         <a class="reference internal" href="CellEditable.html#Gtk.CellEditable" title="Gtk.CellEditable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.CellEditable</span></code></a>,         <a class="reference internal" href="CellLayout.html#Gtk.CellLayout" title="Gtk.CellLayout"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.CellLayout</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="ComboBoxClass.html#Gtk.ComboBoxClass" title="Gtk.ComboBoxClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ComboBoxClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> is a widget that allows the user to choose from a list of
+valid choices.</p>
+<p>An example <a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> displays the selected choice; when activated, the
+<code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> displays a popup which allows the user to make a new choice.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> uses the model-view pattern; the list of valid choices
+is specified in the form of a tree model, and the display of the choices
+can be adapted to the data in the model by using cell renderers, as you
+would in a tree view. This is possible since <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> implements the
+[interface`Gtk`.CellLayout] interface. The tree model holding the valid
+choices is not restricted to a flat list, it can be a real tree, and the
+popup will reflect the tree structure.</p>
+<p>To allow the user to enter values not in the model, the
+[property`Gtk`.ComboBox:has-entry] property allows the <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> to
+contain a [class`Gtk`.Entry]. This entry can be accessed by calling
+[method`Gtk`.ComboBox.get_child] on the combo box.</p>
+<p>For a simple list of textual choices, the model-view API of <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code>
+can be a bit overwhelming. In this case, [class`Gtk`.ComboBoxText] offers
+a simple alternative. Both <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> and <code class="docutils literal notranslate"><span class="pre">GtkComboBoxText</span></code> can contain
+an entry.</p>
+<dl class="docutils">
+<dt>CSS nodes</dt>
+<dd></dd>
+</dl>
+<p>``
+combobox
+├── box.linked
+│   ╰── button.combo
+│       ╰── box
+│           ├── cellview
+│           ╰── arrow
+╰── window.popup
+``</p>
+<p>A normal combobox contains a box with the .linked class, a button
+with the .combo class and inside those buttons, there are a cellview and
+an arrow.</p>
+<p>``
+combobox
+├── box.linked
+│   ├── entry.combo
+│   ╰── button.combo
+│       ╰── box
+│           ╰── arrow
+╰── window.popup
+``</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> with an entry has a single CSS node with name combobox.
+It contains a box with the .linked class. That box contains an entry and
+a button, both with the .combo class added. The button also contains another
+node with name arrow.</p>
+<dl class="docutils">
+<dt>Accessibility</dt>
+<dd></dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> uses the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.COMBO_BOX" title="Gtk.AccessibleRole.COMBO_BOX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.COMBO_BOX</span></code></a> role.</p>
+<dl class="classmethod">
+<dt id="Gtk.ComboBox.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new empty <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.ComboBox.new_with_entry">
+<em class="property">classmethod </em><code class="descname">new_with_entry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.new_with_entry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new empty <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> with an entry.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.ComboBox.new_with_model">
+<em class="property">classmethod </em><code class="descname">new_with_model</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.new_with_model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkTreeModel</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A new <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> with a model.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.ComboBox.new_with_model_and_entry">
+<em class="property">classmethod </em><code class="descname">new_with_model_and_entry</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.new_with_model_and_entry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeModel</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A new <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new empty <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> with an entry and a model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_active">
+<code class="descname">get_active</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An integer which is the index of the currently active item,
+or -1 if there’s no active item.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the index of the currently active item.</p>
+<p>If the model is a non-flat treemodel, and the active item is not
+an immediate child of the root of the tree, this function returns
+<code class="docutils literal notranslate"><span class="pre">gtk_tree_path_get_indices</span> <span class="pre">(path)[0]</span></code>, where <code class="docutils literal notranslate"><span class="pre">path</span></code> is the
+[struct`Gtk`.TreePath] of the active item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_active_id">
+<code class="descname">get_active_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_active_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the ID of the active row, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the ID of the active row of <cite>self</cite>.</p>
+<p>This value is taken from the active row and the column specified
+by the [property`Gtk`.ComboBox:id-column] property of <cite>self</cite>
+(see [method`Gtk`.ComboBox.set_id_column]).</p>
+<p>The returned value is an interned string which means that you can
+compare the pointer by value to other interned strings and that you
+must not free it.</p>
+<p>If the [property`Gtk`.ComboBox:id-column] property of <cite>self</cite> is
+not set, or if no row is active, or if the active row has a <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
+ID value, then <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_active_iter">
+<code class="descname">get_active_iter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_active_iter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> was set, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">iter:</th><td class="field-body">A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>, <strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>iter</cite> to point to the currently active item.</p>
+<p>If no item is active, <cite>iter</cite> is left unchanged.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_button_sensitivity">
+<code class="descname">get_button_sensitivity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_button_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gtk.SensitivityType.ON" title="Gtk.SensitivityType.ON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType.ON</span></code></a> if the dropdown button
+is sensitive when the model is empty, <a class="reference internal" href="../enums.html#Gtk.SensitivityType.OFF" title="Gtk.SensitivityType.OFF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType.OFF</span></code></a>
+if the button is always insensitive or <a class="reference internal" href="../enums.html#Gtk.SensitivityType.AUTO" title="Gtk.SensitivityType.AUTO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType.AUTO</span></code></a>
+if it is only sensitive as long as the model has one item to
+be selected.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gtk.SensitivityType" title="Gtk.SensitivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the combo box sets the dropdown button
+sensitive or not when there are no items in the model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_child">
+<code class="descname">get_child</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_child" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the child widget of <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the child widget of <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_entry_text_column">
+<code class="descname">get_entry_text_column</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_entry_text_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A column in the data source model of <cite>self</cite>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the column which <cite>self</cite> is using to get the strings
+from to display in the internal entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_has_entry">
+<code class="descname">get_has_entry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_has_entry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">whether there is an entry in <cite>self</cite>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the combo box has an entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_id_column">
+<code class="descname">get_id_column</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_id_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A column in the data source model of <cite>self</cite>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the column which <cite>self</cite> is using to get string IDs
+for values from.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_model">
+<code class="descname">get_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A <code class="docutils literal notranslate"><span class="pre">GtkTreeModel</span></code> which was passed
+during construction.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the <code class="docutils literal notranslate"><span class="pre">GtkTreeModel</span></code> of <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.get_popup_fixed_width">
+<code class="descname">get_popup_fixed_width</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.get_popup_fixed_width" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the popup uses a fixed width</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets whether the popup uses a fixed width.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.popdown">
+<code class="descname">popdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.popdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hides the menu or dropdown list of <cite>self</cite>.</p>
+<p>This function is mostly intended for use by accessibility technologies;
+applications should have little use for it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.popup">
+<code class="descname">popup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.popup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops up the menu or dropdown list of <cite>self</cite>.</p>
+<p>This function is mostly intended for use by accessibility technologies;
+applications should have little use for it.</p>
+<p>Before calling this, <cite>self</cite> must be mapped, or nothing will happen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.popup_for_device">
+<code class="descname">popup_for_device</code><span class="sig-paren">(</span><em>device</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.popup_for_device" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>device</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Device.html#Gdk.Device" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Device</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkDevice</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Pops up the menu of <cite>self</cite>.</p>
+<p>Note that currently this does not do anything with the device, as it was
+previously only used for list-mode combo boxes, and those were removed
+in GTK 4. However, it is retained in case similar functionality is added
+back later.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_active">
+<code class="descname">set_active</code><span class="sig-paren">(</span><em>index_</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – An index in the model passed during construction,
+or -1 to have no active item</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the active item of <cite>self</cite> to be the item at <cite>index</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_active_id">
+<code class="descname">set_active_id</code><span class="sig-paren">(</span><em>active_id</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_active_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>active_id</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the ID of the row to select, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a row with a matching ID was found. If a <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
+<cite>active_id</cite> was given to unset the active row, the function
+always returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Changes the active row of <cite>self</cite> to the one that has an ID equal to
+<cite>active_id</cite>.</p>
+<p>If <cite>active_id</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, the active row is unset. Rows having
+a <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> ID string cannot be made active by this function.</p>
+<p>If the [property`Gtk`.ComboBox:id-column] property of <cite>self</cite> is
+unset or if no row has the given ID then the function does nothing
+and returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_active_iter">
+<code class="descname">set_active_iter</code><span class="sig-paren">(</span><em>iter</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_active_iter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Sets the current active item to be the one referenced by <cite>iter</cite>.</p>
+<p>If <cite>iter</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, the active item is unset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_button_sensitivity">
+<code class="descname">set_button_sensitivity</code><span class="sig-paren">(</span><em>sensitivity</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_button_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sensitivity</strong> (<a class="reference internal" href="../enums.html#Gtk.SensitivityType" title="Gtk.SensitivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType</span></code></a>) – specify the sensitivity of the dropdown button</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the dropdown button of the combo box should update
+its sensitivity depending on the model contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_child">
+<code class="descname">set_child</code><span class="sig-paren">(</span><em>child</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_child" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>child</strong> (<a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the child widget</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the child widget of <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_entry_text_column">
+<code class="descname">set_entry_text_column</code><span class="sig-paren">(</span><em>text_column</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_entry_text_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text_column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – A column in <cite>model</cite> to get the strings from for
+the internal entry</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the model column which <cite>self</cite> should use to get strings
+from to be <cite>text_column</cite>.</p>
+<p>The column <cite>text_column</cite> in the model of <cite>self</cite> must be of
+type <a class="reference external" href="../../GObject-2.0/constants.html#GObject.TYPE_STRING" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TYPE_STRING</span></code></a>.</p>
+<p>This is only relevant if <cite>self</cite> has been created with
+[property`Gtk`.ComboBox:has-entry] as <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_id_column">
+<code class="descname">set_id_column</code><span class="sig-paren">(</span><em>id_column</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_id_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>id_column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – A column in <cite>model</cite> to get string IDs for values from</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the model column which <cite>self</cite> should use to get string IDs
+for values from.</p>
+<p>The column <cite>id_column</cite> in the model of <cite>self</cite> must be of type
+<a class="reference external" href="../../GObject-2.0/constants.html#GObject.TYPE_STRING" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TYPE_STRING</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_model">
+<code class="descname">set_model</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeModel</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Sets the model used by <cite>self</cite> to be <cite>model</cite>.</p>
+<p>Will unset a previously set model (if applicable). If model is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>,
+then it will unset the model.</p>
+<p>Note that this function does not clear the cell renderers, you have to
+call [method`Gtk`.CellLayout.clear] yourself if you need to set up different
+cell renderers for the new model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_popup_fixed_width">
+<code class="descname">set_popup_fixed_width</code><span class="sig-paren">(</span><em>fixed</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_popup_fixed_width" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fixed</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to use a fixed popup width</td>
+</tr>
+</tbody>
+</table>
+<p>Specifies whether the popup’s width should be a fixed width.</p>
+<p>If <cite>fixed</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the popup’s width is set to match the
+allocated width of the combo box.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.set_row_separator_func">
+<code class="descname">set_row_separator_func</code><span class="sig-paren">(</span><em>func</em>, <em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.set_row_separator_func" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>func</strong> (<a class="reference internal" href="../callbacks.html#Gtk.TreeViewRowSeparatorFunc" title="Gtk.TreeViewRowSeparatorFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeViewRowSeparatorFunc</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkTreeViewRowSeparatorFunc</span></code></li>
+<li><strong>data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – user data to pass to <cite>func</cite>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the row separator function, which is used to determine
+whether a row should be drawn as a separator.</p>
+<p>If the row separator function is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, no separators are drawn.
+This is the default value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.do_changed">
+<code class="descname">do_changed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.ComboBox.do_changed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Gtk.ComboBox.do_format_entry_text">
+<code class="descname">do_format_entry_text</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.ComboBox.do_format_entry_text" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gtk.ComboBox.signals.changed">
+<code class="descclassname">Gtk.ComboBox.signals.</code><code class="descname">changed</code><span class="sig-paren">(</span><em>combo_box</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.signals.changed" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">changed</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>combo_box</strong> (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a>) – The object which received the signal</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted when the active item is changed.</p>
+<p>The can be due to the user selecting a different item from the list,
+or due to a call to [method`Gtk`.ComboBox.set_active_iter]. It will
+also be emitted while typing into the entry of a combo box with an entry.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.ComboBox.signals.format_entry_text">
+<code class="descclassname">Gtk.ComboBox.signals.</code><code class="descname">format_entry_text</code><span class="sig-paren">(</span><em>combo_box</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.signals.format_entry_text" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">format-entry-text</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>combo_box</strong> (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a>) – The object which received the signal</li>
+<li><strong>path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the [struct`Gtk`.TreePath] string from the combo box’s current model
+to format text for</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a newly allocated string representing <cite>path</cite>
+for the current <code class="docutils literal notranslate"><span class="pre">GtkComboBox</span></code> model.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted to allow changing how the text in a combo box’s entry is displayed.</p>
+<p>See [property`Gtk`.ComboBox:has-entry].</p>
+<p>Connect a signal handler which returns an allocated string representing
+<cite>path</cite>. That string will then be used to set the text in the combo box’s
+entry. The default signal handler uses the text from the
+[property`Gtk`.ComboBox:entry-text-column] model column.</p>
+<p>Here’s an example signal handler which fetches data from the model and
+displays it in the entry.
+```c
+static <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> *
+format_entry_text_callback (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a> *combo,
+const <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> *path,
+<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>     user_data)
+{
+<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> iter;
+<a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a> model;
+double       value;</p>
+<p>model = <a class="reference internal" href="#Gtk.ComboBox.get_model" title="Gtk.ComboBox.get_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox.get_model</span></code></a> (combo);</p>
+<p><a class="reference internal" href="TreeModel.html#Gtk.TreeModel.get_iter_from_string" title="Gtk.TreeModel.get_iter_from_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel.get_iter_from_string</span></code></a> (model, &amp;iter, path);
+gtk_tree_model_get (model, &amp;iter,
+THE_DOUBLE_VALUE_COLUMN, &amp;value,
+-1);</p>
+<p>return g_strdup_printf (“%g”, value);
+}
+```</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.ComboBox.signals.move_active">
+<code class="descclassname">Gtk.ComboBox.signals.</code><code class="descname">move_active</code><span class="sig-paren">(</span><em>combo_box</em>, <em>scroll_type</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.signals.move_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><p class="first"><code class="docutils literal notranslate"><span class="pre">move-active</span></code></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.ACTION" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACTION</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>combo_box</strong> (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a>) – The object which received the signal</li>
+<li><strong>scroll_type</strong> (<a class="reference internal" href="../enums.html#Gtk.ScrollType" title="Gtk.ScrollType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ScrollType</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkScrollType</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted to move the active selection.</p>
+<p>This is an <a class="reference external" href="class.SignalAction.html">keybinding signal</a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.ComboBox.signals.popdown">
+<code class="descclassname">Gtk.ComboBox.signals.</code><code class="descname">popdown</code><span class="sig-paren">(</span><em>combo_box</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.signals.popdown" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">popdown</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.ACTION" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACTION</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>combo_box</strong> (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a>) – The object which received the signal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Emitted to popdown the combo box list.</p>
+<p>This is an <a class="reference external" href="class.SignalAction.html">keybinding signal</a>.</p>
+<p>The default bindings for this signal are Alt+Up and Escape.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.ComboBox.signals.popup">
+<code class="descclassname">Gtk.ComboBox.signals.</code><code class="descname">popup</code><span class="sig-paren">(</span><em>combo_box</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ComboBox.signals.popup" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">popup</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.ACTION" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACTION</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>combo_box</strong> (<a class="reference internal" href="#Gtk.ComboBox" title="Gtk.ComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ComboBox</span></code></a>) – The object which received the signal</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted to popup the combo box list.</p>
+<p>This is an <a class="reference external" href="class.SignalAction.html">keybinding signal</a>.</p>
+<p>The default binding for this signal is Alt+Down.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gtk.ComboBox.props.active">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">active</code><a class="headerlink" href="#Gtk.ComboBox.props.active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">active</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">-1</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The item which is currently active.</p>
+<p>If the model is a non-flat treemodel, and the active item is not an
+immediate child of the root of the tree, this property has the value
+<code class="docutils literal notranslate"><span class="pre">gtk_tree_path_get_indices</span> <span class="pre">(path)[0]</span></code>, where <code class="docutils literal notranslate"><span class="pre">path</span></code> is the
+[struct`Gtk`.TreePath] of the active item.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.active_id">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">active_id</code><a class="headerlink" href="#Gtk.ComboBox.props.active_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">active-id</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The value of the ID column of the active row.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.button_sensitivity">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">button_sensitivity</code><a class="headerlink" href="#Gtk.ComboBox.props.button_sensitivity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">button-sensitivity</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gtk.SensitivityType" title="Gtk.SensitivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gtk.SensitivityType.AUTO" title="Gtk.SensitivityType.AUTO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SensitivityType.AUTO</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the dropdown button is sensitive when
+the model is empty.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.child">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">child</code><a class="headerlink" href="#Gtk.ComboBox.props.child" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">child</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The child widget.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.entry_text_column">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">entry_text_column</code><a class="headerlink" href="#Gtk.ComboBox.props.entry_text_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">entry-text-column</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">-1</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The model column to associate with strings from the entry.</p>
+<p>This is property only relevant if the combo was created with
+[property`Gtk`.ComboBox:has-entry] is <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.has_entry">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">has_entry</code><a class="headerlink" href="#Gtk.ComboBox.props.has_entry" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">has-entry</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the combo box has an entry.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.has_frame">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">has_frame</code><a class="headerlink" href="#Gtk.ComboBox.props.has_frame" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">has-frame</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">has-frame</span></code> property controls whether a frame is drawn around the entry.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.id_column">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">id_column</code><a class="headerlink" href="#Gtk.ComboBox.props.id_column" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">id-column</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">-1</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The model column that provides string IDs for the values
+in the model, if != -1.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.model">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">model</code><a class="headerlink" href="#Gtk.ComboBox.props.model" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">model</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The model from which the combo box takes its values.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.popup_fixed_width">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">popup_fixed_width</code><a class="headerlink" href="#Gtk.ComboBox.props.popup_fixed_width" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">popup-fixed-width</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the popup’s width should be a fixed width matching the
+allocated width of the combo box.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.ComboBox.props.popup_shown">
+<code class="descclassname">Gtk.ComboBox.props.</code><code class="descname">popup_shown</code><a class="headerlink" href="#Gtk.ComboBox.props.popup_shown" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">popup-shown</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the combo boxes dropdown is popped up.</p>
+<p>Note that this property is mainly useful, because
+it allows you to connect to notify::popup-shown.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

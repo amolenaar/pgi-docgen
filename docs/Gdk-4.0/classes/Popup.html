@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gdk.Popup -
+    
+      Interfaces -
+    
+    Gdk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gdk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Interfaces" href="../interfaces.html"/>
+        <link rel="next" title="Gdk.Toplevel" href="Toplevel.html"/>
+        <link rel="prev" title="Gdk.Paintable" href="Paintable.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/Popup.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../interfaces.html">Interfaces</a> &raquo;</li>
+      
+    <li>Gdk.Popup</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../interfaces.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Paintable.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Toplevel.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.Popup</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/Popup.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../interfaces.html">Interfaces</a> &raquo;</li>
+      
+    <li>Gdk.Popup</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../interfaces.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Paintable.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Toplevel.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.Popup</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gdk-popup">
+<h1>Gdk.Popup<a class="headerlink" href="#gdk-popup" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="106pt" height="80pt"
+ viewBox="0.00 0.00 106.00 80.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 76)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-72C92,-72 6,-72 6,-72 3,-72 0,-69 0,-66 0,-66 0,-60 0,-60 0,-57 3,-54 6,-54 6,-54 92,-54 92,-54 95,-54 98,-57 98,-60 98,-60 98,-66 98,-66 98,-69 95,-72 92,-72"/>
+<text text-anchor="middle" x="49" y="-60.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Popup -->
+<g id="node2" class="node">
+<title>Gdk.Popup</title>
+<g id="a_node2"><a xlink:href="#Gdk.Popup" xlink:title="Gdk.Popup">
+<path fill="none" stroke="#3091d1" d="M74,-18C74,-18 24,-18 24,-18 21,-18 18,-15 18,-12 18,-12 18,-6 18,-6 18,-3 21,0 24,0 24,0 74,0 74,0 77,0 80,-3 80,-6 80,-6 80,-12 80,-12 80,-15 77,-18 74,-18"/>
+<text text-anchor="middle" x="49" y="-6.7" font-family="inherit" font-size="8.50">Gdk.Popup</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gdk.Popup -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gdk.Popup</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-53.88C49,-45.76 49,-33.13 49,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-23.24 49,-18.24 47.25,-23.24 50.75,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Implementations:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gdk-popup-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_autohide" title="Gdk.Popup.get_autohide"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_autohide</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_parent" title="Gdk.Popup.get_parent"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_parent</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_position_x" title="Gdk.Popup.get_position_x"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_position_x</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_position_y" title="Gdk.Popup.get_position_y"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_position_y</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_rect_anchor" title="Gdk.Popup.get_rect_anchor"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_rect_anchor</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.get_surface_anchor" title="Gdk.Popup.get_surface_anchor"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_surface_anchor</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Popup.present" title="Gdk.Popup.present"><code class="xref py py-func docutils literal notranslate"><span class="pre">present</span></code></a> (width, height, layout)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gdk-popup-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="properties">
+<span id="gdk-popup-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Popup.props.autohide" title="Gdk.Popup.props.autohide"><code class="xref py py-data docutils literal notranslate"><span class="pre">autohide</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/co</td>
+<td>Whether to hide on outside clicks</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Popup.props.parent" title="Gdk.Popup.props.parent"><code class="xref py py-data docutils literal notranslate"><span class="pre">parent</span></code></a></td>
+<td><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a></td>
+<td>r/w/co</td>
+<td>The parent surface</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gdk-popup-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="fields">
+<span id="gdk-popup-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gdk.Popup">
+<em class="property">class </em><code class="descclassname">Gdk.</code><code class="descname">Popup</code><a class="headerlink" href="#Gdk.Popup" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GInterface</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="PopupInterface.html#Gdk.PopupInterface" title="Gdk.PopupInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.PopupInterface</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <code class="docutils literal notranslate"><span class="pre">GdkPopup</span></code> is a surface that is attached to another surface.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkPopup</span></code> is positioned relative to its parent surface.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>GdkPopup``s are typically used to implement menus and similar popups.
+They can be modal, which is indicated by the [property`GdkPopup`:py:data:<cite>:autohide&lt;Gdk.Popup.props.autohide&gt;</cite>]
+property.</p>
+<dl class="method">
+<dt id="Gdk.Popup.get_autohide">
+<code class="descname">get_autohide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_autohide" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> will autohide</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether this popup is set to hide on outside clicks.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.get_parent">
+<code class="descname">get_parent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_parent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the parent surface</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the parent surface of a popup.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.get_position_x">
+<code class="descname">get_position_x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_position_x" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the X coordinate of <cite>self</cite> position</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Obtains the position of the popup relative to its parent.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.get_position_y">
+<code class="descname">get_position_y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_position_y" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the Y coordinate of <cite>self</cite> position</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Obtains the position of the popup relative to its parent.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.get_rect_anchor">
+<code class="descname">get_rect_anchor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_rect_anchor" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the current rectangle anchor value of <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gdk.Gravity" title="Gdk.Gravity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Gravity</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the current popup rectangle anchor.</p>
+<p>The value returned may change after calling [method`Gdk`.Popup.present],
+or after the [signal`Gdk`.Surface::layout] signal is emitted.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.get_surface_anchor">
+<code class="descname">get_surface_anchor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.get_surface_anchor" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the current surface anchor value of <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gdk.Gravity" title="Gdk.Gravity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Gravity</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the current popup surface anchor.</p>
+<p>The value returned may change after calling [method`Gdk`.Popup.present],
+or after the [signal`Gdk`.Surface::layout] signal is emitted.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Popup.present">
+<code class="descname">present</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Popup.present" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the unconstrained popup width to layout</li>
+<li><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the unconstrained popup height to layout</li>
+<li><strong>layout</strong> (<a class="reference internal" href="PopupLayout.html#Gdk.PopupLayout" title="Gdk.PopupLayout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.PopupLayout</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GdkPopupLayout</span></code> object used to layout</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if it failed to be presented, otherwise <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Present <cite>self</cite> after having processed the <a class="reference internal" href="PopupLayout.html#Gdk.PopupLayout" title="Gdk.PopupLayout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.PopupLayout</span></code></a> rules.</p>
+<p>If the popup was previously now showing, it will be showed,
+otherwise it will change position according to <cite>layout</cite>.</p>
+<p>After calling this function, the result should be handled in response
+to the [signal`GdkSurface`:py:func:<cite>::layout&lt;Gdk.Popup.signals.layout&gt;</cite>] signal being emitted. The resulting
+popup position can be queried using [method`Gdk`.Popup.get_position_x],
+[method`Gdk`.Popup.get_position_y], and the resulting size will be sent as
+parameters in the layout signal. Use [method`Gdk`.Popup.get_rect_anchor]
+and [method`Gdk`.Popup.get_surface_anchor] to get the resulting anchors.</p>
+<p>Presenting may fail, for example if the <cite>self</cite> is set to autohide
+and is immediately hidden upon being presented. If presenting failed,
+the [signal`Gdk`.Surface::layout] signal will not me emitted.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gdk.Popup.props.autohide">
+<code class="descclassname">Gdk.Popup.props.</code><code class="descname">autohide</code><a class="headerlink" href="#Gdk.Popup.props.autohide" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">autohide</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether to hide on outside clicks.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Popup.props.parent">
+<code class="descclassname">Gdk.Popup.props.</code><code class="descname">parent</code><a class="headerlink" href="#Gdk.Popup.props.parent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">parent</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The parent surface.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

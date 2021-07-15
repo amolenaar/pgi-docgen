@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gdk.GLTexture -
+    
+      Classes -
+    
+    Gdk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gdk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gdk.GrabBrokenEvent" href="GrabBrokenEvent.html"/>
+        <link rel="prev" title="Gdk.GLContext" href="GLContext.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/GLTexture.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gdk.GLTexture</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="GLContext.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="GrabBrokenEvent.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.GLTexture</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/GLTexture.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gdk.GLTexture</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="GLContext.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="GrabBrokenEvent.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.GLTexture</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gdk-gltexture">
+<h1>Gdk.GLTexture<a class="headerlink" href="#gdk-gltexture" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="193pt" height="188pt"
+ viewBox="0.00 0.00 193.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-180C92,-180 6,-180 6,-180 3,-180 0,-177 0,-174 0,-174 0,-168 0,-168 0,-165 3,-162 6,-162 6,-162 92,-162 92,-162 95,-162 98,-165 98,-168 98,-168 98,-174 98,-174 98,-177 95,-180 92,-180"/>
+<text text-anchor="middle" x="49" y="-168.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Paintable -->
+<g id="node4" class="node">
+<title>Gdk.Paintable</title>
+<g id="a_node4"><a xlink:href="Paintable.html#Gdk.Paintable" xlink:title="Gdk.Paintable">
+<path fill="none" stroke="#3091d1" d="M80.5,-126C80.5,-126 17.5,-126 17.5,-126 14.5,-126 11.5,-123 11.5,-120 11.5,-120 11.5,-114 11.5,-114 11.5,-111 14.5,-108 17.5,-108 17.5,-108 80.5,-108 80.5,-108 83.5,-108 86.5,-111 86.5,-114 86.5,-114 86.5,-120 86.5,-120 86.5,-123 83.5,-126 80.5,-126"/>
+<text text-anchor="middle" x="49" y="-114.7" font-family="inherit" font-size="8.50">Gdk.Paintable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gdk.Paintable -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gdk.Paintable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-161.88C49,-153.76 49,-141.13 49,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-131.24 49,-126.24 47.25,-131.24 50.75,-131.24"/>
+</g>
+<!-- GObject.Object -->
+<g id="node2" class="node">
+<title>GObject.Object</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M179,-126C179,-126 111,-126 111,-126 108,-126 105,-123 105,-120 105,-120 105,-114 105,-114 105,-111 108,-108 111,-108 111,-108 179,-108 179,-108 182,-108 185,-111 185,-114 185,-114 185,-120 185,-120 185,-123 182,-126 179,-126"/>
+<text text-anchor="middle" x="145" y="-114.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Texture -->
+<g id="node5" class="node">
+<title>Gdk.Texture</title>
+<g id="a_node5"><a xlink:href="Texture.html#Gdk.Texture" xlink:title="Gdk.Texture">
+<path fill="none" stroke="#aaaaaa" d="M125,-72C125,-72 69,-72 69,-72 66,-72 63,-69 63,-66 63,-66 63,-60 63,-60 63,-57 66,-54 69,-54 69,-54 125,-54 125,-54 128,-54 131,-57 131,-60 131,-60 131,-66 131,-66 131,-69 128,-72 125,-72"/>
+<text text-anchor="middle" x="97" y="-60.7" font-family="inherit" font-size="8.50">Gdk.Texture</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gdk.Texture -->
+<g id="edge2" class="edge">
+<title>GObject.Object&#45;&gt;Gdk.Texture</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M137.5,-107.88C129.59,-99.3 117.03,-85.7 108,-75.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="109.28,-74.73 104.61,-72.24 106.71,-77.1 109.28,-74.73"/>
+</g>
+<!-- Gdk.GLTexture -->
+<g id="node3" class="node">
+<title>Gdk.GLTexture</title>
+<g id="a_node3"><a xlink:href="#Gdk.GLTexture" xlink:title="Gdk.GLTexture">
+<path fill="none" stroke="#75507b" d="M130,-18C130,-18 64,-18 64,-18 61,-18 58,-15 58,-12 58,-12 58,-6 58,-6 58,-3 61,0 64,0 64,0 130,0 130,0 133,0 136,-3 136,-6 136,-6 136,-12 136,-12 136,-15 133,-18 130,-18"/>
+<text text-anchor="middle" x="97" y="-6.7" font-family="inherit" font-size="8.50">Gdk.GLTexture</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Paintable&#45;&gt;Gdk.Texture -->
+<g id="edge3" class="edge">
+<title>Gdk.Paintable&#45;&gt;Gdk.Texture</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.5,-107.88C64.41,-99.3 76.97,-85.7 86,-75.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="87.29,-77.1 89.39,-72.24 84.72,-74.73 87.29,-77.1"/>
+</g>
+<!-- Gdk.Texture&#45;&gt;Gdk.GLTexture -->
+<g id="edge4" class="edge">
+<title>Gdk.Texture&#45;&gt;Gdk.GLTexture</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M97,-53.88C97,-45.76 97,-33.13 97,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="98.75,-23.24 97,-18.24 95.25,-23.24 98.75,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gdk-gltexture-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Texture.html#gdk-texture-methods"><span class="std std-ref">Gdk.Texture (7)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Paintable.html#gdk-paintable-methods"><span class="std std-ref">Gdk.Paintable (10)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gdk.GLTexture.new" title="Gdk.GLTexture.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (context, id, width, height, destroy, data)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLTexture.release" title="Gdk.GLTexture.release"><code class="xref py py-func docutils literal notranslate"><span class="pre">release</span></code></a> ()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gdk-gltexture-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Paintable.html#gdk-paintable-vfuncs"><span class="std std-ref">Gdk.Paintable (6)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gdk-gltexture-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Texture.html#gdk-texture-props"><span class="std std-ref">Gdk.Texture (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gdk-gltexture-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference internal" href="Paintable.html#gdk-paintable-signals"><span class="std std-ref">Gdk.Paintable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gdk-gltexture-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference internal" href="Paintable.html#gdk-paintable-fields"><span class="std std-ref">Gdk.Paintable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gdk.GLTexture">
+<em class="property">class </em><code class="descclassname">Gdk.</code><code class="descname">GLTexture</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLTexture" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="Texture.html#Gdk.Texture" title="Gdk.Texture"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.Texture</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="GLTextureClass.html#Gdk.GLTextureClass" title="Gdk.GLTextureClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.GLTextureClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="Texture.html#Gdk.Texture" title="Gdk.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Texture</span></code></a> representing a GL texture object.</p>
+<dl class="classmethod">
+<dt id="Gdk.GLTexture.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>context</em>, <em>id</em>, <em>width</em>, <em>height</em>, <em>destroy</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLTexture.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>context</strong> (<a class="reference internal" href="GLContext.html#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code></li>
+<li><strong>id</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the ID of a texture that was created with <cite>context</cite></li>
+<li><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the nominal width of the texture</li>
+<li><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the nominal height of the texture</li>
+<li><strong>destroy</strong> (<a class="reference external" href="../../GLib-2.0/callbacks.html#GLib.DestroyNotify" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.DestroyNotify</span></code></a>) – a destroy notify that will be called when the GL resources
+are released</li>
+<li><strong>data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – data that gets passed to <cite>destroy</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A newly-created <code class="docutils literal notranslate"><span class="pre">GdkTexture</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="Texture.html#Gdk.Texture" title="Gdk.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Texture</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new texture for an existing GL texture.</p>
+<p>Note that the GL texture must not be modified until <cite>destroy</cite> is called,
+which will happen when the <a class="reference internal" href="Texture.html#Gdk.Texture" title="Gdk.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Texture</span></code></a> object is finalized, or due to
+an explicit call of [method`Gdk`.GLTexture.release].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLTexture.release">
+<code class="descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLTexture.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases the GL resources held by a <code class="docutils literal notranslate"><span class="pre">GdkGLTexture</span></code>.</p>
+<p>The texture contents are still available via the
+[method`Gdk`.Texture.download] function, after this
+function has been called.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

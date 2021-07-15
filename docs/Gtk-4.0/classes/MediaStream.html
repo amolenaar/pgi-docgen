@@ -1,0 +1,1431 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.MediaStream -
+    
+      Classes -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gtk.MenuButton" href="MenuButton.html"/>
+        <link rel="prev" title="Gtk.MediaFile" href="MediaFile.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/MediaStream.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.MediaStream</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="MediaFile.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="MenuButton.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.MediaStream</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/MediaStream.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.MediaStream</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="MediaFile.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="MenuButton.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.MediaStream</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-mediastream">
+<h1>Gtk.MediaStream<a class="headerlink" href="#gtk-mediastream" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="193pt" height="134pt"
+ viewBox="0.00 0.00 193.00 134.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-126C92,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 92,-108 92,-108 95,-108 98,-111 98,-114 98,-114 98,-120 98,-120 98,-123 95,-126 92,-126"/>
+<text text-anchor="middle" x="49" y="-114.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Paintable -->
+<g id="node3" class="node">
+<title>Gdk.Paintable</title>
+<g id="a_node3"><a xlink:href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" xlink:title="Gdk.Paintable">
+<path fill="none" stroke="#3091d1" d="M80.5,-72C80.5,-72 17.5,-72 17.5,-72 14.5,-72 11.5,-69 11.5,-66 11.5,-66 11.5,-60 11.5,-60 11.5,-57 14.5,-54 17.5,-54 17.5,-54 80.5,-54 80.5,-54 83.5,-54 86.5,-57 86.5,-60 86.5,-60 86.5,-66 86.5,-66 86.5,-69 83.5,-72 80.5,-72"/>
+<text text-anchor="middle" x="49" y="-60.7" font-family="inherit" font-size="8.50">Gdk.Paintable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gdk.Paintable -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gdk.Paintable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-107.88C49,-99.76 49,-87.13 49,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-77.24 49,-72.24 47.25,-77.24 50.75,-77.24"/>
+</g>
+<!-- GObject.Object -->
+<g id="node2" class="node">
+<title>GObject.Object</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M179,-72C179,-72 111,-72 111,-72 108,-72 105,-69 105,-66 105,-66 105,-60 105,-60 105,-57 108,-54 111,-54 111,-54 179,-54 179,-54 182,-54 185,-57 185,-60 185,-60 185,-66 185,-66 185,-69 182,-72 179,-72"/>
+<text text-anchor="middle" x="145" y="-60.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gtk.MediaStream -->
+<g id="node4" class="node">
+<title>Gtk.MediaStream</title>
+<g id="a_node4"><a xlink:href="#Gtk.MediaStream" xlink:title="Gtk.MediaStream">
+<path fill="none" stroke="#aaaaaa" d="M136,-18C136,-18 58,-18 58,-18 55,-18 52,-15 52,-12 52,-12 52,-6 52,-6 52,-3 55,0 58,0 58,0 136,0 136,0 139,0 142,-3 142,-6 142,-6 142,-12 142,-12 142,-15 139,-18 136,-18"/>
+<text text-anchor="middle" x="97" y="-6.7" font-family="inherit" font-size="8.50">Gtk.MediaStream</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gtk.MediaStream -->
+<g id="edge2" class="edge">
+<title>GObject.Object&#45;&gt;Gtk.MediaStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M137.5,-53.88C129.59,-45.3 117.03,-31.7 108,-21.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="109.28,-20.73 104.61,-18.24 106.71,-23.1 109.28,-20.73"/>
+</g>
+<!-- Gdk.Paintable&#45;&gt;Gtk.MediaStream -->
+<g id="edge3" class="edge">
+<title>Gdk.Paintable&#45;&gt;Gtk.MediaStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.5,-53.88C64.41,-45.3 76.97,-31.7 86,-21.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="87.29,-23.1 89.39,-18.24 84.72,-20.73 87.29,-23.1"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body"><a class="reference internal" href="MediaFile.html#Gtk.MediaFile" title="Gtk.MediaFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.MediaFile</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gtk-mediastream-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#gdk-paintable-methods" title="(in Gdk 4.0 v4.0)"><span class="xref std std-ref">Gdk.Paintable (10)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.ended" title="Gtk.MediaStream.ended"><code class="xref py py-func docutils literal notranslate"><span class="pre">ended</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.gerror" title="Gtk.MediaStream.gerror"><code class="xref py py-func docutils literal notranslate"><span class="pre">gerror</span></code></a> (error)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_duration" title="Gtk.MediaStream.get_duration"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_duration</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_ended" title="Gtk.MediaStream.get_ended"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_ended</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_error" title="Gtk.MediaStream.get_error"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_error</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_loop" title="Gtk.MediaStream.get_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_loop</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_muted" title="Gtk.MediaStream.get_muted"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_muted</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_playing" title="Gtk.MediaStream.get_playing"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_playing</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_timestamp" title="Gtk.MediaStream.get_timestamp"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_timestamp</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.get_volume" title="Gtk.MediaStream.get_volume"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_volume</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.has_audio" title="Gtk.MediaStream.has_audio"><code class="xref py py-func docutils literal notranslate"><span class="pre">has_audio</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.has_video" title="Gtk.MediaStream.has_video"><code class="xref py py-func docutils literal notranslate"><span class="pre">has_video</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.is_prepared" title="Gtk.MediaStream.is_prepared"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_prepared</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.is_seekable" title="Gtk.MediaStream.is_seekable"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_seekable</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.is_seeking" title="Gtk.MediaStream.is_seeking"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_seeking</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.pause" title="Gtk.MediaStream.pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">pause</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.play" title="Gtk.MediaStream.play"><code class="xref py py-func docutils literal notranslate"><span class="pre">play</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.prepared" title="Gtk.MediaStream.prepared"><code class="xref py py-func docutils literal notranslate"><span class="pre">prepared</span></code></a> (has_audio, has_video, seekable, duration)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.realize" title="Gtk.MediaStream.realize"><code class="xref py py-func docutils literal notranslate"><span class="pre">realize</span></code></a> (surface)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.seek" title="Gtk.MediaStream.seek"><code class="xref py py-func docutils literal notranslate"><span class="pre">seek</span></code></a> (timestamp)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.seek_failed" title="Gtk.MediaStream.seek_failed"><code class="xref py py-func docutils literal notranslate"><span class="pre">seek_failed</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.seek_success" title="Gtk.MediaStream.seek_success"><code class="xref py py-func docutils literal notranslate"><span class="pre">seek_success</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.set_loop" title="Gtk.MediaStream.set_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_loop</span></code></a> (loop)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.set_muted" title="Gtk.MediaStream.set_muted"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_muted</span></code></a> (muted)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.set_playing" title="Gtk.MediaStream.set_playing"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_playing</span></code></a> (playing)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.set_volume" title="Gtk.MediaStream.set_volume"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_volume</span></code></a> (volume)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.unprepared" title="Gtk.MediaStream.unprepared"><code class="xref py py-func docutils literal notranslate"><span class="pre">unprepared</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.unrealize" title="Gtk.MediaStream.unrealize"><code class="xref py py-func docutils literal notranslate"><span class="pre">unrealize</span></code></a> (surface)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.update" title="Gtk.MediaStream.update"><code class="xref py py-func docutils literal notranslate"><span class="pre">update</span></code></a> (timestamp)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gtk-mediastream-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#gdk-paintable-vfuncs" title="(in Gdk 4.0 v4.0)"><span class="xref std std-ref">Gdk.Paintable (6)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_pause" title="Gtk.MediaStream.do_pause"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_pause</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_play" title="Gtk.MediaStream.do_play"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_play</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_realize" title="Gtk.MediaStream.do_realize"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_realize</span></code></a> (surface)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_seek" title="Gtk.MediaStream.do_seek"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_seek</span></code></a> (timestamp)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_unrealize" title="Gtk.MediaStream.do_unrealize"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_unrealize</span></code></a> (surface)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.MediaStream.do_update_audio" title="Gtk.MediaStream.do_update_audio"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_update_audio</span></code></a> (muted, volume)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gtk-mediastream-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.duration" title="Gtk.MediaStream.props.duration"><code class="xref py py-data docutils literal notranslate"><span class="pre">duration</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/en</td>
+<td>Timestamp in microseconds</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.ended" title="Gtk.MediaStream.props.ended"><code class="xref py py-data docutils literal notranslate"><span class="pre">ended</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Set when playback has finished</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.error" title="Gtk.MediaStream.props.error"><code class="xref py py-data docutils literal notranslate"><span class="pre">error</span></code></a></td>
+<td><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></td>
+<td>r/en</td>
+<td>Error the stream is in</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.has_audio" title="Gtk.MediaStream.props.has_audio"><code class="xref py py-data docutils literal notranslate"><span class="pre">has-audio</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Whether the stream contains audio</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.has_video" title="Gtk.MediaStream.props.has_video"><code class="xref py py-data docutils literal notranslate"><span class="pre">has-video</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Whether the stream contains video</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.loop" title="Gtk.MediaStream.props.loop"><code class="xref py py-data docutils literal notranslate"><span class="pre">loop</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Try to restart the media from the beginning once it ended.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.muted" title="Gtk.MediaStream.props.muted"><code class="xref py py-data docutils literal notranslate"><span class="pre">muted</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the audio stream should be muted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.playing" title="Gtk.MediaStream.props.playing"><code class="xref py py-data docutils literal notranslate"><span class="pre">playing</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the stream is playing</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.prepared" title="Gtk.MediaStream.props.prepared"><code class="xref py py-data docutils literal notranslate"><span class="pre">prepared</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the stream has finished initializing</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.seekable" title="Gtk.MediaStream.props.seekable"><code class="xref py py-data docutils literal notranslate"><span class="pre">seekable</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Set unless seeking is not supported</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.seeking" title="Gtk.MediaStream.props.seeking"><code class="xref py py-data docutils literal notranslate"><span class="pre">seeking</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Set while a seek is in progress</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.MediaStream.props.timestamp" title="Gtk.MediaStream.props.timestamp"><code class="xref py py-data docutils literal notranslate"><span class="pre">timestamp</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/en</td>
+<td>Timestamp in microseconds</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.MediaStream.props.volume" title="Gtk.MediaStream.props.volume"><code class="xref py py-data docutils literal notranslate"><span class="pre">volume</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+<td>r/w/en</td>
+<td>Volume of the audio stream.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gtk-mediastream-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#gdk-paintable-signals" title="(in Gdk 4.0 v4.0)"><span class="xref std std-ref">Gdk.Paintable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gtk-mediastream-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#gdk-paintable-fields" title="(in Gdk 4.0 v4.0)"><span class="xref std std-ref">Gdk.Paintable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="16%" />
+<col width="1%" />
+<col width="1%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>parent_instance</td>
+<td><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a></td>
+<td>r</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.MediaStream">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">MediaStream</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>,         <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="MediaStreamClass.html#Gtk.MediaStreamClass" title="Gtk.MediaStreamClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.MediaStreamClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">GtkMediaStream</span></code> is the integration point for media playback inside GTK.</p>
+<p>GTK provides an implementation of the <code class="docutils literal notranslate"><span class="pre">GtkMediaStream</span></code> interface that
+is called [class`Gtk`.MediaFile].</p>
+<p>Apart from application-facing API for stream playback, <code class="docutils literal notranslate"><span class="pre">GtkMediaStream</span></code>
+has a number of APIs that are only useful for implementations and should
+not be used in applications:
+[method`Gtk`.MediaStream.prepared],
+[method`Gtk`.MediaStream.unprepared],
+[method`Gtk`.MediaStream.update],
+[method`Gtk`.MediaStream.ended],
+[method`Gtk`.MediaStream.seek_success],
+[method`Gtk`.MediaStream.seek_failed],
+[method`Gtk`.MediaStream.gerror],
+[method`Gtk`.MediaStream.error],
+[method`Gtk`.MediaStream.error_valist].</p>
+<dl class="method">
+<dt id="Gtk.MediaStream.ended">
+<code class="descname">ended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.ended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses the media stream and marks it as ended.</p>
+<p>This is a hint only, calls to <a class="reference internal" href="#Gtk.MediaStream.do_play" title="Gtk.MediaStream.do_play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.do_play</span></code></a>()
+may still happen.</p>
+<p>The media stream must be prepared when this function is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.gerror">
+<code class="descname">gerror</code><span class="sig-paren">(</span><em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.gerror" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>error</strong> (<a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Error</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GError</span></code> to set</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>self</cite> into an error state.</p>
+<p>This will pause the stream (you can check for an error
+via [method`Gtk`.MediaStream.get_error] in your
+<a class="reference internal" href="#Gtk.MediaStream.do_pause" title="Gtk.MediaStream.do_pause"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.do_pause</span></code></a>() implementation), abort pending
+seeks and mark the stream as prepared.</p>
+<p>if the stream is already in an error state, this call
+will be ignored and the existing error will be retained.</p>
+<p>To unset an error, the stream must be reset via a call to
+[method`Gtk`.MediaStream.unprepared].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_duration">
+<code class="descname">get_duration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_duration" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the duration of the stream or 0 if not known.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the duration of the stream.</p>
+<p>If the duration is not known, 0 will be returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_ended">
+<code class="descname">get_ended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_ended" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if playback is finished</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the streams playback is finished.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_error">
+<code class="descname">get_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_error" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if not in an
+error state or the <code class="docutils literal notranslate"><span class="pre">GError</span></code> of the stream</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Error</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>If the stream is in an error state, returns the <code class="docutils literal notranslate"><span class="pre">GError</span></code>
+explaining that state.</p>
+<p>Any type of error can be reported here depending on the
+implementation of the media stream.</p>
+<p>A media stream in an error cannot be operated on, calls
+like [method`Gtk`.MediaStream.play] or
+[method`Gtk`.MediaStream.seek] will not have any effect.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GtkMediaStream</span></code> itself does not provide a way to unset
+an error, but implementations may provide options. For example,
+a [class`Gtk`.MediaFile] will unset errors when a new source is
+set, e.g. with [method`Gtk`.MediaFile.set_file].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_loop">
+<code class="descname">get_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_loop" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should loop</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the stream is set to loop.</p>
+<p>See [method`Gtk`.MediaStream.set_loop] for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_muted">
+<code class="descname">get_muted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_muted" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream is muted</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the audio for the stream is muted.</p>
+<p>See [method`Gtk`.MediaStream.set_muted] for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_playing">
+<code class="descname">get_playing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_playing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream is playing</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Return whether the stream is currently playing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_timestamp">
+<code class="descname">get_timestamp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the timestamp in microseconds</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the current presentation timestamp in microseconds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.get_volume">
+<code class="descname">get_volume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.get_volume" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">volume of the stream from 0.0 to 1.0</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the volume of the audio for the stream.</p>
+<p>See [method`Gtk`.MediaStream.set_volume] for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.has_audio">
+<code class="descname">has_audio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.has_audio" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream has audio</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the stream has audio.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.has_video">
+<code class="descname">has_video</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.has_video" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream has video</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the stream has video.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.is_prepared">
+<code class="descname">is_prepared</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.is_prepared" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream is prepared</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the stream has finished initializing.</p>
+<p>At this point the existence of audio and video is known.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.is_seekable">
+<code class="descname">is_seekable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.is_seekable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream may support seeking</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if a stream may be seekable.</p>
+<p>This is meant to be a hint. Streams may not allow seeking even if
+this function returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>. However, if this function returns
+<a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, streams are guaranteed to not be seekable and user interfaces
+may hide controls that allow seeking.</p>
+<p>It is allowed to call [method`Gtk`.MediaStream.seek] on a non-seekable
+stream, though it will not do anything.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.is_seeking">
+<code class="descname">is_seeking</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.is_seeking" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a seek operation is ongoing.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if there is currently a seek operation going on.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses playback of the stream.</p>
+<p>If the stream is not playing, do nothing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.play">
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts playing the stream.</p>
+<p>If the stream is in error or already playing, do nothing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.prepared">
+<code class="descname">prepared</code><span class="sig-paren">(</span><em>has_audio</em>, <em>has_video</em>, <em>seekable</em>, <em>duration</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.prepared" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>has_audio</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should advertise audio support</li>
+<li><strong>has_video</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should advertise video support</li>
+<li><strong>seekable</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should advertise seekability</li>
+<li><strong>duration</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – The duration of the stream or 0 if unknown</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Called by <code class="docutils literal notranslate"><span class="pre">GtkMediaStream</span></code> implementations to advertise the stream
+being ready to play and providing details about the stream.</p>
+<p>Note that the arguments are hints. If the stream implementation
+cannot determine the correct values, it is better to err on the
+side of caution and return <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>. User interfaces will use those
+values to determine what controls to show.</p>
+<p>This function may not be called again until the stream has been
+reset via [method`Gtk`.MediaStream.unprepared].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.realize">
+<code class="descname">realize</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.realize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>surface</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Surface.html#Gdk.Surface" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Called by users to attach the media stream to a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code> they manage.</p>
+<p>The stream can then access the resources of <cite>surface</cite> for its
+rendering purposes. In particular, media streams might want to
+create a <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> or sync to the <code class="docutils literal notranslate"><span class="pre">GdkFrameClock</span></code>.</p>
+<p>Whoever calls this function is responsible for calling
+[method`Gtk`.MediaStream.unrealize] before either the stream
+or <cite>surface</cite> get destroyed.</p>
+<p>Multiple calls to this function may happen from different
+users of the video, even with the same <cite>surface</cite>. Each of these
+calls must be followed by its own call to
+[method`Gtk`.MediaStream.unrealize].</p>
+<p>It is not required to call this function to make a media stream work.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.seek">
+<code class="descname">seek</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.seek" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – timestamp to seek to.</td>
+</tr>
+</tbody>
+</table>
+<p>Start a seek operation on <cite>self</cite> to <cite>timestamp</cite>.</p>
+<p>If <cite>timestamp</cite> is out of range, it will be clamped.</p>
+<p>Seek operations may not finish instantly. While a
+seek operation is in process, the [property`Gtk`.MediaStream:seeking]
+property will be set.</p>
+<p>When calling <a class="reference internal" href="#Gtk.MediaStream.seek" title="Gtk.MediaStream.seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.seek</span></code></a>() during an
+ongoing seek operation, the new seek will override
+any pending seek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.seek_failed">
+<code class="descname">seek_failed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.seek_failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends a seek operation started via <a class="reference internal" href="#Gtk.MediaStream.do_seek" title="Gtk.MediaStream.do_seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.do_seek</span></code></a>() as a failure.</p>
+<p>This will not cause an error on the stream and will assume that
+playback continues as if no seek had happened.</p>
+<p>See [method`Gtk`.MediaStream.seek_success] for the other way of
+ending a seek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.seek_success">
+<code class="descname">seek_success</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.seek_success" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends a seek operation started via <a class="reference internal" href="#Gtk.MediaStream.do_seek" title="Gtk.MediaStream.do_seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.do_seek</span></code></a>() successfully.</p>
+<p>This function will unset the <a class="reference internal" href="#Gtk.MediaStream" title="Gtk.MediaStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream</span></code></a> <a class="reference internal" href="#Gtk.MediaStream.props.ended" title="Gtk.MediaStream.props.ended"><code class="xref py py-data docutils literal notranslate"><span class="pre">:ended</span></code></a> property
+if it was set.</p>
+<p>See [method`Gtk`.MediaStream.seek_failed] for the other way of
+ending a seek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.set_loop">
+<code class="descname">set_loop</code><span class="sig-paren">(</span><em>loop</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.set_loop" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>loop</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should loop</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the stream should loop.</p>
+<p>In this case, it will attempt to restart playback
+from the beginning instead of stopping at the end.</p>
+<p>Not all streams may support looping, in particular
+non-seekable streams. Those streams will ignore the
+loop setting and just end.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.set_muted">
+<code class="descname">set_muted</code><span class="sig-paren">(</span><em>muted</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.set_muted" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>muted</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the stream should be muted</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the audio stream should be muted.</p>
+<p>Muting a stream will cause no audio to be played, but it
+does not modify the volume. This means that muting and
+then unmuting the stream will restore the volume settings.</p>
+<p>If the stream has no audio, calling this function will
+still work but it will not have an audible effect.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.set_playing">
+<code class="descname">set_playing</code><span class="sig-paren">(</span><em>playing</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.set_playing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>playing</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to start or pause playback</td>
+</tr>
+</tbody>
+</table>
+<p>Starts or pauses playback of the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.set_volume">
+<code class="descname">set_volume</code><span class="sig-paren">(</span><em>volume</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.set_volume" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>volume</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – New volume of the stream from 0.0 to 1.0</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the volume of the audio stream.</p>
+<p>This function call will work even if the stream is muted.</p>
+<p>The given <cite>volume</cite> should range from 0.0 for silence to 1.0
+for as loud as possible. Values outside of this range will
+be clamped to the nearest value.</p>
+<p>If the stream has no audio or is muted, calling this function
+will still work but it will not have an immediate audible effect.
+When the stream is unmuted, the new volume setting will take effect.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.unprepared">
+<code class="descname">unprepared</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.unprepared" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets a given media stream implementation.</p>
+<p>[method`Gtk`.MediaStream.prepared] can then be called again.</p>
+<p>This function will also reset any error state the stream was in.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.unrealize">
+<code class="descname">unrealize</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.unrealize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>surface</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Surface.html#Gdk.Surface" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code> the stream was realized with</td>
+</tr>
+</tbody>
+</table>
+<p>Undoes a previous call to <a class="reference internal" href="#Gtk.MediaStream.realize" title="Gtk.MediaStream.realize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.realize</span></code></a>().</p>
+<p>This causes the stream to release all resources it had
+allocated from <cite>surface</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.MediaStream.update" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the new timestamp</td>
+</tr>
+</tbody>
+</table>
+<p>Media stream implementations should regularly call this
+function to update the timestamp reported by the stream.</p>
+<p>It is up to implementations to call this at the frequency
+they deem appropriate.</p>
+<p>The media stream must be prepared when this function is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_pause">
+<code class="descname">do_pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses playback of the stream.</p>
+<p>If the stream is not playing, do nothing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_play">
+<code class="descname">do_play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_play" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_realize">
+<code class="descname">do_realize</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_realize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>surface</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Surface.html#Gdk.Surface" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Called by users to attach the media stream to a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code> they manage.</p>
+<p>The stream can then access the resources of <cite>surface</cite> for its
+rendering purposes. In particular, media streams might want to
+create a <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> or sync to the <code class="docutils literal notranslate"><span class="pre">GdkFrameClock</span></code>.</p>
+<p>Whoever calls this function is responsible for calling
+[method`Gtk`.MediaStream.unrealize] before either the stream
+or <cite>surface</cite> get destroyed.</p>
+<p>Multiple calls to this function may happen from different
+users of the video, even with the same <cite>surface</cite>. Each of these
+calls must be followed by its own call to
+[method`Gtk`.MediaStream.unrealize].</p>
+<p>It is not required to call this function to make a media stream work.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_seek">
+<code class="descname">do_seek</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_seek" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – timestamp to seek to.</td>
+</tr>
+</tbody>
+</table>
+<p>Start a seek operation on <cite>self</cite> to <cite>timestamp</cite>.</p>
+<p>If <cite>timestamp</cite> is out of range, it will be clamped.</p>
+<p>Seek operations may not finish instantly. While a
+seek operation is in process, the [property`Gtk`.MediaStream:seeking]
+property will be set.</p>
+<p>When calling <a class="reference internal" href="#Gtk.MediaStream.seek" title="Gtk.MediaStream.seek"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.seek</span></code></a>() during an
+ongoing seek operation, the new seek will override
+any pending seek.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_unrealize">
+<code class="descname">do_unrealize</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_unrealize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>surface</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Surface.html#Gdk.Surface" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code> the stream was realized with</td>
+</tr>
+</tbody>
+</table>
+<p>Undoes a previous call to <a class="reference internal" href="#Gtk.MediaStream.realize" title="Gtk.MediaStream.realize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.MediaStream.realize</span></code></a>().</p>
+<p>This causes the stream to release all resources it had
+allocated from <cite>surface</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.MediaStream.do_update_audio">
+<code class="descname">do_update_audio</code><span class="sig-paren">(</span><em>muted</em>, <em>volume</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.MediaStream.do_update_audio" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>muted</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – </li>
+<li><strong>volume</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gtk.MediaStream.props.duration">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">duration</code><a class="headerlink" href="#Gtk.MediaStream.props.duration" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">duration</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The stream’s duration in microseconds or 0 if unknown.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.ended">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">ended</code><a class="headerlink" href="#Gtk.MediaStream.props.ended" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">ended</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Set when playback has finished.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.error">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">error</code><a class="headerlink" href="#Gtk.MediaStream.props.error" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">error</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> for a properly working stream or the <code class="docutils literal notranslate"><span class="pre">GError</span></code>
+that the stream is in.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.has_audio">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">has_audio</code><a class="headerlink" href="#Gtk.MediaStream.props.has_audio" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">has-audio</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the stream contains audio.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.has_video">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">has_video</code><a class="headerlink" href="#Gtk.MediaStream.props.has_video" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">has-video</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the stream contains video.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.loop">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">loop</code><a class="headerlink" href="#Gtk.MediaStream.props.loop" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">loop</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Try to restart the media from the beginning once it ended.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.muted">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">muted</code><a class="headerlink" href="#Gtk.MediaStream.props.muted" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">muted</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the audio stream should be muted.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.playing">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">playing</code><a class="headerlink" href="#Gtk.MediaStream.props.playing" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">playing</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the stream is currently playing.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.prepared">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">prepared</code><a class="headerlink" href="#Gtk.MediaStream.props.prepared" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">prepared</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the stream has finished initializing and existence of
+audio and video is known.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.seekable">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">seekable</code><a class="headerlink" href="#Gtk.MediaStream.props.seekable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">seekable</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Set unless the stream is known to not support seeking.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.seeking">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">seeking</code><a class="headerlink" href="#Gtk.MediaStream.props.seeking" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">seeking</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Set while a seek is in progress.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.timestamp">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">timestamp</code><a class="headerlink" href="#Gtk.MediaStream.props.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">timestamp</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The current presentation timestamp in microseconds.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.MediaStream.props.volume">
+<code class="descclassname">Gtk.MediaStream.props.</code><code class="descname">volume</code><a class="headerlink" href="#Gtk.MediaStream.props.volume" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">volume</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">1.0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Volume of the audio stream.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

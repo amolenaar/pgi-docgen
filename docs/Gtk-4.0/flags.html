@@ -1,0 +1,973 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Flags -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="index.html"/>
+        <link rel="next" title="Enums" href="enums.html"/>
+        <link rel="prev" title="Gtk.TreeSortableIface" href="classes/TreeSortableIface.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="./../index.html#Gtk-4.0/flags.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Gtk 4.0</a> &raquo;</li>
+      
+    <li>Flags</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><i class="fa fa-chevron-up"></i></td>
+
+
+
+<td><a accesskey="p" href="classes/TreeSortableIface.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="enums.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Flags</a><ul>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="./../index.html#Gtk-4.0/flags.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Gtk 4.0</a> &raquo;</li>
+      
+    <li>Flags</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><i class="fa fa-chevron-up"></i></td>
+
+
+
+<td><a accesskey="p" href="classes/TreeSortableIface.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="enums.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Flags</a><ul>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="flags">
+<h1>Flags<a class="headerlink" href="#flags" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#Gtk.ApplicationInhibitFlags" title="Gtk.ApplicationInhibitFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ApplicationInhibitFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.BuilderClosureFlags" title="Gtk.BuilderClosureFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.BuilderClosureFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.CellRendererState" title="Gtk.CellRendererState"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.CellRendererState</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.DebugFlags" title="Gtk.DebugFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.DebugFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.DialogFlags" title="Gtk.DialogFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.DialogFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.EventControllerScrollFlags" title="Gtk.EventControllerScrollFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.EventControllerScrollFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.FontChooserLevel" title="Gtk.FontChooserLevel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.FontChooserLevel</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.IconLookupFlags" title="Gtk.IconLookupFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.IconLookupFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.InputHints" title="Gtk.InputHints"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.InputHints</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.PickFlags" title="Gtk.PickFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.PickFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.PopoverMenuFlags" title="Gtk.PopoverMenuFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.PopoverMenuFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.PrintCapabilities" title="Gtk.PrintCapabilities"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.PrintCapabilities</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.ShortcutActionFlags" title="Gtk.ShortcutActionFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ShortcutActionFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.StateFlags" title="Gtk.StateFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.StateFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.StyleContextPrintFlags" title="Gtk.StyleContextPrintFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.StyleContextPrintFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.TextSearchFlags" title="Gtk.TextSearchFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.TextSearchFlags</span></code></a></li>
+<li><a class="reference internal" href="#Gtk.TreeModelFlags" title="Gtk.TreeModelFlags"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.TreeModelFlags</span></code></a></li>
+</ul>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.ApplicationInhibitFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">ApplicationInhibitFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ApplicationInhibitFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Types of user actions that may be blocked by <code class="docutils literal notranslate"><span class="pre">GtkApplication</span></code>.</p>
+<p>See [method`Gtk`.Application.inhibit].</p>
+<dl class="attribute">
+<dt id="Gtk.ApplicationInhibitFlags.LOGOUT">
+<code class="descname">LOGOUT</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.ApplicationInhibitFlags.LOGOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inhibit ending the user session
+by logging out or by shutting down the computer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.ApplicationInhibitFlags.SWITCH">
+<code class="descname">SWITCH</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.ApplicationInhibitFlags.SWITCH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inhibit user switching</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.ApplicationInhibitFlags.SUSPEND">
+<code class="descname">SUSPEND</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.ApplicationInhibitFlags.SUSPEND" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inhibit suspending the
+session or computer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.ApplicationInhibitFlags.IDLE">
+<code class="descname">IDLE</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.ApplicationInhibitFlags.IDLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inhibit the session being
+marked as idle (and possibly locked)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.BuilderClosureFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">BuilderClosureFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuilderClosureFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>The list of flags that can be passed to <a class="reference internal" href="classes/Builder.html#Gtk.Builder.create_closure" title="Gtk.Builder.create_closure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Builder.create_closure</span></code></a>().</p>
+<p>New values may be added in the future for new features, so external
+implementations of [interface`Gtk`.BuilderScope] should test the flags
+for unknown values and raise a <a class="reference internal" href="enums.html#Gtk.BuilderError.INVALID_ATTRIBUTE" title="Gtk.BuilderError.INVALID_ATTRIBUTE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderError.INVALID_ATTRIBUTE</span></code></a> error
+when they encounter one.</p>
+<dl class="attribute">
+<dt id="Gtk.BuilderClosureFlags.SWAPPED">
+<code class="descname">SWAPPED</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.BuilderClosureFlags.SWAPPED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The closure should be created swapped. See
+g_cclosure_new_swap() for details.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.CellRendererState">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">CellRendererState</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CellRendererState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Tells how a cell is to be rendered.</p>
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.SELECTED">
+<code class="descname">SELECTED</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.CellRendererState.SELECTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is currently selected, and
+probably has a selection colored background to render to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.FOCUSED">
+<code class="descname">FOCUSED</code><em class="property"> = 16</em><a class="headerlink" href="#Gtk.CellRendererState.FOCUSED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is in the focus row.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.PRELIT">
+<code class="descname">PRELIT</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.CellRendererState.PRELIT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mouse is hovering over the cell.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.EXPANDABLE">
+<code class="descname">EXPANDABLE</code><em class="property"> = 32</em><a class="headerlink" href="#Gtk.CellRendererState.EXPANDABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is in a row that can be expanded</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.INSENSITIVE">
+<code class="descname">INSENSITIVE</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.CellRendererState.INSENSITIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is drawn in an insensitive manner</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.EXPANDED">
+<code class="descname">EXPANDED</code><em class="property"> = 64</em><a class="headerlink" href="#Gtk.CellRendererState.EXPANDED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is in a row that is expanded</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.CellRendererState.SORTED">
+<code class="descname">SORTED</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.CellRendererState.SORTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cell is in a sorted row</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.DebugFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">DebugFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DebugFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.TEXT">
+<code class="descname">TEXT</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.DebugFlags.TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.INTERACTIVE">
+<code class="descname">INTERACTIVE</code><em class="property"> = 1024</em><a class="headerlink" href="#Gtk.DebugFlags.INTERACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.BUILDER">
+<code class="descname">BUILDER</code><em class="property"> = 128</em><a class="headerlink" href="#Gtk.DebugFlags.BUILDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.A11Y">
+<code class="descname">A11Y</code><em class="property"> = 131072</em><a class="headerlink" href="#Gtk.DebugFlags.A11Y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.GEOMETRY">
+<code class="descname">GEOMETRY</code><em class="property"> = 16</em><a class="headerlink" href="#Gtk.DebugFlags.GEOMETRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.SNAPSHOT">
+<code class="descname">SNAPSHOT</code><em class="property"> = 16384</em><a class="headerlink" href="#Gtk.DebugFlags.SNAPSHOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.TREE">
+<code class="descname">TREE</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.DebugFlags.TREE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.TOUCHSCREEN">
+<code class="descname">TOUCHSCREEN</code><em class="property"> = 2048</em><a class="headerlink" href="#Gtk.DebugFlags.TOUCHSCREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.SIZE_REQUEST">
+<code class="descname">SIZE_REQUEST</code><em class="property"> = 256</em><a class="headerlink" href="#Gtk.DebugFlags.SIZE_REQUEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.ICONFALLBACK">
+<code class="descname">ICONFALLBACK</code><em class="property"> = 262144</em><a class="headerlink" href="#Gtk.DebugFlags.ICONFALLBACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.ICONTHEME">
+<code class="descname">ICONTHEME</code><em class="property"> = 32</em><a class="headerlink" href="#Gtk.DebugFlags.ICONTHEME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.CONSTRAINTS">
+<code class="descname">CONSTRAINTS</code><em class="property"> = 32768</em><a class="headerlink" href="#Gtk.DebugFlags.CONSTRAINTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.KEYBINDINGS">
+<code class="descname">KEYBINDINGS</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.DebugFlags.KEYBINDINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.ACTIONS">
+<code class="descname">ACTIONS</code><em class="property"> = 4096</em><a class="headerlink" href="#Gtk.DebugFlags.ACTIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.NO_CSS_CACHE">
+<code class="descname">NO_CSS_CACHE</code><em class="property"> = 512</em><a class="headerlink" href="#Gtk.DebugFlags.NO_CSS_CACHE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.PRINTING">
+<code class="descname">PRINTING</code><em class="property"> = 64</em><a class="headerlink" href="#Gtk.DebugFlags.PRINTING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.BUILDER_OBJECTS">
+<code class="descname">BUILDER_OBJECTS</code><em class="property"> = 65536</em><a class="headerlink" href="#Gtk.DebugFlags.BUILDER_OBJECTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.MODULES">
+<code class="descname">MODULES</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.DebugFlags.MODULES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DebugFlags.LAYOUT">
+<code class="descname">LAYOUT</code><em class="property"> = 8192</em><a class="headerlink" href="#Gtk.DebugFlags.LAYOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.DialogFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">DialogFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DialogFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Flags used to influence dialog construction.</p>
+<dl class="attribute">
+<dt id="Gtk.DialogFlags.MODAL">
+<code class="descname">MODAL</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.DialogFlags.MODAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the constructed dialog modal</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DialogFlags.DESTROY_WITH_PARENT">
+<code class="descname">DESTROY_WITH_PARENT</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.DialogFlags.DESTROY_WITH_PARENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the dialog when its parent is destroyed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.DialogFlags.USE_HEADER_BAR">
+<code class="descname">USE_HEADER_BAR</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.DialogFlags.USE_HEADER_BAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create dialog with actions in header
+bar instead of action area</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.EventControllerScrollFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">EventControllerScrollFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.EventControllerScrollFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Describes the behavior of a <code class="docutils literal notranslate"><span class="pre">GtkEventControllerScroll</span></code>.</p>
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.NONE">
+<code class="descname">NONE</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Don’t emit scroll.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.VERTICAL">
+<code class="descname">VERTICAL</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.VERTICAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit scroll with vertical deltas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.HORIZONTAL">
+<code class="descname">HORIZONTAL</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.HORIZONTAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit scroll with horizontal deltas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.BOTH_AXES">
+<code class="descname">BOTH_AXES</code><em class="property"> = 3</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.BOTH_AXES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit scroll on both axes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.DISCRETE">
+<code class="descname">DISCRETE</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only emit deltas that are multiples of 1.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.EventControllerScrollFlags.KINETIC">
+<code class="descname">KINETIC</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.EventControllerScrollFlags.KINETIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit ::decelerate after continuous scroll finishes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.FontChooserLevel">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">FontChooserLevel</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.FontChooserLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Specifies the granularity of font selection
+that is desired in a <code class="docutils literal notranslate"><span class="pre">GtkFontChooser</span></code>.</p>
+<p>This enumeration may be extended in the future; applications should
+ignore unknown values.</p>
+<dl class="attribute">
+<dt id="Gtk.FontChooserLevel.FAMILY">
+<code class="descname">FAMILY</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.FontChooserLevel.FAMILY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow selecting a font family</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.FontChooserLevel.STYLE">
+<code class="descname">STYLE</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.FontChooserLevel.STYLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow selecting a specific font face</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.FontChooserLevel.SIZE">
+<code class="descname">SIZE</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.FontChooserLevel.SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow selecting a specific font size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.FontChooserLevel.VARIATIONS">
+<code class="descname">VARIATIONS</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.FontChooserLevel.VARIATIONS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow changing OpenType font variation axes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.FontChooserLevel.FEATURES">
+<code class="descname">FEATURES</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.FontChooserLevel.FEATURES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow selecting specific OpenType font features</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.IconLookupFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">IconLookupFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.IconLookupFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Used to specify options for <a class="reference internal" href="classes/IconTheme.html#Gtk.IconTheme.lookup_icon" title="Gtk.IconTheme.lookup_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.IconTheme.lookup_icon</span></code></a>().</p>
+<dl class="attribute">
+<dt id="Gtk.IconLookupFlags.FORCE_REGULAR">
+<code class="descname">FORCE_REGULAR</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.IconLookupFlags.FORCE_REGULAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to always load regular icons, even
+when symbolic icon names are given</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.IconLookupFlags.FORCE_SYMBOLIC">
+<code class="descname">FORCE_SYMBOLIC</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.IconLookupFlags.FORCE_SYMBOLIC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to always load symbolic icons, even
+when regular icon names are given</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.IconLookupFlags.PRELOAD">
+<code class="descname">PRELOAD</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.IconLookupFlags.PRELOAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts loading the texture in the background
+so it is ready when later needed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.InputHints">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">InputHints</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.InputHints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Describes hints that might be taken into account by input methods
+or applications.</p>
+<p>Note that input methods may already tailor their behaviour according
+to the <code class="docutils literal notranslate"><span class="pre">GtkInputPurpose</span></code> of the entry.</p>
+<p>Some common sense is expected when using these flags - mixing
+<a class="reference internal" href="#Gtk.InputHints.LOWERCASE" title="Gtk.InputHints.LOWERCASE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints.LOWERCASE</span></code></a> with any of the uppercase hints makes no sense.</p>
+<p>This enumeration may be extended in the future; input methods should
+ignore unknown values.</p>
+<dl class="attribute">
+<dt id="Gtk.InputHints.NONE">
+<code class="descname">NONE</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.InputHints.NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>No special behaviour suggested</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.SPELLCHECK">
+<code class="descname">SPELLCHECK</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.InputHints.SPELLCHECK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest checking for typos</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.NO_EMOJI">
+<code class="descname">NO_EMOJI</code><em class="property"> = 1024</em><a class="headerlink" href="#Gtk.InputHints.NO_EMOJI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest not offering Emoji support</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.INHIBIT_OSK">
+<code class="descname">INHIBIT_OSK</code><em class="property"> = 128</em><a class="headerlink" href="#Gtk.InputHints.INHIBIT_OSK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest to not show an onscreen keyboard
+(e.g for a calculator that already has all the keys).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.UPPERCASE_CHARS">
+<code class="descname">UPPERCASE_CHARS</code><em class="property"> = 16</em><a class="headerlink" href="#Gtk.InputHints.UPPERCASE_CHARS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest to capitalize all text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.NO_SPELLCHECK">
+<code class="descname">NO_SPELLCHECK</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.InputHints.NO_SPELLCHECK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest not checking for typos</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.PRIVATE">
+<code class="descname">PRIVATE</code><em class="property"> = 2048</em><a class="headerlink" href="#Gtk.InputHints.PRIVATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request that the input method should not
+update personalized data (like typing history)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.VERTICAL_WRITING">
+<code class="descname">VERTICAL_WRITING</code><em class="property"> = 256</em><a class="headerlink" href="#Gtk.InputHints.VERTICAL_WRITING" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text is vertical</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.UPPERCASE_WORDS">
+<code class="descname">UPPERCASE_WORDS</code><em class="property"> = 32</em><a class="headerlink" href="#Gtk.InputHints.UPPERCASE_WORDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest to capitalize the first
+character of each word</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.WORD_COMPLETION">
+<code class="descname">WORD_COMPLETION</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.InputHints.WORD_COMPLETION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest word completion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.EMOJI">
+<code class="descname">EMOJI</code><em class="property"> = 512</em><a class="headerlink" href="#Gtk.InputHints.EMOJI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest offering Emoji support</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.UPPERCASE_SENTENCES">
+<code class="descname">UPPERCASE_SENTENCES</code><em class="property"> = 64</em><a class="headerlink" href="#Gtk.InputHints.UPPERCASE_SENTENCES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest to capitalize the
+first word of each sentence</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.InputHints.LOWERCASE">
+<code class="descname">LOWERCASE</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.InputHints.LOWERCASE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suggest to convert all text to lowercase</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.PickFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">PickFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.PickFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Flags that influence the behavior of <a class="reference internal" href="classes/Widget.html#Gtk.Widget.pick" title="Gtk.Widget.pick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget.pick</span></code></a>().</p>
+<dl class="attribute">
+<dt id="Gtk.PickFlags.DEFAULT">
+<code class="descname">DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.PickFlags.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default behavior, include widgets that are receiving events</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PickFlags.INSENSITIVE">
+<code class="descname">INSENSITIVE</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.PickFlags.INSENSITIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Include widgets that are insensitive</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PickFlags.NON_TARGETABLE">
+<code class="descname">NON_TARGETABLE</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.PickFlags.NON_TARGETABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Include widgets that are marked as non-targetable. See <a class="reference internal" href="classes/Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> <a class="reference internal" href="classes/Widget.html#Gtk.Widget.props.can_target" title="Gtk.Widget.props.can_target"><code class="xref py py-data docutils literal notranslate"><span class="pre">:can-target</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.PopoverMenuFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">PopoverMenuFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.PopoverMenuFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Flags that affect how popover menus are created from
+a menu model.</p>
+<dl class="attribute">
+<dt id="Gtk.PopoverMenuFlags.NESTED">
+<code class="descname">NESTED</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.PopoverMenuFlags.NESTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create submenus as nested
+popovers. Without this flag, submenus are created as
+sliding pages that replace the main menu.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.PrintCapabilities">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">PrintCapabilities</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.PrintCapabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Specifies which features the print dialog should offer.</p>
+<p>If neither <a class="reference internal" href="#Gtk.PrintCapabilities.GENERATE_PDF" title="Gtk.PrintCapabilities.GENERATE_PDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.PrintCapabilities.GENERATE_PDF</span></code></a> nor
+<a class="reference internal" href="#Gtk.PrintCapabilities.GENERATE_PS" title="Gtk.PrintCapabilities.GENERATE_PS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.PrintCapabilities.GENERATE_PS</span></code></a> is specified, GTK assumes that all
+formats are supported.</p>
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.PAGE_SET">
+<code class="descname">PAGE_SET</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.PrintCapabilities.PAGE_SET" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will offer printing even/odd pages.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.PREVIEW">
+<code class="descname">PREVIEW</code><em class="property"> = 128</em><a class="headerlink" href="#Gtk.PrintCapabilities.PREVIEW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will offer a preview</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.SCALE">
+<code class="descname">SCALE</code><em class="property"> = 16</em><a class="headerlink" href="#Gtk.PrintCapabilities.SCALE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will allow to scale the output.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.COPIES">
+<code class="descname">COPIES</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.PrintCapabilities.COPIES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will allow to print multiple copies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.NUMBER_UP">
+<code class="descname">NUMBER_UP</code><em class="property"> = 256</em><a class="headerlink" href="#Gtk.PrintCapabilities.NUMBER_UP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will offer printing multiple
+pages per sheet</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.GENERATE_PDF">
+<code class="descname">GENERATE_PDF</code><em class="property"> = 32</em><a class="headerlink" href="#Gtk.PrintCapabilities.GENERATE_PDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>The program will send the document to
+the printer in PDF format</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.COLLATE">
+<code class="descname">COLLATE</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.PrintCapabilities.COLLATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will allow to collate multiple copies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.NUMBER_UP_LAYOUT">
+<code class="descname">NUMBER_UP_LAYOUT</code><em class="property"> = 512</em><a class="headerlink" href="#Gtk.PrintCapabilities.NUMBER_UP_LAYOUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will allow to rearrange
+pages when printing multiple pages per sheet</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.GENERATE_PS">
+<code class="descname">GENERATE_PS</code><em class="property"> = 64</em><a class="headerlink" href="#Gtk.PrintCapabilities.GENERATE_PS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The program will send the document to
+the printer in Postscript format</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.PrintCapabilities.REVERSE">
+<code class="descname">REVERSE</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.PrintCapabilities.REVERSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print dialog will allow to print pages in reverse order.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.ShortcutActionFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">ShortcutActionFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ShortcutActionFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>List of flags that can be passed to action activation.</p>
+<p>More flags may be added in the future.</p>
+<dl class="attribute">
+<dt id="Gtk.ShortcutActionFlags.EXCLUSIVE">
+<code class="descname">EXCLUSIVE</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.ShortcutActionFlags.EXCLUSIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The action is the only
+action that can be activated. If this flag is not set,
+a future activation may select a different action.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.StateFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">StateFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.StateFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Describes a widget state.</p>
+<p>Widget states are used to match the widget against CSS pseudo-classes.
+Note that GTK extends the regular CSS classes and sometimes uses
+different names.</p>
+<dl class="attribute">
+<dt id="Gtk.StateFlags.NORMAL">
+<code class="descname">NORMAL</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.StateFlags.NORMAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>State during normal operation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.ACTIVE">
+<code class="descname">ACTIVE</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.StateFlags.ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is active</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.VISITED">
+<code class="descname">VISITED</code><em class="property"> = 1024</em><a class="headerlink" href="#Gtk.StateFlags.VISITED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location the widget points to has already been visited</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.DIR_LTR">
+<code class="descname">DIR_LTR</code><em class="property"> = 128</em><a class="headerlink" href="#Gtk.StateFlags.DIR_LTR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is in left-to-right text direction</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.INCONSISTENT">
+<code class="descname">INCONSISTENT</code><em class="property"> = 16</em><a class="headerlink" href="#Gtk.StateFlags.INCONSISTENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is inconsistent</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.FOCUS_WITHIN">
+<code class="descname">FOCUS_WITHIN</code><em class="property"> = 16384</em><a class="headerlink" href="#Gtk.StateFlags.FOCUS_WITHIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget contains the keyboard focus</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.PRELIGHT">
+<code class="descname">PRELIGHT</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.StateFlags.PRELIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget has a mouse pointer over it</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.CHECKED">
+<code class="descname">CHECKED</code><em class="property"> = 2048</em><a class="headerlink" href="#Gtk.StateFlags.CHECKED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is checked</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.DIR_RTL">
+<code class="descname">DIR_RTL</code><em class="property"> = 256</em><a class="headerlink" href="#Gtk.StateFlags.DIR_RTL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is in right-to-left text direction</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.FOCUSED">
+<code class="descname">FOCUSED</code><em class="property"> = 32</em><a class="headerlink" href="#Gtk.StateFlags.FOCUSED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget has the keyboard focus</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.SELECTED">
+<code class="descname">SELECTED</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.StateFlags.SELECTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is selected</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.DROP_ACTIVE">
+<code class="descname">DROP_ACTIVE</code><em class="property"> = 4096</em><a class="headerlink" href="#Gtk.StateFlags.DROP_ACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is highlighted as a drop target for DND</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.LINK">
+<code class="descname">LINK</code><em class="property"> = 512</em><a class="headerlink" href="#Gtk.StateFlags.LINK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is a link</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.BACKDROP">
+<code class="descname">BACKDROP</code><em class="property"> = 64</em><a class="headerlink" href="#Gtk.StateFlags.BACKDROP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is in a background toplevel window</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.INSENSITIVE">
+<code class="descname">INSENSITIVE</code><em class="property"> = 8</em><a class="headerlink" href="#Gtk.StateFlags.INSENSITIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget is insensitive</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StateFlags.FOCUS_VISIBLE">
+<code class="descname">FOCUS_VISIBLE</code><em class="property"> = 8192</em><a class="headerlink" href="#Gtk.StateFlags.FOCUS_VISIBLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Widget has the visible focus</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.StyleContextPrintFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">StyleContextPrintFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.StyleContextPrintFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Flags that modify the behavior of <a class="reference internal" href="classes/StyleContext.html#Gtk.StyleContext.to_string" title="Gtk.StyleContext.to_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.StyleContext.to_string</span></code></a>().</p>
+<p>New values may be added to this enumeration.</p>
+<dl class="attribute">
+<dt id="Gtk.StyleContextPrintFlags.NONE">
+<code class="descname">NONE</code><em class="property"> = 0</em><a class="headerlink" href="#Gtk.StyleContextPrintFlags.NONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StyleContextPrintFlags.RECURSE">
+<code class="descname">RECURSE</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.StyleContextPrintFlags.RECURSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the entire tree of
+CSS nodes starting at the style context’s node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StyleContextPrintFlags.SHOW_STYLE">
+<code class="descname">SHOW_STYLE</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.StyleContextPrintFlags.SHOW_STYLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the values of the
+CSS properties for each node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.StyleContextPrintFlags.SHOW_CHANGE">
+<code class="descname">SHOW_CHANGE</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.StyleContextPrintFlags.SHOW_CHANGE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show information about
+what changes affect the styles</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.TextSearchFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">TextSearchFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.TextSearchFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>Flags affecting how a search is done.</p>
+<p>If neither <a class="reference internal" href="#Gtk.TextSearchFlags.VISIBLE_ONLY" title="Gtk.TextSearchFlags.VISIBLE_ONLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TextSearchFlags.VISIBLE_ONLY</span></code></a> nor <a class="reference internal" href="#Gtk.TextSearchFlags.TEXT_ONLY" title="Gtk.TextSearchFlags.TEXT_ONLY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TextSearchFlags.TEXT_ONLY</span></code></a> are
+enabled, the match must be exact; the special 0xFFFC character will match
+embedded paintables or child widgets.</p>
+<dl class="attribute">
+<dt id="Gtk.TextSearchFlags.VISIBLE_ONLY">
+<code class="descname">VISIBLE_ONLY</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.TextSearchFlags.VISIBLE_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search only visible data. A search match may
+have invisible text interspersed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.TextSearchFlags.TEXT_ONLY">
+<code class="descname">TEXT_ONLY</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.TextSearchFlags.TEXT_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search only text. A match may have paintables or
+child widgets mixed inside the matched range.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.TextSearchFlags.CASE_INSENSITIVE">
+<code class="descname">CASE_INSENSITIVE</code><em class="property"> = 4</em><a class="headerlink" href="#Gtk.TextSearchFlags.CASE_INSENSITIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text will be matched regardless of
+what case it is in.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Gtk.TreeModelFlags">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">TreeModelFlags</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.TreeModelFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/flags.html#GObject.GFlags" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GFlags</span></code></a></p>
+<p>These flags indicate various properties of a <a class="reference internal" href="classes/TreeModel.html#Gtk.TreeModel" title="Gtk.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel</span></code></a>.</p>
+<p>They are returned by <a class="reference internal" href="classes/TreeModel.html#Gtk.TreeModel.get_flags" title="Gtk.TreeModel.get_flags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModel.get_flags</span></code></a>(), and must be
+static for the lifetime of the object. A more complete description
+of <a class="reference internal" href="#Gtk.TreeModelFlags.ITERS_PERSIST" title="Gtk.TreeModelFlags.ITERS_PERSIST"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeModelFlags.ITERS_PERSIST</span></code></a> can be found in the overview of
+this section.</p>
+<dl class="attribute">
+<dt id="Gtk.TreeModelFlags.ITERS_PERSIST">
+<code class="descname">ITERS_PERSIST</code><em class="property"> = 1</em><a class="headerlink" href="#Gtk.TreeModelFlags.ITERS_PERSIST" title="Permalink to this definition">¶</a></dt>
+<dd><p>iterators survive all signals
+emitted by the tree</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Gtk.TreeModelFlags.LIST_ONLY">
+<code class="descname">LIST_ONLY</code><em class="property"> = 2</em><a class="headerlink" href="#Gtk.TreeModelFlags.LIST_ONLY" title="Permalink to this definition">¶</a></dt>
+<dd><p>the model is a list only, and never
+has children</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

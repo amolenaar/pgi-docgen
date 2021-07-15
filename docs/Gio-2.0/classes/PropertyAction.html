@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gio.PropertyAction -
+    
+      Classes -
+    
+    Gio 2.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gio 2.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gio.ProxyAddress" href="ProxyAddress.html"/>
+        <link rel="prev" title="Gio.Permission" href="Permission.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/PropertyAction.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.PropertyAction</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Permission.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ProxyAddress.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.PropertyAction</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/PropertyAction.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.PropertyAction</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Permission.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ProxyAddress.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.PropertyAction</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gio-propertyaction">
+<h1>Gio.PropertyAction<a class="headerlink" href="#gio-propertyaction" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="185pt" height="134pt"
+ viewBox="0.00 0.00 185.00 134.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-126C92,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 92,-108 92,-108 95,-108 98,-111 98,-114 98,-114 98,-120 98,-120 98,-123 95,-126 92,-126"/>
+<text text-anchor="middle" x="49" y="-114.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gio.Action -->
+<g id="node3" class="node">
+<title>Gio.Action</title>
+<g id="a_node3"><a xlink:href="Action.html#Gio.Action" xlink:title="Gio.Action">
+<path fill="none" stroke="#3091d1" d="M73,-72C73,-72 25,-72 25,-72 22,-72 19,-69 19,-66 19,-66 19,-60 19,-60 19,-57 22,-54 25,-54 25,-54 73,-54 73,-54 76,-54 79,-57 79,-60 79,-60 79,-66 79,-66 79,-69 76,-72 73,-72"/>
+<text text-anchor="middle" x="49" y="-60.7" font-family="inherit" font-size="8.50">Gio.Action</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gio.Action -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gio.Action</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-107.88C49,-99.76 49,-87.13 49,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-77.24 49,-72.24 47.25,-77.24 50.75,-77.24"/>
+</g>
+<!-- GObject.Object -->
+<g id="node2" class="node">
+<title>GObject.Object</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M171,-72C171,-72 103,-72 103,-72 100,-72 97,-69 97,-66 97,-66 97,-60 97,-60 97,-57 100,-54 103,-54 103,-54 171,-54 171,-54 174,-54 177,-57 177,-60 177,-60 177,-66 177,-66 177,-69 174,-72 171,-72"/>
+<text text-anchor="middle" x="137" y="-60.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gio.PropertyAction -->
+<g id="node4" class="node">
+<title>Gio.PropertyAction</title>
+<g id="a_node4"><a xlink:href="#Gio.PropertyAction" xlink:title="Gio.PropertyAction">
+<path fill="none" stroke="#75507b" d="M135,-18C135,-18 51,-18 51,-18 48,-18 45,-15 45,-12 45,-12 45,-6 45,-6 45,-3 48,0 51,0 51,0 135,0 135,0 138,0 141,-3 141,-6 141,-6 141,-12 141,-12 141,-15 138,-18 135,-18"/>
+<text text-anchor="middle" x="93" y="-6.7" font-family="inherit" font-size="8.50">Gio.PropertyAction</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gio.PropertyAction -->
+<g id="edge2" class="edge">
+<title>GObject.Object&#45;&gt;Gio.PropertyAction</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M130.12,-53.88C122.93,-45.38 111.57,-31.94 103.3,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="104.54,-20.93 99.97,-18.24 101.87,-23.19 104.54,-20.93"/>
+</g>
+<!-- Gio.Action&#45;&gt;Gio.PropertyAction -->
+<g id="edge3" class="edge">
+<title>Gio.Action&#45;&gt;Gio.PropertyAction</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M55.88,-53.88C63.07,-45.38 74.43,-31.94 82.7,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="84.13,-23.19 86.03,-18.24 81.46,-20.93 84.13,-23.19"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gio-propertyaction-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Action.html#gio-action-methods"><span class="std std-ref">Gio.Action (11)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gio.PropertyAction.new" title="Gio.PropertyAction.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (name, object, property_name)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gio-propertyaction-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Action.html#gio-action-vfuncs"><span class="std std-ref">Gio.Action (8)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gio-propertyaction-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Action.html#gio-action-props"><span class="std std-ref">Gio.Action (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gio.PropertyAction.props.invert_boolean" title="Gio.PropertyAction.props.invert_boolean"><code class="xref py py-data docutils literal notranslate"><span class="pre">invert-boolean</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/co</td>
+<td>Whether to invert the value of a boolean property</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gio.PropertyAction.props.object" title="Gio.PropertyAction.props.object"><code class="xref py py-data docutils literal notranslate"><span class="pre">object</span></code></a></td>
+<td><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a></td>
+<td>w/co</td>
+<td>The object with the property to wrap</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gio.PropertyAction.props.property_name" title="Gio.PropertyAction.props.property_name"><code class="xref py py-data docutils literal notranslate"><span class="pre">property-name</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<td>w/co</td>
+<td>The name of the property to wrap</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gio-propertyaction-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gio-propertyaction-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gio.PropertyAction">
+<em class="property">class </em><code class="descclassname">Gio.</code><code class="descname">PropertyAction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.PropertyAction" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>,         <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.Action</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+</tbody>
+</table>
+<p>A <a class="reference internal" href="#Gio.PropertyAction" title="Gio.PropertyAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.PropertyAction</span></code></a> is a way to get a <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action</span></code></a> with a state value
+reflecting and controlling the value of a <a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a> property.</p>
+<p>The state of the action will correspond to the value of the property.
+Changing it will change the property (assuming the requested value
+matches the requirements as specified in the <a class="reference external" href="../../GObject-2.0/classes/ParamSpec.html#GObject.ParamSpec" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.ParamSpec</span></code></a>).</p>
+<p>Only the most common types are presently supported.  Booleans are
+mapped to booleans, strings to strings, signed/unsigned integers to
+int32/uint32 and floats and doubles to doubles.</p>
+<p>If the property is an enum then the state will be string-typed and
+conversion will automatically be performed between the enum value and
+“nick” string as per the <a class="reference external" href="../../GObject-2.0/classes/EnumValue.html#GObject.EnumValue" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.EnumValue</span></code></a> table.</p>
+<p>Flags types are not currently supported.</p>
+<p>Properties of object types, boxed types and pointer types are not
+supported and probably never will be.</p>
+<p>Properties of <a class="reference external" href="../../GLib-2.0/classes/Variant.html#GLib.Variant" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Variant</span></code></a> types are not currently supported.</p>
+<p>If the property is boolean-valued then the action will have a <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
+parameter type, and activating the action (with no parameter) will
+toggle the value of the property.</p>
+<p>In all other cases, the parameter type will correspond to the type of
+the property.</p>
+<p>The general idea here is to reduce the number of locations where a
+particular piece of state is kept (and therefore has to be synchronised
+between). <a class="reference internal" href="#Gio.PropertyAction" title="Gio.PropertyAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.PropertyAction</span></code></a> does not have a separate state that is kept
+in sync with the property value – its state is the property value.</p>
+<p>For example, it might be useful to create a <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action</span></code></a> corresponding to
+the “visible-child-name” property of a #GtkStack so that the current
+page can be switched from a menu.  The active radio indication in the
+menu is then directly determined from the active page of the
+#GtkStack.</p>
+<p>An anti-example would be binding the “active-id” property on a
+#GtkComboBox.  This is because the state of the combobox itself is
+probably uninteresting and is actually being used to control
+something else.</p>
+<p>Another anti-example would be to bind to the “visible-child-name”
+property of a #GtkStack if this value is actually stored in
+<a class="reference internal" href="Settings.html#Gio.Settings" title="Gio.Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Settings</span></code></a>.  In that case, the real source of the value is
+<a class="reference internal" href="Settings.html#Gio.Settings" title="Gio.Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Settings</span></code></a>.  If you want a <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action</span></code></a> to control a setting stored in
+<a class="reference internal" href="Settings.html#Gio.Settings" title="Gio.Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Settings</span></code></a>, see <a class="reference internal" href="Settings.html#Gio.Settings.create_action" title="Gio.Settings.create_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Settings.create_action</span></code></a>() instead, and possibly
+combine its use with <a class="reference internal" href="Settings.html#Gio.Settings.bind" title="Gio.Settings.bind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Settings.bind</span></code></a>().</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.38.</span></p>
+</div>
+<dl class="classmethod">
+<dt id="Gio.PropertyAction.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>name</em>, <em>object</em>, <em>property_name</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.PropertyAction.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the name of the action to create</li>
+<li><strong>object</strong> (<a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>) – the object that has the property
+to wrap</li>
+<li><strong>property_name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the name of the property</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a new <a class="reference internal" href="#Gio.PropertyAction" title="Gio.PropertyAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.PropertyAction</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gio.PropertyAction" title="Gio.PropertyAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.PropertyAction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a <a class="reference internal" href="Action.html#Gio.Action" title="Gio.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Action</span></code></a> corresponding to the value of property
+<cite>property_name</cite> on <cite>object</cite>.</p>
+<p>The property must be existent and readable and writable (and not
+construct-only).</p>
+<p>This function takes a reference on <cite>object</cite> and doesn’t release it
+until the action is destroyed.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.38.</span></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gio.PropertyAction.props.invert_boolean">
+<code class="descclassname">Gio.PropertyAction.props.</code><code class="descname">invert_boolean</code><a class="headerlink" href="#Gio.PropertyAction.props.invert_boolean" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">invert-boolean</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>If <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the state of the action will be the negation of the
+property value, provided the property is boolean.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.46.</span></p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gio.PropertyAction.props.object">
+<code class="descclassname">Gio.PropertyAction.props.</code><code class="descname">object</code><a class="headerlink" href="#Gio.PropertyAction.props.object" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">object</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The object to wrap a property on.</p>
+<p>The object must be a non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> <a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a> with properties.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.38.</span></p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gio.PropertyAction.props.property_name">
+<code class="descclassname">Gio.PropertyAction.props.</code><code class="descname">property_name</code><a class="headerlink" href="#Gio.PropertyAction.props.property_name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">property-name</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The name of the property to wrap on the object.</p>
+<p>The property must exist on the passed-in object and it must be
+readable and writable (and not construct-only).</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.38.</span></p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

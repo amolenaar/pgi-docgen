@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gdk.GLContext -
+    
+      Classes -
+    
+    Gdk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gdk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gdk.GLTexture" href="GLTexture.html"/>
+        <link rel="prev" title="Gdk.FrameClock" href="FrameClock.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/GLContext.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gdk.GLContext</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="FrameClock.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="GLTexture.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.GLContext</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/GLContext.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gdk.GLContext</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="FrameClock.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="GLTexture.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.GLContext</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gdk-glcontext">
+<h1>Gdk.GLContext<a class="headerlink" href="#gdk-glcontext" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="100pt" height="134pt"
+ viewBox="0.00 0.00 100.00 134.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 130)">
+<title>g</title>
+<!-- GObject.Object -->
+<g id="node1" class="node">
+<title>GObject.Object</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M80,-126C80,-126 12,-126 12,-126 9,-126 6,-123 6,-120 6,-120 6,-114 6,-114 6,-111 9,-108 12,-108 12,-108 80,-108 80,-108 83,-108 86,-111 86,-114 86,-114 86,-120 86,-120 86,-123 83,-126 80,-126"/>
+<text text-anchor="middle" x="46" y="-114.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gdk.DrawContext -->
+<g id="node2" class="node">
+<title>Gdk.DrawContext</title>
+<g id="a_node2"><a xlink:href="DrawContext.html#Gdk.DrawContext" xlink:title="Gdk.DrawContext">
+<path fill="none" stroke="#aaaaaa" d="M86,-72C86,-72 6,-72 6,-72 3,-72 0,-69 0,-66 0,-66 0,-60 0,-60 0,-57 3,-54 6,-54 6,-54 86,-54 86,-54 89,-54 92,-57 92,-60 92,-60 92,-66 92,-66 92,-69 89,-72 86,-72"/>
+<text text-anchor="middle" x="46" y="-60.7" font-family="inherit" font-size="8.50">Gdk.DrawContext</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gdk.DrawContext -->
+<g id="edge1" class="edge">
+<title>GObject.Object&#45;&gt;Gdk.DrawContext</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M46,-107.88C46,-99.76 46,-87.13 46,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="47.75,-77.24 46,-72.24 44.25,-77.24 47.75,-77.24"/>
+</g>
+<!-- Gdk.GLContext -->
+<g id="node3" class="node">
+<title>Gdk.GLContext</title>
+<g id="a_node3"><a xlink:href="#Gdk.GLContext" xlink:title="Gdk.GLContext">
+<path fill="none" stroke="#aaaaaa" d="M80.5,-18C80.5,-18 11.5,-18 11.5,-18 8.5,-18 5.5,-15 5.5,-12 5.5,-12 5.5,-6 5.5,-6 5.5,-3 8.5,0 11.5,0 11.5,0 80.5,0 80.5,0 83.5,0 86.5,-3 86.5,-6 86.5,-6 86.5,-12 86.5,-12 86.5,-15 83.5,-18 80.5,-18"/>
+<text text-anchor="middle" x="46" y="-6.7" font-family="inherit" font-size="8.50">Gdk.GLContext</text>
+</a>
+</g>
+</g>
+<!-- Gdk.DrawContext&#45;&gt;Gdk.GLContext -->
+<g id="edge2" class="edge">
+<title>Gdk.DrawContext&#45;&gt;Gdk.GLContext</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M46,-53.88C46,-45.76 46,-33.13 46,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="47.75,-23.24 46,-18.24 44.25,-23.24 47.75,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gdk-glcontext-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="DrawContext.html#gdk-drawcontext-methods"><span class="std std-ref">Gdk.DrawContext (6)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gdk.GLContext.clear_current" title="Gdk.GLContext.clear_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">clear_current</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_current" title="Gdk.GLContext.get_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_current</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_debug_enabled" title="Gdk.GLContext.get_debug_enabled"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_debug_enabled</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_display" title="Gdk.GLContext.get_display"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_display</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_forward_compatible" title="Gdk.GLContext.get_forward_compatible"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_forward_compatible</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_required_version" title="Gdk.GLContext.get_required_version"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_required_version</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_shared_context" title="Gdk.GLContext.get_shared_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_shared_context</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_surface" title="Gdk.GLContext.get_surface"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_surface</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_use_es" title="Gdk.GLContext.get_use_es"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_use_es</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.get_version" title="Gdk.GLContext.get_version"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_version</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.is_legacy" title="Gdk.GLContext.is_legacy"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_legacy</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.make_current" title="Gdk.GLContext.make_current"><code class="xref py py-func docutils literal notranslate"><span class="pre">make_current</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.realize" title="Gdk.GLContext.realize"><code class="xref py py-func docutils literal notranslate"><span class="pre">realize</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.set_debug_enabled" title="Gdk.GLContext.set_debug_enabled"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_debug_enabled</span></code></a> (enabled)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.set_forward_compatible" title="Gdk.GLContext.set_forward_compatible"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_forward_compatible</span></code></a> (compatible)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.set_required_version" title="Gdk.GLContext.set_required_version"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_required_version</span></code></a> (major, minor)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.GLContext.set_use_es" title="Gdk.GLContext.set_use_es"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_use_es</span></code></a> (use_es)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gdk-glcontext-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gdk-glcontext-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="DrawContext.html#gdk-drawcontext-props"><span class="std std-ref">Gdk.DrawContext (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.GLContext.props.shared_context" title="Gdk.GLContext.props.shared_context"><code class="xref py py-data docutils literal notranslate"><span class="pre">shared-context</span></code></a></td>
+<td><a class="reference internal" href="#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a></td>
+<td>r/w/co</td>
+<td>The GL context this context shares data with</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gdk-glcontext-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gdk-glcontext-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gdk.GLContext">
+<em class="property">class </em><code class="descclassname">Gdk.</code><code class="descname">GLContext</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="DrawContext.html#Gdk.DrawContext" title="Gdk.DrawContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.DrawContext</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is an object representing a platform-specific
+OpenGL draw context.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>GdkGLContext``s are created for a surface using
+[method`Gdk`.Surface.create_gl_context], and the context will match
+the the characteristics of the surface.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is not tied to any particular normal framebuffer.
+For instance, it cannot draw to the surface back buffer. The GDK
+repaint system is in full control of the painting to that. Instead,
+you can create render buffers or textures and use [func`cairo_draw_from_gl`]
+in the draw function of your widget to draw them. Then GDK will handle
+the integration of your rendering with that of other widgets.</p>
+<p>Support for <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is platform-specific and context creation
+can fail, returning <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> context.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> has to be made “current” in order to start using
+it, otherwise any OpenGL call will be ignored.</p>
+<dl class="docutils">
+<dt>Creating a new OpenGL context</dt>
+<dd></dd>
+</dl>
+<p>In order to create a new <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> instance you need a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code>,
+which you typically get during the realize call of a widget.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is not realized until either [method`Gdk`.GLContext.make_current]
+or [method`Gdk`.GLContext.realize] is called. It is possible to specify
+details of the GL context like the OpenGL version to be used, or whether
+the GL context should have extra state validation enabled after calling
+[method`Gdk`.Surface.create_gl_context] by calling [method`Gdk`.GLContext.realize].
+If the realization fails you have the option to change the settings of
+the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> and try again.</p>
+<dl class="docutils">
+<dt>Using a <a class="reference internal" href="#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a></dt>
+<dd></dd>
+</dl>
+<p>You will need to make the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> the current context before issuing
+OpenGL calls; the system sends OpenGL commands to whichever context is current.
+It is possible to have multiple contexts, so you always need to ensure that
+the one which you want to draw with is the current one before issuing commands:</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>c
+gdk_gl_context_make_current (context);
+``</p>
+<p>You can now perform your drawing using OpenGL commands.</p>
+<p>You can check which <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is the current one by using
+[func`Gdk`.GLContext.get_current]; you can also unset any <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>
+that is currently set by calling [func`Gdk`.GLContext.clear_current].</p>
+<dl class="classmethod">
+<dt id="Gdk.GLContext.clear_current">
+<em class="property">classmethod </em><code class="descname">clear_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.clear_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the current <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>.</p>
+<p>Any OpenGL call after this function returns will be ignored
+until [method`Gdk`.GLContext.make_current] is called.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gdk.GLContext.get_current">
+<em class="property">classmethod </em><code class="descname">get_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_current" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the current <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves the current <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_debug_enabled">
+<code class="descname">get_debug_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_debug_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if debugging is enabled</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves whether the context is doing extra validations and runtime checking.</p>
+<p>See [method`Gdk`.GLContext.set_debug_enabled].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_display">
+<code class="descname">get_display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_display" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal notranslate"><span class="pre">GdkDisplay</span></code> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Display.html#Gdk.Display" title="Gdk.Display"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Display</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves the display the <cite>self</cite> is created for</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_forward_compatible">
+<code class="descname">get_forward_compatible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_forward_compatible" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the context should be forward-compatible</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves whether the context is forward-compatible.</p>
+<p>See [method`Gdk`.GLContext.set_forward_compatible].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_required_version">
+<code class="descname">get_required_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_required_version" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">major:</th><td class="field-body">return location for the major version to request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">minor:</th><td class="field-body">return location for the minor version to request</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(<strong>major</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <strong>minor</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves required OpenGL version.</p>
+<p>See [method`Gdk`.GLContext.set_required_version].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_shared_context">
+<code class="descname">get_shared_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_shared_context" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> that this <cite>self</cite> share data with.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_surface">
+<code class="descname">get_surface</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_surface" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves the surface used by the <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_use_es">
+<code class="descname">get_use_es</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_use_es" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is using an OpenGL ES profile</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks whether the <cite>self</cite> is using an OpenGL or OpenGL ES profile.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.get_version">
+<code class="descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">major:</th><td class="field-body">return location for the major version</td>
+</tr>
+<tr class="field-even field"><th class="field-name">minor:</th><td class="field-body">return location for the minor version</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(<strong>major</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <strong>minor</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Retrieves the OpenGL version of the <cite>self</cite>.</p>
+<p>The <cite>self</cite> must be realized prior to calling this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.is_legacy">
+<code class="descname">is_legacy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.is_legacy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the GL context is in legacy mode</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> is in legacy mode or not.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> must be realized before calling this function.</p>
+<p>When realizing a GL context, GDK will try to use the OpenGL 3.2 core
+profile; this profile removes all the OpenGL API that was deprecated
+prior to the 3.2 version of the specification. If the realization is
+successful, this function will return <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+<p>If the underlying OpenGL implementation does not support core profiles,
+GDK will fall back to a pre-3.2 compatibility profile, and this function
+will return <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+<p>You can use the value returned by this function to decide which kind
+of OpenGL API to use, or whether to do extension discovery, or what
+kind of shader programs to load.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.make_current">
+<code class="descname">make_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.make_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the <cite>self</cite> the current one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.realize">
+<code class="descname">realize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.realize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the context is realized</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Realizes the given <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>.</p>
+<p>It is safe to call this function on a realized <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.set_debug_enabled">
+<code class="descname">set_debug_enabled</code><span class="sig-paren">(</span><em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.set_debug_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enabled</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to enable debugging in the context</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> should perform extra validations and
+runtime checking.</p>
+<p>This is useful during development, but has additional overhead.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> must not be realized or made current prior to
+calling this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.set_forward_compatible">
+<code class="descname">set_forward_compatible</code><span class="sig-paren">(</span><em>compatible</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.set_forward_compatible" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>compatible</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether the context should be forward-compatible</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether the <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> should be forward-compatible.</p>
+<p>Forward-compatible contexts must not support OpenGL functionality that
+has been marked as deprecated in the requested version; non-forward
+compatible contexts, on the other hand, must support both deprecated and
+non deprecated functionality.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> must not be realized or made current prior to calling
+this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.set_required_version">
+<code class="descname">set_required_version</code><span class="sig-paren">(</span><em>major</em>, <em>minor</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.set_required_version" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>major</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the major version to request</li>
+<li><strong>minor</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the minor version to request</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the major and minor version of OpenGL to request.</p>
+<p>Setting <cite>major</cite> and <cite>minor</cite> to zero will use the default values.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> must not be realized or made current prior to calling
+this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.GLContext.set_use_es">
+<code class="descname">set_use_es</code><span class="sig-paren">(</span><em>use_es</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.GLContext.set_use_es" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>use_es</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – whether the context should use OpenGL ES instead of OpenGL,
+or -1 to allow auto-detection</td>
+</tr>
+</tbody>
+</table>
+<p>Requests that GDK create an OpenGL ES context instead of an OpenGL one.</p>
+<p>Not all platforms support OpenGL ES.</p>
+<p>The <cite>self</cite> must not have been realized.</p>
+<p>By default, GDK will attempt to automatically detect whether the
+underlying GL implementation is OpenGL or OpenGL ES once the <cite>self</cite>
+is realized.</p>
+<p>You should check the return value of [method`Gdk`.GLContext.get_use_es]
+after calling [method`Gdk`.GLContext.realize] to decide whether to use
+the OpenGL or OpenGL ES API, extensions, or shaders.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gdk.GLContext.props.shared_context">
+<code class="descclassname">Gdk.GLContext.props.</code><code class="descname">shared_context</code><a class="headerlink" href="#Gdk.GLContext.props.shared_context" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">shared-context</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#Gdk.GLContext" title="Gdk.GLContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.GLContext</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkGLContext</span></code> that this context is sharing data with, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

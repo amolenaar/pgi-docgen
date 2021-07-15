@@ -1,0 +1,1010 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.CheckButton -
+    
+      Classes -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gtk.ClosureExpression" href="ClosureExpression.html"/>
+        <link rel="prev" title="Gtk.CenterLayout" href="CenterLayout.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/CheckButton.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.CheckButton</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="CenterLayout.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ClosureExpression.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.CheckButton</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/CheckButton.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gtk.CheckButton</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="CenterLayout.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ClosureExpression.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.CheckButton</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-checkbutton">
+<h1>Gtk.CheckButton<a class="headerlink" href="#gtk-checkbutton" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="461pt" height="188pt"
+ viewBox="0.00 0.00 460.50 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M371,-180C371,-180 285,-180 285,-180 282,-180 279,-177 279,-174 279,-174 279,-168 279,-168 279,-165 282,-162 285,-162 285,-162 371,-162 371,-162 374,-162 377,-165 377,-168 377,-168 377,-174 377,-174 377,-177 374,-180 371,-180"/>
+<text text-anchor="middle" x="328" y="-168.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node4" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node4"><a xlink:href="Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M213.5,-126C213.5,-126 146.5,-126 146.5,-126 143.5,-126 140.5,-123 140.5,-120 140.5,-120 140.5,-114 140.5,-114 140.5,-111 143.5,-108 146.5,-108 146.5,-108 213.5,-108 213.5,-108 216.5,-108 219.5,-111 219.5,-114 219.5,-114 219.5,-120 219.5,-120 219.5,-123 216.5,-126 213.5,-126"/>
+<text text-anchor="middle" x="180" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M305.2,-161.99C278.99,-152.78 235.96,-137.66 207.8,-127.77"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="208.37,-126.11 203.07,-126.11 207.21,-129.41 208.37,-126.11"/>
+</g>
+<!-- Gtk.Actionable -->
+<g id="node5" class="node">
+<title>Gtk.Actionable</title>
+<g id="a_node5"><a xlink:href="Actionable.html#Gtk.Actionable" xlink:title="Gtk.Actionable">
+<path fill="none" stroke="#3091d1" d="M446.5,-72C446.5,-72 379.5,-72 379.5,-72 376.5,-72 373.5,-69 373.5,-66 373.5,-66 373.5,-60 373.5,-60 373.5,-57 376.5,-54 379.5,-54 379.5,-54 446.5,-54 446.5,-54 449.5,-54 452.5,-57 452.5,-60 452.5,-60 452.5,-66 452.5,-66 452.5,-69 449.5,-72 446.5,-72"/>
+<text text-anchor="middle" x="413" y="-60.7" font-family="inherit" font-size="8.50">Gtk.Actionable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Actionable -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Actionable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M377.09,-164.18C401.19,-158.57 428.16,-147.57 443,-126 454.18,-109.75 438.5,-88.7 425.93,-75.79"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="426.95,-74.33 422.16,-72.05 424.48,-76.81 426.95,-74.33"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node6" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node6"><a xlink:href="Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M306,-126C306,-126 244,-126 244,-126 241,-126 238,-123 238,-120 238,-120 238,-114 238,-114 238,-111 241,-108 244,-108 244,-108 306,-108 306,-108 309,-108 312,-111 312,-114 312,-114 312,-120 312,-120 312,-123 309,-126 306,-126"/>
+<text text-anchor="middle" x="275" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M319.72,-161.88C310.98,-153.3 297.12,-139.7 287.14,-129.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="288.19,-128.49 283.4,-126.24 285.74,-130.99 288.19,-128.49"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node8" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node8"><a xlink:href="ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M428,-126C428,-126 336,-126 336,-126 333,-126 330,-123 330,-120 330,-120 330,-114 330,-114 330,-111 333,-108 336,-108 336,-108 428,-108 428,-108 431,-108 434,-111 434,-114 434,-114 434,-120 434,-120 434,-123 431,-126 428,-126"/>
+<text text-anchor="middle" x="382" y="-114.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M336.44,-161.88C345.34,-153.3 359.46,-139.7 369.63,-129.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="371.06,-130.97 373.44,-126.24 368.63,-128.45 371.06,-130.97"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node2" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M116,-126C116,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 116,-108 116,-108 119,-108 122,-111 122,-114 122,-114 122,-120 122,-120 122,-123 119,-126 116,-126"/>
+<text text-anchor="middle" x="61" y="-114.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node9" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node9"><a xlink:href="Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M301,-72C301,-72 249,-72 249,-72 246,-72 243,-69 243,-66 243,-66 243,-60 243,-60 243,-57 246,-54 249,-54 249,-54 301,-54 301,-54 304,-54 307,-57 307,-60 307,-60 307,-66 307,-66 307,-69 304,-72 301,-72"/>
+<text text-anchor="middle" x="275" y="-60.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge5" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M93.97,-107.99C132.68,-98.58 196.75,-83.01 237.37,-73.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="238.25,-74.73 242.69,-71.85 237.42,-71.33 238.25,-74.73"/>
+</g>
+<!-- GObject.Object -->
+<g id="node3" class="node">
+<title>GObject.Object</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M95,-180C95,-180 27,-180 27,-180 24,-180 21,-177 21,-174 21,-174 21,-168 21,-168 21,-165 24,-162 27,-162 27,-162 95,-162 95,-162 98,-162 101,-165 101,-168 101,-168 101,-174 101,-174 101,-177 98,-180 95,-180"/>
+<text text-anchor="middle" x="61" y="-168.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge6" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M61,-161.88C61,-153.76 61,-141.13 61,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="62.75,-131.24 61,-126.24 59.25,-131.24 62.75,-131.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge7" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M194.84,-107.88C211.16,-98.95 237.43,-84.56 255.42,-74.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.71,-76 260.26,-72.07 255.03,-72.93 256.71,-76"/>
+</g>
+<!-- Gtk.CheckButton -->
+<g id="node7" class="node">
+<title>Gtk.CheckButton</title>
+<g id="a_node7"><a xlink:href="#Gtk.CheckButton" xlink:title="Gtk.CheckButton">
+<path fill="none" stroke="#75507b" d="M358.5,-18C358.5,-18 281.5,-18 281.5,-18 278.5,-18 275.5,-15 275.5,-12 275.5,-12 275.5,-6 275.5,-6 275.5,-3 278.5,0 281.5,0 281.5,0 358.5,0 358.5,0 361.5,0 364.5,-3 364.5,-6 364.5,-6 364.5,-12 364.5,-12 364.5,-15 361.5,-18 358.5,-18"/>
+<text text-anchor="middle" x="320" y="-6.7" font-family="inherit" font-size="8.50">Gtk.CheckButton</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Actionable&#45;&gt;Gtk.CheckButton -->
+<g id="edge8" class="edge">
+<title>Gtk.Actionable&#45;&gt;Gtk.CheckButton</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M398.47,-53.88C382.5,-44.95 356.78,-30.56 339.17,-20.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="339.65,-18.98 334.43,-18.07 337.94,-22.04 339.65,-18.98"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge9" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M275,-107.88C275,-99.76 275,-87.13 275,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="276.75,-77.24 275,-72.24 273.25,-77.24 276.75,-77.24"/>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge10" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M365.28,-107.88C346.67,-98.83 316.55,-84.19 296.28,-74.34"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="296.86,-72.68 291.6,-72.07 295.33,-75.83 296.86,-72.68"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.CheckButton -->
+<g id="edge11" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.CheckButton</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M282.03,-53.88C289.39,-45.38 301.01,-31.94 309.46,-22.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="310.92,-23.17 312.87,-18.24 308.27,-20.88 310.92,-23.17"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gtk-checkbutton-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference internal" href="Actionable.html#gtk-actionable-methods"><span class="std std-ref">Gtk.Actionable (5)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.CheckButton.new" title="Gtk.CheckButton.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.CheckButton.new_with_label" title="Gtk.CheckButton.new_with_label"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_with_label</span></code></a> (label)</td>
+</tr>
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.CheckButton.new_with_mnemonic" title="Gtk.CheckButton.new_with_mnemonic"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_with_mnemonic</span></code></a> (label)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.get_active" title="Gtk.CheckButton.get_active"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_active</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.get_inconsistent" title="Gtk.CheckButton.get_inconsistent"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_inconsistent</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.get_label" title="Gtk.CheckButton.get_label"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_label</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.get_use_underline" title="Gtk.CheckButton.get_use_underline"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_use_underline</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.set_active" title="Gtk.CheckButton.set_active"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_active</span></code></a> (setting)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.set_group" title="Gtk.CheckButton.set_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_group</span></code></a> (group)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.set_inconsistent" title="Gtk.CheckButton.set_inconsistent"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_inconsistent</span></code></a> (inconsistent)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.set_label" title="Gtk.CheckButton.set_label"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_label</span></code></a> (label)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.set_use_underline" title="Gtk.CheckButton.set_use_underline"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_use_underline</span></code></a> (setting)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gtk-checkbutton-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-vfuncs"><span class="std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-vfuncs"><span class="std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference internal" href="Actionable.html#gtk-actionable-vfuncs"><span class="std std-ref">Gtk.Actionable (4)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.do_activate" title="Gtk.CheckButton.do_activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_activate</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.CheckButton.do_toggled" title="Gtk.CheckButton.do_toggled"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_toggled</span></code></a> ()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gtk-checkbutton-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-props"><span class="std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-props"><span class="std std-ref">Gtk.Accessible (1)</span></a>,     <a class="reference internal" href="Actionable.html#gtk-actionable-props"><span class="std std-ref">Gtk.Actionable (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.CheckButton.props.active" title="Gtk.CheckButton.props.active"><code class="xref py py-data docutils literal notranslate"><span class="pre">active</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>If the toggle button should be pressed in</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.CheckButton.props.group" title="Gtk.CheckButton.props.group"><code class="xref py py-data docutils literal notranslate"><span class="pre">group</span></code></a></td>
+<td><a class="reference internal" href="#Gtk.CheckButton" title="Gtk.CheckButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.CheckButton</span></code></a></td>
+<td>w</td>
+<td>The check button whose group this widget belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.CheckButton.props.inconsistent" title="Gtk.CheckButton.props.inconsistent"><code class="xref py py-data docutils literal notranslate"><span class="pre">inconsistent</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>If the check button is in an “in between” state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.CheckButton.props.label" title="Gtk.CheckButton.props.label"><code class="xref py py-data docutils literal notranslate"><span class="pre">label</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<td>r/w/en</td>
+<td>Text of the label widget inside the button, if the button contains a label widget</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.CheckButton.props.use_underline" title="Gtk.CheckButton.props.use_underline"><code class="xref py py-data docutils literal notranslate"><span class="pre">use-underline</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>If set, an underline in the text indicates the next character should be used for the mnemonic accelerator key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gtk-checkbutton-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-signals"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gtk.CheckButton.signals.activate" title="Gtk.CheckButton.signals.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">activate</span></code></a></td>
+<td>Emitted to when the check button is activated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gtk.CheckButton.signals.toggled" title="Gtk.CheckButton.signals.toggled"><code class="xref py py-func docutils literal notranslate"><span class="pre">toggled</span></code></a></td>
+<td>Emitted when the buttons’s [property`Gtk`.CheckButton:active] property changes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gtk-checkbutton-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="Widget.html#gtk-widget-fields"><span class="std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="16%" />
+<col width="1%" />
+<col width="1%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>parent_instance</td>
+<td><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+<td>r</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.CheckButton">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">CheckButton</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>,         <a class="reference internal" href="Actionable.html#Gtk.Actionable" title="Gtk.Actionable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Actionable</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="CheckButtonClass.html#Gtk.CheckButtonClass" title="Gtk.CheckButtonClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.CheckButtonClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> places a label next to an indicator.</p>
+<p>Example GtkCheckButtons</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> is created by calling either [ctor`Gtk`.CheckButton.new]
+or [ctor`Gtk`.CheckButton.new_with_label].</p>
+<p>The state of a <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> can be set specifically using
+[method`Gtk`.CheckButton.set_active], and retrieved using
+[method`Gtk`.CheckButton.get_active].</p>
+<dl class="docutils">
+<dt>Inconsistent state</dt>
+<dd></dd>
+</dl>
+<p>In addition to “on” and “off”, check buttons can be an
+“in between” state that is neither on nor off. This can be used
+e.g. when the user has selected a range of elements (such as some
+text or spreadsheet cells) that are affected by a check button,
+and the current values in that range are inconsistent.</p>
+<p>To set a <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> to inconsistent state, use
+[method`Gtk`.CheckButton.set_inconsistent].</p>
+<dl class="docutils">
+<dt>Grouping</dt>
+<dd></dd>
+</dl>
+<p>Check buttons can be grouped together, to form mutually exclusive
+groups - only one of the buttons can be toggled at a time, and toggling
+another one will switch the currently toggled one off.</p>
+<p>Grouped check buttons use a different indicator, and are commonly referred
+to as *radio buttons*.</p>
+<p>Example GtkCheckButtons</p>
+<p>To add a <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> to a group, use [method`Gtk`.CheckButton.set_group].</p>
+<dl class="docutils">
+<dt>CSS nodes</dt>
+<dd></dd>
+</dl>
+<p>``
+checkbutton[.text-button]
+├── check
+╰── [label]
+``</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> has a main node with name checkbutton. If the
+[property`Gtk`.CheckButton:label] property is set, it contains a label
+child. The indicator node is named check when no group is set, and
+radio if the checkbutton is grouped together with other checkbuttons.</p>
+<dl class="docutils">
+<dt>Accessibility</dt>
+<dd></dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> uses the <a class="reference internal" href="../enums.html#Gtk.AccessibleRole.CHECKBOX" title="Gtk.AccessibleRole.CHECKBOX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.AccessibleRole.CHECKBOX</span></code></a> role.</p>
+<dl class="classmethod">
+<dt id="Gtk.CheckButton.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code>.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.CheckButton.new_with_label">
+<em class="property">classmethod </em><code class="descname">new_with_label</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.new_with_label" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>label</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the text for the check button.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> with the given text.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.CheckButton.new_with_mnemonic">
+<em class="property">classmethod </em><code class="descname">new_with_mnemonic</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.new_with_mnemonic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>label</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – The text of the button, with an underscore
+in front of the mnemonic character</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> with the given text and a mnemonic.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.get_active">
+<code class="descname">get_active</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.get_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">whether the check button is active</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the check button is active.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.get_inconsistent">
+<code class="descname">get_inconsistent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.get_inconsistent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> is currently in an inconsistent state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the check button is in an inconsistent state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.get_label">
+<code class="descname">get_label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.get_label" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The label <cite>self</cite> shows next
+to the indicator. If no label is shown, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> will be returned.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the label of the check button.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.get_use_underline">
+<code class="descname">get_use_underline</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.get_use_underline" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The value of the [property`Gtk`.CheckButton:use-underline] property.
+See [method`Gtk`.CheckButton.set_use_underline] for details on how to set
+a new value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether underlines in the label indicate mnemonics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.set_active">
+<code class="descname">set_active</code><span class="sig-paren">(</span><em>setting</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.set_active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>setting</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – the new value to set</td>
+</tr>
+</tbody>
+</table>
+<p>Changes the check buttons active state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.set_group">
+<code class="descname">set_group</code><span class="sig-paren">(</span><em>group</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.set_group" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>group</strong> (<a class="reference internal" href="#Gtk.CheckButton" title="Gtk.CheckButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.CheckButton</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – another <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> to
+form a group with</td>
+</tr>
+</tbody>
+</table>
+<p>Adds <cite>self</cite> to the group of <cite>group</cite>.</p>
+<p>In a group of multiple check buttons, only one button can be active
+at a time. The behavior of a checkbutton in a group is also commonly
+known as a *radio button*.</p>
+<p>Setting the group of a check button also changes the css name of the
+indicator widget’s CSS node to ‘radio’.</p>
+<p>Setting up groups in a cycle leads to undefined behavior.</p>
+<p>Note that the same effect can be achieved via the [interface`Gtk`.Actionable]
+API, by using the same action with parameter type and state type ‘s’
+for all buttons in the group, and giving each button its own target
+value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.set_inconsistent">
+<code class="descname">set_inconsistent</code><span class="sig-paren">(</span><em>inconsistent</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.set_inconsistent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inconsistent</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if state is inconsistent</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> to inconsistent state.</p>
+<p>You shoud turn off the inconsistent state again if the user checks
+the check button. This has to be done manually.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.set_label">
+<code class="descname">set_label</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.set_label" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>label</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – The text shown next to the indicator, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
+to show no text</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the text of <cite>self</cite>.</p>
+<p>If [property`Gtk`.CheckButton:use-underline] is <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, an underscore
+in <cite>label</cite> is interpreted as mnemonic indicator, see
+[method`Gtk`.CheckButton.set_use_underline] for details on this behavior.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.set_use_underline">
+<code class="descname">set_use_underline</code><span class="sig-paren">(</span><em>setting</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.set_use_underline" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>setting</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – the new value to set</td>
+</tr>
+</tbody>
+</table>
+<p>Sets whether underlines in the label indicate mnemonics.</p>
+<p>If <cite>setting</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, an underscore character in <cite>self</cite>’s label
+indicates a mnemonic accelerator key. This behavior is similar
+to [property`Gtk`.Label:use-underline].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.do_activate">
+<code class="descname">do_activate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.CheckButton.do_activate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Gtk.CheckButton.do_toggled">
+<code class="descname">do_toggled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gtk.CheckButton.do_toggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gtk.CheckButton.signals.activate">
+<code class="descclassname">Gtk.CheckButton.signals.</code><code class="descname">activate</code><span class="sig-paren">(</span><em>check_button</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.signals.activate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">activate</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_FIRST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_FIRST</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.ACTION" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACTION</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>check_button</strong> (<a class="reference internal" href="#Gtk.CheckButton" title="Gtk.CheckButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.CheckButton</span></code></a>) – The object which received the signal</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted to when the check button is activated.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">::activate</span></code> signal on <code class="docutils literal notranslate"><span class="pre">GtkCheckButton</span></code> is an action signal and
+emitting it causes the button to animate press then release.</p>
+<p>Applications should never connect to this signal, but use the
+[signal`Gtk`.CheckButton::toggled] signal.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 4.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="Gtk.CheckButton.signals.toggled">
+<code class="descclassname">Gtk.CheckButton.signals.</code><code class="descname">toggled</code><span class="sig-paren">(</span><em>check_button</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.CheckButton.signals.toggled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">toggled</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_FIRST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_FIRST</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>check_button</strong> (<a class="reference internal" href="#Gtk.CheckButton" title="Gtk.CheckButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.CheckButton</span></code></a>) – The object which received the signal</td>
+</tr>
+</tbody>
+</table>
+<p>Emitted when the buttons’s [property`Gtk`.CheckButton:active]
+property changes.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gtk.CheckButton.props.active">
+<code class="descclassname">Gtk.CheckButton.props.</code><code class="descname">active</code><a class="headerlink" href="#Gtk.CheckButton.props.active" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">active</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>If the check button is active.</p>
+<p>Setting <code class="docutils literal notranslate"><span class="pre">active</span></code> to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> will add the <code class="docutils literal notranslate"><span class="pre">:checked:</span></code> state to both
+the check button and the indicator CSS node.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.CheckButton.props.group">
+<code class="descclassname">Gtk.CheckButton.props.</code><code class="descname">group</code><a class="headerlink" href="#Gtk.CheckButton.props.group" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">group</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#Gtk.CheckButton" title="Gtk.CheckButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.CheckButton</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The check button whose group this widget belongs to.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.CheckButton.props.inconsistent">
+<code class="descclassname">Gtk.CheckButton.props.</code><code class="descname">inconsistent</code><a class="headerlink" href="#Gtk.CheckButton.props.inconsistent" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">inconsistent</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>If the check button is in an “in between” state.</p>
+<p>The inconsistent state only affects visual appearance,
+not the semantics of the button.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.CheckButton.props.label">
+<code class="descclassname">Gtk.CheckButton.props.</code><code class="descname">label</code><a class="headerlink" href="#Gtk.CheckButton.props.label" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">label</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Text of the label inside the check button, if it contains a label widget.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gtk.CheckButton.props.use_underline">
+<code class="descclassname">Gtk.CheckButton.props.</code><code class="descname">use_underline</code><a class="headerlink" href="#Gtk.CheckButton.props.use_underline" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">use-underline</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>If set, an underline in the text indicates that the following
+character is to be used as mnemonic.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gdk.Toplevel -
+    
+      Interfaces -
+    
+    Gdk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gdk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Interfaces" href="../interfaces.html"/>
+        <link rel="next" title="Classes" href="../classes.html"/>
+        <link rel="prev" title="Gdk.Popup" href="Popup.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/Toplevel.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../interfaces.html">Interfaces</a> &raquo;</li>
+      
+    <li>Gdk.Toplevel</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../interfaces.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Popup.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="../classes.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.Toplevel</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gdk-4.0/classes/Toplevel.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gdk 4.0</a> &raquo;</li>
+      
+          <li><a href="../interfaces.html">Interfaces</a> &raquo;</li>
+      
+    <li>Gdk.Toplevel</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../interfaces.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Popup.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="../classes.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gdk.Toplevel</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gdk-toplevel">
+<h1>Gdk.Toplevel<a class="headerlink" href="#gdk-toplevel" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="106pt" height="80pt"
+ viewBox="0.00 0.00 106.00 80.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 76)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-72C92,-72 6,-72 6,-72 3,-72 0,-69 0,-66 0,-66 0,-60 0,-60 0,-57 3,-54 6,-54 6,-54 92,-54 92,-54 95,-54 98,-57 98,-60 98,-60 98,-66 98,-66 98,-69 95,-72 92,-72"/>
+<text text-anchor="middle" x="49" y="-60.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gdk.Toplevel -->
+<g id="node2" class="node">
+<title>Gdk.Toplevel</title>
+<g id="a_node2"><a xlink:href="#Gdk.Toplevel" xlink:title="Gdk.Toplevel">
+<path fill="none" stroke="#3091d1" d="M78.5,-18C78.5,-18 19.5,-18 19.5,-18 16.5,-18 13.5,-15 13.5,-12 13.5,-12 13.5,-6 13.5,-6 13.5,-3 16.5,0 19.5,0 19.5,0 78.5,0 78.5,0 81.5,0 84.5,-3 84.5,-6 84.5,-6 84.5,-12 84.5,-12 84.5,-15 81.5,-18 78.5,-18"/>
+<text text-anchor="middle" x="49" y="-6.7" font-family="inherit" font-size="8.50">Gdk.Toplevel</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gdk.Toplevel -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gdk.Toplevel</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49,-53.88C49,-45.76 49,-33.13 49,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.75,-23.24 49,-18.24 47.25,-23.24 50.75,-23.24"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Implementations:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gdk-toplevel-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.begin_move" title="Gdk.Toplevel.begin_move"><code class="xref py py-func docutils literal notranslate"><span class="pre">begin_move</span></code></a> (device, button, x, y, timestamp)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.begin_resize" title="Gdk.Toplevel.begin_resize"><code class="xref py py-func docutils literal notranslate"><span class="pre">begin_resize</span></code></a> (edge, device, button, x, y, timestamp)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.focus" title="Gdk.Toplevel.focus"><code class="xref py py-func docutils literal notranslate"><span class="pre">focus</span></code></a> (timestamp)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.get_state" title="Gdk.Toplevel.get_state"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_state</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.inhibit_system_shortcuts" title="Gdk.Toplevel.inhibit_system_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">inhibit_system_shortcuts</span></code></a> (event)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.lower" title="Gdk.Toplevel.lower"><code class="xref py py-func docutils literal notranslate"><span class="pre">lower</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.minimize" title="Gdk.Toplevel.minimize"><code class="xref py py-func docutils literal notranslate"><span class="pre">minimize</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.present" title="Gdk.Toplevel.present"><code class="xref py py-func docutils literal notranslate"><span class="pre">present</span></code></a> (layout)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.restore_system_shortcuts" title="Gdk.Toplevel.restore_system_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">restore_system_shortcuts</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_decorated" title="Gdk.Toplevel.set_decorated"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_decorated</span></code></a> (decorated)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_deletable" title="Gdk.Toplevel.set_deletable"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_deletable</span></code></a> (deletable)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_icon_list" title="Gdk.Toplevel.set_icon_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_icon_list</span></code></a> (surfaces)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_modal" title="Gdk.Toplevel.set_modal"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_modal</span></code></a> (modal)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_startup_id" title="Gdk.Toplevel.set_startup_id"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_startup_id</span></code></a> (startup_id)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_title" title="Gdk.Toplevel.set_title"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_title</span></code></a> (title)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.set_transient_for" title="Gdk.Toplevel.set_transient_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_transient_for</span></code></a> (parent)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.show_window_menu" title="Gdk.Toplevel.show_window_menu"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_window_menu</span></code></a> (event)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gdk.Toplevel.supports_edge_constraints" title="Gdk.Toplevel.supports_edge_constraints"><code class="xref py py-func docutils literal notranslate"><span class="pre">supports_edge_constraints</span></code></a> ()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gdk-toplevel-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="properties">
+<span id="gdk-toplevel-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.props.decorated" title="Gdk.Toplevel.props.decorated"><code class="xref py py-data docutils literal notranslate"><span class="pre">decorated</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Decorated</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Toplevel.props.deletable" title="Gdk.Toplevel.props.deletable"><code class="xref py py-data docutils literal notranslate"><span class="pre">deletable</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Deletable</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.props.fullscreen_mode" title="Gdk.Toplevel.props.fullscreen_mode"><code class="xref py py-data docutils literal notranslate"><span class="pre">fullscreen-mode</span></code></a></td>
+<td><a class="reference internal" href="../enums.html#Gdk.FullscreenMode" title="Gdk.FullscreenMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.FullscreenMode</span></code></a></td>
+<td>r/w/en</td>
+<td>Fullscreen mode</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Toplevel.props.icon_list" title="Gdk.Toplevel.props.icon_list"><code class="xref py py-data docutils literal notranslate"><span class="pre">icon-list</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/w/en</td>
+<td>The list of icon textures</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.props.modal" title="Gdk.Toplevel.props.modal"><code class="xref py py-data docutils literal notranslate"><span class="pre">modal</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/w/en</td>
+<td>Whether the surface is modal</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Toplevel.props.shortcuts_inhibited" title="Gdk.Toplevel.props.shortcuts_inhibited"><code class="xref py py-data docutils literal notranslate"><span class="pre">shortcuts-inhibited</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+<td>r/en</td>
+<td>Whether keyboard shortcuts are inhibited</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.props.startup_id" title="Gdk.Toplevel.props.startup_id"><code class="xref py py-data docutils literal notranslate"><span class="pre">startup-id</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<td>r/w/en</td>
+<td>The startup ID of the surface</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Toplevel.props.state" title="Gdk.Toplevel.props.state"><code class="xref py py-data docutils literal notranslate"><span class="pre">state</span></code></a></td>
+<td><a class="reference internal" href="../flags.html#Gdk.ToplevelState" title="Gdk.ToplevelState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ToplevelState</span></code></a></td>
+<td>r</td>
+<td>State</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.props.title" title="Gdk.Toplevel.props.title"><code class="xref py py-data docutils literal notranslate"><span class="pre">title</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+<td>r/w/en</td>
+<td>The title of the surface</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#Gdk.Toplevel.props.transient_for" title="Gdk.Toplevel.props.transient_for"><code class="xref py py-data docutils literal notranslate"><span class="pre">transient-for</span></code></a></td>
+<td><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a></td>
+<td>r/w/en</td>
+<td>The transient parent of the surface</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gdk-toplevel-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gdk.Toplevel.signals.compute_size" title="Gdk.Toplevel.signals.compute_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">compute-size</span></code></a></td>
+<td>Emitted when the size for the surface needs to be computed, when it is present.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gdk-toplevel-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gdk.Toplevel">
+<em class="property">class </em><code class="descclassname">Gdk.</code><code class="descname">Toplevel</code><a class="headerlink" href="#Gdk.Toplevel" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GInterface</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="ToplevelInterface.html#Gdk.ToplevelInterface" title="Gdk.ToplevelInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gdk.ToplevelInterface</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A <code class="docutils literal notranslate"><span class="pre">GdkToplevel</span></code> is a freestanding toplevel surface.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GdkToplevel</span></code> interface provides useful APIs for interacting with
+the windowing system, such as controlling maximization and size of the
+surface, setting icons and transient parents for dialogs.</p>
+<dl class="method">
+<dt id="Gdk.Toplevel.begin_move">
+<code class="descname">begin_move</code><span class="sig-paren">(</span><em>device</em>, <em>button</em>, <em>x</em>, <em>y</em>, <em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.begin_move" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>device</strong> (<a class="reference internal" href="Device.html#Gdk.Device" title="Gdk.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Device</span></code></a>) – the device used for the operation</li>
+<li><strong>button</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the button being used to drag, or 0 for a keyboard-initiated drag</li>
+<li><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – surface X coordinate of mouse click that began the drag</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – surface Y coordinate of mouse click that began the drag</li>
+<li><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – timestamp of mouse click that began the drag (use
+[method`Gdk`.Event.get_time])</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Begins an interactive move operation.</p>
+<p>You might use this function to implement draggable titlebars.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.begin_resize">
+<code class="descname">begin_resize</code><span class="sig-paren">(</span><em>edge</em>, <em>device</em>, <em>button</em>, <em>x</em>, <em>y</em>, <em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.begin_resize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>edge</strong> (<a class="reference internal" href="../enums.html#Gdk.SurfaceEdge" title="Gdk.SurfaceEdge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.SurfaceEdge</span></code></a>) – the edge or corner from which the drag is started</li>
+<li><strong>device</strong> (<a class="reference internal" href="Device.html#Gdk.Device" title="Gdk.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Device</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the device used for the operation</li>
+<li><strong>button</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the button being used to drag, or 0 for a keyboard-initiated drag</li>
+<li><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – surface X coordinate of mouse click that began the drag</li>
+<li><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – surface Y coordinate of mouse click that began the drag</li>
+<li><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – timestamp of mouse click that began the drag (use
+[method`Gdk`.Event.get_time])</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Begins an interactive resize operation.</p>
+<p>You might use this function to implement a “window resize grip.”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.focus">
+<code class="descname">focus</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.focus" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timestamp</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – timestamp of the event triggering the surface focus</td>
+</tr>
+</tbody>
+</table>
+<p>Sets keyboard focus to <cite>surface</cite>.</p>
+<p>In most cases, [method`Gtk`.Window.present_with_time] should be
+used on a [class`Gtk`.Window], rather than calling this function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.get_state">
+<code class="descname">get_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">surface state bitfield</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../flags.html#Gdk.ToplevelState" title="Gdk.ToplevelState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ToplevelState</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the bitwise or of the currently active surface state flags,
+from the <code class="docutils literal notranslate"><span class="pre">GdkToplevelState</span></code> enumeration.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.inhibit_system_shortcuts">
+<code class="descname">inhibit_system_shortcuts</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.inhibit_system_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="Event.html#Gdk.Event" title="Gdk.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Event</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GdkEvent</span></code> that is triggering the inhibit
+request, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if none is available</td>
+</tr>
+</tbody>
+</table>
+<p>Requests that the <cite>self</cite> inhibit the system shortcuts.</p>
+<p>This is asking the desktop environment/windowing system to let all
+keyboard events reach the surface, as long as it is focused, instead
+of triggering system actions.</p>
+<p>If granted, the rerouting remains active until the default shortcuts
+processing is restored with [method`Gdk`.Toplevel.restore_system_shortcuts],
+or the request is revoked by the desktop environment, windowing system
+or the user.</p>
+<p>A typical use case for this API is remote desktop or virtual machine
+viewers which need to inhibit the default system keyboard shortcuts
+so that the remote session or virtual host gets those instead of the
+local environment.</p>
+<p>The windowing system or desktop environment may ask the user to grant
+or deny the request or even choose to ignore the request entirely.</p>
+<p>The caller can be notified whenever the request is granted or revoked
+by listening to the [property`Gdk`.Toplevel:shortcuts-inhibited] property.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.lower">
+<code class="descname">lower</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.lower" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the surface was lowered</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Asks to lower the <cite>self</cite> below other windows.</p>
+<p>The windowing system may choose to ignore the request.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.minimize">
+<code class="descname">minimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.minimize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the surface was minimized</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Asks to minimize the <cite>self</cite>.</p>
+<p>The windowing system may choose to ignore the request.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.present">
+<code class="descname">present</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.present" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layout</strong> (<a class="reference internal" href="ToplevelLayout.html#Gdk.ToplevelLayout" title="Gdk.ToplevelLayout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ToplevelLayout</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GdkToplevelLayout</span></code> object used to layout</td>
+</tr>
+</tbody>
+</table>
+<p>Present <cite>self</cite> after having processed the <code class="docutils literal notranslate"><span class="pre">GdkToplevelLayout</span></code> rules.</p>
+<p>If the toplevel was previously not showing, it will be showed,
+otherwise it will change layout according to <cite>layout</cite>.</p>
+<p>GDK may emit the [signal`Gdk`.Toplevel::compute-size] signal to let
+the user of this toplevel compute the preferred size of the toplevel
+surface.</p>
+<p>Presenting is asynchronous and the specified layout parameters are not
+guaranteed to be respected.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.restore_system_shortcuts">
+<code class="descname">restore_system_shortcuts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.restore_system_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restore default system keyboard shortcuts which were previously
+inhibited.</p>
+<p>This undoes the effect of [method`Gdk`.Toplevel.inhibit_system_shortcuts].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_decorated">
+<code class="descname">set_decorated</code><span class="sig-paren">(</span><em>decorated</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_decorated" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>decorated</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to request decorations</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the toplevel to be decorated.</p>
+<p>Setting <cite>decorated</cite> to <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> hints the desktop environment
+that the surface has its own, client-side decorations and
+does not need to have window decorations added.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_deletable">
+<code class="descname">set_deletable</code><span class="sig-paren">(</span><em>deletable</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_deletable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deletable</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to request a delete button</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the toplevel to be deletable.</p>
+<p>Setting <cite>deletable</cite> to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> hints the desktop environment
+that it should offer the user a way to close the surface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_icon_list">
+<code class="descname">set_icon_list</code><span class="sig-paren">(</span><em>surfaces</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_icon_list" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>surfaces</strong> ([<a class="reference internal" href="Texture.html#Gdk.Texture" title="Gdk.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Texture</span></code></a>]) – A list of textures to use as icon, of different sizes</td>
+</tr>
+</tbody>
+</table>
+<p>Sets a list of icons for the surface.</p>
+<p>One of these will be used to represent the surface in iconic form.
+The icon may be shown in window lists or task bars. Which icon
+size is shown depends on the window manager. The window manager
+can scale the icon but setting several size icons can give better
+image quality.</p>
+<p>Note that some platforms don’t support surface icons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_modal">
+<code class="descname">set_modal</code><span class="sig-paren">(</span><em>modal</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_modal" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>modal</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the surface is modal, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the toplevel to be modal.</p>
+<p>The application can use this hint to tell the
+window manager that a certain surface has modal
+behaviour. The window manager can use this information
+to handle modal surfaces in a special way.</p>
+<p>You should only use this on surfaces for which you have
+previously called [method`Gdk`.Toplevel.set_transient_for].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_startup_id">
+<code class="descname">set_startup_id</code><span class="sig-paren">(</span><em>startup_id</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_startup_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>startup_id</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – a string with startup-notification identifier</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the startup notification ID.</p>
+<p>When using GTK, typically you should use
+[method`Gtk`.Window.set_startup_id] instead of this
+low-level function.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_title">
+<code class="descname">set_title</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_title" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>title</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – title of <cite>surface</cite></td>
+</tr>
+</tbody>
+</table>
+<p>Sets the title of a toplevel surface.</p>
+<p>The title maybe be displayed in the titlebar,
+in lists of windows, etc.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.set_transient_for">
+<code class="descname">set_transient_for</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.set_transient_for" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parent</strong> (<a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a>) – another toplevel <code class="docutils literal notranslate"><span class="pre">GdkSurface</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Sets a transient-for parent.</p>
+<p>Indicates to the window manager that <cite>surface</cite> is a transient
+dialog associated with the application surface <cite>parent</cite>. This
+allows the window manager to do things like center <cite>surface</cite>
+on <cite>parent</cite> and keep <cite>surface</cite> above <cite>parent</cite>.</p>
+<p>See [method`Gtk`.Window.set_transient_for] if you’re using
+[class`Gtk`.Window] or [class`Gtk`.Dialog].</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.show_window_menu">
+<code class="descname">show_window_menu</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.show_window_menu" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="Event.html#Gdk.Event" title="Gdk.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Event</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkEvent</span></code> to show the menu for</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the window menu was shown and <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Asks the windowing system to show the window menu.</p>
+<p>The window menu is the menu shown when right-clicking the titlebar
+on traditional windows managed by the window manager. This is useful
+for windows using client-side decorations, activating it with a
+right-click on the window decorations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gdk.Toplevel.supports_edge_constraints">
+<code class="descname">supports_edge_constraints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.supports_edge_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the desktop environment supports
+tiled window states</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns whether the desktop environment supports
+tiled window states.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Gdk.Toplevel.signals.compute_size">
+<code class="descclassname">Gdk.Toplevel.signals.</code><code class="descname">compute_size</code><span class="sig-paren">(</span><em>toplevel</em><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.Toplevel.signals.compute_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Signal Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">compute-size</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>toplevel</strong> (<a class="reference internal" href="#Gdk.Toplevel" title="Gdk.Toplevel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Toplevel</span></code></a>) – The object which received the signal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal notranslate"><span class="pre">GdkToplevelSize</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><strong>size</strong>: <a class="reference internal" href="ToplevelSize.html#Gdk.ToplevelSize" title="Gdk.ToplevelSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ToplevelSize</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Emitted when the size for the surface needs to be computed, when
+it is present.</p>
+<p>It will normally be emitted during or after [method`Gdk`.Toplevel.present],
+depending on the configuration received by the windowing system.
+It may also be emitted at any other point in time, in response
+to the windowing system spontaneously changing the configuration.</p>
+<p>It is the responsibility of the toplevel user to handle this signal
+and compute the desired size of the toplevel, given the information
+passed via the [struct`Gdk`.ToplevelSize] object. Failing to do so
+will result in an arbitrary size being used as a result.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gdk.Toplevel.props.decorated">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">decorated</code><a class="headerlink" href="#Gdk.Toplevel.props.decorated" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">decorated</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the window manager should add decorations.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.deletable">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">deletable</code><a class="headerlink" href="#Gdk.Toplevel.props.deletable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">deletable</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the window manager should allow to close the surface.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.fullscreen_mode">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">fullscreen_mode</code><a class="headerlink" href="#Gdk.Toplevel.props.fullscreen_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">fullscreen-mode</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gdk.FullscreenMode" title="Gdk.FullscreenMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.FullscreenMode</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference internal" href="../enums.html#Gdk.FullscreenMode.CURRENT_MONITOR" title="Gdk.FullscreenMode.CURRENT_MONITOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.FullscreenMode.CURRENT_MONITOR</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The fullscreen mode of the surface.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.icon_list">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">icon_list</code><a class="headerlink" href="#Gdk.Toplevel.props.icon_list" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">icon-list</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>A list of textures to use as icon.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.modal">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">modal</code><a class="headerlink" href="#Gdk.Toplevel.props.modal" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">modal</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the surface is modal.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.shortcuts_inhibited">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">shortcuts_inhibited</code><a class="headerlink" href="#Gdk.Toplevel.props.shortcuts_inhibited" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">shortcuts-inhibited</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Whether the surface should inhibit keyboard shortcuts.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.startup_id">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">startup_id</code><a class="headerlink" href="#Gdk.Toplevel.props.startup_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">startup-id</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The startup ID of the surface.</p>
+<p>See [class`Gdk`.AppLaunchContext] for more information about
+startup feedback.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.state">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">state</code><a class="headerlink" href="#Gdk.Toplevel.props.state" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">state</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../flags.html#Gdk.ToplevelState" title="Gdk.ToplevelState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ToplevelState</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The state of the toplevel.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.title">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">title</code><a class="headerlink" href="#Gdk.Toplevel.props.title" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">title</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The title of the surface.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="Gdk.Toplevel.props.transient_for">
+<code class="descclassname">Gdk.Toplevel.props.</code><code class="descname">transient_for</code><a class="headerlink" href="#Gdk.Toplevel.props.transient_for" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">transient-for</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="Surface.html#Gdk.Surface" title="Gdk.Surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Surface</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The transient parent of the surface.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PyGObject API Reference</title>
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/pgi.css" type="text/css" />
+
+    <style>
+
+    dd {
+        margin: 15px 0px 25px 20px !important;
+    }
+
+    dl {
+        margin-left: 15px;
+    }
+
+    </style>
+
+</head>
+<body class="wy-body-for-nav" role="document">
+
+    <div class="wy-grid-for-nav">
+
+        <section class="wy-nav-content-wrap">
+            <div class="wy-nav-content">
+            <div class="rst-content">
+                <div class="section">
+
+<h1>Search Configuration</h1>
+
+<dl class="docutils">
+    <dt><label><input type="button" id="config-restore" value="Restore Default Configuration"></label></dt>
+</dl>
+
+<dl class="docutils">
+    <dt>General</dt>
+    <dd>
+        <label><input type="checkbox" id="case-insensitive"> Case Insensitive Search</label>
+    </dd>
+</dl>
+
+<dl class="docutils">
+    <dt>Included Modules</dt>
+    <dd>
+        <label><input type="checkbox" id="include-all"> Include All Modules <small>(only the newest versions)</small></label>
+    </dd>
+    <dd class="module-selection">
+        <label><input type="button" id="select-all" value="Select All">&#160;&#160;&#160;<input type="button" id="unselect-all" value="Unselect All"></label>
+    </dd>
+    <dd class="module-selection">
+        
+        <label><input type="checkbox" class="module-checkbox" value="Gdk 4.0">Gdk 4.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="GdkPixbuf 2.0">GdkPixbuf 2.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="Gio 2.0">Gio 2.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="GLib 2.0">GLib 2.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="GModule 2.0">GModule 2.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="GObject 2.0">GObject 2.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="Graphene 1.0">Graphene 1.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="Gsk 4.0">Gsk 4.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="Gtk 4.0">Gtk 4.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="HarfBuzz 0.0">HarfBuzz 0.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="Pango 1.0">Pango 1.0</label>
+        
+        <label><input type="checkbox" class="module-checkbox" value="PangoCairo 1.0">PangoCairo 1.0</label>
+        
+    </dd>
+</dl>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js.cookie-2.1.0.min.js"></script>
+    <script type="text/javascript" src="pgi-config.js"></script>
+
+    <script type="text/javascript">
+    jQuery(function () {
+        // Case Insensitive
+        $("#case-insensitive").prop('checked', PGIConfig.getCaseInsensitive());
+        $("#case-insensitive").change(function() {
+            var checked = $(this).prop('checked');
+            PGIConfig.setCaseInsensitive(checked);
+        });
+
+        // Config Restore
+        $("#config-restore").click(function() {
+            PGIConfig.reset();
+            location.reload();
+        });
+
+        var saveModuleSelection = function() {
+            var selected = [];
+            $(".module-checkbox").each(function (index, elm) {
+                var name = $(elm).val().replace(" ", "-");
+                if ($(elm).prop('checked')) {
+                    selected.push(name);
+                }
+            });
+            PGIConfig.setModules(selected);
+        }
+
+        var restoreModuleSelection = function() {
+            var selected = PGIConfig.getModules();
+            $(".module-checkbox").each(function (index, elm) {
+                var name = $(elm).val().replace(" ", "-");
+                $(elm).prop('checked', selected.indexOf(name) >= 0);
+            });
+        }
+
+        // Select All
+        $("#select-all").click(function() {
+            $(".module-checkbox").each(function (index, elm) {
+                $(elm).prop('checked', true);
+            });
+            saveModuleSelection();
+        });
+
+        // Unselect All
+        $("#unselect-all").click(function() {
+            $(".module-checkbox").each(function (index, elm) {
+                $(elm).prop('checked', false);
+            });
+            saveModuleSelection();
+        });
+
+        // Include All
+        $("#include-all").change(function() {
+            var checked = $(this).prop('checked');
+
+            $(".module-selection input").each(function (index, elm) {
+                $(elm).prop('disabled', checked);
+            });
+
+            PGIConfig.setIncludeAll(checked);
+        });
+        $("#include-all").prop('checked', PGIConfig.getIncludeAll());
+        $("#include-all").change();  // trigger change event
+
+        // Module Selection
+        restoreModuleSelection();
+        saveModuleSelection();
+        $(".module-checkbox").change(function() {
+            saveModuleSelection();
+        });
+    });
+    </script>
+
+</body>
+</html>

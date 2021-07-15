@@ -1,0 +1,858 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gio.BufferedInputStream -
+    
+      Classes -
+    
+    Gio 2.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gio 2.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Gio.BufferedOutputStream" href="BufferedOutputStream.html"/>
+        <link rel="prev" title="Gio.ApplicationCommandLine" href="ApplicationCommandLine.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/BufferedInputStream.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.BufferedInputStream</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ApplicationCommandLine.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="BufferedOutputStream.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.BufferedInputStream</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gio-2.0/classes/BufferedInputStream.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gio 2.0</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Gio.BufferedInputStream</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ApplicationCommandLine.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="BufferedOutputStream.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gio.BufferedInputStream</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gio-bufferedinputstream">
+<h1>Gio.BufferedInputStream<a class="headerlink" href="#gio-bufferedinputstream" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<svg width="219pt" height="188pt"
+ viewBox="0.00 0.00 219.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>g</title>
+<!-- GObject.GInterface -->
+<g id="node1" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node1"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M92,-126C92,-126 6,-126 6,-126 3,-126 0,-123 0,-120 0,-120 0,-114 0,-114 0,-111 3,-108 6,-108 6,-108 92,-108 92,-108 95,-108 98,-111 98,-114 98,-114 98,-120 98,-120 98,-123 95,-126 92,-126"/>
+<text text-anchor="middle" x="49" y="-114.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gio.Seekable -->
+<g id="node6" class="node">
+<title>Gio.Seekable</title>
+<g id="a_node6"><a xlink:href="Seekable.html#Gio.Seekable" xlink:title="Gio.Seekable">
+<path fill="none" stroke="#3091d1" d="M80,-72C80,-72 20,-72 20,-72 17,-72 14,-69 14,-66 14,-66 14,-60 14,-60 14,-57 17,-54 20,-54 20,-54 80,-54 80,-54 83,-54 86,-57 86,-60 86,-60 86,-66 86,-66 86,-69 83,-72 80,-72"/>
+<text text-anchor="middle" x="50" y="-60.7" font-family="inherit" font-size="8.50">Gio.Seekable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gio.Seekable -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gio.Seekable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M49.16,-107.88C49.31,-99.76 49.56,-87.13 49.74,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="51.49,-77.27 49.84,-72.24 48,-77.2 51.49,-77.27"/>
+</g>
+<!-- GObject.Object -->
+<g id="node2" class="node">
+<title>GObject.Object</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M193,-180C193,-180 125,-180 125,-180 122,-180 119,-177 119,-174 119,-174 119,-168 119,-168 119,-165 122,-162 125,-162 125,-162 193,-162 193,-162 196,-162 199,-165 199,-168 199,-168 199,-174 199,-174 199,-177 196,-180 193,-180"/>
+<text text-anchor="middle" x="159" y="-168.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- Gio.InputStream -->
+<g id="node5" class="node">
+<title>Gio.InputStream</title>
+<g id="a_node5"><a xlink:href="InputStream.html#Gio.InputStream" xlink:title="Gio.InputStream">
+<path fill="none" stroke="#aaaaaa" d="M195.5,-126C195.5,-126 122.5,-126 122.5,-126 119.5,-126 116.5,-123 116.5,-120 116.5,-120 116.5,-114 116.5,-114 116.5,-111 119.5,-108 122.5,-108 122.5,-108 195.5,-108 195.5,-108 198.5,-108 201.5,-111 201.5,-114 201.5,-114 201.5,-120 201.5,-120 201.5,-123 198.5,-126 195.5,-126"/>
+<text text-anchor="middle" x="159" y="-114.7" font-family="inherit" font-size="8.50">Gio.InputStream</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;Gio.InputStream -->
+<g id="edge2" class="edge">
+<title>GObject.Object&#45;&gt;Gio.InputStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M159,-161.88C159,-153.76 159,-141.13 159,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="160.75,-131.24 159,-126.24 157.25,-131.24 160.75,-131.24"/>
+</g>
+<!-- Gio.BufferedInputStream -->
+<g id="node3" class="node">
+<title>Gio.BufferedInputStream</title>
+<g id="a_node3"><a xlink:href="#Gio.BufferedInputStream" xlink:title="Gio.BufferedInputStream">
+<path fill="none" stroke="#75507b" d="M157.5,-18C157.5,-18 48.5,-18 48.5,-18 45.5,-18 42.5,-15 42.5,-12 42.5,-12 42.5,-6 42.5,-6 42.5,-3 45.5,0 48.5,0 48.5,0 157.5,0 157.5,0 160.5,0 163.5,-3 163.5,-6 163.5,-6 163.5,-12 163.5,-12 163.5,-15 160.5,-18 157.5,-18"/>
+<text text-anchor="middle" x="103" y="-6.7" font-family="inherit" font-size="8.50">Gio.BufferedInputStream</text>
+</a>
+</g>
+</g>
+<!-- Gio.FilterInputStream -->
+<g id="node4" class="node">
+<title>Gio.FilterInputStream</title>
+<g id="a_node4"><a xlink:href="FilterInputStream.html#Gio.FilterInputStream" xlink:title="Gio.FilterInputStream">
+<path fill="none" stroke="#aaaaaa" d="M205,-72C205,-72 111,-72 111,-72 108,-72 105,-69 105,-66 105,-66 105,-60 105,-60 105,-57 108,-54 111,-54 111,-54 205,-54 205,-54 208,-54 211,-57 211,-60 211,-60 211,-66 211,-66 211,-69 208,-72 205,-72"/>
+<text text-anchor="middle" x="158" y="-60.7" font-family="inherit" font-size="8.50">Gio.FilterInputStream</text>
+</a>
+</g>
+</g>
+<!-- Gio.FilterInputStream&#45;&gt;Gio.BufferedInputStream -->
+<g id="edge3" class="edge">
+<title>Gio.FilterInputStream&#45;&gt;Gio.BufferedInputStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M149.41,-53.88C140.34,-45.3 125.95,-31.7 115.6,-21.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.55,-20.4 111.71,-18.24 114.15,-22.95 116.55,-20.4"/>
+</g>
+<!-- Gio.InputStream&#45;&gt;Gio.FilterInputStream -->
+<g id="edge4" class="edge">
+<title>Gio.InputStream&#45;&gt;Gio.FilterInputStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M158.84,-107.88C158.69,-99.76 158.44,-87.13 158.26,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="160,-77.2 158.16,-72.24 156.51,-77.27 160,-77.2"/>
+</g>
+<!-- Gio.Seekable&#45;&gt;Gio.BufferedInputStream -->
+<g id="edge5" class="edge">
+<title>Gio.Seekable&#45;&gt;Gio.BufferedInputStream</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M58.28,-53.88C67.02,-45.3 80.88,-31.7 90.86,-21.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="92.26,-22.99 94.6,-18.24 89.81,-20.49 92.26,-22.99"/>
+</g>
+</g>
+</svg>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Subclasses:</th><td class="field-body"><a class="reference internal" href="DataInputStream.html#Gio.DataInputStream" title="Gio.DataInputStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.DataInputStream</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="methods">
+<span id="gio-bufferedinputstream-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="FilterInputStream.html#gio-filterinputstream-methods"><span class="std std-ref">Gio.FilterInputStream (3)</span></a>,     <a class="reference internal" href="InputStream.html#gio-inputstream-methods"><span class="std std-ref">Gio.InputStream (19)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Seekable.html#gio-seekable-methods"><span class="std std-ref">Gio.Seekable (5)</span></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Structs:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.new" title="Gio.BufferedInputStream.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (base_stream)</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.new_sized" title="Gio.BufferedInputStream.new_sized"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_sized</span></code></a> (base_stream, size)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.fill" title="Gio.BufferedInputStream.fill"><code class="xref py py-func docutils literal notranslate"><span class="pre">fill</span></code></a> (count, cancellable)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.fill_async" title="Gio.BufferedInputStream.fill_async"><code class="xref py py-func docutils literal notranslate"><span class="pre">fill_async</span></code></a> (count, io_priority, cancellable, callback, *user_data)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.fill_finish" title="Gio.BufferedInputStream.fill_finish"><code class="xref py py-func docutils literal notranslate"><span class="pre">fill_finish</span></code></a> (result)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.get_available" title="Gio.BufferedInputStream.get_available"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_available</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.get_buffer_size" title="Gio.BufferedInputStream.get_buffer_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_buffer_size</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.peek" title="Gio.BufferedInputStream.peek"><code class="xref py py-func docutils literal notranslate"><span class="pre">peek</span></code></a> (buffer, offset)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.peek_buffer" title="Gio.BufferedInputStream.peek_buffer"><code class="xref py py-func docutils literal notranslate"><span class="pre">peek_buffer</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.read_byte" title="Gio.BufferedInputStream.read_byte"><code class="xref py py-func docutils literal notranslate"><span class="pre">read_byte</span></code></a> (cancellable)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.set_buffer_size" title="Gio.BufferedInputStream.set_buffer_size"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_buffer_size</span></code></a> (size)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="virtual-methods">
+<span id="gio-bufferedinputstream-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="InputStream.html#gio-inputstream-vfuncs"><span class="std std-ref">Gio.InputStream (9)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference internal" href="Seekable.html#gio-seekable-vfuncs"><span class="std std-ref">Gio.Seekable (5)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.do_fill" title="Gio.BufferedInputStream.do_fill"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_fill</span></code></a> (count, cancellable)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.do_fill_async" title="Gio.BufferedInputStream.do_fill_async"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_fill_async</span></code></a> (count, io_priority, cancellable, callback, *user_data)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gio.BufferedInputStream.do_fill_finish" title="Gio.BufferedInputStream.do_fill_finish"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_fill_finish</span></code></a> (result)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="properties">
+<span id="gio-bufferedinputstream-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference internal" href="FilterInputStream.html#gio-filterinputstream-props"><span class="std std-ref">Gio.FilterInputStream (2)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="97%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Flags</th>
+<th class="head">Short Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#Gio.BufferedInputStream.props.buffer_size" title="Gio.BufferedInputStream.props.buffer_size"><code class="xref py py-data docutils literal notranslate"><span class="pre">buffer-size</span></code></a></td>
+<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+<td>r/w/c</td>
+<td>The size of the backend buffer</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signals">
+<span id="gio-bufferedinputstream-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fields">
+<span id="gio-bufferedinputstream-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inherited:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="16%" />
+<col width="1%" />
+<col width="1%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>parent_instance</td>
+<td><a class="reference internal" href="FilterInputStream.html#Gio.FilterInputStream" title="Gio.FilterInputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.FilterInputStream</span></code></a></td>
+<td>r</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gio.BufferedInputStream">
+<em class="property">class </em><code class="descclassname">Gio.</code><code class="descname">BufferedInputStream</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Bases:</th><td class="field-body"><a class="reference internal" href="FilterInputStream.html#Gio.FilterInputStream" title="Gio.FilterInputStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.FilterInputStream</span></code></a>,         <a class="reference internal" href="Seekable.html#Gio.Seekable" title="Gio.Seekable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.Seekable</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">No</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Structure:</th><td class="field-body"><a class="reference internal" href="BufferedInputStreamClass.html#Gio.BufferedInputStreamClass" title="Gio.BufferedInputStreamClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gio.BufferedInputStreamClass</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Buffered input stream implements <a class="reference internal" href="FilterInputStream.html#Gio.FilterInputStream" title="Gio.FilterInputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.FilterInputStream</span></code></a> and provides
+for buffered reads.</p>
+<p>By default, <a class="reference internal" href="#Gio.BufferedInputStream" title="Gio.BufferedInputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream</span></code></a>’s buffer size is set at 4 kilobytes.</p>
+<p>To create a buffered input stream, use <a class="reference internal" href="#Gio.BufferedInputStream.new" title="Gio.BufferedInputStream.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.new</span></code></a>(),
+or <a class="reference internal" href="#Gio.BufferedInputStream.new_sized" title="Gio.BufferedInputStream.new_sized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.new_sized</span></code></a>() to specify the buffer’s size at
+construction.</p>
+<p>To get the size of a buffer within a buffered input stream, use
+<a class="reference internal" href="#Gio.BufferedInputStream.get_buffer_size" title="Gio.BufferedInputStream.get_buffer_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.get_buffer_size</span></code></a>(). To change the size of a
+buffered input stream’s buffer, use
+<a class="reference internal" href="#Gio.BufferedInputStream.set_buffer_size" title="Gio.BufferedInputStream.set_buffer_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.set_buffer_size</span></code></a>(). Note that the buffer’s size
+cannot be reduced below the size of the data within the buffer.</p>
+<dl class="classmethod">
+<dt id="Gio.BufferedInputStream.new">
+<em class="property">classmethod </em><code class="descname">new</code><span class="sig-paren">(</span><em>base_stream</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.new" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>base_stream</strong> (<a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a>) – a <a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a <a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a> for the given <cite>base_stream</cite>.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a> from the given <cite>base_stream</cite>, with
+a buffer set to the default size (4 kilobytes).</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gio.BufferedInputStream.new_sized">
+<em class="property">classmethod </em><code class="descname">new_sized</code><span class="sig-paren">(</span><em>base_stream</em>, <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.new_sized" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>base_stream</strong> (<a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a>) – a <a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a></li>
+<li><strong>size</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – a #gsize</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a <a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="InputStream.html#Gio.InputStream" title="Gio.InputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.InputStream</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new <a class="reference internal" href="#Gio.BufferedInputStream" title="Gio.BufferedInputStream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream</span></code></a> from the given <cite>base_stream</cite>,
+with a buffer set to <cite>size</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.fill">
+<code class="descname">fill</code><span class="sig-paren">(</span><em>count</em>, <em>cancellable</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.fill" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>count</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of bytes that will be read from the stream</li>
+<li><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – optional <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> object, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> to ignore</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the number of bytes read into <cite>self</cite>’s buffer, up to <cite>count</cite>,
+or -1 on error.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Tries to read <cite>count</cite> bytes from the stream into the buffer.
+Will block during this read.</p>
+<p>If <cite>count</cite> is zero, returns zero and does nothing. A value of <cite>count</cite>
+larger than <a class="reference external" href="../../GObject-2.0/constants.html#GObject.G_MAXSSIZE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.G_MAXSSIZE</span></code></a> will cause a <a class="reference internal" href="../enums.html#Gio.IOErrorEnum.INVALID_ARGUMENT" title="Gio.IOErrorEnum.INVALID_ARGUMENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.IOErrorEnum.INVALID_ARGUMENT</span></code></a> error.</p>
+<p>On success, the number of bytes read into the buffer is returned.
+It is not an error if this is not the same as the requested size, as it
+can happen e.g. near the end of a file. Zero is returned on end of file
+(or if <cite>count</cite> is zero),  but never otherwise.</p>
+<p>If <cite>count</cite> is -1 then the attempted read size is equal to the number of
+bytes that are required to fill the buffer.</p>
+<p>If <cite>cancellable</cite> is not <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the operation can be cancelled by
+triggering the cancellable object from another thread. If the operation
+was cancelled, the error <a class="reference internal" href="../enums.html#Gio.IOErrorEnum.CANCELLED" title="Gio.IOErrorEnum.CANCELLED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.IOErrorEnum.CANCELLED</span></code></a> will be returned. If an
+operation was partially finished when the operation was cancelled the
+partial result will be returned, without an error.</p>
+<p>On error -1 is returned and <cite>error</cite> is set accordingly.</p>
+<p>For the asynchronous, non-blocking, version of this function, see
+<a class="reference internal" href="#Gio.BufferedInputStream.fill_async" title="Gio.BufferedInputStream.fill_async"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.fill_async</span></code></a>().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.fill_async">
+<code class="descname">fill_async</code><span class="sig-paren">(</span><em>count</em>, <em>io_priority</em>, <em>cancellable</em>, <em>callback</em>, <em>*user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.fill_async" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>count</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of bytes that will be read from the stream</li>
+<li><strong>io_priority</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the <a class="reference external" href="https://developer.gnome.org/gio/stable/GAsyncResult.html#io-priority">I/O priority</a> of the request</li>
+<li><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – optional <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> object</li>
+<li><strong>callback</strong> (<a class="reference internal" href="../callbacks.html#Gio.AsyncReadyCallback" title="Gio.AsyncReadyCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncReadyCallback</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference internal" href="../callbacks.html#Gio.AsyncReadyCallback" title="Gio.AsyncReadyCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncReadyCallback</span></code></a></li>
+<li><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Reads data into <cite>self</cite>’s buffer asynchronously, up to <cite>count</cite> size.
+<cite>io_priority</cite> can be used to prioritize reads. For the synchronous
+version of this function, see <a class="reference internal" href="#Gio.BufferedInputStream.fill" title="Gio.BufferedInputStream.fill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.fill</span></code></a>().</p>
+<p>If <cite>count</cite> is -1 then the attempted read size is equal to the number
+of bytes that are required to fill the buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.fill_finish">
+<code class="descname">fill_finish</code><span class="sig-paren">(</span><em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.fill_finish" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>result</strong> (<a class="reference internal" href="AsyncResult.html#Gio.AsyncResult" title="Gio.AsyncResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncResult</span></code></a>) – a <a class="reference internal" href="AsyncResult.html#Gio.AsyncResult" title="Gio.AsyncResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncResult</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a #gssize of the read stream, or <code class="docutils literal notranslate"><span class="pre">-1</span></code> on an error.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Finishes an asynchronous read.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.get_available">
+<code class="descname">get_available</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.get_available" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">size of the available stream.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the size of the available data within the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.get_buffer_size">
+<code class="descname">get_buffer_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.get_buffer_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the current buffer size.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the size of the input buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>buffer</em>, <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.peek" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>buffer</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bytes</span></code></a>) – a pointer to
+an allocated chunk of memory</li>
+<li><strong>offset</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – a #gsize</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a #gsize of the number of bytes peeked, or -1 on error.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Peeks in the buffer, copying data of size <cite>count</cite> into <cite>buffer</cite>,
+offset <cite>offset</cite> bytes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.peek_buffer">
+<code class="descname">peek_buffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.peek_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">read-only buffer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bytes</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the buffer with the currently available bytes. The returned
+buffer must not be modified and will become invalid when reading from
+the stream or filling the buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.read_byte">
+<code class="descname">read_byte</code><span class="sig-paren">(</span><em>cancellable</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.read_byte" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – optional <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> object, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> to ignore</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the byte read from the <cite>self</cite>, or -1 on end of stream or error.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Tries to read a single byte from the stream or the buffer. Will block
+during this read.</p>
+<p>On success, the byte read from the stream is returned. On end of stream
+-1 is returned but it’s not an exceptional error and <cite>error</cite> is not set.</p>
+<p>If <cite>cancellable</cite> is not <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the operation can be cancelled by
+triggering the cancellable object from another thread. If the operation
+was cancelled, the error <a class="reference internal" href="../enums.html#Gio.IOErrorEnum.CANCELLED" title="Gio.IOErrorEnum.CANCELLED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.IOErrorEnum.CANCELLED</span></code></a> will be returned. If an
+operation was partially finished when the operation was cancelled the
+partial result will be returned, without an error.</p>
+<p>On error -1 is returned and <cite>error</cite> is set accordingly.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.set_buffer_size">
+<code class="descname">set_buffer_size</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#Gio.BufferedInputStream.set_buffer_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>size</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – a #gsize</td>
+</tr>
+</tbody>
+</table>
+<p>Sets the size of the internal buffer of <cite>self</cite> to <cite>size</cite>, or to the
+size of the contents of the buffer. The buffer can never be resized
+smaller than its current contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.do_fill">
+<code class="descname">do_fill</code><span class="sig-paren">(</span><em>count</em>, <em>cancellable</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gio.BufferedInputStream.do_fill" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>count</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of bytes that will be read from the stream</li>
+<li><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – optional <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> object, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> to ignore</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the number of bytes read into <cite>stream</cite>’s buffer, up to <cite>count</cite>,
+or -1 on error.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Tries to read <cite>count</cite> bytes from the stream into the buffer.
+Will block during this read.</p>
+<p>If <cite>count</cite> is zero, returns zero and does nothing. A value of <cite>count</cite>
+larger than <a class="reference external" href="../../GObject-2.0/constants.html#GObject.G_MAXSSIZE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.G_MAXSSIZE</span></code></a> will cause a <a class="reference internal" href="../enums.html#Gio.IOErrorEnum.INVALID_ARGUMENT" title="Gio.IOErrorEnum.INVALID_ARGUMENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.IOErrorEnum.INVALID_ARGUMENT</span></code></a> error.</p>
+<p>On success, the number of bytes read into the buffer is returned.
+It is not an error if this is not the same as the requested size, as it
+can happen e.g. near the end of a file. Zero is returned on end of file
+(or if <cite>count</cite> is zero),  but never otherwise.</p>
+<p>If <cite>count</cite> is -1 then the attempted read size is equal to the number of
+bytes that are required to fill the buffer.</p>
+<p>If <cite>cancellable</cite> is not <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the operation can be cancelled by
+triggering the cancellable object from another thread. If the operation
+was cancelled, the error <a class="reference internal" href="../enums.html#Gio.IOErrorEnum.CANCELLED" title="Gio.IOErrorEnum.CANCELLED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.IOErrorEnum.CANCELLED</span></code></a> will be returned. If an
+operation was partially finished when the operation was cancelled the
+partial result will be returned, without an error.</p>
+<p>On error -1 is returned and <cite>error</cite> is set accordingly.</p>
+<p>For the asynchronous, non-blocking, version of this function, see
+<a class="reference internal" href="#Gio.BufferedInputStream.fill_async" title="Gio.BufferedInputStream.fill_async"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.fill_async</span></code></a>().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.do_fill_async">
+<code class="descname">do_fill_async</code><span class="sig-paren">(</span><em>count</em>, <em>io_priority</em>, <em>cancellable</em>, <em>callback</em>, <em>*user_data</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gio.BufferedInputStream.do_fill_async" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>count</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of bytes that will be read from the stream</li>
+<li><strong>io_priority</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the <a class="reference external" href="https://developer.gnome.org/gio/stable/GAsyncResult.html#io-priority">I/O priority</a> of the request</li>
+<li><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – optional <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> object</li>
+<li><strong>callback</strong> (<a class="reference internal" href="../callbacks.html#Gio.AsyncReadyCallback" title="Gio.AsyncReadyCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncReadyCallback</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference internal" href="../callbacks.html#Gio.AsyncReadyCallback" title="Gio.AsyncReadyCallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncReadyCallback</span></code></a></li>
+<li><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Reads data into <cite>stream</cite>’s buffer asynchronously, up to <cite>count</cite> size.
+<cite>io_priority</cite> can be used to prioritize reads. For the synchronous
+version of this function, see <a class="reference internal" href="#Gio.BufferedInputStream.fill" title="Gio.BufferedInputStream.fill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.BufferedInputStream.fill</span></code></a>().</p>
+<p>If <cite>count</cite> is -1 then the attempted read size is equal to the number
+of bytes that are required to fill the buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gio.BufferedInputStream.do_fill_finish">
+<code class="descname">do_fill_finish</code><span class="sig-paren">(</span><em>result</em><span class="sig-paren">)</span><em class="property"> virtual</em><a class="headerlink" href="#Gio.BufferedInputStream.do_fill_finish" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>result</strong> (<a class="reference internal" href="AsyncResult.html#Gio.AsyncResult" title="Gio.AsyncResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncResult</span></code></a>) – a <a class="reference internal" href="AsyncResult.html#Gio.AsyncResult" title="Gio.AsyncResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.AsyncResult</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a #gssize of the read stream, or <code class="docutils literal notranslate"><span class="pre">-1</span></code> on an error.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Finishes an asynchronous read.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="Gio.BufferedInputStream.props.buffer_size">
+<code class="descclassname">Gio.BufferedInputStream.props.</code><code class="descname">buffer_size</code><a class="headerlink" href="#Gio.BufferedInputStream.props.buffer_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">buffer-size</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Default Value:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">4096</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Flags:</th><td class="field-body"><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>The size of the backend buffer</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

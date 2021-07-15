@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PyGObject API Reference</title>
+
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/pgi.css" type="text/css" />
+
+    <style>
+
+    li {
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    body {
+        background-color: #404040 !important;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    .wy-side-nav-search, .wy-nav-top {
+        background-color: #2E6E99;
+        border-bottom: 1px solid #888;
+    }
+
+    .wy-side-nav-search {
+        position: fixed;
+        width: 100%;
+        padding: 0.6em;
+    }
+
+    .wy-side-nav-search input[type="text"] {
+        border-color: #404040;
+        border-radius: 5px;
+        padding: 6px 8px;
+    }
+
+    #search-results {
+        margin-top: 98px;
+         margin-bottom: 70px;
+    }
+
+    #settings-button {
+        padding: 5px 7px;
+        margin-left: 6px;
+        background: #EFEFEF;
+        cursor: pointer;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #404040;
+        display: block;
+        color: #404040;
+    }
+
+    .wy-menu-vertical a {
+        padding: 0.4em 0.8em 0.4em 1em;
+    }
+
+    .wy-menu-vertical a.message {
+        color: #888;
+    }
+
+    .left {
+        text-align:left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .left .version {
+        color: #888;
+    }
+
+    .right {
+        float: right;
+        color: #888;
+        font-size: smaller;
+        text-align: right;
+        padding-left: 0.8em;
+    }
+
+    #favourites {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #333;
+        border-top: 1px solid #888;
+    }
+
+
+
+    .wy-menu-vertical a:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    #favourites a::after {
+        content: "\f08e";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        padding-left: 0.4em;
+        font-size: 0.7em;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="wy-side-nav-search">
+        <a href="main.html" target="Content">PyGObject API Reference</a>
+
+        <div role="search" id="search-box">
+        <table>
+        <tr>
+        <td width="100%">
+            <input id="search-field" placeholder="Search" type="text" autocomplete="off">
+        </td>
+        <td>
+            <a id="settings-button" target="Content" href="config.html"><i class="fa fa-cog"></i></a>
+        </td>
+        </tr>
+        </table>
+        </div>
+
+    </div>
+
+    <div class="wy-menu wy-menu-vertical">
+        <div id="search-results">
+            <ul>
+                
+                <li><a href="Gdk-4.0/index.html" target="Content" title="Gdk"><div class="right">4.2.1</div><div class="left">Gdk <span class="version">4.0</span></div></a></li>
+                
+                <li><a href="GdkPixbuf-2.0/index.html" target="Content" title="GdkPixbuf"><div class="right">2.42.6</div><div class="left">GdkPixbuf <span class="version">2.0</span></div></a></li>
+                
+                <li><a href="Gio-2.0/index.html" target="Content" title="Gio"><div class="right">2.68.2</div><div class="left">Gio <span class="version">2.0</span></div></a></li>
+                
+                <li><a href="GLib-2.0/index.html" target="Content" title="GLib"><div class="right">2.68.2</div><div class="left">GLib <span class="version">2.0</span></div></a></li>
+                
+                <li><a href="GModule-2.0/index.html" target="Content" title="GModule"><div class="right">2.68.2</div><div class="left">GModule <span class="version">2.0</span></div></a></li>
+                
+                <li><a href="GObject-2.0/index.html" target="Content" title="GObject"><div class="right">2.68.2</div><div class="left">GObject <span class="version">2.0</span></div></a></li>
+                
+                <li><a href="Graphene-1.0/index.html" target="Content" title="Graphene"><div class="right">1.8.4</div><div class="left">Graphene <span class="version">1.0</span></div></a></li>
+                
+                <li><a href="Gsk-4.0/index.html" target="Content" title="Gsk"><div class="right"></div><div class="left">Gsk <span class="version">4.0</span></div></a></li>
+                
+                <li><a href="Gtk-4.0/index.html" target="Content" title="Gtk"><div class="right">4.2.1</div><div class="left">Gtk <span class="version">4.0</span></div></a></li>
+                
+                <li><a href="HarfBuzz-0.0/index.html" target="Content" title="HarfBuzz"><div class="right">2.7.4</div><div class="left">HarfBuzz <span class="version">0.0</span></div></a></li>
+                
+                <li><a href="Pango-1.0/index.html" target="Content" title="Pango"><div class="right">1.48.7</div><div class="left">Pango <span class="version">1.0</span></div></a></li>
+                
+                <li><a href="PangoCairo-1.0/index.html" target="Content" title="PangoCairo"><div class="right">1.48.7</div><div class="left">PangoCairo <span class="version">1.0</span></div></a></li>
+                
+            </ul>
+        </div>
+        <div id="favourites">
+            <ul>
+                <li><a href="https://python-gtk-3-tutorial.readthedocs.org/" target="_parent" title="Python GTK+ 3 Tutorial">Python GTK+ 3 Tutorial</a></li>
+                <li><a href="https://pygobject.readthedocs.org/" target="_parent" title="PyGObject Tutorial">PyGObject Tutorial</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js.cookie-2.1.0.min.js"></script>
+    <script type="text/javascript" src="pgi-config.js"></script>
+    <script type="text/javascript" src="pgi-searchtools.js"></script>
+
+    <script type="text/javascript">
+
+    var delay = (function() {
+        var timer = 0;
+        return function(callback, ms) {
+            clearTimeout(timer);
+            timer = setTimeout(callback, ms);
+        };
+    })();
+
+    var Search = new SearchIndex();
+    var searchField = document.getElementById('search-field');
+
+    searchField.focus();
+    searchField.addEventListener('keyup', function() {
+        var val = this.value;
+        delay(function() {
+            Search.performSearch(val);
+        }, 250);
+    });
+
+    </script>
+
+    <script type="text/javascript" src="searchindex.js" async></script>
+
+</body>
+</html>

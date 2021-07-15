@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gtk.Bitset -
+    
+      Structures -
+    
+    Gtk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gtk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Structures" href="../structs.html"/>
+        <link rel="next" title="Gtk.BitsetIter" href="BitsetIter.html"/>
+        <link rel="prev" title="Structures" href="../structs.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/Bitset.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../structs.html">Structures</a> &raquo;</li>
+      
+    <li>Gtk.Bitset</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../structs.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="../structs.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="BitsetIter.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.Bitset</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gtk-4.0/classes/Bitset.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gtk 4.0</a> &raquo;</li>
+      
+          <li><a href="../structs.html">Structures</a> &raquo;</li>
+      
+    <li>Gtk.Bitset</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../structs.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="../structs.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="BitsetIter.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gtk.Bitset</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gtk-bitset">
+<h1>Gtk.Bitset<a class="headerlink" href="#gtk-bitset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fields">
+<span id="gtk-bitset-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="methods">
+<span id="gtk-bitset-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.Bitset.new_empty" title="Gtk.Bitset.new_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_empty</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td><em>class</em></td>
+<td><a class="reference internal" href="#Gtk.Bitset.new_range" title="Gtk.Bitset.new_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_range</span></code></a> (start, n_items)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.add" title="Gtk.Bitset.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a> (value)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.add_range" title="Gtk.Bitset.add_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_range</span></code></a> (start, n_items)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.add_range_closed" title="Gtk.Bitset.add_range_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_range_closed</span></code></a> (first, last)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.add_rectangle" title="Gtk.Bitset.add_rectangle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_rectangle</span></code></a> (start, width, height, stride)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.contains" title="Gtk.Bitset.contains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains</span></code></a> (value)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.copy" title="Gtk.Bitset.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.difference" title="Gtk.Bitset.difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">difference</span></code></a> (other)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.equals" title="Gtk.Bitset.equals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">equals</span></code></a> (other)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.get_maximum" title="Gtk.Bitset.get_maximum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maximum</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.get_minimum" title="Gtk.Bitset.get_minimum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_minimum</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.get_nth" title="Gtk.Bitset.get_nth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_nth</span></code></a> (nth)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.get_size" title="Gtk.Bitset.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.get_size_in_range" title="Gtk.Bitset.get_size_in_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size_in_range</span></code></a> (first, last)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.intersect" title="Gtk.Bitset.intersect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersect</span></code></a> (other)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.is_empty" title="Gtk.Bitset.is_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_empty</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.ref" title="Gtk.Bitset.ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ref</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.remove" title="Gtk.Bitset.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a> (value)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.remove_all" title="Gtk.Bitset.remove_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_all</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.remove_range" title="Gtk.Bitset.remove_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_range</span></code></a> (start, n_items)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.remove_range_closed" title="Gtk.Bitset.remove_range_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_range_closed</span></code></a> (first, last)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.remove_rectangle" title="Gtk.Bitset.remove_rectangle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_rectangle</span></code></a> (start, width, height, stride)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.shift_left" title="Gtk.Bitset.shift_left"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shift_left</span></code></a> (amount)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.shift_right" title="Gtk.Bitset.shift_right"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shift_right</span></code></a> (amount)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.splice" title="Gtk.Bitset.splice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">splice</span></code></a> (position, removed, added)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.subtract" title="Gtk.Bitset.subtract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subtract</span></code></a> (other)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.union" title="Gtk.Bitset.union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">union</span></code></a> (other)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gtk.Bitset.unref" title="Gtk.Bitset.unref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unref</span></code></a> ()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gtk.Bitset">
+<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">Bitset</code><a class="headerlink" href="#Gtk.Bitset" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> represents a set of unsigned integers.</p>
+<p>Another name for this data structure is “bitmap”.</p>
+<p>The current implementation is based on <a class="reference external" href="https://roaringbitmap.org/">roaring bitmaps</a>.</p>
+<p>A bitset allows adding a set of integers and provides support for set operations
+like unions, intersections and checks for equality or if a value is contained
+in the set. <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> also contains various functions to query metadata about
+the bitset, such as the minimum or maximum values or its size.</p>
+<p>The fastest way to iterate values in a bitset is [struct`Gtk`.BitsetIter].</p>
+<p>The main use case for <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> is implementing complex selections for
+[iface`Gtk`.SelectionModel].</p>
+<dl class="classmethod">
+<dt id="Gtk.Bitset.new_empty">
+<em class="property">classmethod </em><code class="descname">new_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.new_empty" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new empty bitset</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new empty bitset.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="Gtk.Bitset.new_range">
+<em class="property">classmethod </em><code class="descname">new_range</code><span class="sig-paren">(</span><em>start</em>, <em>n_items</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.new_range" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to add</li>
+<li><strong>n_items</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of consecutive values to add</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A new bitset</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a bitset with the given range set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.add" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – value to add</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>value</cite> was not part of <cite>self</cite> and <cite>self</cite>
+was changed.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Adds <cite>value</cite> to <cite>self</cite> if it wasn’t part of it before.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.add_range">
+<code class="descname">add_range</code><span class="sig-paren">(</span><em>start</em>, <em>n_items</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.add_range" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to add</li>
+<li><strong>n_items</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of consecutive values to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Adds all values from <cite>start</cite> (inclusive) to <cite>start</cite> + <cite>n_items</cite>
+(exclusive) in <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.add_range_closed">
+<code class="descname">add_range_closed</code><span class="sig-paren">(</span><em>first</em>, <em>last</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.add_range_closed" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>first</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to add</li>
+<li><strong>last</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – last value to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Adds the closed range [<cite>first</cite>, <cite>last</cite>], so <cite>first</cite>, <cite>last</cite> and all
+values in between. <cite>first</cite> must be smaller than <cite>last</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.add_rectangle">
+<code class="descname">add_rectangle</code><span class="sig-paren">(</span><em>start</em>, <em>width</em>, <em>height</em>, <em>stride</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.add_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to add</li>
+<li><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – width of the rectangle</li>
+<li><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – height of the rectangle</li>
+<li><strong>stride</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – row stride of the grid</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Interprets the values as a 2-dimensional boolean grid with the given <cite>stride</cite>
+and inside that grid, adds a rectangle with the given <cite>width</cite> and <cite>height</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.contains">
+<code class="descname">contains</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.contains" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the value to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> contains <cite>value</cite></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if the given <cite>value</cite> has been added to <cite>self</cite></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.copy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A new bitset that contains the same
+values as <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Creates a copy of <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.difference">
+<code class="descname">difference</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.difference" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> to compute the difference from</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>self</cite> to be the symmetric difference of <cite>self</cite> and <cite>other</cite>.</p>
+<p>The symmetric difference is set <cite>self</cite> to contain all values that
+were either contained in <cite>self</cite> or in <cite>other</cite>, but not in both.
+This operation is also called an XOR.</p>
+<p>It is allowed for <cite>self</cite> and <cite>other</cite> to be the same bitset. The bitset
+will be emptied in that case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.equals">
+<code class="descname">equals</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.equals" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a>) – another <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> and <cite>other</cite> contain the same values</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> and <cite>other</cite> contain the same values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.get_maximum">
+<code class="descname">get_maximum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.get_maximum" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The largest value in <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the largest value in <cite>self</cite>.</p>
+<p>If <cite>self</cite> is empty, 0 is returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.get_minimum">
+<code class="descname">get_minimum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.get_minimum" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The smallest value in <cite>self</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the smallest value in <cite>self</cite>.</p>
+<p>If <cite>self</cite> is empty, <code class="docutils literal notranslate"><span class="pre">G_MAXUINT</span></code> is returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.get_nth">
+<code class="descname">get_nth</code><span class="sig-paren">(</span><em>nth</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.get_nth" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>nth</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – index of the item to get</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the value of the <cite>nth</cite> item in <cite>self</cite></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Returns the value of the <cite>nth</cite> item in self.</p>
+<p>If <cite>nth</cite> is &gt;= the size of <cite>self</cite>, 0 is returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.get_size">
+<code class="descname">get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.get_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of values in the set.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Gets the number of values that were added to the set.</p>
+<p>For example, if the set is empty, 0 is returned.</p>
+<p>Note that this function returns a <code class="docutils literal notranslate"><span class="pre">guint64</span></code>, because when all
+values are set, the return value is <code class="docutils literal notranslate"><span class="pre">G_MAXUINT</span> <span class="pre">+</span> <span class="pre">1</span></code>. Unless you
+are sure this cannot happen (it can’t with <code class="docutils literal notranslate"><span class="pre">GListModel</span></code>), be sure
+to use a 64bit type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.get_size_in_range">
+<code class="descname">get_size_in_range</code><span class="sig-paren">(</span><em>first</em>, <em>last</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.get_size_in_range" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>first</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the first element to include</li>
+<li><strong>last</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the last element to include</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The number of values in the set from <cite>first</cite> to <cite>last</cite>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Gets the number of values that are part of the set from <cite>first</cite> to <cite>last</cite>
+(inclusive).</p>
+<p>Note that this function returns a <code class="docutils literal notranslate"><span class="pre">guint64</span></code>, because when all values are
+set, the return value is <code class="docutils literal notranslate"><span class="pre">G_MAXUINT</span> <span class="pre">+</span> <span class="pre">1</span></code>. Unless you are sure this cannot
+happen (it can’t with <code class="docutils literal notranslate"><span class="pre">GListModel</span></code>), be sure to use a 64bit type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.intersect">
+<code class="descname">intersect</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> to intersect with</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>self</cite> to be the intersection of <cite>self</cite> and <cite>other</cite>.</p>
+<p>In other words, remove all values from <cite>self</cite> that are not part of <cite>other</cite>.</p>
+<p>It is allowed for <cite>self</cite> and <cite>other</cite> to be the same bitset. Nothing will
+happen in that case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> is empty</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Check if no value is contained in bitset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.ref">
+<code class="descname">ref</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.ref" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> with an additional reference</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Acquires a reference on the given <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.remove" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – value to add</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>value</cite> was part of <cite>self</cite> and <cite>self</cite>
+was changed.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Removes <cite>value</cite> from <cite>self</cite> if it was part of it before.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.remove_all">
+<code class="descname">remove_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.remove_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all values from the bitset so that it is empty again.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.remove_range">
+<code class="descname">remove_range</code><span class="sig-paren">(</span><em>start</em>, <em>n_items</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.remove_range" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to remove</li>
+<li><strong>n_items</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of consecutive values to remove</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Removes all values from <cite>start</cite> (inclusive) to <cite>start</cite> + <cite>n_items</cite> (exclusive)
+in <cite>self</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.remove_range_closed">
+<code class="descname">remove_range_closed</code><span class="sig-paren">(</span><em>first</em>, <em>last</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.remove_range_closed" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>first</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to remove</li>
+<li><strong>last</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – last value to remove</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Removes the closed range [<cite>first</cite>, <cite>last</cite>], so <cite>first</cite>, <cite>last</cite> and all
+values in between. <cite>first</cite> must be smaller than <cite>last</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.remove_rectangle">
+<code class="descname">remove_rectangle</code><span class="sig-paren">(</span><em>start</em>, <em>width</em>, <em>height</em>, <em>stride</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.remove_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – first value to remove</li>
+<li><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – width of the rectangle</li>
+<li><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – height of the rectangle</li>
+<li><strong>stride</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – row stride of the grid</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Interprets the values as a 2-dimensional boolean grid with the given <cite>stride</cite>
+and inside that grid, removes a rectangle with the given <cite>width</cite> and <cite>height</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.shift_left">
+<code class="descname">shift_left</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.shift_left" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – amount to shift all values to the left</td>
+</tr>
+</tbody>
+</table>
+<p>Shifts all values in <cite>self</cite> to the left by <cite>amount</cite>.</p>
+<p>Values smaller than <cite>amount</cite> are discarded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.shift_right">
+<code class="descname">shift_right</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.shift_right" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>amount</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – amount to shift all values to the right</td>
+</tr>
+</tbody>
+</table>
+<p>Shifts all values in <cite>self</cite> to the right by <cite>amount</cite>.</p>
+<p>Values that end up too large to be held in a <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a> are discarded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.splice">
+<code class="descname">splice</code><span class="sig-paren">(</span><em>position</em>, <em>removed</em>, <em>added</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.splice" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position at which to slice</li>
+<li><strong>removed</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of values to remove</li>
+<li><strong>added</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of values to add</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This is a support function for <code class="docutils literal notranslate"><span class="pre">GListModel</span></code> handling, by mirroring
+the <code class="docutils literal notranslate"><span class="pre">GlistModel::items-changed</span></code> signal.</p>
+<p>First, it “cuts” the values from <cite>position</cite> to <cite>removed</cite> from
+the bitset. That is, it removes all those values and shifts
+all larger values to the left by <cite>removed</cite> places.</p>
+<p>Then, it “pastes” new room into the bitset by shifting all values
+larger than <cite>position</cite> by <cite>added</cite> spaces to the right. This frees
+up space that can then be filled.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.subtract">
+<code class="descname">subtract</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.subtract" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> to subtract</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>self</cite> to be the subtraction of <cite>other</cite> from <cite>self</cite>.</p>
+<p>In other words, remove all values from <cite>self</cite> that are part of <cite>other</cite>.</p>
+<p>It is allowed for <cite>self</cite> and <cite>other</cite> to be the same bitset. The bitset
+will be emptied in that case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.union">
+<code class="descname">union</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.union" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#Gtk.Bitset" title="Gtk.Bitset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Bitset</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code> to union with</td>
+</tr>
+</tbody>
+</table>
+<p>Sets <cite>self</cite> to be the union of <cite>self</cite> and <cite>other</cite>.</p>
+<p>That is, add all values from <cite>other</cite> into <cite>self</cite> that weren’t part of it.</p>
+<p>It is allowed for <cite>self</cite> and <cite>other</cite> to be the same bitset. Nothing will
+happen in that case.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gtk.Bitset.unref">
+<code class="descname">unref</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Bitset.unref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases a reference on the given <code class="docutils literal notranslate"><span class="pre">GtkBitset</span></code>.</p>
+<p>If the reference was the last, the resources associated to the <cite>self</cite> are
+freed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

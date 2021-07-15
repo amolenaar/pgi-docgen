@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Gsk.RoundedRect -
+    
+      Structures -
+    
+    Gsk 4.0
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Gsk 4.0 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Structures" href="../structs.html"/>
+        <link rel="next" title="Gsk.ShaderArgsBuilder" href="ShaderArgsBuilder.html"/>
+        <link rel="prev" title="Gsk.ParseLocation" href="ParseLocation.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gsk-4.0/classes/RoundedRect.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gsk 4.0</a> &raquo;</li>
+      
+          <li><a href="../structs.html">Structures</a> &raquo;</li>
+      
+    <li>Gsk.RoundedRect</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../structs.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ParseLocation.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ShaderArgsBuilder.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gsk.RoundedRect</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Gsk-4.0/classes/RoundedRect.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Gsk 4.0</a> &raquo;</li>
+      
+          <li><a href="../structs.html">Structures</a> &raquo;</li>
+      
+    <li>Gsk.RoundedRect</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../structs.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ParseLocation.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="ShaderArgsBuilder.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Gsk.RoundedRect</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <div class="section" id="gsk-roundedrect">
+<h1>Gsk.RoundedRect<a class="headerlink" href="#gsk-roundedrect" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fields">
+<span id="gsk-roundedrect-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="16%" />
+<col width="1%" />
+<col width="1%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Access</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>bounds</td>
+<td><a class="reference external" href="../../Graphene-1.0/classes/Rect.html#Graphene.Rect" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Rect</span></code></a></td>
+<td>r/w</td>
+<td>the bounds of the rectangle</td>
+</tr>
+<tr class="row-odd"><td>corner</td>
+<td>[<a class="reference external" href="../../Graphene-1.0/classes/Size.html#Graphene.Size" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Size</span></code></a>]</td>
+<td>r/w</td>
+<td>the size of the 4 rounded corners</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="methods">
+<span id="gsk-roundedrect-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="1%" />
+<col width="99%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.contains_point" title="Gsk.RoundedRect.contains_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_point</span></code></a> (point)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.contains_rect" title="Gsk.RoundedRect.contains_rect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_rect</span></code></a> (rect)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.init" title="Gsk.RoundedRect.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a> (bounds, top_left, top_right, bottom_right, bottom_left)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.init_copy" title="Gsk.RoundedRect.init_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_copy</span></code></a> (src)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.init_from_rect" title="Gsk.RoundedRect.init_from_rect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_from_rect</span></code></a> (bounds, radius)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.intersects_rect" title="Gsk.RoundedRect.intersects_rect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_rect</span></code></a> (rect)</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.is_rectilinear" title="Gsk.RoundedRect.is_rectilinear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_rectilinear</span></code></a> ()</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.normalize" title="Gsk.RoundedRect.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a> ()</td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.offset" title="Gsk.RoundedRect.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a> (dx, dy)</td>
+</tr>
+<tr class="row-even"><td>&#160;</td>
+<td><a class="reference internal" href="#Gsk.RoundedRect.shrink" title="Gsk.RoundedRect.shrink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shrink</span></code></a> (top, right, bottom, left)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Gsk.RoundedRect">
+<em class="property">class </em><code class="descclassname">Gsk.</code><code class="descname">RoundedRect</code><a class="headerlink" href="#Gsk.RoundedRect" title="Permalink to this definition">¶</a></dt>
+<dd><p>A rectangular region with rounded corners.</p>
+<p>Application code should normalize rectangles using
+[method`Gsk`.RoundedRect.normalize]; this function will ensure that
+the bounds of the rectangle are normalized and ensure that the corner
+values are positive and the corners do not overlap.</p>
+<p>All functions taking a <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code> as an argument will internally
+operate on a normalized copy; all functions returning a <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code>
+will always return a normalized one.</p>
+<p>The algorithm used for normalizing corner sizes is described in
+<a class="reference external" href="https://drafts.csswg.org/css-backgrounds-3/#border-radius">the CSS specification</a>.</p>
+<dl class="method">
+<dt id="Gsk.RoundedRect.contains_point">
+<code class="descname">contains_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.contains_point" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Point.html#Graphene.Point" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Point</span></code></a>) – the point to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the <cite>point</cite> is inside the rounded rectangle</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if the given <cite>point</cite> is inside the rounded rectangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.contains_rect">
+<code class="descname">contains_rect</code><span class="sig-paren">(</span><em>rect</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.contains_rect" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rect</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Rect.html#Graphene.Rect" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Rect</span></code></a>) – the rectangle to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the <cite>rect</cite> is fully contained inside the rounded rectangle</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if the given <cite>rect</cite> is contained inside the rounded rectangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.init">
+<code class="descname">init</code><span class="sig-paren">(</span><em>bounds</em>, <em>top_left</em>, <em>top_right</em>, <em>bottom_right</em>, <em>bottom_left</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.init" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bounds</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Rect.html#Graphene.Rect" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Rect</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">graphene_rect_t</span></code> describing the bounds</li>
+<li><strong>top_left</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Size.html#Graphene.Size" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Size</span></code></a>) – the rounding radius of the top left corner</li>
+<li><strong>top_right</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Size.html#Graphene.Size" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Size</span></code></a>) – the rounding radius of the top right corner</li>
+<li><strong>bottom_right</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Size.html#Graphene.Size" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Size</span></code></a>) – the rounding radius of the bottom right corner</li>
+<li><strong>bottom_left</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Size.html#Graphene.Size" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Size</span></code></a>) – the rounding radius of the bottom left corner</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the initialized rectangle</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Initializes the given <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code> with the given values.</p>
+<p>This function will implicitly normalize the <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code>
+before returning.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.init_copy">
+<code class="descname">init_copy</code><span class="sig-paren">(</span><em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.init_copy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>src</strong> (<a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the initialized rectangle</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Initializes <cite>self</cite> using the given <cite>src</cite> rectangle.</p>
+<p>This function will not normalize the <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code>,
+so make sure the source is normalized.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.init_from_rect">
+<code class="descname">init_from_rect</code><span class="sig-paren">(</span><em>bounds</em>, <em>radius</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.init_from_rect" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>bounds</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Rect.html#Graphene.Rect" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Rect</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">graphene_rect_t</span></code></li>
+<li><strong>radius</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the border radius</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the initialized rectangle</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Initializes <cite>self</cite> to the given <cite>bounds</cite> and sets the radius
+of all four corners to <cite>radius</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.intersects_rect">
+<code class="descname">intersects_rect</code><span class="sig-paren">(</span><em>rect</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.intersects_rect" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rect</strong> (<a class="reference external" href="../../Graphene-1.0/classes/Rect.html#Graphene.Rect" title="(in Graphene 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Graphene.Rect</span></code></a>) – the rectangle to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the <cite>rect</cite> intersects with the rounded rectangle</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if part of the given <cite>rect</cite> is contained inside the rounded rectangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.is_rectilinear">
+<code class="descname">is_rectilinear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.is_rectilinear" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the rectangle is rectilinear</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Checks if all corners of <cite>self</cite> are right angles and the
+rectangle covers all of its bounds.</p>
+<p>This information can be used to decide if [ctor`Gsk`.ClipNode.new]
+or [ctor`Gsk`.RoundedClipNode.new] should be called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.normalize">
+<code class="descname">normalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the normalized rectangle</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Normalizes the passed rectangle.</p>
+<p>This function will ensure that the bounds of the rectangle
+are normalized and ensure that the corner values are positive
+and the corners do not overlap.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.offset">
+<code class="descname">offset</code><span class="sig-paren">(</span><em>dx</em>, <em>dy</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.offset" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>dx</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the horizontal offset</li>
+<li><strong>dy</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the vertical offset</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the offset rectangle</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Offsets the bound’s origin by <cite>dx</cite> and <cite>dy</cite>.</p>
+<p>The size and corners of the rectangle are unchanged.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Gsk.RoundedRect.shrink">
+<code class="descname">shrink</code><span class="sig-paren">(</span><em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em><span class="sig-paren">)</span><a class="headerlink" href="#Gsk.RoundedRect.shrink" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>top</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – How far to move the top side downwards</li>
+<li><strong>right</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – How far to move the right side to the left</li>
+<li><strong>bottom</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – How far to move the bottom side upwards</li>
+<li><strong>left</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – How far to move the left side to the right</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the resized <code class="docutils literal notranslate"><span class="pre">GskRoundedRect</span></code></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Gsk.RoundedRect" title="Gsk.RoundedRect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gsk.RoundedRect</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Shrinks (or grows) the given rectangle by moving the 4 sides
+according to the offsets given.</p>
+<p>The corner radii will be changed in a way that tries to keep
+the center of the corner circle intact. This emulates CSS behavior.</p>
+<p>This function also works for growing rectangles if you pass
+negative values for the <cite>top</cite>, <cite>right</cite>, <cite>bottom</cite> or <cite>left</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>
