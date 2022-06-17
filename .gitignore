@@ -3,6 +3,8 @@
 .vscode/
 _docs
 pgi
+.venv
+.vscode
 _venv
 _docs*
 MANIFEST
@@ -11,3 +13,4 @@ tools/_temp_*
 .coverage
 coverage.xml
 .mypy_cache
+public
