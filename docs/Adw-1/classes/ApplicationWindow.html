@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Adw.ApplicationWindow -
+    
+      Classes -
+    
+    Adw 1
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Adw 1 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Adw.Avatar" href="Avatar.html"/>
+        <link rel="prev" title="Adw.Application" href="Application.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/ApplicationWindow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.ApplicationWindow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Application.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Avatar.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.ApplicationWindow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/ApplicationWindow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.ApplicationWindow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="Application.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Avatar.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.ApplicationWindow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <section id="adw-applicationwindow">
+<h1>Adw.ApplicationWindow<a class="headerlink" href="#adw-applicationwindow" title="Permalink to this heading">¶</a></h1>
+<p class="graphviz">
+<svg width="689pt" height="296pt"
+ viewBox="0.00 0.00 689.00 296.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 292)">
+<title>g</title>
+<!-- Adw.ApplicationWindow -->
+<g id="node1" class="node">
+<title>Adw.ApplicationWindow</title>
+<g id="a_node1"><a xlink:href="#Adw.ApplicationWindow" xlink:title="Adw.ApplicationWindow">
+<path fill="none" stroke="#75507b" d="M160.5,-18C160.5,-18 59.5,-18 59.5,-18 56.5,-18 53.5,-15 53.5,-12 53.5,-12 53.5,-6 53.5,-6 53.5,-3 56.5,0 59.5,0 59.5,0 160.5,0 160.5,0 163.5,0 166.5,-3 166.5,-6 166.5,-6 166.5,-12 166.5,-12 166.5,-15 163.5,-18 160.5,-18"/>
+<text text-anchor="middle" x="110" y="-6.7" font-family="inherit" font-size="8.50">Adw.ApplicationWindow</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface -->
+<g id="node2" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node2"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M263.5,-288C263.5,-288 184.5,-288 184.5,-288 181.5,-288 178.5,-285 178.5,-282 178.5,-282 178.5,-276 178.5,-276 178.5,-273 181.5,-270 184.5,-270 184.5,-270 263.5,-270 263.5,-270 266.5,-270 269.5,-273 269.5,-276 269.5,-276 269.5,-282 269.5,-282 269.5,-285 266.5,-288 263.5,-288"/>
+<text text-anchor="middle" x="224" y="-276.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gio.ActionGroup -->
+<g id="node5" class="node">
+<title>Gio.ActionGroup</title>
+<g id="a_node5"><a xlink:href="../../Gio-2.0/classes/ActionGroup.html#Gio.ActionGroup" xlink:title="Gio.ActionGroup">
+<path fill="none" stroke="#3091d1" d="M76,-180C76,-180 6,-180 6,-180 3,-180 0,-177 0,-174 0,-174 0,-168 0,-168 0,-165 3,-162 6,-162 6,-162 76,-162 76,-162 79,-162 82,-165 82,-168 82,-168 82,-174 82,-174 82,-177 79,-180 76,-180"/>
+<text text-anchor="middle" x="41" y="-168.7" font-family="inherit" font-size="8.50">Gio.ActionGroup</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gio.ActionGroup -->
+<g id="edge7" class="edge">
+<title>GObject.GInterface&#45;&gt;Gio.ActionGroup</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M184.39,-269.97C157.81,-263.29 122.88,-251.93 96,-234 75.99,-220.66 58.67,-198.32 49.05,-184.41"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="50.35,-183.2 46.09,-180.04 47.45,-185.16 50.35,-183.2"/>
+</g>
+<!-- Gio.ActionMap -->
+<g id="node6" class="node">
+<title>Gio.ActionMap</title>
+<g id="a_node6"><a xlink:href="../../Gio-2.0/classes/ActionMap.html#Gio.ActionMap" xlink:title="Gio.ActionMap">
+<path fill="none" stroke="#3091d1" d="M141,-126C141,-126 79,-126 79,-126 76,-126 73,-123 73,-120 73,-120 73,-114 73,-114 73,-111 76,-108 79,-108 79,-108 141,-108 141,-108 144,-108 147,-111 147,-114 147,-114 147,-120 147,-120 147,-123 144,-126 141,-126"/>
+<text text-anchor="middle" x="110" y="-114.7" font-family="inherit" font-size="8.50">Gio.ActionMap</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gio.ActionMap -->
+<g id="edge8" class="edge">
+<title>GObject.GInterface&#45;&gt;Gio.ActionMap</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M213.19,-269.79C193.57,-254.34 152.02,-218.97 129,-180 119.88,-164.56 114.75,-144.34 112.18,-131.26"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="113.86,-130.72 111.23,-126.12 110.42,-131.36 113.86,-130.72"/>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node7" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node7"><a xlink:href="../../Gtk-4.0/classes/Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M336.5,-234C336.5,-234 277.5,-234 277.5,-234 274.5,-234 271.5,-231 271.5,-228 271.5,-228 271.5,-222 271.5,-222 271.5,-219 274.5,-216 277.5,-216 277.5,-216 336.5,-216 336.5,-216 339.5,-216 342.5,-219 342.5,-222 342.5,-222 342.5,-228 342.5,-228 342.5,-231 339.5,-234 336.5,-234"/>
+<text text-anchor="middle" x="307" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge1" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M236.97,-269.88C251.1,-261.02 273.79,-246.81 289.49,-236.97"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="290.81,-238.21 294.12,-234.07 288.96,-235.24 290.81,-238.21"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node9" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node9"><a xlink:href="../../Gtk-4.0/classes/Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M423.5,-234C423.5,-234 366.5,-234 366.5,-234 363.5,-234 360.5,-231 360.5,-228 360.5,-228 360.5,-222 360.5,-222 360.5,-219 363.5,-216 366.5,-216 366.5,-216 423.5,-216 423.5,-216 426.5,-216 429.5,-219 429.5,-222 429.5,-222 429.5,-228 429.5,-228 429.5,-231 426.5,-234 423.5,-234"/>
+<text text-anchor="middle" x="395" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M250.34,-269.99C280.85,-260.71 331.05,-245.45 363.57,-235.56"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="364.35,-237.15 368.63,-234.02 363.33,-233.8 364.35,-237.15"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node10" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node10"><a xlink:href="../../Gtk-4.0/classes/ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M538.5,-234C538.5,-234 453.5,-234 453.5,-234 450.5,-234 447.5,-231 447.5,-228 447.5,-228 447.5,-222 447.5,-222 447.5,-219 450.5,-216 453.5,-216 453.5,-216 538.5,-216 538.5,-216 541.5,-216 544.5,-219 544.5,-222 544.5,-222 544.5,-228 544.5,-228 544.5,-231 541.5,-234 538.5,-234"/>
+<text text-anchor="middle" x="496" y="-222.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M265.9,-269.99C315.32,-260.54 397.25,-244.88 448.84,-235.02"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="449.47,-236.68 454.05,-234.02 448.81,-233.24 449.47,-236.68"/>
+</g>
+<!-- Gtk.Native -->
+<g id="node11" class="node">
+<title>Gtk.Native</title>
+<g id="a_node11"><a xlink:href="../../Gtk-4.0/classes/Native.html#Gtk.Native" xlink:title="Gtk.Native">
+<path fill="none" stroke="#3091d1" d="M190,-180C190,-180 144,-180 144,-180 141,-180 138,-177 138,-174 138,-174 138,-168 138,-168 138,-165 141,-162 144,-162 144,-162 190,-162 190,-162 193,-162 196,-165 196,-168 196,-168 196,-174 196,-174 196,-177 193,-180 190,-180"/>
+<text text-anchor="middle" x="167" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Native</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Native -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Native</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M219.53,-269.68C209.62,-251.26 185.77,-206.91 173.92,-184.88"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="175.36,-183.85 171.45,-180.28 172.28,-185.51 175.36,-183.85"/>
+</g>
+<!-- Gtk.Root -->
+<g id="node12" class="node">
+<title>Gtk.Root</title>
+<g id="a_node12"><a xlink:href="../../Gtk-4.0/classes/Root.html#Gtk.Root" xlink:title="Gtk.Root">
+<path fill="none" stroke="#3091d1" d="M262,-180C262,-180 220,-180 220,-180 217,-180 214,-177 214,-174 214,-174 214,-168 214,-168 214,-165 217,-162 220,-162 220,-162 262,-162 262,-162 265,-162 268,-165 268,-168 268,-168 268,-174 268,-174 268,-177 265,-180 262,-180"/>
+<text text-anchor="middle" x="241" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Root</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Root -->
+<g id="edge5" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Root</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M224.17,-269.91C224.54,-258.02 225.65,-235.15 229,-216 230.85,-205.41 234.12,-193.67 236.78,-184.98"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="238.51,-185.3 238.33,-180.01 235.17,-184.26 238.51,-185.3"/>
+</g>
+<!-- Gtk.ShortcutManager -->
+<g id="node13" class="node">
+<title>Gtk.ShortcutManager</title>
+<g id="a_node13"><a xlink:href="../../Gtk-4.0/classes/ShortcutManager.html#Gtk.ShortcutManager" xlink:title="Gtk.ShortcutManager">
+<path fill="none" stroke="#3091d1" d="M381.5,-180C381.5,-180 292.5,-180 292.5,-180 289.5,-180 286.5,-177 286.5,-174 286.5,-174 286.5,-168 286.5,-168 286.5,-165 289.5,-162 292.5,-162 292.5,-162 381.5,-162 381.5,-162 384.5,-162 387.5,-165 387.5,-168 387.5,-168 387.5,-174 387.5,-174 387.5,-177 384.5,-180 381.5,-180"/>
+<text text-anchor="middle" x="337" y="-168.7" font-family="inherit" font-size="8.50">Gtk.ShortcutManager</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ShortcutManager -->
+<g id="edge6" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ShortcutManager</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M227.39,-269.91C233.04,-257.18 245.42,-232.27 262,-216 276.75,-201.53 297.16,-189.96 312.97,-182.32"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="313.94,-183.8 317.71,-180.08 312.44,-180.63 313.94,-183.8"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node3" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M675,-234C675,-234 569,-234 569,-234 566,-234 563,-231 563,-228 563,-228 563,-222 563,-222 563,-219 566,-216 569,-216 569,-216 675,-216 675,-216 678,-216 681,-219 681,-222 681,-222 681,-228 681,-228 681,-231 678,-234 675,-234"/>
+<text text-anchor="middle" x="622" y="-222.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node14" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node14"><a xlink:href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M460,-180C460,-180 412,-180 412,-180 409,-180 406,-177 406,-174 406,-174 406,-168 406,-168 406,-165 409,-162 412,-162 412,-162 460,-162 460,-162 463,-162 466,-165 466,-168 466,-168 466,-174 466,-174 466,-177 463,-180 460,-180"/>
+<text text-anchor="middle" x="436" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge9" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M593.35,-215.99C560.03,-206.68 505.11,-191.32 469.76,-181.44"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="469.97,-179.68 464.69,-180.02 469.03,-183.05 469.97,-179.68"/>
+</g>
+<!-- GObject.Object -->
+<g id="node4" class="node">
+<title>GObject.Object</title>
+<g id="a_node4"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M653.5,-288C653.5,-288 590.5,-288 590.5,-288 587.5,-288 584.5,-285 584.5,-282 584.5,-282 584.5,-276 584.5,-276 584.5,-273 587.5,-270 590.5,-270 590.5,-270 653.5,-270 653.5,-270 656.5,-270 659.5,-273 659.5,-276 659.5,-276 659.5,-282 659.5,-282 659.5,-285 656.5,-288 653.5,-288"/>
+<text text-anchor="middle" x="622" y="-276.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge10" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M622,-269.88C622,-261.76 622,-249.13 622,-239.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="623.75,-239.24 622,-234.24 620.25,-239.24 623.75,-239.24"/>
+</g>
+<!-- Gtk.ApplicationWindow -->
+<g id="node8" class="node">
+<title>Gtk.ApplicationWindow</title>
+<g id="a_node8"><a xlink:href="../../Gtk-4.0/classes/ApplicationWindow.html#Gtk.ApplicationWindow" xlink:title="Gtk.ApplicationWindow">
+<path fill="none" stroke="#75507b" d="M159,-72C159,-72 61,-72 61,-72 58,-72 55,-69 55,-66 55,-66 55,-60 55,-60 55,-57 58,-54 61,-54 61,-54 159,-54 159,-54 162,-54 165,-57 165,-60 165,-60 165,-66 165,-66 165,-69 162,-72 159,-72"/>
+<text text-anchor="middle" x="110" y="-60.7" font-family="inherit" font-size="8.50">Gtk.ApplicationWindow</text>
+</a>
+</g>
+</g>
+<!-- Gio.ActionGroup&#45;&gt;Gtk.ApplicationWindow -->
+<g id="edge11" class="edge">
+<title>Gio.ActionGroup&#45;&gt;Gtk.ApplicationWindow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M42.78,-161.83C45.74,-149.43 52.52,-125.46 64,-108 72.28,-95.39 84.81,-83.72 94.7,-75.57"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="95.97,-76.8 98.76,-72.3 93.77,-74.08 95.97,-76.8"/>
+</g>
+<!-- Gio.ActionMap&#45;&gt;Gtk.ApplicationWindow -->
+<g id="edge12" class="edge">
+<title>Gio.ActionMap&#45;&gt;Gtk.ApplicationWindow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M110,-107.88C110,-99.76 110,-87.13 110,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="111.75,-77.24 110,-72.24 108.25,-77.24 111.75,-77.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge13" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M326.87,-215.99C349.53,-206.85 386.61,-191.91 411.16,-182.01"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="411.91,-183.6 415.89,-180.11 410.6,-180.35 411.91,-183.6"/>
+</g>
+<!-- Gtk.ApplicationWindow&#45;&gt;Adw.ApplicationWindow -->
+<g id="edge14" class="edge">
+<title>Gtk.ApplicationWindow&#45;&gt;Adw.ApplicationWindow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M110,-53.88C110,-45.76 110,-33.13 110,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="111.75,-23.24 110,-18.24 108.25,-23.24 111.75,-23.24"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge15" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M401.41,-215.88C408.11,-207.38 418.7,-193.94 426.4,-184.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="427.78,-185.25 429.5,-180.24 425.03,-183.08 427.78,-185.25"/>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge16" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M486.62,-215.88C476.64,-207.23 460.76,-193.46 449.45,-183.66"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="450.43,-182.19 445.51,-180.24 448.14,-184.84 450.43,-182.19"/>
+</g>
+<!-- Gtk.Window -->
+<g id="node15" class="node">
+<title>Gtk.Window</title>
+<g id="a_node15"><a xlink:href="../../Gtk-4.0/classes/Window.html#Gtk.Window" xlink:title="Gtk.Window">
+<path fill="none" stroke="#75507b" d="M267.5,-126C267.5,-126 214.5,-126 214.5,-126 211.5,-126 208.5,-123 208.5,-120 208.5,-120 208.5,-114 208.5,-114 208.5,-111 211.5,-108 214.5,-108 214.5,-108 267.5,-108 267.5,-108 270.5,-108 273.5,-111 273.5,-114 273.5,-114 273.5,-120 273.5,-120 273.5,-123 270.5,-126 267.5,-126"/>
+<text text-anchor="middle" x="241" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Window</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Native&#45;&gt;Gtk.Window -->
+<g id="edge17" class="edge">
+<title>Gtk.Native&#45;&gt;Gtk.Window</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M178.56,-161.88C191.09,-153.07 211.15,-138.98 225.14,-129.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="226.19,-130.55 229.27,-126.24 224.18,-127.68 226.19,-130.55"/>
+</g>
+<!-- Gtk.Root&#45;&gt;Gtk.Window -->
+<g id="edge18" class="edge">
+<title>Gtk.Root&#45;&gt;Gtk.Window</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M241,-161.88C241,-153.76 241,-141.13 241,-131.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="242.75,-131.24 241,-126.24 239.25,-131.24 242.75,-131.24"/>
+</g>
+<!-- Gtk.ShortcutManager&#45;&gt;Gtk.Window -->
+<g id="edge19" class="edge">
+<title>Gtk.ShortcutManager&#45;&gt;Gtk.Window</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M322,-161.88C305.37,-152.87 278.51,-138.32 260.32,-128.47"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="261.12,-126.91 255.89,-126.07 259.46,-129.99 261.12,-126.91"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.Window -->
+<g id="edge20" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.Window</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M405.96,-161.99C370.89,-152.64 312.98,-137.19 275.94,-127.32"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="276.36,-125.62 271.08,-126.02 275.46,-129 276.36,-125.62"/>
+</g>
+<!-- Gtk.Window&#45;&gt;Gtk.ApplicationWindow -->
+<g id="edge21" class="edge">
+<title>Gtk.Window&#45;&gt;Gtk.ApplicationWindow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M220.82,-107.99C197.81,-98.85 160.16,-83.91 135.23,-74.01"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="135.71,-72.32 130.42,-72.11 134.42,-75.58 135.71,-72.32"/>
+</g>
+</g>
+</svg>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Subclasses<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+<section id="methods">
+<span id="adw-applicationwindow-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ApplicationWindow.html#gtk-applicationwindow-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ApplicationWindow (6)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Window.html#gtk-window-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Window (61)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Native.html#gtk-native-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Native (6)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Root.html#gtk-root-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Root (3)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionGroup.html#gio-actiongroup-methods" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionGroup (14)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionMap.html#gio-actionmap-methods" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionMap (4)</span></a></p>
+</dd>
+<dt class="field-even">Structs<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/WidgetClass.html#gtk-widgetclass-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 99%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>class</em></p></td>
+<td><p><a class="reference internal" href="#Adw.ApplicationWindow.new" title="Adw.ApplicationWindow.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> (app)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ApplicationWindow.get_content" title="Adw.ApplicationWindow.get_content"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_content</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ApplicationWindow.set_content" title="Adw.ApplicationWindow.set_content"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_content</span></code></a> (content)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="virtual-methods">
+<span id="adw-applicationwindow-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Window.html#gtk-window-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Window (5)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/ShortcutManager.html#gtk-shortcutmanager-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ShortcutManager (2)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionGroup.html#gio-actiongroup-vfuncs" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionGroup (14)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionMap.html#gio-actionmap-vfuncs" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionMap (3)</span></a></p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<span id="adw-applicationwindow-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ApplicationWindow.html#gtk-applicationwindow-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ApplicationWindow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Window.html#gtk-window-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Window (24)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (1)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Flags</p></th>
+<th class="head"><p>Short Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.ApplicationWindow.props.content" title="Adw.ApplicationWindow.props.content"><code class="xref py py-data docutils literal notranslate"><span class="pre">content</span></code></a></p></td>
+<td><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td><p>The content widget</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="signals">
+<span id="adw-applicationwindow-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Window.html#gtk-window-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Window (5)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionGroup.html#gio-actiongroup-signals" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionGroup (4)</span></a></p>
+</dd>
+</dl>
+</section>
+<section id="fields">
+<span id="adw-applicationwindow-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Window.html#gtk-window-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Window (5)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ActionGroup.html#gio-actiongroup-fields" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ActionGroup (4)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Access</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>parent_instance</p></td>
+<td><p><a class="reference external" href="../../Gtk-4.0/classes/ApplicationWindow.html#Gtk.ApplicationWindow" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ApplicationWindow</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Adw.ApplicationWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Adw.</span></span><span class="sig-name descname"><span class="pre">ApplicationWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ApplicationWindow" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Bases<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ApplicationWindow.html#Gtk.ApplicationWindow" title="(in Gtk 4.0 v4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.ApplicationWindow</span></code></a></p>
+</dd>
+<dt class="field-even">Abstract<span class="colon">:</span></dt>
+<dd class="field-even"><p>No</p>
+</dd>
+<dt class="field-odd">Structure<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="ApplicationWindowClass.html#Adw.ApplicationWindowClass" title="Adw.ApplicationWindowClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ApplicationWindowClass</span></code></a></p>
+</dd>
+</dl>
+<p>A freeform application window.</p>
+<p>&lt;picture&gt;
+&lt;source srcset=”application-window-dark.png” media=”(prefers-color-scheme: dark)”&gt;
+&lt;img src=”application-window.png” alt=”application-window”&gt;
+&lt;/picture&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">AdwApplicationWindow</span></code> is a [class`Gtk`.ApplicationWindow] subclass providing
+the same features as [class`Window`].</p>
+<p>See [class`Window`] for details.</p>
+<p>Using [property`Gtk`.Application:menubar] is not supported and may result in
+visual glitches.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ApplicationWindow.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ApplicationWindow.new" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>app</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Application.html#Gtk.Application" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Application</span></code></a>) – an application instance</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the newly created <code class="docutils literal notranslate"><span class="pre">AdwApplicationWindow</span></code></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
+</dd>
+</dl>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">AdwApplicationWindow</span></code> for <cite>app</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ApplicationWindow.get_content">
+<span class="sig-name descname"><span class="pre">get_content</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ApplicationWindow.get_content" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the content widget of <cite>self</cite></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the content widget of <cite>self</cite>.</p>
+<p>This method should always be used instead of [method`Gtk`.Window.get_child].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ApplicationWindow.set_content">
+<span class="sig-name descname"><span class="pre">set_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ApplicationWindow.set_content" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>content</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the content widget</p>
+</dd>
+</dl>
+<p>Sets the content widget of <cite>self</cite>.</p>
+<p>This method should always be used instead of [method`Gtk`.Window.set_child].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ApplicationWindow.props.content">
+<span class="sig-prename descclassname"><span class="pre">Adw.ApplicationWindow.props.</span></span><span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#Adw.ApplicationWindow.props.content" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">content</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The content widget.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

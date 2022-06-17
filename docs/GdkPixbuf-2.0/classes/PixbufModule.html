@@ -33,6 +33,10 @@
   
 
   
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
     <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
   
 
@@ -179,110 +183,109 @@
         <div class="rst-content">
           <div role="main">
             
-  <div class="section" id="gdkpixbuf-pixbufmodule">
-<h1>GdkPixbuf.PixbufModule<a class="headerlink" href="#gdkpixbuf-pixbufmodule" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="fields">
-<span id="gdkpixbuf-pixbufmodule-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="colwidths-given docutils">
+  <section id="gdkpixbuf-pixbufmodule">
+<h1>GdkPixbuf.PixbufModule<a class="headerlink" href="#gdkpixbuf-pixbufmodule" title="Permalink to this heading">¶</a></h1>
+<section id="fields">
+<span id="gdkpixbuf-pixbufmodule-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
 <colgroup>
-<col width="16%" />
-<col width="1%" />
-<col width="1%" />
-<col width="82%" />
+<col style="width: 16%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 82%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Access</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Access</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>begin_load</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tbody>
+<tr class="row-even"><td><p>begin_load</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>begins an incremental load.</p></td>
 </tr>
-<tr class="row-odd"><td>info</td>
-<td><a class="reference internal" href="PixbufFormat.html#GdkPixbuf.PixbufFormat" title="GdkPixbuf.PixbufFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufFormat</span></code></a></td>
-<td>r/w</td>
-<td>a <code class="docutils literal notranslate"><span class="pre">GdkPixbufFormat</span></code> holding information about the module.</td>
+<tr class="row-odd"><td><p>info</p></td>
+<td><p><a class="reference internal" href="PixbufFormat.html#GdkPixbuf.PixbufFormat" title="GdkPixbuf.PixbufFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufFormat</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>a <code class="docutils literal notranslate"><span class="pre">GdkPixbufFormat</span></code> holding information about the module.</p></td>
 </tr>
-<tr class="row-even"><td>is_save_option_supported</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>is_save_option_supported</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleSaveOptionSupportedFunc" title="GdkPixbuf.PixbufModuleSaveOptionSupportedFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleSaveOptionSupportedFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>returns whether a save option key is supported by the module</p></td>
 </tr>
-<tr class="row-odd"><td>load</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>load</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleLoadFunc" title="GdkPixbuf.PixbufModuleLoadFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleLoadFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>loads an image from a file.</p></td>
 </tr>
-<tr class="row-even"><td>load_animation</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>load_animation</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleLoadAnimationFunc" title="GdkPixbuf.PixbufModuleLoadAnimationFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleLoadAnimationFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>loads an animation from a file.</p></td>
 </tr>
-<tr class="row-odd"><td>load_increment</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>load_increment</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleIncrementLoadFunc" title="GdkPixbuf.PixbufModuleIncrementLoadFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleIncrementLoadFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>continues an incremental load.</p></td>
 </tr>
-<tr class="row-even"><td>load_xpm_data</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>load_xpm_data</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleLoadXpmDataFunc" title="GdkPixbuf.PixbufModuleLoadXpmDataFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleLoadXpmDataFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>loads an image from data in memory.</p></td>
 </tr>
-<tr class="row-odd"><td>module</td>
-<td><a class="reference external" href="../../GModule-2.0/classes/Module.html#GModule.Module" title="(in GModule 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GModule.Module</span></code></a></td>
-<td>r/w</td>
-<td>the loaded <code class="docutils literal notranslate"><span class="pre">GModule</span></code>.</td>
+<tr class="row-odd"><td><p>module</p></td>
+<td><p><a class="reference external" href="../../GModule-2.0/classes/Module.html#GModule.Module" title="(in GModule 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GModule.Module</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>the loaded <code class="docutils literal notranslate"><span class="pre">GModule</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td>module_name</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
-<td>r/w</td>
-<td>the name of the module, usually the same as the usual file extension for images of this type, eg. “xpm”, “jpeg” or “png”.</td>
+<tr class="row-even"><td><p>module_name</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>the name of the module, usually the same as the usual file extension for images of this type, eg. “xpm”, “jpeg” or “png”.</p></td>
 </tr>
-<tr class="row-odd"><td>module_path</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></td>
-<td>r/w</td>
-<td>the path from which the module is loaded.</td>
+<tr class="row-odd"><td><p>module_path</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>the path from which the module is loaded.</p></td>
 </tr>
-<tr class="row-even"><td>save</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>save</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleSaveFunc" title="GdkPixbuf.PixbufModuleSaveFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleSaveFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>saves a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code> to a file.</p></td>
 </tr>
-<tr class="row-odd"><td>save_to_callback</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>save_to_callback</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>saves a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code> by calling the given <code class="docutils literal notranslate"><span class="pre">GdkPixbufSaveFunc</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td>stop_load</td>
-<td><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></td>
-<td>r</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>stop_load</p></td>
+<td><p><a class="reference internal" href="../callbacks.html#GdkPixbuf.PixbufModuleStopLoadFunc" title="GdkPixbuf.PixbufModuleStopLoadFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.PixbufModuleStopLoadFunc</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>stops an incremental load.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="methods">
-<span id="gdkpixbuf-pixbufmodule-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="methods">
+<span id="gdkpixbuf-pixbufmodule-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <p>None</p>
-</div>
-<div class="section" id="details">
-<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="GdkPixbuf.PixbufModule">
-<em class="property">class </em><code class="descclassname">GdkPixbuf.</code><code class="descname">PixbufModule</code><a class="headerlink" href="#GdkPixbuf.PixbufModule" title="Permalink to this definition">¶</a></dt>
+</section>
+<section id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GdkPixbuf.PixbufModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GdkPixbuf.</span></span><span class="sig-name descname"><span class="pre">PixbufModule</span></span><a class="headerlink" href="#GdkPixbuf.PixbufModule" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">GdkPixbufModule</span></code> contains the necessary functions to load and save
 images in a certain file format.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code> has been compiled with <code class="docutils literal notranslate"><span class="pre">GModule</span></code> support, it can be extended
 by modules which can load (and perhaps also save) new image and animation
 formats.</p>
-<dl class="docutils">
-<dt>Implementing modules</dt>
-<dd></dd>
+<dl class="simple">
+<dt>Implementing modules</dt><dd></dd>
 </dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code> interfaces needed for implementing modules are contained in
 <code class="docutils literal notranslate"><span class="pre">gdk-pixbuf-io.h</span></code> (and <code class="docutils literal notranslate"><span class="pre">gdk-pixbuf-animation.h</span></code> if the module supports
@@ -306,23 +309,22 @@ function pointers of the <code class="docutils literal notranslate"><span class=
 incremental loading (i.e. provides <code class="docutils literal notranslate"><span class="pre">begin_load</span></code>, <code class="docutils literal notranslate"><span class="pre">stop_load</span></code> and
 <code class="docutils literal notranslate"><span class="pre">load_increment</span></code>), it doesn’t have to implement <code class="docutils literal notranslate"><span class="pre">load</span></code>, since <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code>
 can supply a generic <code class="docutils literal notranslate"><span class="pre">load</span></code> implementation wrapping the incremental loading.</p>
-<dl class="docutils">
-<dt>Installing modules</dt>
-<dd></dd>
+<dl class="simple">
+<dt>Installing modules</dt><dd></dd>
 </dl>
 <p>Installing a module is a two-step process:</p>
 <ul class="simple">
-<li>copy the module file(s) to the loader directory (normally
+<li><p>copy the module file(s) to the loader directory (normally
 <code class="docutils literal notranslate"><span class="pre">$libdir/gdk-pixbuf-2.0/$version/loaders</span></code>, unless overridden by the
-environment variable <code class="docutils literal notranslate"><span class="pre">GDK_PIXBUF_MODULEDIR</span></code>)</li>
-<li>call <code class="docutils literal notranslate"><span class="pre">gdk-pixbuf-query-loaders</span></code> to update the module file (normally
+environment variable <code class="docutils literal notranslate"><span class="pre">GDK_PIXBUF_MODULEDIR</span></code>)</p></li>
+<li><p>call <code class="docutils literal notranslate"><span class="pre">gdk-pixbuf-query-loaders</span></code> to update the module file (normally
 <code class="docutils literal notranslate"><span class="pre">$libdir/gdk-pixbuf-2.0/$version/loaders.cache</span></code>, unless overridden
-by the environment variable <code class="docutils literal notranslate"><span class="pre">GDK_PIXBUF_MODULE_FILE</span></code>)</li>
+by the environment variable <code class="docutils literal notranslate"><span class="pre">GDK_PIXBUF_MODULE_FILE</span></code>)</p></li>
 </ul>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
           </div>

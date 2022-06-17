@@ -1,0 +1,1029 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Adw.ActionRow -
+    
+      Classes -
+    
+    Adw 1
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Adw 1 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Adw.Animation" href="Animation.html"/>
+        <link rel="prev" title="Classes" href="../classes.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/ActionRow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.ActionRow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="../classes.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Animation.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.ActionRow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/ActionRow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.ActionRow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="../classes.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="Animation.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.ActionRow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <section id="adw-actionrow">
+<h1>Adw.ActionRow<a class="headerlink" href="#adw-actionrow" title="Permalink to this heading">¶</a></h1>
+<p class="graphviz">
+<svg width="436pt" height="296pt"
+ viewBox="0.00 0.00 436.00 296.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 292)">
+<title>g</title>
+<!-- Adw.ActionRow -->
+<g id="node1" class="node">
+<title>Adw.ActionRow</title>
+<g id="a_node1"><a xlink:href="#Adw.ActionRow" xlink:title="Adw.ActionRow">
+<path fill="none" stroke="#75507b" d="M334.5,-18C334.5,-18 269.5,-18 269.5,-18 266.5,-18 263.5,-15 263.5,-12 263.5,-12 263.5,-6 263.5,-6 263.5,-3 266.5,0 269.5,0 269.5,0 334.5,0 334.5,0 337.5,0 340.5,-3 340.5,-6 340.5,-6 340.5,-12 340.5,-12 340.5,-15 337.5,-18 334.5,-18"/>
+<text text-anchor="middle" x="302" y="-6.7" font-family="inherit" font-size="8.50">Adw.ActionRow</text>
+</a>
+</g>
+</g>
+<!-- Adw.PreferencesRow -->
+<g id="node2" class="node">
+<title>Adw.PreferencesRow</title>
+<g id="a_node2"><a xlink:href="PreferencesRow.html#Adw.PreferencesRow" xlink:title="Adw.PreferencesRow">
+<path fill="none" stroke="#75507b" d="M345,-72C345,-72 259,-72 259,-72 256,-72 253,-69 253,-66 253,-66 253,-60 253,-60 253,-57 256,-54 259,-54 259,-54 345,-54 345,-54 348,-54 351,-57 351,-60 351,-60 351,-66 351,-66 351,-69 348,-72 345,-72"/>
+<text text-anchor="middle" x="302" y="-60.7" font-family="inherit" font-size="8.50">Adw.PreferencesRow</text>
+</a>
+</g>
+</g>
+<!-- Adw.PreferencesRow&#45;&gt;Adw.ActionRow -->
+<g id="edge1" class="edge">
+<title>Adw.PreferencesRow&#45;&gt;Adw.ActionRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M302,-53.88C302,-45.76 302,-33.13 302,-23.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="303.75,-23.24 302,-18.24 300.25,-23.24 303.75,-23.24"/>
+</g>
+<!-- GObject.GInterface -->
+<g id="node3" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M349.5,-288C349.5,-288 270.5,-288 270.5,-288 267.5,-288 264.5,-285 264.5,-282 264.5,-282 264.5,-276 264.5,-276 264.5,-273 267.5,-270 270.5,-270 270.5,-270 349.5,-270 349.5,-270 352.5,-270 355.5,-273 355.5,-276 355.5,-276 355.5,-282 355.5,-282 355.5,-285 352.5,-288 349.5,-288"/>
+<text text-anchor="middle" x="310" y="-276.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node6" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node6"><a xlink:href="../../Gtk-4.0/classes/Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M201.5,-234C201.5,-234 142.5,-234 142.5,-234 139.5,-234 136.5,-231 136.5,-228 136.5,-228 136.5,-222 136.5,-222 136.5,-219 139.5,-216 142.5,-216 142.5,-216 201.5,-216 201.5,-216 204.5,-216 207.5,-219 207.5,-222 207.5,-222 207.5,-228 207.5,-228 207.5,-231 204.5,-234 201.5,-234"/>
+<text text-anchor="middle" x="172" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M288.74,-269.99C264.4,-260.82 224.51,-245.79 198.25,-235.89"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="198.81,-234.23 193.51,-234.11 197.57,-237.51 198.81,-234.23"/>
+</g>
+<!-- Gtk.Actionable -->
+<g id="node7" class="node">
+<title>Gtk.Actionable</title>
+<g id="a_node7"><a xlink:href="../../Gtk-4.0/classes/Actionable.html#Gtk.Actionable" xlink:title="Gtk.Actionable">
+<path fill="none" stroke="#3091d1" d="M422,-180C422,-180 360,-180 360,-180 357,-180 354,-177 354,-174 354,-174 354,-168 354,-168 354,-165 357,-162 360,-162 360,-162 422,-162 422,-162 425,-162 428,-165 428,-168 428,-168 428,-174 428,-174 428,-177 425,-180 422,-180"/>
+<text text-anchor="middle" x="391" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Actionable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Actionable -->
+<g id="edge5" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Actionable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M355.76,-271.7C378.83,-265.96 404.85,-254.98 419,-234 429.9,-217.85 415.13,-196.78 403.24,-183.82"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="404.39,-182.49 399.68,-180.08 401.86,-184.91 404.39,-182.49"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node8" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node8"><a xlink:href="../../Gtk-4.0/classes/Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M288.5,-234C288.5,-234 231.5,-234 231.5,-234 228.5,-234 225.5,-231 225.5,-228 225.5,-228 225.5,-222 225.5,-222 225.5,-219 228.5,-216 231.5,-216 231.5,-216 288.5,-216 288.5,-216 291.5,-216 294.5,-219 294.5,-222 294.5,-222 294.5,-228 294.5,-228 294.5,-231 291.5,-234 288.5,-234"/>
+<text text-anchor="middle" x="260" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M302.19,-269.88C293.94,-261.3 280.87,-247.7 271.46,-237.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="272.65,-236.63 267.92,-234.24 270.13,-239.06 272.65,-236.63"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node9" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node9"><a xlink:href="../../Gtk-4.0/classes/ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M403.5,-234C403.5,-234 318.5,-234 318.5,-234 315.5,-234 312.5,-231 312.5,-228 312.5,-228 312.5,-222 312.5,-222 312.5,-219 315.5,-216 318.5,-216 318.5,-216 403.5,-216 403.5,-216 406.5,-216 409.5,-219 409.5,-222 409.5,-222 409.5,-228 409.5,-228 409.5,-231 406.5,-234 403.5,-234"/>
+<text text-anchor="middle" x="361" y="-222.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M317.97,-269.88C326.38,-261.3 339.72,-247.7 349.31,-237.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="350.67,-239.03 352.92,-234.24 348.17,-236.58 350.67,-239.03"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node4" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node4"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M112,-234C112,-234 6,-234 6,-234 3,-234 0,-231 0,-228 0,-228 0,-222 0,-222 0,-219 3,-216 6,-216 6,-216 112,-216 112,-216 115,-216 118,-219 118,-222 118,-222 118,-228 118,-228 118,-231 115,-234 112,-234"/>
+<text text-anchor="middle" x="59" y="-222.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node11" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node11"><a xlink:href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M284,-180C284,-180 236,-180 236,-180 233,-180 230,-177 230,-174 230,-174 230,-168 230,-168 230,-165 233,-162 236,-162 236,-162 284,-162 284,-162 287,-162 290,-165 290,-168 290,-168 290,-174 290,-174 290,-177 287,-180 284,-180"/>
+<text text-anchor="middle" x="260" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge6" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M89.97,-215.99C126.43,-206.56 186.85,-190.92 224.99,-181.06"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="225.58,-182.71 229.98,-179.77 224.71,-179.32 225.58,-182.71"/>
+</g>
+<!-- GObject.Object -->
+<g id="node5" class="node">
+<title>GObject.Object</title>
+<g id="a_node5"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M90.5,-288C90.5,-288 27.5,-288 27.5,-288 24.5,-288 21.5,-285 21.5,-282 21.5,-282 21.5,-276 21.5,-276 21.5,-273 24.5,-270 27.5,-270 27.5,-270 90.5,-270 90.5,-270 93.5,-270 96.5,-273 96.5,-276 96.5,-276 96.5,-282 96.5,-282 96.5,-285 93.5,-288 90.5,-288"/>
+<text text-anchor="middle" x="59" y="-276.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge7" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M59,-269.88C59,-261.76 59,-249.13 59,-239.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="60.75,-239.24 59,-234.24 57.25,-239.24 60.75,-239.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge8" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M185.75,-215.88C200.86,-206.95 225.2,-192.56 241.86,-182.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="242.93,-184.12 246.35,-180.07 241.15,-181.11 242.93,-184.12"/>
+</g>
+<!-- Gtk.ListBoxRow -->
+<g id="node10" class="node">
+<title>Gtk.ListBoxRow</title>
+<g id="a_node10"><a xlink:href="../../Gtk-4.0/classes/ListBoxRow.html#Gtk.ListBoxRow" xlink:title="Gtk.ListBoxRow">
+<path fill="none" stroke="#75507b" d="M335,-126C335,-126 269,-126 269,-126 266,-126 263,-123 263,-120 263,-120 263,-114 263,-114 263,-111 266,-108 269,-108 269,-108 335,-108 335,-108 338,-108 341,-111 341,-114 341,-114 341,-120 341,-120 341,-123 338,-126 335,-126"/>
+<text text-anchor="middle" x="302" y="-114.7" font-family="inherit" font-size="8.50">Gtk.ListBoxRow</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Actionable&#45;&gt;Gtk.ListBoxRow -->
+<g id="edge9" class="edge">
+<title>Gtk.Actionable&#45;&gt;Gtk.ListBoxRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M377.09,-161.88C361.81,-152.95 337.2,-138.56 320.34,-128.72"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="321.01,-127.08 315.81,-126.07 319.24,-130.1 321.01,-127.08"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge10" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M260,-215.88C260,-207.76 260,-195.13 260,-185.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="261.75,-185.24 260,-180.24 258.25,-185.24 261.75,-185.24"/>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge11" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M345.22,-215.88C327.73,-206.87 299.46,-192.32 280.33,-182.47"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="280.92,-180.8 275.67,-180.07 279.31,-183.91 280.92,-180.8"/>
+</g>
+<!-- Gtk.ListBoxRow&#45;&gt;Adw.PreferencesRow -->
+<g id="edge12" class="edge">
+<title>Gtk.ListBoxRow&#45;&gt;Adw.PreferencesRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M302,-107.88C302,-99.76 302,-87.13 302,-77.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="303.75,-77.24 302,-72.24 300.25,-77.24 303.75,-77.24"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.ListBoxRow -->
+<g id="edge13" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.ListBoxRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M266.56,-161.88C273.43,-153.38 284.28,-139.94 292.17,-130.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="293.56,-131.23 295.34,-126.24 290.84,-129.03 293.56,-131.23"/>
+</g>
+</g>
+</svg>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Subclasses<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="ComboRow.html#Adw.ComboRow" title="Adw.ComboRow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ComboRow</span></code></a></p>
+</dd>
+</dl>
+<section id="methods">
+<span id="adw-actionrow-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#adw-preferencesrow-methods"><span class="std std-ref">Adw.PreferencesRow (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (12)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (5)</span></a></p>
+</dd>
+<dt class="field-even">Structs<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/WidgetClass.html#gtk-widgetclass-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 99%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>class</em></p></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.new" title="Adw.ActionRow.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.activate" title="Adw.ActionRow.activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">activate</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.add_prefix" title="Adw.ActionRow.add_prefix"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_prefix</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.add_suffix" title="Adw.ActionRow.add_suffix"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_suffix</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.get_activatable_widget" title="Adw.ActionRow.get_activatable_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_activatable_widget</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.get_icon_name" title="Adw.ActionRow.get_icon_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_icon_name</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.get_subtitle" title="Adw.ActionRow.get_subtitle"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_subtitle</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.get_subtitle_lines" title="Adw.ActionRow.get_subtitle_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_subtitle_lines</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.get_title_lines" title="Adw.ActionRow.get_title_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_title_lines</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.remove" title="Adw.ActionRow.remove"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.set_activatable_widget" title="Adw.ActionRow.set_activatable_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_activatable_widget</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.set_icon_name" title="Adw.ActionRow.set_icon_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_icon_name</span></code></a> (icon_name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.set_subtitle" title="Adw.ActionRow.set_subtitle"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_subtitle</span></code></a> (subtitle)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.set_subtitle_lines" title="Adw.ActionRow.set_subtitle_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_subtitle_lines</span></code></a> (subtitle_lines)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.set_title_lines" title="Adw.ActionRow.set_title_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_title_lines</span></code></a> (title_lines)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="virtual-methods">
+<span id="adw-actionrow-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (4)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 99%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.ActionRow.do_activate" title="Adw.ActionRow.do_activate"><code class="xref py py-func docutils literal notranslate"><span class="pre">do_activate</span></code></a> ()</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="properties">
+<span id="adw-actionrow-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#adw-preferencesrow-props"><span class="std std-ref">Adw.PreferencesRow (3)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (3)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (2)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Flags</p></th>
+<th class="head"><p>Short Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.ActionRow.props.activatable_widget" title="Adw.ActionRow.props.activatable_widget"><code class="xref py py-data docutils literal notranslate"><span class="pre">activatable-widget</span></code></a></p></td>
+<td><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p></td>
+<td><p>r/w</p></td>
+<td><p>The widget to be activated when the row is activated</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.ActionRow.props.icon_name" title="Adw.ActionRow.props.icon_name"><code class="xref py py-data docutils literal notranslate"><span class="pre">icon-name</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td><p>The icon name for this row</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.ActionRow.props.subtitle" title="Adw.ActionRow.props.subtitle"><code class="xref py py-data docutils literal notranslate"><span class="pre">subtitle</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td><p>The subtitle for this row</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.ActionRow.props.subtitle_lines" title="Adw.ActionRow.props.subtitle_lines"><code class="xref py py-data docutils literal notranslate"><span class="pre">subtitle-lines</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td><p>The desired number of subtitle lines</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.ActionRow.props.title_lines" title="Adw.ActionRow.props.title_lines"><code class="xref py py-data docutils literal notranslate"><span class="pre">title-lines</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td><p>The desired number of title lines</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="signals">
+<span id="adw-actionrow-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Short Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.ActionRow.signals.activated" title="Adw.ActionRow.signals.activated"><code class="xref py py-func docutils literal notranslate"><span class="pre">activated</span></code></a></p></td>
+<td><p>This signal is emitted after the row has been activated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fields">
+<span id="adw-actionrow-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Access</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>parent_instance</p></td>
+<td><p><a class="reference internal" href="PreferencesRow.html#Adw.PreferencesRow" title="Adw.PreferencesRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.PreferencesRow</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Adw.ActionRow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Adw.</span></span><span class="sig-name descname"><span class="pre">ActionRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Bases<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#Adw.PreferencesRow" title="Adw.PreferencesRow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.PreferencesRow</span></code></a></p>
+</dd>
+<dt class="field-even">Abstract<span class="colon">:</span></dt>
+<dd class="field-even"><p>No</p>
+</dd>
+<dt class="field-odd">Structure<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="ActionRowClass.html#Adw.ActionRowClass" title="Adw.ActionRowClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ActionRowClass</span></code></a></p>
+</dd>
+</dl>
+<p>A [class`Gtk`.ListBoxRow] used to present actions.</p>
+<p>&lt;picture&gt;
+&lt;source srcset=”action-row-dark.png” media=”(prefers-color-scheme: dark)”&gt;
+&lt;img src=”action-row.png” alt=”action-row”&gt;
+&lt;/picture&gt;</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code> widget can have a title, a subtitle and an icon. The row
+can receive additional widgets at its end, or prefix widgets at its start.</p>
+<p>It is convenient to present a preference and its related actions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code> is unactivatable by default, giving it an activatable widget
+will automatically make it activatable, but unsetting it won’t change the
+row’s activatability.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#Adw.ActionRow" title="Adw.ActionRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ActionRow</span></code></a> as <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#Gtk.Buildable" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Buildable</span></code></a></dt><dd></dd>
+</dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code> implementation of the [iface`Gtk`.Buildable] interface
+supports adding a child at its end by specifying “suffix” or omitting the
+“type” attribute of a &lt;child&gt; element.</p>
+<p>It also supports adding a child as a prefix widget by specifying “prefix” as
+the “type” attribute of a &lt;child&gt; element.</p>
+<dl class="simple">
+<dt>CSS nodes</dt><dd></dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code> has a main CSS node with name <code class="docutils literal notranslate"><span class="pre">row</span></code>.</p>
+<p>It contains the subnode <code class="docutils literal notranslate"><span class="pre">box.header</span></code> for its main horizontal box, and
+<code class="docutils literal notranslate"><span class="pre">box.title</span></code> for the vertical box containing the title and subtitle labels.</p>
+<p>It contains subnodes <code class="docutils literal notranslate"><span class="pre">label.title</span></code> and <code class="docutils literal notranslate"><span class="pre">label.subtitle</span></code> representing
+respectively the title label and subtitle label.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.new" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the newly created <code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
+</dd>
+</dl>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">AdwActionRow</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.add_prefix">
+<span class="sig-name descname"><span class="pre">add_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.add_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget</p>
+</dd>
+</dl>
+<p>Adds a prefix widget to <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.add_suffix">
+<span class="sig-name descname"><span class="pre">add_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.add_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget</p>
+</dd>
+</dl>
+<p>Adds a suffix widget to <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.get_activatable_widget">
+<span class="sig-name descname"><span class="pre">get_activatable_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.get_activatable_widget" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the activatable widget for <cite>self</cite></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the widget activated when <cite>self</cite> is activated.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.get_icon_name">
+<span class="sig-name descname"><span class="pre">get_icon_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.get_icon_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the icon name for <cite>self</cite></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the icon name for <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.get_subtitle">
+<span class="sig-name descname"><span class="pre">get_subtitle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.get_subtitle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the subtitle for <cite>self</cite></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the subtitle for <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.get_subtitle_lines">
+<span class="sig-name descname"><span class="pre">get_subtitle_lines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.get_subtitle_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of lines at the end of which the subtitle label will be
+ellipsized</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the number of lines at the end of which the subtitle label will be
+ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.get_title_lines">
+<span class="sig-name descname"><span class="pre">get_title_lines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.get_title_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of lines at the end of which the title label will be
+ellipsized</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the number of lines at the end of which the title label will be
+ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.remove" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – the child to be removed</p>
+</dd>
+</dl>
+<p>Removes a child from <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.set_activatable_widget">
+<span class="sig-name descname"><span class="pre">set_activatable_widget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.set_activatable_widget" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the target widget</p>
+</dd>
+</dl>
+<p>Sets the widget to activate when <cite>self</cite> is activated.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.set_icon_name">
+<span class="sig-name descname"><span class="pre">set_icon_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">icon_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.set_icon_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>icon_name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the icon name</p>
+</dd>
+</dl>
+<p>Sets the icon name for <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.set_subtitle">
+<span class="sig-name descname"><span class="pre">set_subtitle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtitle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.set_subtitle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>subtitle</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – the subtitle</p>
+</dd>
+</dl>
+<p>Sets the subtitle for <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.set_subtitle_lines">
+<span class="sig-name descname"><span class="pre">set_subtitle_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subtitle_lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.set_subtitle_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>subtitle_lines</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of lines at the end of which the subtitle label will be ellipsized</p>
+</dd>
+</dl>
+<p>Sets the number of lines at the end of which the subtitle label will be
+ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.set_title_lines">
+<span class="sig-name descname"><span class="pre">set_title_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title_lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.set_title_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title_lines</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the number of lines at the end of which the title label will be ellipsized</p>
+</dd>
+</dl>
+<p>Sets the number of lines at the end of which the title label will be
+ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.ActionRow.do_activate">
+<span class="sig-name descname"><span class="pre">do_activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><em class="property"><span class="w"> </span><span class="pre">virtual</span></em><a class="headerlink" href="#Adw.ActionRow.do_activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Adw.ActionRow.signals.activated">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.signals.</span></span><span class="sig-name descname"><span class="pre">activated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action_row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ActionRow.signals.activated" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Signal Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">activated</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</dd>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>action_row</strong> (<a class="reference internal" href="#Adw.ActionRow" title="Adw.ActionRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ActionRow</span></code></a>) – The object which received the signal</p>
+</dd>
+</dl>
+<p>This signal is emitted after the row has been activated.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ActionRow.props.activatable_widget">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.props.</span></span><span class="sig-name descname"><span class="pre">activatable_widget</span></span><a class="headerlink" href="#Adw.ActionRow.props.activatable_widget" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">activatable-widget</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a></p>
+</dd>
+</dl>
+<p>The widget to activate when the row is activated.</p>
+<p>The row can be activated either by clicking on it, calling
+[method`ActionRow`.activate], or via mnemonics in the title or the subtitle.
+See the [property`PreferencesRow`:py:data:<cite>:use-underline&lt;Adw.ActionRow.props.use_underline&gt;</cite>] property to enable
+mnemonics.</p>
+<p>The target widget will be activated by emitting the
+[signal`Gtk`.Widget::mnemonic-activate] signal on it.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ActionRow.props.icon_name">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.props.</span></span><span class="sig-name descname"><span class="pre">icon_name</span></span><a class="headerlink" href="#Adw.ActionRow.props.icon_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">icon-name</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">''</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The icon name for this row.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ActionRow.props.subtitle">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.props.</span></span><span class="sig-name descname"><span class="pre">subtitle</span></span><a class="headerlink" href="#Adw.ActionRow.props.subtitle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">subtitle</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">''</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The subtitle for this row.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ActionRow.props.subtitle_lines">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.props.</span></span><span class="sig-name descname"><span class="pre">subtitle_lines</span></span><a class="headerlink" href="#Adw.ActionRow.props.subtitle_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">subtitle-lines</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The number of lines at the end of which the subtitle label will be
+ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.ActionRow.props.title_lines">
+<span class="sig-prename descclassname"><span class="pre">Adw.ActionRow.props.</span></span><span class="sig-name descname"><span class="pre">title_lines</span></span><a class="headerlink" href="#Adw.ActionRow.props.title_lines" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">title-lines</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The number of lines at the end of which the title label will be ellipsized.</p>
+<p>If the value is 0, the number of lines won’t be limited.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

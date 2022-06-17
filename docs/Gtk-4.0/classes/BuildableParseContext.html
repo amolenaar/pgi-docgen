@@ -33,6 +33,10 @@
   
 
   
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
     <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
   
 
@@ -179,78 +183,74 @@
         <div class="rst-content">
           <div role="main">
             
-  <div class="section" id="gtk-buildableparsecontext">
-<h1>Gtk.BuildableParseContext<a class="headerlink" href="#gtk-buildableparsecontext" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="fields">
-<span id="gtk-buildableparsecontext-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+  <section id="gtk-buildableparsecontext">
+<h1>Gtk.BuildableParseContext<a class="headerlink" href="#gtk-buildableparsecontext" title="Permalink to this heading">¶</a></h1>
+<section id="fields">
+<span id="gtk-buildableparsecontext-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
 <p>None</p>
-</div>
-<div class="section" id="methods">
-<span id="gtk-buildableparsecontext-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="colwidths-given docutils">
+</section>
+<section id="methods">
+<span id="gtk-buildableparsecontext-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<table class="docutils align-default">
 <colgroup>
-<col width="1%" />
-<col width="99%" />
+<col style="width: 1%" />
+<col style="width: 99%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>&#160;</td>
-<td><a class="reference internal" href="#Gtk.BuildableParseContext.get_element" title="Gtk.BuildableParseContext.get_element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element</span></code></a> ()</td>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.BuildableParseContext.get_element" title="Gtk.BuildableParseContext.get_element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td><a class="reference internal" href="#Gtk.BuildableParseContext.get_element_stack" title="Gtk.BuildableParseContext.get_element_stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_stack</span></code></a> ()</td>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Gtk.BuildableParseContext.get_element_stack" title="Gtk.BuildableParseContext.get_element_stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_stack</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td>&#160;</td>
-<td><a class="reference internal" href="#Gtk.BuildableParseContext.get_position" title="Gtk.BuildableParseContext.get_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_position</span></code></a> ()</td>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.BuildableParseContext.get_position" title="Gtk.BuildableParseContext.get_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_position</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td>&#160;</td>
-<td><a class="reference internal" href="#Gtk.BuildableParseContext.pop" title="Gtk.BuildableParseContext.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a> ()</td>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Gtk.BuildableParseContext.pop" title="Gtk.BuildableParseContext.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td>&#160;</td>
-<td><a class="reference internal" href="#Gtk.BuildableParseContext.push" title="Gtk.BuildableParseContext.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">push</span></code></a> (parser, user_data)</td>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.BuildableParseContext.push" title="Gtk.BuildableParseContext.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">push</span></code></a> (parser, user_data)</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="details">
-<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="Gtk.BuildableParseContext">
-<em class="property">class </em><code class="descclassname">Gtk.</code><code class="descname">BuildableParseContext</code><a class="headerlink" href="#Gtk.BuildableParseContext" title="Permalink to this definition">¶</a></dt>
+</section>
+<section id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Gtk.</span></span><span class="sig-name descname"><span class="pre">BuildableParseContext</span></span><a class="headerlink" href="#Gtk.BuildableParseContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>An opaque context struct for <code class="docutils literal notranslate"><span class="pre">GtkBuildableParser</span></code>.</p>
-<dl class="method">
-<dt id="Gtk.BuildableParseContext.get_element">
-<code class="descname">get_element</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_element" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the name of the currently open element, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext.get_element">
+<span class="sig-name descname"><span class="pre">get_element</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_element" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the name of the currently open element</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
 <p>Retrieves the name of the currently open element.</p>
 <p>If called from the start_element or end_element handlers this will
 give the element_name as passed to those functions. For the parent
 elements, see <a class="reference internal" href="#Gtk.BuildableParseContext.get_element_stack" title="Gtk.BuildableParseContext.get_element_stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.get_element_stack</span></code></a>().</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="Gtk.BuildableParseContext.get_element_stack">
-<code class="descname">get_element_stack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_element_stack" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the element stack, which must not be modified</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>]</td>
-</tr>
-</tbody>
-</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext.get_element_stack">
+<span class="sig-name descname"><span class="pre">get_element_stack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_element_stack" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the element stack, which must not be modified</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>[<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
 <p>Retrieves the element stack from the internal state of the parser.</p>
-<p>The returned <a class="reference external" href="../../GLib-2.0/classes/PtrArray.html#GLib.PtrArray" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.PtrArray</span></code></a> is an array of strings where the last item is
+<p>The returned <code class="docutils literal notranslate"><span class="pre">GPtrArray</span></code> is an array of strings where the last item is
 the currently open tag (as would be returned by
 <a class="reference internal" href="#Gtk.BuildableParseContext.get_element" title="Gtk.BuildableParseContext.get_element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.get_element</span></code></a>()) and the previous item is its
 immediate parent.</p>
@@ -260,48 +260,42 @@ would merely return the name of the element that is being
 processed.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="Gtk.BuildableParseContext.get_position">
-<code class="descname">get_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_position" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">line_number:</th><td class="field-body">return location for a line number, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">char_number:</th><td class="field-body">return location for a <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>-on-line number, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(<strong>line_number</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <strong>char_number</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</td>
-</tr>
-</tbody>
-</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext.get_position">
+<span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.get_position" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="field-list simple">
+<dt class="field-odd">line_number<span class="colon">:</span></dt>
+<dd class="field-odd"><p>return location for a line number</p>
+</dd>
+<dt class="field-even">char_number<span class="colon">:</span></dt>
+<dd class="field-even"><p>return location for a <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>-on-line number</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>(<strong>line_number</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, <strong>char_number</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>)</p>
+</dd>
+</dl>
 <p>Retrieves the current line number and the number of the character on
 that line. Intended for use in error messages; there are no strict
 semantics for what constitutes the “current” line number other than
 “the best number we could come up with for error messages.”</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="Gtk.BuildableParseContext.pop">
-<code class="descname">pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.pop" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the user data passed to <a class="reference internal" href="#Gtk.BuildableParseContext.push" title="Gtk.BuildableParseContext.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.push</span></code></a>()</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></td>
-</tr>
-</tbody>
-</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.pop" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the user data passed to <a class="reference internal" href="#Gtk.BuildableParseContext.push" title="Gtk.BuildableParseContext.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.push</span></code></a>()</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
 <p>Completes the process of a temporary sub-parser redirection.</p>
 <p>This function exists to collect the user_data allocated by a
 matching call to <a class="reference internal" href="#Gtk.BuildableParseContext.push" title="Gtk.BuildableParseContext.push"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.push</span></code></a>(). It must be called
@@ -315,24 +309,20 @@ be used by the subparsers themselves to implement a higher-level
 interface.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="Gtk.BuildableParseContext.push">
-<code class="descname">push</code><span class="sig-paren">(</span><em>parser</em>, <em>user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.push" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>parser</strong> (<a class="reference internal" href="BuildableParser.html#Gtk.BuildableParser" title="Gtk.BuildableParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParser</span></code></a>) – a <a class="reference internal" href="BuildableParser.html#Gtk.BuildableParser" title="Gtk.BuildableParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParser</span></code></a></li>
-<li><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – user data to pass to <a class="reference internal" href="BuildableParser.html#Gtk.BuildableParser" title="Gtk.BuildableParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParser</span></code></a> functions</li>
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.BuildableParseContext.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BuildableParseContext.push" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> (<a class="reference internal" href="BuildableParser.html#Gtk.BuildableParser" title="Gtk.BuildableParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParser</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkBuildableParser</span></code></p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – user data to pass to <code class="docutils literal notranslate"><span class="pre">GtkBuildableParser</span></code> functions</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p>Temporarily redirects markup data to a sub-parser.</p>
 <p>This function may only be called from the start_element handler of
-a <a class="reference internal" href="BuildableParser.html#Gtk.BuildableParser" title="Gtk.BuildableParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParser</span></code></a>. It must be matched with a corresponding call to
+a <code class="docutils literal notranslate"><span class="pre">GtkBuildableParser</span></code>. It must be matched with a corresponding call to
 <a class="reference internal" href="#Gtk.BuildableParseContext.pop" title="Gtk.BuildableParseContext.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuildableParseContext.pop</span></code></a>() in the matching end_element handler
 (except in the case that the parser aborts due to an error).</p>
 <p>All tags, text and other data between the matching tags is
@@ -358,8 +348,8 @@ has the same kind of API.</p>
 
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
