@@ -8,7 +8,7 @@
 import os
 import xml.etree.ElementTree as etree
 
-from .util import get_doap_path, load_debian
+from .util import get_doap_path
 
 
 class ProjectSummary(object):
@@ -20,7 +20,6 @@ class ProjectSummary(object):
     repositories = []
     mailinglists = []
     dependencies = []
-    debian_package = None
 
 
 def get_project_summary(namespace, version):
@@ -82,25 +81,5 @@ def get_project_summary(namespace, version):
             ps.mailinglists.append(
                 (strip_mailto(r.attrib["resource"]), r.attrib["resource"])
             )
-
-    key = "%s-%s" % (namespace, version)
-    deb_info = load_debian()
-    if key not in deb_info:
-        return ps
-
-    info = deb_info[key]
-
-    if not ps.name:
-        ps.name = info["lib"]
-        if info["summary"]:
-            ps.name += " (" + info["summary"] + ")"
-
-    if not ps.homepage:
-        ps.homepage = info["homepage"]
-
-    if not ps.description:
-        ps.description = info["description"]
-
-    ps.debian_package = info["debian_package"]
 
     return ps

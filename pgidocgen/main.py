@@ -9,7 +9,7 @@
 
 import argparse
 
-from . import create, build, stubs, create_debian, update
+from . import create, build, stubs, update
 
 
 def main(argv):
@@ -19,7 +19,6 @@ def main(argv):
     create.add_parser(subparser)
     build.add_parser(subparser)
     stubs.add_parser(subparser)
-    create_debian.add_parser(subparser)
     update.add_parser(subparser)
 
     args = parser.parse_args(argv[1:])

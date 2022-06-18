@@ -18,11 +18,6 @@ sources.
 from .summary import get_project_summary
 from .project import Project, PROJECTS
 from .library import Library
-from .util import get_doap_dir, get_doap_path, get_debian_path, \
+from .util import get_doap_dir, get_doap_path, \
     get_docref_dir, get_docref_path, get_class_image_dir, \
     get_class_image_path, load_doc_references
-
-
-get_project_summary, Project, Library, PROJECTS, get_debian_path,
-get_doap_dir, get_doap_path, get_docref_dir, get_docref_path,
-get_class_image_dir, get_class_image_path, load_doc_references

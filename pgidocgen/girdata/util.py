@@ -25,10 +25,6 @@ def get_doap_path(namespace):
     return os.path.join(get_doap_dir(), "%s.doap" % namespace)
 
 
-def get_debian_path():
-    return os.path.join(_BASEDIR, "debian-packages.json")
-
-
 def get_class_image_dir(namespace, version):
     """The image directory for a given `namespace` and `version`.
 
@@ -72,17 +68,6 @@ def load_doc_references(namespace, version):
     """
 
     path = get_docref_path(namespace, version)
-    try:
-        with open(path, "rb") as h:
-            return json.load(h)
-    except IOError:
-        return {}
-
-
-def load_debian():
-    """Returns a mapping of namespace-version to debian related info"""
-
-    path = get_debian_path()
     try:
         with open(path, "rb") as h:
             return json.load(h)

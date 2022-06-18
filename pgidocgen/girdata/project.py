@@ -10,7 +10,6 @@ from urllib.parse import quote
 
 from .. import util
 from .library import Library
-from .util import load_debian
 
 
 class Project(object):
@@ -52,14 +51,6 @@ class Project(object):
             version = l.version
             if version:
                 break
-
-        # get the debian package version if all else fails
-        if not version:
-            debian_info = load_debian()
-            for v in version_strings:
-                if v in debian_info:
-                    version = debian_info[v]["version"]
-                    break
 
         return version
 
