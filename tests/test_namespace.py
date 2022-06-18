@@ -14,23 +14,6 @@ from pgidocgen.namespace import get_cairo_types, \
 
 class TNamespace(unittest.TestCase):
 
-    def test_soup(self):
-        ns = get_namespace("Soup", "2.4")
-        types = ns.types
-        ns.docs
-
-        self.assertEqual(types["SOUP_STATUS_CANCELLED"],
-                         ["Soup.Status.CANCELLED"])
-
-        self.assertEqual(types["SoupContentDecoder"],
-                         ["Soup.ContentDecoder"])
-
-        self.assertEqual(types["SoupContentDecoder"],
-                         ["Soup.ContentDecoder"])
-
-        self.assertEqual(types["soup_cookie_parse"],
-                         [u'Soup.Cookie.parse', u'Soup.cookie_parse'])
-
     def test_gtk(self):
         ns = get_namespace("Gtk", "3.0")
         types = ns.types
@@ -123,12 +106,6 @@ class TNamespace(unittest.TestCase):
         ns.docs
 
         self.assertEqual(types["pango_break"], ["Pango.break_"])
-
-    def test_ges(self):
-        ns = get_namespace("GES", "1.0")
-        ns.docs
-        types = ns.types
-        self.assertTrue("position" not in types)
 
     def test_deps(self):
         ns = get_namespace("DBus", "1.0")

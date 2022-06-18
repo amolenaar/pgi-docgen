@@ -8,6 +8,7 @@
 
 import unittest
 
+import pytest
 from pgidocgen.repo import Repository
 from pgidocgen.docobj import Class, Function, Flags, get_hierarchy, PyClass, \
     Constant
@@ -23,10 +24,11 @@ def find(l, name):
 
 class TRepository(unittest.TestCase):
 
+    @pytest.mark.xfail(reason="Currently no overrides")
     def test_parse_override_docs(self):
         docs = parse_override_docs("Gtk", "3.0")
-        self.assertTrue("Gtk.Widget.translate_coordinates" in docs)
-        self.assertTrue(docs["Gtk.Widget.translate_coordinates"])
+        assert "Gtk.Widget.translate_coordinates" in docs
+        assert docs["Gtk.Widget.translate_coordinates"]
 
     def test_override_method(self):
         repo = Repository("Gtk", "3.0")
@@ -127,9 +129,11 @@ class TRepository(unittest.TestCase):
         method = find(klass.methods, "load_contents_finish")
         self.assertTrue(":returns:" in method.signature_desc)
 
+    @pytest.mark.xfail(reason="Currently no overrides")
     def test_gtk_overrides(self):
         repo = Repository("Gtk", "3.0")
         Gtk = repo.import_module()
+        assert Gtk.get_major_version() == 3
 
         PyClass.from_object(repo, Gtk.TreeModelRow)
         PyClass.from_object(repo, Gtk.TreeModelRowIter)
@@ -221,8 +225,3 @@ class TRepository(unittest.TestCase):
         klass = Flags.from_object(repo, Atk.Role)
         info = find(klass.values, "APPLICATION").info
         self.assertEqual(info.version_added, "1.1.4")
-
-    def test_gudev(self):
-        repo = Repository("GUdev", "1.0")
-        GUdev = repo.import_module()
-        Class.from_object(repo, GUdev.Client)
