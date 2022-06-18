@@ -14,3 +14,5 @@ tools/_temp_*
 coverage.xml
 .mypy_cache
 public
+__pycache__
+*.egg-info
