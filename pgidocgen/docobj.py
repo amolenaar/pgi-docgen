@@ -922,13 +922,6 @@ class SymbolMapping(object):
 
         source_map = {}
         pysource_map = {}
-        if func:
-            source_map = repo.get_source_map()
-            for key, value in source_map.items():
-                value = func(value)
-                for pyid in repo.lookup_all_py_id(key, shadowed=False):
-                    pysource_map[pyid] = value
-
         symbol_map = []
         items = repo.get_types().items()
         for key, values in sorted(items, key=lambda x: (x[0].lower(), x[0])):
@@ -1062,8 +1055,7 @@ class Module(BaseDocObject):
             c for c in mod.structures
             if c not in mod.class_structures and c not in mod.iface_structures]
 
-        symbol_mapping = SymbolMapping.from_module(repo, pymod)
-        mod.symbol_mapping = symbol_mapping
+        mod.symbol_mapping = SymbolMapping.from_module(repo, pymod)
 
         mod.hierarchy = to_names(get_hierarchy(hierarchy_classes))
         mod.project_summary = get_project_summary(repo.namespace, repo.version)

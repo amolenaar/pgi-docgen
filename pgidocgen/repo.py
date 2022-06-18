@@ -10,7 +10,6 @@ import jinja2
 
 from .namespace import get_namespace
 from .parser import docstring_to_rest
-from .debug import get_line_numbers_for_name
 from .docobj import Module
 
 
@@ -185,18 +184,6 @@ class Repository(object):
         """
 
         return self._ns.import_module()
-
-    def get_source_map(self):
-        """Returns a dict mapping C symbols to relative source paths and line
-        numbers. In case no debug symbols are present the returned dict will
-        be empty.
-        """
-
-        source_map = {}
-        for lib in self._ns.shared_libraries:
-            for symbol, path in get_line_numbers_for_name(lib).items():
-                source_map[symbol] = path
-        return source_map
 
     def get_types(self):
         return self._ns.types
