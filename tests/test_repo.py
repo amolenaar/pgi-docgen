@@ -22,13 +22,13 @@ def find(l, name):
 
 @pytest.mark.xfail(reason="Currently no overrides")
 def test_parse_override_docs():
-    docs = parse_override_docs("Gtk", "3.0")
+    docs = parse_override_docs("Gtk", "4.0")
     assert "Gtk.Widget.translate_coordinates" in docs
     assert docs["Gtk.Widget.translate_coordinates"]
 
 
 def test_override_method():
-    repo = Repository("Gtk", "3.0")
+    repo = Repository("Gtk", "4.0")
     Gtk = repo.import_module()
     func = Function.from_object(
         "Gtk.Widget",
@@ -48,7 +48,7 @@ def test_method_inheritance():
 
 
 def test_hierarchy():
-    from pgi.repository import GObject
+    from gi.repository import GObject
 
     repo = Repository("Atk", "1.0")
     Atk = repo.import_module()
@@ -133,7 +133,7 @@ def test_gio():
 
 @pytest.mark.xfail(reason="Currently no overrides")
 def test_gtk_overrides():
-    repo = Repository("Gtk", "3.0")
+    repo = Repository("Gtk", "4.0")
     Gtk = repo.import_module()
     assert Gtk.get_major_version() == 3
 
@@ -152,7 +152,7 @@ def test_gtk_overrides():
 
 
 def test_gtk():
-    repo = Repository("Gtk", "3.0")
+    repo = Repository("Gtk", "4.0")
     Gtk = repo.import_module()
 
     klass = Class.from_object(repo, Gtk.TreeModel)

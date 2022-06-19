@@ -8,6 +8,8 @@
 import os
 import re
 
+import pytest
+
 from pgidocgen.girdata import (
     Library,
     Project,
@@ -21,7 +23,7 @@ from pgidocgen.util import import_namespace
 
 
 def test_get_project_summary():
-    s = get_project_summary("Gtk", "3.0")
+    s = get_project_summary("Gtk", "4.0")
     assert s.name == "gtk (Multi-platform toolkit)"
     assert s.description.startswith("GTK is a")
     assert s.homepage
@@ -35,7 +37,7 @@ def test_get_project_summary():
 
 def test_get_library_version():
     mods = [
-        "Gtk-3.0",
+        "Gtk-4.0",
         "Atk-1.0",
         "Gst-1.0",
         "Poppler-0.18",
@@ -77,16 +79,19 @@ def test_get_docref_dir():
     assert os.path.isdir(get_docref_dir())
 
 
+@pytest.mark.skip(reason="No docref folder for Gtk-4.0")
 def test_get_docref_path():
-    assert os.path.isfile(get_docref_path("Gtk", "3.0"))
+    assert os.path.isfile(get_docref_path("Gtk", "4.0"))
 
 
+@pytest.mark.skip(reason="No class image folder for Gtk-4.0")
 def test_get_class_image_dir():
-    assert os.path.isdir(get_class_image_dir("Gtk", "3.0"))
+    assert os.path.isdir(get_class_image_dir("Gtk", "4.0"))
 
 
+@pytest.mark.skip(reason="No class images for Gtk-4.0")
 def test_get_class_image_path():
-    assert os.path.isfile(get_class_image_path("Gtk", "3.0", "Window"))
+    assert os.path.isfile(get_class_image_path("Gtk", "4.0", "Window"))
 
 
 def test_get_source_func():
@@ -115,20 +120,4 @@ def test_get_source_func():
         r"gstreamer/blob/\d+\.\d+\.\d+/"
         r"gst/gstelementfactory\.c\#L\d+",
         url,
-    )
-
-    url = get_url("GstApp", "gst-libs/gst/app/gstappsrc.c:1237")
-    assert re.match(
-        r"https://gitlab\.freedesktop\.org/gstreamer/"
-        r"gst-plugins-base/blob/\d+\.\d+\.\d+/"
-        r"gst-libs/gst/app/gstappsrc\.c\#L\d+",
-        url,
-    )
-
-    url = get_url("GstRtsp", "gst-libs/gst/rtsp/gstrtspurl.c:97")
-    assert re.match(
-        r"https://gitlab\.freedesktop\.org/gstreamer/"
-        r"gst-plugins-base/blob/\d+\.\d+\.\d+/"
-        r"gst-libs/gst/rtsp/gstrtspurl\.c\#L\d+",
-        url,
-    )
+    ), url

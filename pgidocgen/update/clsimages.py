@@ -97,13 +97,13 @@ def fetch(args):
 
 
 def main(args):
-    import pgi
+    import gi
 
-    pgi.require_version("Gtk", "3.0")
+    gi.require_version("Gtk", "4.0")
 
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
-    dest = get_class_image_dir("Gtk", "3.0")
+    dest = get_class_image_dir("Gtk", "4.0")
     mapping = MAPPING
 
     # make sure there are no typos in the mapping

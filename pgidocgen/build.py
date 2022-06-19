@@ -13,8 +13,6 @@ import re
 import shutil
 import subprocess
 import sys
-import threading
-from multiprocessing.pool import ThreadPool
 
 import jinja2
 import sphinx
@@ -118,10 +116,11 @@ def do_build(package):
 
     copy_env["PGIDOCGEN_TARGET_BASE_PATH"] = os.path.dirname(package.build_path)
 
-    subprocess.check_call(
-        [sys.executable, "-m", "sphinx", "-n", "-q", "-a", "-E"] + sphinx_args,
-        env=copy_env,
-    )
+    sphinx_cmd = [sys.executable, "-m", "sphinx", "-n", "-q", "-a", "-E"] + sphinx_args
+    print("=>", " ".join(sphinx_cmd))
+    subprocess.check_call(sphinx_cmd, env=copy_env)
+
+    print("Done building")
 
     # we don't rebuild, remove all caches
     shutil.rmtree(os.path.join(package.build_path, ".doctrees"))
@@ -148,7 +147,7 @@ class Package(object):
         self.devhelp = devhelp
 
     def can_build(self, done_deps):
-        return not (self.deps - set([p.name for p in done_deps]))
+        return not (self.deps - {p.name for p in done_deps})
 
     def __repr__(self):
         return "<%s name=%s>" % (type(self).__name__, self.name)
@@ -166,7 +165,7 @@ def main(args):
     if sphinx.version_info < (1, 5, 0):
         raise SystemExit("Needs sphinx 1.5.0+")
 
-    to_build = {}
+    to_build: dict[str, Package] = {}
 
     target_path = os.path.abspath(args.target)
     devhelp = args.devhelp
@@ -208,26 +207,7 @@ def main(args):
     except OSError:
         pass
 
-    # build bottom up
-    done = set()
-    num_to_build = len(to_build)
-    pool = ThreadPool(int(get_cpu_count() * 1.5))
-    event = threading.Event()
-
-    def job_cb(package=None):
-        if package is not None:
-            done.add(package)
-            print("%s finished: %d/%d done" % (package.name, len(done), num_to_build))
-
-        for package in get_new_jobs():
-            print("Queue build for %s" % package.name)
-            pool.apply_async(do_build, [package], callback=job_cb)
-
-        if len(done) == num_to_build:
-            print("All done")
-            event.set()
-
-    def get_new_jobs():
+    def get_new_jobs() -> list[Package]:
         jobs = []
 
         done_deps = done | to_ignore
@@ -238,15 +218,18 @@ def main(args):
 
         return jobs
 
+    # build bottom up
+    done = set()
+    num_to_build = len(to_build)
+
     for name, package in list(to_build.items()):
         if os.path.exists(package.build_path):
             del to_build[name]
             done.add(package)
 
-    job_cb()
-    event.wait()
-    pool.close()
-    pool.join()
+    while len(done) < num_to_build:
+        for package in get_new_jobs():
+            done.add(do_build(package))
 
     if not devhelp:
         mergeindex(target_path)

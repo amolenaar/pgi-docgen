@@ -30,7 +30,7 @@ class Repository(object):
 
     def get_cache_key(self, obj):
         # If you want to cache a docobj, use this key
-        return (self.namespace, self.version, obj)
+        return (self.namespace, self.version, str(obj))
 
     def parse(self):
         """Returns a Module instance containing the whole documentation tree"""

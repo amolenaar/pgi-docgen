@@ -10,7 +10,7 @@ from pgidocgen.namespace import fixup_since, get_cairo_types, get_namespace, get
 
 
 def test_gtk():
-    ns = get_namespace("Gtk", "3.0")
+    ns = get_namespace("Gtk", "4.0")
     types = ns.types
     ns.docs
 
@@ -30,15 +30,15 @@ def test_gtk():
 
 
 def test_gdk():
-    ns = get_namespace("Gdk", "3.0")
+    ns = get_namespace("Gdk", "4.0")
     types = ns.types
     docs = ns.docs
     versions = get_versions(docs)
-    assert "2.0" in versions
-    assert "3.0" in versions
+    assert "4.2" in versions
+    assert "4.8" in versions
 
     assert types["GdkModifierType"] == ["Gdk.ModifierType"]
-    assert ns.instance_params["Gdk.Window.begin_paint_region"] == "window"
+    assert ns.instance_params["Gdk.Surface.get_display"] == "surface"
 
 
 def test_gdkpixbuf():

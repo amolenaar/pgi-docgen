@@ -28,7 +28,7 @@ def get_signature_string(callable_):
 
     try:
         sig = inspect.signature(callable_)
-    except TypeError:
+    except (ValueError, TypeError):
         # ... is not a Python function
         return "()"
 
@@ -85,39 +85,11 @@ def cache_calls(func):
     return wrap
 
 
-def get_child_properties(cls):
-    """Returns a list of GParamSpecs or an empty list"""
-
-    try:
-        Gtk = import_namespace("Gtk", "3.0")
-    except ImportError:
-        return []
-
-    if not issubclass(cls, Gtk.Container):
-        return []
-
-    def get_props(cls):
-        class_struct = cls._get_class_struct(Gtk.ContainerClass)
-        return class_struct.list_child_properties()
-
-    # only get properties the base classes don't have
-    all_props = get_props(cls)
-    names = dict((p.name, p) for p in all_props)
-
-    for base in fake_mro(cls)[1:]:
-        if not issubclass(base, Gtk.Container):
-            break
-        for p in get_props(base):
-            names.pop(p.name, None)
-
-    return names.values()
-
-
 def get_style_properties(cls):
     """Returns a list of GParamSpecs or an empty list"""
 
     try:
-        Gtk = import_namespace("Gtk", "3.0")
+        Gtk = import_namespace("Gtk", "4.0")
     except ImportError:
         return []
 
@@ -197,7 +169,7 @@ def get_overridden_class(obj):
     Gtk.Widget class passing in the former will return the later.
     """
 
-    assert inspect.isclass(obj), obj
+    # assert inspect.isclass(obj), obj
 
     if not hasattr(obj, "__gtype__"):
         return
@@ -272,9 +244,9 @@ def is_flags(obj):
     if not inspect.isclass(obj):
         return False
 
-    from gi.repository import GLib
+    from gi.repository import GObject
 
-    return issubclass(obj, GLib.Flags)
+    return issubclass(obj, GObject.GFlags)
 
 
 def is_struct(obj):
@@ -301,9 +273,9 @@ def is_enum(obj):
     if not inspect.isclass(obj):
         return False
 
-    from gi.repository import GLib
+    from gi.repository import GObject
 
-    return issubclass(obj, GLib.Enum)
+    return issubclass(obj, GObject.GEnum)
 
 
 def is_field(obj):
@@ -584,6 +556,9 @@ def get_namespace(obj):
 
     get_namespace(Gtk.Widget) -> "Gtk"
     """
+
+    if obj.__name__ == "GObject":
+        return "GObject"
 
     return obj.__module__.split(".")[-1]
 

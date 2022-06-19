@@ -10,8 +10,3 @@ import os
 # Force disable translations for gi libraries.
 # For example descriptions of properties/signals are translated.
 os.environ["LANG"] = "C.UTF-8"
-
-import pgi
-
-pgi.install_as_gi()
-pgi.set_backend("ctypes,null")

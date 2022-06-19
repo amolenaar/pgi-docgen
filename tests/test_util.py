@@ -8,15 +8,14 @@
 
 import os
 
-import pgi
+import gi
 import pytest
 
-pgi.require_version("Gtk", "3.0")
+gi.require_version("Gtk", "4.0")
 
 from pgidocgen.util import (
     fake_bases,
     fake_subclasses,
-    get_child_properties,
     get_csv_line,
     get_signature_string,
     get_style_properties,
@@ -33,7 +32,7 @@ from pgidocgen.util import (
 
 
 def test_get_signature_string():
-    from pgi.repository import Gio, GLib
+    from gi.repository import Gio, GLib
 
     func = GLib.Error.__init__
     assert get_signature_string(func) == "()"
@@ -55,7 +54,7 @@ def test_unindent():
 
 
 def test_method_checks():
-    from pgi.repository import GLib
+    from gi.repository import GLib
 
     assert not is_staticmethod(GLib.AsyncQueue, "push")
     assert is_staticmethod(GLib.Date, "new")
@@ -65,7 +64,7 @@ def test_method_checks():
 
 
 def test_is_method_owner():
-    from pgi.repository import GLib, Gtk
+    from gi.repository import GLib, Gtk
 
     assert not is_method_owner(GLib.IOError, "from_bytes")
 
@@ -79,14 +78,14 @@ def test_is_method_owner():
 
 
 def test_is_attribute_owner():
-    from pgi.repository import GdkPixbuf
+    from gi.repository import GdkPixbuf
 
     getattr(GdkPixbuf.PixbufAnimation, "ref")
     assert not is_attribute_owner(GdkPixbuf.PixbufAnimation, "ref")
 
 
 def test_class_checks():
-    from pgi.repository import GLib, GObject
+    from gi.repository import GLib, GObject
 
     assert not is_fundamental(GLib.Error)
     assert is_fundamental(GObject.Object)
@@ -95,13 +94,13 @@ def test_class_checks():
 
 
 def test_is_object():
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
     assert is_object(Gtk.Button)
 
 
 def test_instance_to_rest():
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
     def itr(gprop):
         return instance_to_rest(gprop.value_type.pytype, gprop.default_value)
@@ -131,18 +130,8 @@ def test_instance_to_rest():
     assert v == "``0``"
 
 
-def test_child_properties():
-    from pgi.repository import Gtk
-
-    assert len(get_child_properties(Gtk.Paned)) == 2
-    assert not get_child_properties(Gtk.Bin)
-    assert len(get_child_properties(Gtk.ActionBar)) == 2
-    assert len(get_child_properties(Gtk.Box)) == 5
-    assert not get_child_properties(Gtk.Statusbar)
-
-
 def test_style_properties():
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
     assert len(get_style_properties(Gtk.Paned)) == 1
     assert len(get_style_properties(Gtk.Widget)) == 17
@@ -151,7 +140,7 @@ def test_style_properties():
 
 @pytest.mark.xfail
 def test_fake_subclasses():
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
     assert fake_subclasses(Gtk.Scrollable)[1] is Gtk.TreeView
 
@@ -164,13 +153,13 @@ def test_unescape():
 
 
 def test_fake_bases():
-    from pgi.repository import Atk, GObject
+    from gi.repository import Atk, GObject
 
     assert fake_bases(Atk.ImplementorIface) == [GObject.GInterface]
 
 
 def test_fake_bases_ignore_redundant():
-    from pgi.repository import Gtk
+    from gi.repository import Gtk
 
     assert fake_bases(Gtk.Dialog, ignore_redundant=True) == [Gtk.Window]
 

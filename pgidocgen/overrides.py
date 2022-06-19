@@ -16,7 +16,7 @@ def parse_override_docs(namespace, version):
     import_namespace(namespace, version)
 
     try:
-        ma = ModuleAnalyzer.for_module("pgi.overrides.%s" % namespace)
+        ma = ModuleAnalyzer.for_module("gi.overrides.%s" % namespace)
     except PycodeError:
         return {}
     docs = {}

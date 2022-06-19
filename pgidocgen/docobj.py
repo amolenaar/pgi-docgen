@@ -19,7 +19,7 @@ import gi
 from gi.repository import GObject
 
 from . import util
-from .funcsig import FuncSignature, get_type_name, py_type_to_class_ref
+from .funcsig import FuncSignature, py_type_to_class_ref
 from .girdata import Project, get_class_image_path, get_project_summary
 from .parser import docstring_to_rest
 from .util import escape_parameter, get_signature_string
@@ -87,7 +87,8 @@ class SignalsMixin(object):
 
         signals = []
         for attr_name, sig in util.iter_public_attr(obj.signals):
-            signals.append(Signal.from_object(repo, self.fullname, sig))
+            if hasattr(sig, "name") and hasattr(sig, "flags"):
+                signals.append(Signal.from_object(repo, self.fullname, sig))
         signals.sort(key=lambda s: s.name)
         self.signals = signals
 
@@ -143,26 +144,6 @@ class PropertiesMixin(object):
         self.properties = props
 
 
-class ChildPropertiesMixin(object):
-    def _parse_child_properties(self, repo, obj):
-        props = []
-        for spec in util.get_child_properties(obj):
-            prop = Property.from_child_pspec(repo, self.fullname, spec)
-            props.append(prop)
-        props.sort(key=lambda p: p.name)
-        self.child_properties = props
-
-
-class StylePropertiesMixin(object):
-    def _parse_style_properties(self, repo, obj):
-        props = []
-        for spec in util.get_style_properties(obj):
-            prop = Property.from_child_pspec(repo, self.fullname, spec)
-            props.append(prop)
-        props.sort(key=lambda p: p.name)
-        self.style_properties = props
-
-
 class FieldsMixin(object):
     def _parse_fields(self, repo, obj):
         fields = []
@@ -172,12 +153,17 @@ class FieldsMixin(object):
             if not util.is_field_owner(obj, attr):
                 continue
 
-            py_type = field_info.py_type
-            type_name = get_type_name(py_type)
-            if "." in type_name and repo.is_private(type_name):
+            if not hasattr(obj.__info__, "find_field"):
                 continue
 
-            fields.append(Field.from_object(repo, self.fullname, field_info))
+            gi_field_info = obj.__info__.find_field(attr)
+            # py_type = field_info.pytypef.get
+            # type_name = get_type_name(py_type)
+            # if "." in type_name and repo.is_private(type_name):
+            #     continue
+
+            if gi_field_info:
+                fields.append(Field.from_object(repo, self.fullname, gi_field_info))
 
         fields.sort(key=lambda f: f.name)
         self.fields = fields
@@ -442,15 +428,7 @@ class ClassNode(object):
         return "<%s name=%r>" % (type(self).__name__, self.name)
 
 
-class Class(
-    BaseDocObject,
-    MethodsMixin,
-    PropertiesMixin,
-    SignalsMixin,
-    ChildPropertiesMixin,
-    StylePropertiesMixin,
-    FieldsMixin,
-):
+class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin, FieldsMixin):
     def __init__(self, namespace, name):
         self.fullname = namespace + "." + name
         self.name = name
@@ -519,6 +497,8 @@ class Class(
             for base in util.fake_bases(obj, ignore_redundant=True):
                 if base is object:
                     continue
+                if not hasattr(base, "__gtype__"):
+                    continue
                 x.append((ClassNode.from_class(base), get_sub_tree(base)))
             return x
 
@@ -528,8 +508,6 @@ class Class(
         klass = cls(namespace, name)
         klass._parse_methods(repo, obj)
         klass._parse_properties(repo, obj)
-        klass._parse_child_properties(repo, obj)
-        klass._parse_style_properties(repo, obj)
         klass._parse_signals(repo, obj)
         klass._parse_fields(repo, obj)
 
@@ -539,19 +517,16 @@ class Class(
         if util.is_iface(obj):
             klass.is_interface = True
             klass.is_abstract = True
-            iface_struct = obj._get_iface_struct()
-            if iface_struct:
-                gtype_struct = type(iface_struct)
+            gtype_struct = obj.__info__
         else:
             klass.is_interface = False
             klass.is_abstract = obj.__gtype__.is_abstract()
-            class_struct = obj._get_class_struct()
-            if class_struct:
-                gtype_struct = type(class_struct)
+            if hasattr(obj, "__info__"):
+                gtype_struct = obj.__info__
 
         if gtype_struct is not None:
             klass.gtype_struct = class_name(gtype_struct)
-            cs_obj = Structure.from_object(repo, gtype_struct)
+            cs_obj = Structure.from_object(repo, obj)
             for method in cs_obj.methods:
                 new = method.copy_for_new(klass.fullname)
                 new.is_static = True
@@ -563,13 +538,7 @@ class Class(
             for base in util.fake_mro(obj):
                 if base is object:
                     continue
-                if util.is_iface(base):
-                    struct = base._get_iface_struct()
-                else:
-                    struct = base._get_class_struct()
-                if not struct:
-                    continue
-                yield Structure.from_object(repo, type(struct))
+                yield Structure.from_object(repo, obj)
 
         for struct in iter_gtype_structs(obj):
             method_count = len(struct.methods)
@@ -581,7 +550,11 @@ class Class(
 
         def iter_bases(obj):
             for base in util.fake_mro(obj):
-                if base is object or base is obj:
+                if (
+                    base is object
+                    or base.__module__ in ("builtins", "gi", "gi._gi", "gobject")
+                    or base is obj
+                ):
                     continue
                 yield Class.from_object(repo, base)
 
@@ -649,12 +622,12 @@ class Field(BaseDocObject):
 
     @classmethod
     def from_object(cls, repo, parent_fullname, field_info):
-        name = field_info.name
+        name = field_info.get_name()
         field = cls(parent_fullname, name)
 
-        field.type_desc = py_type_to_class_ref(field_info.py_type)
-        field.readable = field_info.readable
-        field.writable = field_info.writeable
+        field.type_desc = "TODO"  # py_type_to_class_ref(field_info.py_type)
+        field.readable = field_info.get_flags() & gi._gi.FieldInfoFlags.IS_READABLE
+        field.writable = field_info.get_flags() & gi._gi.FieldInfoFlags.IS_WRITABLE
 
         field.info = DocInfo.from_object(repo, "fields", field, current_type=parent_fullname)
 
@@ -1020,8 +993,12 @@ class Module(BaseDocObject):
 
                     # classes not subclassing from any gobject base class
                     if util.is_fundamental(obj):
-                        klass = Class.from_object(repo, obj)
-                        mod.classes.append(klass)
+                        try:
+                            klass = Class.from_object(repo, obj)
+                        except ValueError as e:
+                            print(f"Cannot handle class {repo}.{obj}", e)
+                        else:
+                            mod.classes.append(klass)
                     else:
                         klass = PyClass.from_object(repo, obj)
                         mod.pyclasses.append(klass)
