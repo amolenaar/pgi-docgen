@@ -359,7 +359,7 @@
 <span id="gtk-searchentry-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference internal" href="Editable.html#gtk-editable-methods"><span class="std std-ref">Gtk.Editable (26)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference internal" href="Editable.html#gtk-editable-methods"><span class="std std-ref">Gtk.Editable (26)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -378,7 +378,13 @@
 <td><p><a class="reference internal" href="#Gtk.SearchEntry.get_key_capture_widget" title="Gtk.SearchEntry.get_key_capture_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_key_capture_widget</span></code></a> ()</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.SearchEntry.get_search_delay" title="Gtk.SearchEntry.get_search_delay"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_search_delay</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.SearchEntry.set_key_capture_widget" title="Gtk.SearchEntry.set_key_capture_widget"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_key_capture_widget</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.SearchEntry.set_search_delay" title="Gtk.SearchEntry.set_search_delay"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_search_delay</span></code></a> (delay)</p></td>
 </tr>
 </tbody>
 </table>
@@ -414,14 +420,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.SearchEntry.props.activates_default" title="Gtk.SearchEntry.props.activates_default"><code class="xref py py-data docutils literal notranslate"><span class="pre">activates-default</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Whether to activate the default widget (such as the default button in a dialog) when Enter is pressed</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.SearchEntry.props.placeholder_text" title="Gtk.SearchEntry.props.placeholder_text"><code class="xref py py-data docutils literal notranslate"><span class="pre">placeholder-text</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
 <td><p>r/w</p></td>
-<td><p>Show text in the entry when it’s empty and unfocused</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.SearchEntry.props.search_delay" title="Gtk.SearchEntry.props.search_delay"><code class="xref py py-data docutils literal notranslate"><span class="pre">search-delay</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -454,7 +465,7 @@
 <td><p>Emitted when the user initiates a move to the previous match for the current search string.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.SearchEntry.signals.search_changed" title="Gtk.SearchEntry.signals.search_changed"><code class="xref py py-func docutils literal notranslate"><span class="pre">search-changed</span></code></a></p></td>
-<td><p>Emitted with a short delay of 150 milliseconds after the last change to the entry text.</p></td>
+<td><p>Emitted with a delay.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.SearchEntry.signals.search_started" title="Gtk.SearchEntry.signals.search_started"><code class="xref py py-func docutils literal notranslate"><span class="pre">search-started</span></code></a></p></td>
 <td><p>Emitted when the user initiated a search on the entry.</p></td>
@@ -544,10 +555,28 @@ a <code class="docutils literal notranslate"><span class="pre">.search</span></c
 <dd class="field-odd"><p>The key capture widget.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the widget that <cite>self</cite> is capturing key events from.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.SearchEntry.get_search_delay">
+<span class="sig-name descname"><span class="pre">get_search_delay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SearchEntry.get_search_delay" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a delay in milliseconds.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+<p>Get the delay to be used between the last keypress and the
+[signal`Gtk`.SearchEntry::search-changed] signal being emitted.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -555,7 +584,7 @@ a <code class="docutils literal notranslate"><span class="pre">.search</span></c
 <span class="sig-name descname"><span class="pre">set_key_capture_widget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SearchEntry.set_key_capture_widget" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>widget</strong> (<a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkWidget</span></code></p>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkWidget</span></code></p>
 </dd>
 </dl>
 <p>Sets <cite>widget</cite> as the widget that <cite>self</cite> will capture key
@@ -572,6 +601,21 @@ editable child widgets of <cite>widget</cite> will receive text input
 before it gets captured. If that is not desired, you can
 capture and forward the events yourself with
 [method`Gtk`.EventControllerKey.forward].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.SearchEntry.set_search_delay">
+<span class="sig-name descname"><span class="pre">set_search_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SearchEntry.set_search_delay" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>delay</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – a delay in milliseconds</p>
+</dd>
+</dl>
+<p>Set the delay to be used between the last keypress and the
+[signal`Gtk`.SearchEntry::search-changed] signal being emitted.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -655,8 +699,9 @@ between matches.</p>
 <dd class="field-odd"><p><strong>search_entry</strong> (<a class="reference internal" href="#Gtk.SearchEntry" title="Gtk.SearchEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SearchEntry</span></code></a>) – The object which received the signal</p>
 </dd>
 </dl>
-<p>Emitted with a short delay of 150 milliseconds after the
-last change to the entry text.</p>
+<p>Emitted with a delay. The length of the delay can be
+changed with the [property`Gtk`.SearchEntry:search-delay]
+property.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -708,10 +753,10 @@ the search entry in this case.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">activates-default</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -728,10 +773,10 @@ the search entry in this case.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">placeholder-text</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a></p>
@@ -739,6 +784,30 @@ the search entry in this case.</p>
 </dl>
 <p>The text that will be displayed in the <code class="docutils literal notranslate"><span class="pre">GtkSearchEntry</span></code>
 when it is empty and unfocused.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Gtk.SearchEntry.props.search_delay">
+<span class="sig-prename descclassname"><span class="pre">Gtk.SearchEntry.props.</span></span><span class="sig-name descname"><span class="pre">search_delay</span></span><a class="headerlink" href="#Gtk.SearchEntry.props.search_delay" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">search-delay</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">150</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The delay in milliseconds from last keypress to the search
+changed signal.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 </section>

@@ -1,0 +1,1110 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>
+    Adw.EntryRow -
+    
+      Classes -
+    
+    Adw 1
+  </title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+  
+
+  
+  <script type="text/javascript">
+
+    function openSidebar(element) {
+        window.location.href = element.href + location.hash;
+        return false;
+    }
+
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+
+    function onLoaded() {
+        if(!inIframe()) {
+            var icons = document.getElementsByClassName('open-sidebar');
+
+            for (var i = 0; i < icons.length; i ++) {
+                icons[i].style.display = 'table-cell';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', onLoaded, false);
+
+  </script>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Adw 1 Python API Docs" href="../index.html"/>
+        <link rel="up" title="Classes" href="../classes.html"/>
+        <link rel="next" title="Adw.EnumListItem" href="EnumListItem.html"/>
+        <link rel="prev" title="Adw.ComboRow" href="ComboRow.html"/> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+<div class="non-fixed-bar">
+<table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/EntryRow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.EntryRow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ComboRow.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="EnumListItem.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.EntryRow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="fixed-bar">
+  <table class="navigation" summary="Navigation header" cellpadding="2" cellspacing="10" width="100%"><tbody><tr valign="middle">
+
+<td class="open-sidebar" style="display:none"><a href="../../index.html#Adw-1/classes/EntryRow.html" onclick="return openSidebar(this);"><i class="fa fa-search"></i></a></td>
+
+<td class="shortcuts" align="left" width="100%">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Adw 1</a> &raquo;</li>
+      
+          <li><a href="../classes.html">Classes</a> &raquo;</li>
+      
+    <li>Adw.EntryRow</li>
+  </ul>
+</td>
+<td><a accesskey="h" href="../index.html"><i class="fa fa-home"></i></a></td>
+
+
+<td><a accesskey="u" href="../classes.html"><i class="fa fa-chevron-up"></i></a></td>
+
+
+
+<td><a accesskey="p" href="ComboRow.html"><i class="fa fa-chevron-left"></i></a></td>
+
+
+
+<td><a accesskey="n" href="EnumListItem.html"><i class="fa fa-chevron-right"></i></a></td>
+
+
+</tr></tbody>
+</table>
+
+<div class="local-toc">
+    <ul>
+<li><a class="reference internal" href="#">Adw.EntryRow</a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#virtual-methods">Virtual Methods</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#fields">Fields</a></li>
+<li><a class="reference internal" href="#class-details">Class Details</a></li>
+<li><a class="reference internal" href="#signal-details">Signal Details</a></li>
+<li><a class="reference internal" href="#property-details">Property Details</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+  <div class="wy-grid-for-nav">
+
+    
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="main">
+            
+  <section id="adw-entryrow">
+<h1>Adw.EntryRow<a class="headerlink" href="#adw-entryrow" title="Permalink to this heading">¶</a></h1>
+<p class="graphviz">
+<svg width="516pt" height="296pt"
+ viewBox="0.00 0.00 516.00 296.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 292)">
+<title>g</title>
+<!-- Adw.EntryRow -->
+<g id="node1" class="node">
+<title>Adw.EntryRow</title>
+<g id="a_node1"><a xlink:href="#Adw.EntryRow" xlink:title="Adw.EntryRow">
+<path fill="none" stroke="#75507b" d="M462,-18C462,-18 400,-18 400,-18 397,-18 394,-15 394,-12 394,-12 394,-6 394,-6 394,-3 397,0 400,0 400,0 462,0 462,0 465,0 468,-3 468,-6 468,-6 468,-12 468,-12 468,-15 465,-18 462,-18"/>
+<text text-anchor="middle" x="431" y="-6.7" font-family="inherit" font-size="8.50">Adw.EntryRow</text>
+</a>
+</g>
+</g>
+<!-- Adw.PreferencesRow -->
+<g id="node2" class="node">
+<title>Adw.PreferencesRow</title>
+<g id="a_node2"><a xlink:href="PreferencesRow.html#Adw.PreferencesRow" xlink:title="Adw.PreferencesRow">
+<path fill="none" stroke="#75507b" d="M436,-72C436,-72 350,-72 350,-72 347,-72 344,-69 344,-66 344,-66 344,-60 344,-60 344,-57 347,-54 350,-54 350,-54 436,-54 436,-54 439,-54 442,-57 442,-60 442,-60 442,-66 442,-66 442,-69 439,-72 436,-72"/>
+<text text-anchor="middle" x="393" y="-60.7" font-family="inherit" font-size="8.50">Adw.PreferencesRow</text>
+</a>
+</g>
+</g>
+<!-- Adw.PreferencesRow&#45;&gt;Adw.EntryRow -->
+<g id="edge1" class="edge">
+<title>Adw.PreferencesRow&#45;&gt;Adw.EntryRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M398.94,-53.88C405.09,-45.45 414.79,-32.18 421.91,-22.44"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="423.44,-23.31 424.98,-18.24 420.62,-21.24 423.44,-23.31"/>
+</g>
+<!-- GObject.GInterface -->
+<g id="node3" class="node">
+<title>GObject.GInterface</title>
+<g id="a_node3"><a xlink:href="../../GObject-2.0/classes/GInterface.html#GObject.GInterface" xlink:title="GObject.GInterface">
+<path fill="none" stroke="#3091d1" d="M413.5,-288C413.5,-288 334.5,-288 334.5,-288 331.5,-288 328.5,-285 328.5,-282 328.5,-282 328.5,-276 328.5,-276 328.5,-273 331.5,-270 334.5,-270 334.5,-270 413.5,-270 413.5,-270 416.5,-270 419.5,-273 419.5,-276 419.5,-276 419.5,-282 419.5,-282 419.5,-285 416.5,-288 413.5,-288"/>
+<text text-anchor="middle" x="374" y="-276.7" font-family="inherit" font-size="8.50">GObject.GInterface</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Accessible -->
+<g id="node6" class="node">
+<title>Gtk.Accessible</title>
+<g id="a_node6"><a xlink:href="../../Gtk-4.0/classes/Accessible.html#Gtk.Accessible" xlink:title="Gtk.Accessible">
+<path fill="none" stroke="#3091d1" d="M403.5,-234C403.5,-234 344.5,-234 344.5,-234 341.5,-234 338.5,-231 338.5,-228 338.5,-228 338.5,-222 338.5,-222 338.5,-219 341.5,-216 344.5,-216 344.5,-216 403.5,-216 403.5,-216 406.5,-216 409.5,-219 409.5,-222 409.5,-222 409.5,-228 409.5,-228 409.5,-231 406.5,-234 403.5,-234"/>
+<text text-anchor="middle" x="374" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Accessible</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Accessible -->
+<g id="edge2" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Accessible</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M374,-269.88C374,-261.76 374,-249.13 374,-239.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="375.75,-239.24 374,-234.24 372.25,-239.24 375.75,-239.24"/>
+</g>
+<!-- Gtk.Actionable -->
+<g id="node7" class="node">
+<title>Gtk.Actionable</title>
+<g id="a_node7"><a xlink:href="../../Gtk-4.0/classes/Actionable.html#Gtk.Actionable" xlink:title="Gtk.Actionable">
+<path fill="none" stroke="#3091d1" d="M430,-180C430,-180 368,-180 368,-180 365,-180 362,-177 362,-174 362,-174 362,-168 362,-168 362,-165 365,-162 368,-162 368,-162 430,-162 430,-162 433,-162 436,-165 436,-168 436,-168 436,-174 436,-174 436,-177 433,-180 430,-180"/>
+<text text-anchor="middle" x="399" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Actionable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Actionable -->
+<g id="edge5" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Actionable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M386.36,-269.93C397,-262.17 411.63,-249.37 418,-234 424.91,-217.33 415.71,-197.22 407.87,-184.52"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="409.26,-183.45 405.08,-180.2 406.32,-185.35 409.26,-183.45"/>
+</g>
+<!-- Gtk.Buildable -->
+<g id="node8" class="node">
+<title>Gtk.Buildable</title>
+<g id="a_node8"><a xlink:href="../../Gtk-4.0/classes/Buildable.html#Gtk.Buildable" xlink:title="Gtk.Buildable">
+<path fill="none" stroke="#3091d1" d="M199.5,-234C199.5,-234 142.5,-234 142.5,-234 139.5,-234 136.5,-231 136.5,-228 136.5,-228 136.5,-222 136.5,-222 136.5,-219 139.5,-216 142.5,-216 142.5,-216 199.5,-216 199.5,-216 202.5,-216 205.5,-219 205.5,-222 205.5,-222 205.5,-228 205.5,-228 205.5,-231 202.5,-234 199.5,-234"/>
+<text text-anchor="middle" x="171" y="-222.7" font-family="inherit" font-size="8.50">Gtk.Buildable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Buildable -->
+<g id="edge3" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Buildable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M342.73,-269.99C306.22,-260.64 245.93,-245.19 207.37,-235.32"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="207.59,-233.57 202.31,-234.02 206.72,-236.96 207.59,-233.57"/>
+</g>
+<!-- Gtk.ConstraintTarget -->
+<g id="node9" class="node">
+<title>Gtk.ConstraintTarget</title>
+<g id="a_node9"><a xlink:href="../../Gtk-4.0/classes/ConstraintTarget.html#Gtk.ConstraintTarget" xlink:title="Gtk.ConstraintTarget">
+<path fill="none" stroke="#3091d1" d="M314.5,-234C314.5,-234 229.5,-234 229.5,-234 226.5,-234 223.5,-231 223.5,-228 223.5,-228 223.5,-222 223.5,-222 223.5,-219 226.5,-216 229.5,-216 229.5,-216 314.5,-216 314.5,-216 317.5,-216 320.5,-219 320.5,-222 320.5,-222 320.5,-228 320.5,-228 320.5,-231 317.5,-234 314.5,-234"/>
+<text text-anchor="middle" x="272" y="-222.7" font-family="inherit" font-size="8.50">Gtk.ConstraintTarget</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.ConstraintTarget -->
+<g id="edge4" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.ConstraintTarget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M358.06,-269.88C340.4,-260.87 311.85,-246.32 292.53,-236.47"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="293.07,-234.78 287.83,-234.07 291.49,-237.9 293.07,-234.78"/>
+</g>
+<!-- Gtk.Editable -->
+<g id="node10" class="node">
+<title>Gtk.Editable</title>
+<g id="a_node10"><a xlink:href="../../Gtk-4.0/classes/Editable.html#Gtk.Editable" xlink:title="Gtk.Editable">
+<path fill="none" stroke="#3091d1" d="M502,-126C502,-126 450,-126 450,-126 447,-126 444,-123 444,-120 444,-120 444,-114 444,-114 444,-111 447,-108 450,-108 450,-108 502,-108 502,-108 505,-108 508,-111 508,-114 508,-114 508,-120 508,-120 508,-123 505,-126 502,-126"/>
+<text text-anchor="middle" x="476" y="-114.7" font-family="inherit" font-size="8.50">Gtk.Editable</text>
+</a>
+</g>
+</g>
+<!-- GObject.GInterface&#45;&gt;Gtk.Editable -->
+<g id="edge6" class="edge">
+<title>GObject.GInterface&#45;&gt;Gtk.Editable</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M389.83,-269.9C403.29,-262.28 422.23,-249.72 434,-234 458.24,-201.62 469.58,-153.88 473.85,-131.07"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="475.59,-131.32 474.75,-126.08 472.14,-130.7 475.59,-131.32"/>
+</g>
+<!-- GObject.InitiallyUnowned -->
+<g id="node4" class="node">
+<title>GObject.InitiallyUnowned</title>
+<g id="a_node4"><a xlink:href="../../GObject-2.0/classes/InitiallyUnowned.html#GObject.InitiallyUnowned" xlink:title="GObject.InitiallyUnowned">
+<path fill="none" stroke="#75507b" d="M112,-234C112,-234 6,-234 6,-234 3,-234 0,-231 0,-228 0,-228 0,-222 0,-222 0,-219 3,-216 6,-216 6,-216 112,-216 112,-216 115,-216 118,-219 118,-222 118,-222 118,-228 118,-228 118,-231 115,-234 112,-234"/>
+<text text-anchor="middle" x="59" y="-222.7" font-family="inherit" font-size="8.50">GObject.InitiallyUnowned</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Widget -->
+<g id="node12" class="node">
+<title>Gtk.Widget</title>
+<g id="a_node12"><a xlink:href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" xlink:title="Gtk.Widget">
+<path fill="none" stroke="#aaaaaa" d="M296,-180C296,-180 248,-180 248,-180 245,-180 242,-177 242,-174 242,-174 242,-168 242,-168 242,-165 245,-162 248,-162 248,-162 296,-162 296,-162 299,-162 302,-165 302,-168 302,-168 302,-174 302,-174 302,-177 299,-180 296,-180"/>
+<text text-anchor="middle" x="272" y="-168.7" font-family="inherit" font-size="8.50">Gtk.Widget</text>
+</a>
+</g>
+</g>
+<!-- GObject.InitiallyUnowned&#45;&gt;Gtk.Widget -->
+<g id="edge7" class="edge">
+<title>GObject.InitiallyUnowned&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M91.81,-215.99C131.01,-206.42 196.34,-190.47 236.63,-180.63"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="237.46,-182.23 241.91,-179.35 236.63,-178.83 237.46,-182.23"/>
+</g>
+<!-- GObject.Object -->
+<g id="node5" class="node">
+<title>GObject.Object</title>
+<g id="a_node5"><a xlink:href="../../GObject-2.0/classes/Object.html#GObject.Object" xlink:title="GObject.Object">
+<path fill="none" stroke="#75507b" d="M90.5,-288C90.5,-288 27.5,-288 27.5,-288 24.5,-288 21.5,-285 21.5,-282 21.5,-282 21.5,-276 21.5,-276 21.5,-273 24.5,-270 27.5,-270 27.5,-270 90.5,-270 90.5,-270 93.5,-270 96.5,-273 96.5,-276 96.5,-276 96.5,-282 96.5,-282 96.5,-285 93.5,-288 90.5,-288"/>
+<text text-anchor="middle" x="59" y="-276.7" font-family="inherit" font-size="8.50">GObject.Object</text>
+</a>
+</g>
+</g>
+<!-- GObject.Object&#45;&gt;GObject.InitiallyUnowned -->
+<g id="edge8" class="edge">
+<title>GObject.Object&#45;&gt;GObject.InitiallyUnowned</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M59,-269.88C59,-261.76 59,-249.13 59,-239.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="60.75,-239.24 59,-234.24 57.25,-239.24 60.75,-239.24"/>
+</g>
+<!-- Gtk.Accessible&#45;&gt;Gtk.Widget -->
+<g id="edge9" class="edge">
+<title>Gtk.Accessible&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M358.06,-215.88C340.4,-206.87 311.85,-192.32 292.53,-182.47"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="293.07,-180.78 287.83,-180.07 291.49,-183.9 293.07,-180.78"/>
+</g>
+<!-- Gtk.ListBoxRow -->
+<g id="node11" class="node">
+<title>Gtk.ListBoxRow</title>
+<g id="a_node11"><a xlink:href="../../Gtk-4.0/classes/ListBoxRow.html#Gtk.ListBoxRow" xlink:title="Gtk.ListBoxRow">
+<path fill="none" stroke="#75507b" d="M420,-126C420,-126 354,-126 354,-126 351,-126 348,-123 348,-120 348,-120 348,-114 348,-114 348,-111 351,-108 354,-108 354,-108 420,-108 420,-108 423,-108 426,-111 426,-114 426,-114 426,-120 426,-120 426,-123 423,-126 420,-126"/>
+<text text-anchor="middle" x="387" y="-114.7" font-family="inherit" font-size="8.50">Gtk.ListBoxRow</text>
+</a>
+</g>
+</g>
+<!-- Gtk.Actionable&#45;&gt;Gtk.ListBoxRow -->
+<g id="edge10" class="edge">
+<title>Gtk.Actionable&#45;&gt;Gtk.ListBoxRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M397.12,-161.88C395.23,-153.68 392.28,-140.89 390.05,-131.24"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="391.73,-130.72 388.9,-126.24 388.32,-131.51 391.73,-130.72"/>
+</g>
+<!-- Gtk.Buildable&#45;&gt;Gtk.Widget -->
+<g id="edge11" class="edge">
+<title>Gtk.Buildable&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M186.78,-215.88C204.27,-206.87 232.54,-192.32 251.67,-182.47"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="252.69,-183.91 256.33,-180.07 251.08,-180.8 252.69,-183.91"/>
+</g>
+<!-- Gtk.ConstraintTarget&#45;&gt;Gtk.Widget -->
+<g id="edge12" class="edge">
+<title>Gtk.ConstraintTarget&#45;&gt;Gtk.Widget</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M272,-215.88C272,-207.76 272,-195.13 272,-185.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="273.75,-185.24 272,-180.24 270.25,-185.24 273.75,-185.24"/>
+</g>
+<!-- Gtk.Editable&#45;&gt;Adw.EntryRow -->
+<g id="edge13" class="edge">
+<title>Gtk.Editable&#45;&gt;Adw.EntryRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M472.87,-107.93C468.25,-96.05 459.23,-73.2 451,-54 446.51,-43.53 441.16,-31.78 437.12,-23.06"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="438.49,-21.86 434.79,-18.06 435.31,-23.33 438.49,-21.86"/>
+</g>
+<!-- Gtk.ListBoxRow&#45;&gt;Adw.PreferencesRow -->
+<g id="edge14" class="edge">
+<title>Gtk.ListBoxRow&#45;&gt;Adw.PreferencesRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M387.94,-107.88C388.88,-99.68 390.36,-86.89 391.47,-77.24"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="393.21,-77.41 392.05,-72.24 389.74,-77.01 393.21,-77.41"/>
+</g>
+<!-- Gtk.Widget&#45;&gt;Gtk.ListBoxRow -->
+<g id="edge15" class="edge">
+<title>Gtk.Widget&#45;&gt;Gtk.ListBoxRow</title>
+<path fill="none" stroke="black" stroke-width="0.5" d="M289.97,-161.88C310.05,-152.79 342.61,-138.07 364.41,-128.22"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="365.32,-129.72 369.16,-126.07 363.88,-126.53 365.32,-129.72"/>
+</g>
+</g>
+</svg>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Subclasses<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PasswordEntryRow.html#Adw.PasswordEntryRow" title="Adw.PasswordEntryRow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.PasswordEntryRow</span></code></a></p>
+</dd>
+</dl>
+<section id="methods">
+<span id="adw-entryrow-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#adw-preferencesrow-methods"><span class="std std-ref">Adw.PreferencesRow (9)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (12)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (5)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#gtk-editable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Editable (26)</span></a></p>
+</dd>
+<dt class="field-even">Structs<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/WidgetClass.html#gtk-widgetclass-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 99%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>class</em></p></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.new" title="Adw.EntryRow.new"><code class="xref py py-func docutils literal notranslate"><span class="pre">new</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.add_prefix" title="Adw.EntryRow.add_prefix"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_prefix</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.add_suffix" title="Adw.EntryRow.add_suffix"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_suffix</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_activates_default" title="Adw.EntryRow.get_activates_default"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_activates_default</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_attributes" title="Adw.EntryRow.get_attributes"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_attributes</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_enable_emoji_completion" title="Adw.EntryRow.get_enable_emoji_completion"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_enable_emoji_completion</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_input_hints" title="Adw.EntryRow.get_input_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_input_hints</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_input_purpose" title="Adw.EntryRow.get_input_purpose"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_input_purpose</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.get_show_apply_button" title="Adw.EntryRow.get_show_apply_button"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_show_apply_button</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.remove" title="Adw.EntryRow.remove"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove</span></code></a> (widget)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_activates_default" title="Adw.EntryRow.set_activates_default"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_activates_default</span></code></a> (activates)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_attributes" title="Adw.EntryRow.set_attributes"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_attributes</span></code></a> (attributes)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_enable_emoji_completion" title="Adw.EntryRow.set_enable_emoji_completion"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_enable_emoji_completion</span></code></a> (enable_emoji_completion)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_input_hints" title="Adw.EntryRow.set_input_hints"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_input_hints</span></code></a> (hints)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_input_purpose" title="Adw.EntryRow.set_input_purpose"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_input_purpose</span></code></a> (purpose)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.EntryRow.set_show_apply_button" title="Adw.EntryRow.set_show_apply_button"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_show_apply_button</span></code></a> (show_apply_button)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="virtual-methods">
+<span id="adw-entryrow-vfuncs"></span><h2>Virtual Methods<a class="headerlink" href="#virtual-methods" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (25)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-vfuncs" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (9)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (4)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#gtk-editable-vfuncs" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Editable (9)</span></a></p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<span id="adw-entryrow-props"></span><h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#adw-preferencesrow-props"><span class="std std-ref">Adw.PreferencesRow (4)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (3)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (34)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Actionable.html#gtk-actionable-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Actionable (2)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#gtk-editable-props" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Editable (8)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Flags</p></th>
+<th class="head"><p>Short Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.EntryRow.props.activates_default" title="Adw.EntryRow.props.activates_default"><code class="xref py py-data docutils literal notranslate"><span class="pre">activates-default</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.EntryRow.props.attributes" title="Adw.EntryRow.props.attributes"><code class="xref py py-data docutils literal notranslate"><span class="pre">attributes</span></code></a></p></td>
+<td><p><a class="reference external" href="../../Pango-1.0/classes/AttrList.html#Pango.AttrList" title="(in Pango 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pango.AttrList</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.EntryRow.props.enable_emoji_completion" title="Adw.EntryRow.props.enable_emoji_completion"><code class="xref py py-data docutils literal notranslate"><span class="pre">enable-emoji-completion</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.EntryRow.props.input_hints" title="Adw.EntryRow.props.input_hints"><code class="xref py py-data docutils literal notranslate"><span class="pre">input-hints</span></code></a></p></td>
+<td><p><a class="reference external" href="../../Gtk-4.0/flags.html#Gtk.InputHints" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.EntryRow.props.input_purpose" title="Adw.EntryRow.props.input_purpose"><code class="xref py py-data docutils literal notranslate"><span class="pre">input-purpose</span></code></a></p></td>
+<td><p><a class="reference external" href="../../Gtk-4.0/enums.html#Gtk.InputPurpose" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputPurpose</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.EntryRow.props.show_apply_button" title="Adw.EntryRow.props.show_apply_button"><code class="xref py py-data docutils literal notranslate"><span class="pre">show-apply-button</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="signals">
+<span id="adw-entryrow-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-signals" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#gtk-editable-signals" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Editable (3)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Short Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#Adw.EntryRow.signals.apply" title="Adw.EntryRow.signals.apply"><code class="xref py py-func docutils literal notranslate"><span class="pre">apply</span></code></a></p></td>
+<td><p>Emitted when the apply button is pressed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.EntryRow.signals.entry_activated" title="Adw.EntryRow.signals.entry_activated"><code class="xref py py-func docutils literal notranslate"><span class="pre">entry-activated</span></code></a></p></td>
+<td><p>Emitted when the embedded entry is activated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fields">
+<span id="adw-entryrow-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Inherited<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/ListBoxRow.html#gtk-listboxrow-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.ListBoxRow (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-fields" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (1)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#gtk-editable-fields" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Editable (3)</span></a></p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Access</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>parent_instance</p></td>
+<td><p><a class="reference internal" href="PreferencesRow.html#Adw.PreferencesRow" title="Adw.PreferencesRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.PreferencesRow</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="class-details">
+<h2>Class Details<a class="headerlink" href="#class-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="Adw.EntryRow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Adw.</span></span><span class="sig-name descname"><span class="pre">EntryRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Bases<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="PreferencesRow.html#Adw.PreferencesRow" title="Adw.PreferencesRow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.PreferencesRow</span></code></a>,         <a class="reference external" href="../../Gtk-4.0/classes/Editable.html#Gtk.Editable" title="(in Gtk 4.0 v4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Gtk.Editable</span></code></a></p>
+</dd>
+<dt class="field-even">Abstract<span class="colon">:</span></dt>
+<dd class="field-even"><p>No</p>
+</dd>
+<dt class="field-odd">Structure<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="EntryRowClass.html#Adw.EntryRowClass" title="Adw.EntryRowClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.EntryRowClass</span></code></a></p>
+</dd>
+</dl>
+<p>A [class`Gtk`.ListBoxRow] with an embedded text entry.</p>
+<p>&lt;picture&gt;
+&lt;source srcset=”entry-row-dark.png” media=”(prefers-color-scheme: dark)”&gt;
+&lt;img src=”entry-row.png” alt=”entry-row”&gt;
+&lt;/picture&gt;</p>
+<p><code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code> has a title that doubles as placeholder text. It shows an icon
+indicating that it’s editable and can receive additional widgets before or
+after the editable part.</p>
+<p>If [property`EntryRow`:py:data:<cite>:show-apply-button&lt;Adw.EntryRow.props.show_apply_button&gt;</cite>] is set to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, <code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code> can
+show an apply button when editing its contents. This can be useful if
+changing its contents can result in an expensive operation, such as network
+activity.</p>
+<p><code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code> provides only minimal API and should be used with the
+[iface`Gtk`.Editable] API.</p>
+<p>See also [class`PasswordEntryRow`].</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#Adw.EntryRow" title="Adw.EntryRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.EntryRow</span></code></a> as <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#Gtk.Buildable" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Buildable</span></code></a></dt><dd></dd>
+</dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code> implementation of the [iface`Gtk`.Buildable] interface
+supports adding a child at its end by specifying “suffix” or omitting the
+“type” attribute of a &lt;child&gt; element.</p>
+<p>It also supports adding a child as a prefix widget by specifying “prefix” as
+the “type” attribute of a &lt;child&gt; element.</p>
+<dl class="simple">
+<dt>CSS nodes</dt><dd></dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code> has a single CSS node with name <code class="docutils literal notranslate"><span class="pre">row</span></code> and the <code class="docutils literal notranslate"><span class="pre">.entry</span></code> style
+class.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.new" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the newly created <code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
+</dd>
+</dl>
+<p>Creates a new <code class="docutils literal notranslate"><span class="pre">AdwEntryRow</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.add_prefix">
+<span class="sig-name descname"><span class="pre">add_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.add_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget</p>
+</dd>
+</dl>
+<p>Adds a prefix widget to <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.add_suffix">
+<span class="sig-name descname"><span class="pre">add_suffix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.add_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget</p>
+</dd>
+</dl>
+<p>Adds a suffix widget to <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_activates_default">
+<span class="sig-name descname"><span class="pre">get_activates_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_activates_default" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>whether to activate the default widget</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+<p>Gets whether activating the embedded entry can activate the default widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_attributes">
+<span class="sig-name descname"><span class="pre">get_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the list of attributes</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Pango-1.0/classes/AttrList.html#Pango.AttrList" title="(in Pango 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pango.AttrList</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
+<p>Gets Pango attributes applied to the text of the embedded entry.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_enable_emoji_completion">
+<span class="sig-name descname"><span class="pre">get_enable_emoji_completion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_enable_emoji_completion" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>whether or not emoji completion is enabled</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+<p>Gets whether to suggest emoji replacements on <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_input_hints">
+<span class="sig-name descname"><span class="pre">get_input_hints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_input_hints" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The input hints</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/flags.html#Gtk.InputHints" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the additional input hints of <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_input_purpose">
+<span class="sig-name descname"><span class="pre">get_input_purpose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_input_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the input purpose</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/enums.html#Gtk.InputPurpose" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputPurpose</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the input purpose of <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.get_show_apply_button">
+<span class="sig-name descname"><span class="pre">get_show_apply_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.get_show_apply_button" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>whether to show the apply button</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+<p>Gets whether <cite>self</cite> can show the apply button.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.remove" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – the child to be removed</p>
+</dd>
+</dl>
+<p>Removes a child from <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_activates_default">
+<span class="sig-name descname"><span class="pre">set_activates_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_activates_default" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>activates</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to activate the default widget</p>
+</dd>
+</dl>
+<p>Sets whether activating the embedded entry can activate the default widget.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_attributes">
+<span class="sig-name descname"><span class="pre">set_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>attributes</strong> (<a class="reference external" href="../../Pango-1.0/classes/AttrList.html#Pango.AttrList" title="(in Pango 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pango.AttrList</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a list of attributes</p>
+</dd>
+</dl>
+<p>Sets Pango attributes to apply to the text of the embedded entry.</p>
+<p>The [struct`Pango`.Attribute]’s <code class="docutils literal notranslate"><span class="pre">start_index</span></code> and <code class="docutils literal notranslate"><span class="pre">end_index</span></code> must refer to
+the [class`Gtk`.EntryBuffer] text, i.e. without the preedit string.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_enable_emoji_completion">
+<span class="sig-name descname"><span class="pre">set_enable_emoji_completion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable_emoji_completion</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_enable_emoji_completion" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enable_emoji_completion</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether emoji completion should be enabled or not</p>
+</dd>
+</dl>
+<p>Sets whether to suggest emoji replacements on <cite>self</cite>.</p>
+<p>Emoji replacement is done with <code class="xref py py-data docutils literal notranslate"><span class="pre">:-delimited</span></code> names, like <code class="docutils literal notranslate"><span class="pre">:heart:</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_input_hints">
+<span class="sig-name descname"><span class="pre">set_input_hints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hints</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_input_hints" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>hints</strong> (<a class="reference external" href="../../Gtk-4.0/flags.html#Gtk.InputHints" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints</span></code></a>) – the hints</p>
+</dd>
+</dl>
+<p>Set additional input hints for <cite>self</cite>.</p>
+<p>Input hints allow input methods to fine-tune their behavior.</p>
+<p>See also: [property`AdwEntryRow`:py:data:<cite>:input-purpose&lt;Adw.EntryRow.props.input_purpose&gt;</cite>]</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_input_purpose">
+<span class="sig-name descname"><span class="pre">set_input_purpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">purpose</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_input_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>purpose</strong> (<a class="reference external" href="../../Gtk-4.0/enums.html#Gtk.InputPurpose" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputPurpose</span></code></a>) – the purpose</p>
+</dd>
+</dl>
+<p>Sets the input purpose of <cite>self</cite>.</p>
+<p>The input purpose can be used by input methods to adjust their behavior.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.EntryRow.set_show_apply_button">
+<span class="sig-name descname"><span class="pre">set_show_apply_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_apply_button</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.set_show_apply_button" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>show_apply_button</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to show the apply button</p>
+</dd>
+</dl>
+<p>Sets whether <cite>self</cite> can show the apply button.</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, typing text in the entry will reveal an apply button.
+Clicking it or pressing the &lt;kbd&gt;Enter&lt;/kbd&gt; key will hide the button and
+emit the [signal`EntryRow`:py:func:<cite>::apply&lt;Adw.EntryRow.signals.apply&gt;</cite>] signal.</p>
+<p>This is useful if changing the entry contents can trigger an expensive
+operation, e.g. network activity, to avoid triggering it after typing every
+character.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="signal-details">
+<h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Adw.EntryRow.signals.apply">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.signals.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.signals.apply" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Signal Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">apply</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</dd>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entry_row</strong> (<a class="reference internal" href="#Adw.EntryRow" title="Adw.EntryRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.EntryRow</span></code></a>) – The object which received the signal</p>
+</dd>
+</dl>
+<p>Emitted when the apply button is pressed.</p>
+<p>See [property`EntryRow`:py:data:<cite>:show-apply-button&lt;Adw.EntryRow.props.show_apply_button&gt;</cite>].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Adw.EntryRow.signals.entry_activated">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.signals.</span></span><span class="sig-name descname"><span class="pre">entry_activated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.EntryRow.signals.entry_activated" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Signal Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">entry-activated</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.SignalFlags.RUN_LAST" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RUN_LAST</span></code></a></p>
+</dd>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>entry_row</strong> (<a class="reference internal" href="#Adw.EntryRow" title="Adw.EntryRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.EntryRow</span></code></a>) – The object which received the signal</p>
+</dd>
+</dl>
+<p>Emitted when the embedded entry is activated.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="property-details">
+<h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.activates_default">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">activates_default</span></span><a class="headerlink" href="#Adw.EntryRow.props.activates_default" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">activates-default</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>Whether activating the embedded entry can activate the default widget.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.attributes">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">attributes</span></span><a class="headerlink" href="#Adw.EntryRow.props.attributes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Pango-1.0/classes/AttrList.html#Pango.AttrList" title="(in Pango 1.0 v1.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pango.AttrList</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>A list of Pango attributes to apply to the text of the embedded entry.</p>
+<p>The [struct`Pango`.Attribute]’s <code class="docutils literal notranslate"><span class="pre">start_index</span></code> and <code class="docutils literal notranslate"><span class="pre">end_index</span></code> must refer to
+the [class`Gtk`.EntryBuffer] text, i.e. without the preedit string.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.enable_emoji_completion">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">enable_emoji_completion</span></span><a class="headerlink" href="#Adw.EntryRow.props.enable_emoji_completion" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">enable-emoji-completion</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>Whether to suggest emoji replacements on the entry row.</p>
+<p>Emoji replacement is done with <code class="xref py py-data docutils literal notranslate"><span class="pre">:-delimited</span></code> names, like <code class="docutils literal notranslate"><span class="pre">:heart:</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.input_hints">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">input_hints</span></span><a class="headerlink" href="#Adw.EntryRow.props.input_hints" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">input-hints</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/flags.html#Gtk.InputHints" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/flags.html#Gtk.InputHints.NONE" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputHints.NONE</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>Additional input hints for the entry row.</p>
+<p>Input hints allow input methods to fine-tune their behavior.</p>
+<p>See also: [property`Adw`.EntryRow:input-purpose]</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.input_purpose">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">input_purpose</span></span><a class="headerlink" href="#Adw.EntryRow.props.input_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">input-purpose</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/enums.html#Gtk.InputPurpose" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputPurpose</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/enums.html#Gtk.InputPurpose.FREE_FORM" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.InputPurpose.FREE_FORM</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The input purpose of the entry row.</p>
+<p>The input purpose can be used by input methods to adjust their behavior.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.EntryRow.props.show_apply_button">
+<span class="sig-prename descclassname"><span class="pre">Adw.EntryRow.props.</span></span><span class="sig-name descname"><span class="pre">show_apply_button</span></span><a class="headerlink" href="#Adw.EntryRow.props.show_apply_button" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">show-apply-button</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>Whether to show the apply button.</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code>, typing text in the entry will reveal an apply button.
+Clicking it or pressing the &lt;kbd&gt;Enter&lt;/kbd&gt; key will hide the button and
+emit the [signal`EntryRow`:py:func:<cite>::apply&lt;Adw.EntryRow.signals.apply&gt;</cite>] signal.</p>
+<p>This is useful if changing the entry contents can trigger an expensive
+operation, e.g. network activity, to avoid triggering it after typing every
+character.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div> 
+
+</body>
+</html>

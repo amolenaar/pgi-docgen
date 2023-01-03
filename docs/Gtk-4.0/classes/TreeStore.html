@@ -528,7 +528,7 @@ attribute specifies the data type for the column.</p>
 <span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.TreeStore.append" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
+<dd class="field-odd"><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An unset <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> to set to the appended row</p>
@@ -537,7 +537,7 @@ attribute specifies the data type for the column.</p>
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Appends a new row to <cite>self</cite>.  If <cite>parent</cite> is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then it will append the
+<p>Appends a new row to <cite>self</cite>.  If <cite>parent</cite> is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then it will append the
 new row after the last child of <cite>parent</cite>, otherwise it will append a row to
 the top level.  <cite>iter</cite> will be changed to point to this new row.  The row will
 be empty after this function is called.  To fill in values, you need to call
@@ -556,8 +556,8 @@ be empty after this function is called.  To fill in values, you need to call
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -567,7 +567,7 @@ be empty after this function is called.  To fill in values, you need to call
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Creates a new row at <cite>position</cite>.  If parent is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
+<p>Creates a new row at <cite>position</cite>.  If parent is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
 made a child of <cite>parent</cite>.  Otherwise, the row will be created at the toplevel.
 If <cite>position</cite> is -1 or is larger than the number of rows at that level, then
 the new row will be inserted to the end of the list.  <cite>iter</cite> will be changed
@@ -582,8 +582,8 @@ called.  To fill in values, you need to call <a class="reference internal" href=
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -593,8 +593,8 @@ called.  To fill in values, you need to call <a class="reference internal" href=
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Inserts a new row after <cite>sibling</cite>.  If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
-prepended to <cite>parent</cite> ’s children.  If <cite>parent</cite> and <cite>sibling</cite> are <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then
+<p>Inserts a new row after <cite>sibling</cite>.  If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
+prepended to <cite>parent</cite> ’s children.  If <cite>parent</cite> and <cite>sibling</cite> are <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then
 the row will be prepended to the toplevel.  If both <cite>sibling</cite> and <cite>parent</cite> are
 set, then <cite>parent</cite> must be the parent of <cite>sibling</cite>.  When <cite>sibling</cite> is set,
 <cite>parent</cite> is optional.</p>
@@ -609,8 +609,8 @@ this function is called.  To fill in values, you need to call
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -620,8 +620,8 @@ this function is called.  To fill in values, you need to call
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Inserts a new row before <cite>sibling</cite>.  If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will
-be appended to <cite>parent</cite> ’s children.  If <cite>parent</cite> and <cite>sibling</cite> are <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then
+<p>Inserts a new row before <cite>sibling</cite>.  If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will
+be appended to <cite>parent</cite> ’s children.  If <cite>parent</cite> and <cite>sibling</cite> are <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then
 the row will be appended to the toplevel.  If both <cite>sibling</cite> and <cite>parent</cite> are
 set, then <cite>parent</cite> must be the parent of <cite>sibling</cite>.  When <cite>sibling</cite> is set,
 <cite>parent</cite> is optional.</p>
@@ -636,9 +636,9 @@ this function is called.  To fill in values, you need to call
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
-<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
+<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
 <li><p><strong>values</strong> ([<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>]) – an array of GValues</p></li>
 </ul>
 </dd>
@@ -665,13 +665,13 @@ function is mainly intended for language bindings.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, if <cite>iter</cite> is an ancestor of <cite>descendant</cite></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, if <cite>iter</cite> is an ancestor of <cite>descendant</cite></p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
-<p>Returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is an ancestor of <cite>descendant</cite>.  That is, <cite>iter</cite> is the
+<p>Returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is an ancestor of <cite>descendant</cite>.  That is, <cite>iter</cite> is the
 parent (or grandparent or great-grandparent) of <cite>descendant</cite>.</p>
 </dd></dl>
 
@@ -686,7 +686,7 @@ parent (or grandparent or great-grandparent) of <cite>descendant</cite>.</p>
 <dd class="field-even"><p>The depth of <cite>iter</cite></p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Returns the depth of <cite>iter</cite>.  This will be 0 for anything on the root level, 1
@@ -701,10 +701,10 @@ for anything down a level, etc.</p>
 <dd class="field-odd"><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – the iterator to check</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the iter is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if the iter is invalid.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the iter is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if the iter is invalid.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Checks if the given iter is a valid iter for this <code class="docutils literal notranslate"><span class="pre">GtkTreeStore</span></code>.</p>
@@ -719,13 +719,13 @@ purposes.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code>.</p></li>
-<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code>.</p></li>
+<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>Moves <cite>iter</cite> in <cite>self</cite> to the position after <cite>position</cite>. <cite>iter</cite> and
 <cite>position</cite> should be in the same level. Note that this function only
-works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite> will be moved
+works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite> will be moved
 to the start of the level.</p>
 </dd></dl>
 
@@ -736,13 +736,13 @@ to the start of the level.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <p>Moves <cite>iter</cite> in <cite>self</cite> to the position before <cite>position</cite>. <cite>iter</cite> and
 <cite>position</cite> should be in the same level. Note that this function only
-works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite> will be
+works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite> will be
 moved to the end of the level.</p>
 </dd></dl>
 
@@ -751,7 +751,7 @@ moved to the end of the level.</p>
 <span class="sig-name descname"><span class="pre">prepend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.TreeStore.prepend" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
+<dd class="field-odd"><p><strong>parent</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An unset <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> to set to the prepended row</p>
@@ -760,7 +760,7 @@ moved to the end of the level.</p>
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Prepends a new row to <cite>self</cite>.  If <cite>parent</cite> is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then it will prepend
+<p>Prepends a new row to <cite>self</cite>.  If <cite>parent</cite> is non-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then it will prepend
 the new row before the first child of <cite>parent</cite>, otherwise it will prepend a row
 to the top level.  <cite>iter</cite> will be changed to point to this new row.  The row
 will be empty after this function is called.  To fill in values, you need to
@@ -775,10 +775,10 @@ call <a class="reference internal" href="#Gtk.TreeStore.set" title="Gtk.TreeStor
 <dd class="field-odd"><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is still valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if not.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is still valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if not.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Removes <cite>iter</cite> from <cite>self</cite>.  After being removed, <cite>iter</cite> is set to the
@@ -793,7 +793,7 @@ last one.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> for the row being modified</p></li>
-<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
+<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
 <li><p><strong>values</strong> ([<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>]) – an array of GValues</p></li>
 </ul>
 </dd>
@@ -825,7 +825,7 @@ or a method on the <code class="docutils literal notranslate"><span class="pre">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> for the row being modified</p></li>
-<li><p><strong>column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – column number to modify</p></li>
+<li><p><strong>column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – column number to modify</p></li>
 <li><p><strong>value</strong> (<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>) – new value for the cell</p></li>
 </ul>
 </dd>

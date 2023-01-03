@@ -382,9 +382,9 @@
 It is guaranteed to be enough for all output of that function
 on systems with 64bit IEEE-compatible doubles.</p>
 <p>The typical usage would be something like:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="n">G_ASCII_DTOSTR_BUF_SIZE</span><span class="p">];</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="n">G_ASCII_DTOSTR_BUF_SIZE</span><span class="p">];</span>
 
-<span class="n">fprintf</span><span class="w"> </span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;value=%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g_ascii_dtostr</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="p">),</span><span class="w"> </span><span class="n">value</span><span class="p">));</span><span class="w"></span>
+<span class="n">fprintf</span><span class="w"> </span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;value=%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g_ascii_dtostr</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">buf</span><span class="p">),</span><span class="w"> </span><span class="n">value</span><span class="p">));</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -473,11 +473,11 @@ This is “/” on UNIX machines and “\” under Windows.</p>
 printing values of type #gint16. It is a string literal, but doesn’t
 include the percent-sign, such that you can add precision and length
 modifiers between percent-sign and conversion specifier.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">gint16</span><span class="w"> </span><span class="n">in</span><span class="p">;</span><span class="w"></span>
-<span class="n">gint32</span><span class="w"> </span><span class="n">out</span><span class="p">;</span><span class="w"></span>
-<span class="n">sscanf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;42&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="w"> </span><span class="n">G_GINT16_FORMAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">in</span><span class="p">)</span><span class="w"></span>
-<span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"></span>
-<span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%&quot;</span><span class="w"> </span><span class="n">G_GINT32_FORMAT</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">gint16</span><span class="w"> </span><span class="n">in</span><span class="p">;</span>
+<span class="n">gint32</span><span class="w"> </span><span class="n">out</span><span class="p">;</span>
+<span class="n">sscanf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;42&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="w"> </span><span class="n">G_GINT16_FORMAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">in</span><span class="p">)</span>
+<span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%&quot;</span><span class="w"> </span><span class="n">G_GINT32_FORMAT</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -491,8 +491,8 @@ is a string literal, but doesn’t include the percent-sign, such
 that you can add precision and length modifiers between percent-sign
 and conversion specifier and append a conversion specifier.</p>
 <p>The following example prints “0x7b”;</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">gint16</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span><span class="w"></span>
-<span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%#&quot;</span><span class="w"> </span><span class="n">G_GINT16_MODIFIER</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">gint16</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<span class="n">g_print</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;%#&quot;</span><span class="w"> </span><span class="n">G_GINT16_MODIFIER</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="versionadded">
@@ -1107,12 +1107,12 @@ it in any public header files.</p>
 <p>Log domains must be unique, and it is recommended that they are the
 application or library name, optionally followed by a hyphen and a sub-domain
 name. For example, <code class="docutils literal notranslate"><span class="pre">bloatpad</span></code> or <code class="docutils literal notranslate"><span class="pre">bloatpad-io</span></code>.</p>
-<p>If undefined, it defaults to the default <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> (or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) log domain; this is
+<p>If undefined, it defaults to the default <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> (or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>) log domain; this is
 not advisable, as it cannot be filtered against using the <code class="docutils literal notranslate"><span class="pre">G_MESSAGES_DEBUG</span></code>
 environment variable.</p>
 <p>For example, GTK+ uses this in its <code class="docutils literal notranslate"><span class="pre">Makefile.am</span></code> :</p>
 <p><code class="docutils literal notranslate"><span class="pre">AM_CPPFLAGS</span> <span class="pre">=</span> <span class="pre">-DG_LOG_DOMAIN=\&quot;Gtk\&quot;</span></code></p>
-<p>Applications can choose to leave it as the default <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> (or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>)
+<p>Applications can choose to leave it as the default <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> (or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>)
 domain. However, defining the domain offers the same advantages as
 above.</p>
 </dd></dl>
@@ -1331,7 +1331,7 @@ linked against at application run time.</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="GLib.MINOR_VERSION">
-<span class="sig-prename descclassname"><span class="pre">GLib.</span></span><span class="sig-name descname"><span class="pre">MINOR_VERSION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">72</span></em><a class="headerlink" href="#GLib.MINOR_VERSION" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">GLib.</span></span><span class="sig-name descname"><span class="pre">MINOR_VERSION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">74</span></em><a class="headerlink" href="#GLib.MINOR_VERSION" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minor version number of the GLib library.</p>
 <p>Like #gtk_minor_version, but from the headers used at
 application compile time, rather than from the library
@@ -1816,7 +1816,7 @@ using functions deprecated in later releases will not).</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="GLib.glib_version">
-<span class="sig-prename descclassname"><span class="pre">GLib.</span></span><span class="sig-name descname"><span class="pre">glib_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">(2,</span> <span class="pre">72,</span> <span class="pre">0)</span></em><a class="headerlink" href="#GLib.glib_version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">GLib.</span></span><span class="sig-name descname"><span class="pre">glib_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">(2,</span> <span class="pre">74,</span> <span class="pre">0)</span></em><a class="headerlink" href="#GLib.glib_version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py data">

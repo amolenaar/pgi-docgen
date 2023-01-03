@@ -300,7 +300,7 @@
 <span id="gtk-shortcutcontroller-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (12)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ListModel.html#gio-listmodel-methods" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ListModel (4)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gio-2.0/classes/ListModel.html#gio-listmodel-methods" title="(in Gio 2.0 v2.0)"><span class="xref std std-ref">Gio.ListModel (4)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -369,20 +369,30 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.mnemonic_modifiers" title="Gtk.ShortcutController.props.mnemonic_modifiers"><code class="xref py py-data docutils literal notranslate"><span class="pre">mnemonic-modifiers</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.item_type" title="Gtk.ShortcutController.props.item_type"><code class="xref py py-data docutils literal notranslate"><span class="pre">item-type</span></code></a></p></td>
+<td><p><a class="reference external" href="../../GObject-2.0/classes/GType.html#GObject.GType" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.GType</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.mnemonic_modifiers" title="Gtk.ShortcutController.props.mnemonic_modifiers"><code class="xref py py-data docutils literal notranslate"><span class="pre">mnemonic-modifiers</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gdk-4.0/flags.html#Gdk.ModifierType" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ModifierType</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The modifiers to be pressed to allow mnemonics activation</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.model" title="Gtk.ShortcutController.props.model"><code class="xref py py-data docutils literal notranslate"><span class="pre">model</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.model" title="Gtk.ShortcutController.props.model"><code class="xref py py-data docutils literal notranslate"><span class="pre">model</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gio-2.0/classes/ListModel.html#Gio.ListModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ListModel</span></code></a></p></td>
 <td><p>w/co/en</p></td>
-<td><p>A list model to take shortcuts from</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.n_items" title="Gtk.ShortcutController.props.n_items"><code class="xref py py-data docutils literal notranslate"><span class="pre">n-items</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.ShortcutController.props.scope" title="Gtk.ShortcutController.props.scope"><code class="xref py py-data docutils literal notranslate"><span class="pre">scope</span></code></a></p></td>
 <td><p><a class="reference internal" href="../enums.html#Gtk.ShortcutScope" title="Gtk.ShortcutScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ShortcutScope</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>What scope the shortcuts will be handled in</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -584,6 +594,29 @@ when the widget has focus.</p>
 <section id="property-details">
 <h2>Property Details<a class="headerlink" href="#property-details" title="Permalink to this heading">¶</a></h2>
 <dl class="py data">
+<dt class="sig sig-object py" id="Gtk.ShortcutController.props.item_type">
+<span class="sig-prename descclassname"><span class="pre">Gtk.ShortcutController.props.</span></span><span class="sig-name descname"><span class="pre">item_type</span></span><a class="headerlink" href="#Gtk.ShortcutController.props.item_type" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">item-type</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/classes/GType.html#GObject.GType" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.GType</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">&lt;GType</span> <span class="pre">GObject&gt;</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
+</dd>
+</dl>
+<p>The type of items. See [method`Gio`.ListModel.get_item_type].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
 <dt class="sig sig-object py" id="Gtk.ShortcutController.props.mnemonic_modifiers">
 <span class="sig-prename descclassname"><span class="pre">Gtk.ShortcutController.props.</span></span><span class="sig-name descname"><span class="pre">mnemonic_modifiers</span></span><a class="headerlink" href="#Gtk.ShortcutController.props.mnemonic_modifiers" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -614,13 +647,36 @@ when the widget has focus.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/ListModel.html#Gio.ListModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ListModel</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
 </dd>
 </dl>
 <p>A list model to take shortcuts from.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Gtk.ShortcutController.props.n_items">
+<span class="sig-prename descclassname"><span class="pre">Gtk.ShortcutController.props.</span></span><span class="sig-name descname"><span class="pre">n_items</span></span><a class="headerlink" href="#Gtk.ShortcutController.props.n_items" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">n-items</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
+</dd>
+</dl>
+<p>The number of items. See [method`Gio`.ListModel.get_n_items].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py data">

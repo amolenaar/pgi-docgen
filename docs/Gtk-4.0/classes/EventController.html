@@ -282,6 +282,9 @@
 <tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.EventController.set_propagation_phase" title="Gtk.EventController.set_propagation_phase"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_propagation_phase</span></code></a> (phase)</p></td>
 </tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.EventController.set_static_name" title="Gtk.EventController.set_static_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_static_name</span></code></a> (name)</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -311,24 +314,24 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.EventController.props.name" title="Gtk.EventController.props.name"><code class="xref py py-data docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
 <td><p>r/w</p></td>
-<td><p>Name for this controller</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.EventController.props.propagation_limit" title="Gtk.EventController.props.propagation_limit"><code class="xref py py-data docutils literal notranslate"><span class="pre">propagation-limit</span></code></a></p></td>
 <td><p><a class="reference internal" href="../enums.html#Gtk.PropagationLimit" title="Gtk.PropagationLimit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.PropagationLimit</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Propagation limit for events handled by this controller</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.EventController.props.propagation_phase" title="Gtk.EventController.props.propagation_phase"><code class="xref py py-data docutils literal notranslate"><span class="pre">propagation-phase</span></code></a></p></td>
 <td><p><a class="reference internal" href="../enums.html#Gtk.PropagationPhase" title="Gtk.PropagationPhase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.PropagationPhase</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Propagation phase at which this controller is run</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.EventController.props.widget" title="Gtk.EventController.props.widget"><code class="xref py py-data docutils literal notranslate"><span class="pre">widget</span></code></a></p></td>
 <td><p><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Widget the gesture relates to</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -383,11 +386,11 @@ phases of even propagation.</p>
 handled by <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Event.html#Gdk.Event" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Event</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Event.html#Gdk.Event" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Event</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Returns the event that is currently being handled by the controller.</p>
-<p>At other times, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
+<p>At other times, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -399,12 +402,12 @@ handled by <cite>self</cite></p>
 currently handled by <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Device.html#Gdk.Device" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Device</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Device.html#Gdk.Device" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Device</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Returns the device of the event that is currently being
 handled by the controller.</p>
-<p>At other times, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
+<p>At other times, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -431,7 +434,7 @@ handled by the controller.</p>
 <dd class="field-odd"><p>timestamp of the event is currently handled by <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Returns the timestamp of the event that is currently being
@@ -447,7 +450,7 @@ handled by the controller.</p>
 <dd class="field-odd"><p>The controller name</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the name of <cite>self</cite>.</p>
@@ -506,7 +509,7 @@ handled by the controller.</p>
 <span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.EventController.set_name" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a name for <cite>self</cite></p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a name for <cite>self</cite></p>
 </dd>
 </dl>
 <p>Sets a name on the controller that can be used for debugging.</p>
@@ -539,6 +542,20 @@ surface, such as popovers.</p>
 performed, but other additional gesture maintenance will.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.EventController.set_static_name">
+<span class="sig-name descname"><span class="pre">set_static_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.EventController.set_static_name" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a name for <cite>self</cite>, must be a static string</p>
+</dd>
+</dl>
+<p>Sets a name on the controller that can be used for debugging.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -552,10 +569,10 @@ performed, but other additional gesture maintenance will.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a></p>
@@ -615,7 +632,7 @@ performed, but other additional gesture maintenance will.</p>
 <dd class="field-even"><p><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>

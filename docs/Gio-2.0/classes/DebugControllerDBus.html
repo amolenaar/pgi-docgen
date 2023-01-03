@@ -445,16 +445,16 @@ privileged users or processes.</p>
 <p>One option is to install a D-Bus security policy which restricts access to
 <code class="docutils literal notranslate"><span class="pre">SetDebugEnabled()</span></code>, installing something like the following in
 <code class="docutils literal notranslate"><span class="pre">$datadir/dbus-1/system.d/</span></code> :</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span> <span class="cm">&lt;!--*-nxml-*--&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span><span class="w"> </span><span class="cm">&lt;!--*-nxml-*--&gt;</span>
 <span class="cp">&lt;!DOCTYPE busconfig PUBLIC &quot;-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN&quot;</span>
 <span class="cp">     &quot;http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd&quot;&gt;</span>
 <span class="nt">&lt;busconfig&gt;</span>
-  <span class="nt">&lt;policy</span> <span class="na">user=</span><span class="s">&quot;root&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;allow</span> <span class="na">send_destination=</span><span class="s">&quot;com.example.MyService&quot;</span> <span class="na">send_interface=</span><span class="s">&quot;org.gtk.Debugging&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;/policy&gt;</span>
-  <span class="nt">&lt;policy</span> <span class="na">context=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;deny</span> <span class="na">send_destination=</span><span class="s">&quot;com.example.MyService&quot;</span> <span class="na">send_interface=</span><span class="s">&quot;org.gtk.Debugging&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;/policy&gt;</span>
+<span class="w">  </span><span class="nt">&lt;policy</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;root&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;allow</span><span class="w"> </span><span class="na">send_destination=</span><span class="s">&quot;com.example.MyService&quot;</span><span class="w"> </span><span class="na">send_interface=</span><span class="s">&quot;org.gtk.Debugging&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/policy&gt;</span>
+<span class="w">  </span><span class="nt">&lt;policy</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;default&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;deny</span><span class="w"> </span><span class="na">send_destination=</span><span class="s">&quot;com.example.MyService&quot;</span><span class="w"> </span><span class="na">send_interface=</span><span class="s">&quot;org.gtk.Debugging&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/policy&gt;</span>
 <span class="nt">&lt;/busconfig&gt;</span>
 </pre></div>
 </div>
@@ -465,66 +465,66 @@ as it’s accessed through the <code class="docutils literal notranslate"><span 
 basis, allowing for the possibility of dynamic authorisation. To do this,
 connect to the <a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a> <a class="reference internal" href="#Gio.DebugControllerDBus.signals.authorize" title="Gio.DebugControllerDBus.signals.authorize"><code class="xref py py-func docutils literal notranslate"><span class="pre">::authorize</span></code></a> signal and query polkit in
 it:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">child_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="n">g_autoptr</span><span class="p">(</span><span class="n">GDBusConnection</span><span class="p">)</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_bus_get_sync</span><span class="w"> </span><span class="p">(</span><span class="n">G_BUS_TYPE_SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="n">gulong</span><span class="w"> </span><span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">child_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="n">g_autoptr</span><span class="p">(</span><span class="n">GDBusConnection</span><span class="p">)</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_bus_get_sync</span><span class="w"> </span><span class="p">(</span><span class="n">G_BUS_TYPE_SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="n">gulong</span><span class="w"> </span><span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="c1">// Set up the debug controller.</span>
-<span class="n">debug_controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G_DEBUG_CONTROLLER</span><span class="w"> </span><span class="p">(</span><span class="n">g_debug_controller_dbus_new</span><span class="w"> </span><span class="p">(</span><span class="n">priv</span><span class="o">-&gt;</span><span class="n">connection</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child_error</span><span class="p">));</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">g_error</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Could not register debug controller on bus: %s&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">             </span><span class="n">child_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="n">debug_controller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G_DEBUG_CONTROLLER</span><span class="w"> </span><span class="p">(</span><span class="n">g_debug_controller_dbus_new</span><span class="w"> </span><span class="p">(</span><span class="n">priv</span><span class="o">-&gt;</span><span class="n">connection</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child_error</span><span class="p">));</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">g_error</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Could not register debug controller on bus: %s&quot;</span><span class="p">),</span>
+<span class="w">             </span><span class="n">child_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_signal_connect</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                  </span><span class="s">&quot;authorize&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                  </span><span class="n">G_CALLBACK</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller_authorize_cb</span><span class="p">),</span><span class="w"></span>
-<span class="w">                                                  </span><span class="n">self</span><span class="p">);</span><span class="w"></span>
+<span class="n">debug_controller_authorize_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_signal_connect</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller</span><span class="p">,</span>
+<span class="w">                                                  </span><span class="s">&quot;authorize&quot;</span><span class="p">,</span>
+<span class="w">                                                  </span><span class="n">G_CALLBACK</span><span class="w"> </span><span class="p">(</span><span class="n">debug_controller_authorize_cb</span><span class="p">),</span>
+<span class="w">                                                  </span><span class="n">self</span><span class="p">);</span>
 
-<span class="k">static</span><span class="w"> </span><span class="n">gboolean</span><span class="w"></span>
-<span class="nf">debug_controller_authorize_cb</span><span class="w"> </span><span class="p">(</span><span class="n">GDebugControllerDBus</span><span class="w">  </span><span class="o">*</span><span class="n">debug_controller</span><span class="p">,</span><span class="w"></span>
-<span class="w">                               </span><span class="n">GDBusMethodInvocation</span><span class="w"> </span><span class="o">*</span><span class="n">invocation</span><span class="p">,</span><span class="w"></span>
-<span class="w">                               </span><span class="n">gpointer</span><span class="w">               </span><span class="n">user_data</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthority</span><span class="p">)</span><span class="w"> </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitSubject</span><span class="p">)</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthorizationResult</span><span class="p">)</span><span class="w"> </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">local_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">GDBusMessage</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">GDBusMessageFlags</span><span class="w"> </span><span class="n">message_flags</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">PolkitCheckAuthorizationFlags</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_NONE</span><span class="p">;</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="n">gboolean</span>
+<span class="nf">debug_controller_authorize_cb</span><span class="w"> </span><span class="p">(</span><span class="n">GDebugControllerDBus</span><span class="w">  </span><span class="o">*</span><span class="n">debug_controller</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">GDBusMethodInvocation</span><span class="w"> </span><span class="o">*</span><span class="n">invocation</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">gpointer</span><span class="w">               </span><span class="n">user_data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthority</span><span class="p">)</span><span class="w"> </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitSubject</span><span class="p">)</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">PolkitAuthorizationResult</span><span class="p">)</span><span class="w"> </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="n">g_autoptr</span><span class="p">(</span><span class="n">GError</span><span class="p">)</span><span class="w"> </span><span class="n">local_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GDBusMessage</span><span class="w"> </span><span class="o">*</span><span class="n">message</span><span class="p">;</span>
+<span class="w">  </span><span class="n">GDBusMessageFlags</span><span class="w"> </span><span class="n">message_flags</span><span class="p">;</span>
+<span class="w">  </span><span class="n">PolkitCheckAuthorizationFlags</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_NONE</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_method_invocation_get_message</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">message_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_message_get_flags</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_method_invocation_get_message</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">);</span>
+<span class="w">  </span><span class="n">message_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_dbus_message_get_flags</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_get_sync</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Failed to get polkit authority: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">authority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_get_sync</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Failed to get polkit authority: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">flags</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_ALLOW_USER_INTERACTION</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message_flags</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION</span><span class="p">)</span>
+<span class="w">    </span><span class="n">flags</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">POLKIT_CHECK_AUTHORIZATION_FLAGS_ALLOW_USER_INTERACTION</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_system_bus_name_new</span><span class="w"> </span><span class="p">(</span><span class="n">g_dbus_method_invocation_get_sender</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_system_bus_name_new</span><span class="w"> </span><span class="p">(</span><span class="n">g_dbus_method_invocation_get_sender</span><span class="w"> </span><span class="p">(</span><span class="n">invocation</span><span class="p">));</span>
 
-<span class="w">  </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_check_authorization_sync</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="n">subject</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="s">&quot;com.example.MyService.set-debug-enabled&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="nb">NULL</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="n">flags</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="nb">NULL</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                           </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Failed to get check polkit authorization: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">auth_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">polkit_authority_check_authorization_sync</span><span class="w"> </span><span class="p">(</span><span class="n">authority</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="n">subject</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="s">&quot;com.example.MyService.set-debug-enabled&quot;</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="nb">NULL</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="n">flags</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="nb">NULL</span><span class="p">,</span>
+<span class="w">                                                           </span><span class="o">&amp;</span><span class="n">local_error</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">g_warning</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Failed to get check polkit authorization: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">local_error</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">FALSE</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">polkit_authorization_result_get_is_authorized</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">polkit_authorization_result_get_is_authorized</span><span class="w"> </span><span class="p">(</span><span class="n">auth_result</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="versionadded">
@@ -537,18 +537,18 @@ it:</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>connection</strong> (<a class="reference internal" href="DBusConnection.html#Gio.DBusConnection" title="Gio.DBusConnection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DBusConnection</span></code></a>) – a <a class="reference internal" href="DBusConnection.html#Gio.DBusConnection" title="Gio.DBusConnection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DBusConnection</span></code></a> to register the debug object on</p></li>
-<li><p><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p></li>
+<li><p><strong>cancellable</strong> (<a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <a class="reference internal" href="Cancellable.html#Gio.Cancellable" title="Gio.Cancellable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Cancellable</span></code></a>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GLib-2.0/classes/Error.html#GLib.Error" title="(in GLib 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GLib.Error</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a new <a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
+<dd class="field-odd"><p>a new <a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a>, or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>
 on failure</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Create a new <a class="reference internal" href="#Gio.DebugControllerDBus" title="Gio.DebugControllerDBus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DebugControllerDBus</span></code></a> and synchronously initialize it.</p>
@@ -590,7 +590,7 @@ handler will cause a deadlock and must not be done.</p>
 <dd class="field-odd"><p><strong>invocation</strong> (<a class="reference internal" href="DBusMethodInvocation.html#Gio.DBusMethodInvocation" title="Gio.DBusMethodInvocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DBusMethodInvocation</span></code></a>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -617,10 +617,10 @@ handler will cause a deadlock and must not be done.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the call is authorized, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the call is authorized, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Emitted when a D-Bus peer is trying to change the debug settings and used
@@ -629,12 +629,12 @@ to determine if that is authorized.</p>
 allowed to perform blocking I/O. This means that, for example, it is
 appropriate to call <code class="docutils literal notranslate"><span class="pre">polkit_authority_check_authorization_sync()</span></code> to check
 authorization using polkit.</p>
-<p>If <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> is returned then no further handlers are run and the request to
+<p>If <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> is returned then no further handlers are run and the request to
 change the debug settings is rejected.</p>
-<p>Otherwise, if <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> is returned, signal emission continues. If no handlers
-return <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, then the debug settings are allowed to be changed.</p>
+<p>Otherwise, if <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> is returned, signal emission continues. If no handlers
+return <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, then the debug settings are allowed to be changed.</p>
 <p>Signal handlers must not modify <cite>invocation</cite>, or cause it to return a value.</p>
-<p>The default class handler just returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+<p>The default class handler just returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 2.72.</span></p>
 </div>
@@ -654,7 +654,7 @@ return <a class="reference external" href="http://docs.python.org/3/library/cons
 <dd class="field-even"><p><a class="reference internal" href="DBusConnection.html#Gio.DBusConnection" title="Gio.DBusConnection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.DBusConnection</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>

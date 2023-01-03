@@ -307,17 +307,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.BuilderListItemFactory.props.bytes" title="Gtk.BuilderListItemFactory.props.bytes"><code class="xref py py-data docutils literal notranslate"><span class="pre">bytes</span></code></a></p></td>
 <td><p><a class="reference external" href="../../GLib-2.0/classes/Bytes.html#GLib.Bytes" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Bytes</span></code></a></p></td>
 <td><p>r/w/co</p></td>
-<td><p>bytes containing the UI definition</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.BuilderListItemFactory.props.resource" title="Gtk.BuilderListItemFactory.props.resource"><code class="xref py py-data docutils literal notranslate"><span class="pre">resource</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
 <td><p>r/w/co</p></td>
-<td><p>resource containing the UI definition</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.BuilderListItemFactory.props.scope" title="Gtk.BuilderListItemFactory.props.scope"><code class="xref py py-data docutils literal notranslate"><span class="pre">scope</span></code></a></p></td>
 <td><p><a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a></p></td>
 <td><p>r/w/co</p></td>
-<td><p>scope to use when instantiating listitems</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -373,7 +373,7 @@ widgets by instantiating <code class="docutils literal notranslate"><span class=
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A scope to use when instantiating</p></li>
+<li><p><strong>scope</strong> (<a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A scope to use when instantiating</p></li>
 <li><p><strong>bytes</strong> (<a class="reference external" href="../../GLib-2.0/classes/Bytes.html#GLib.Bytes" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Bytes</span></code></a>) – the <code class="docutils literal notranslate"><span class="pre">GBytes</span></code> containing the ui file to instantiate</p></li>
 </ul>
 </dd>
@@ -394,8 +394,8 @@ using <cite>bytes</cite> as the data to pass to <code class="docutils literal no
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A scope to use when instantiating</p></li>
-<li><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – valid path to a resource that contains the data</p></li>
+<li><p><strong>scope</strong> (<a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A scope to use when instantiating</p></li>
+<li><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – valid path to a resource that contains the data</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -432,7 +432,7 @@ listitems.</p>
 <dd class="field-odd"><p>The path to the resource</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>If the data references a resource, gets the path of that resource.</p>
@@ -446,7 +446,7 @@ listitems.</p>
 <dd class="field-odd"><p>The scope used when constructing listitems</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the scope used when constructing listitems.</p>
@@ -468,7 +468,7 @@ listitems.</p>
 <dd class="field-even"><p><a class="reference external" href="../../GLib-2.0/classes/Bytes.html#GLib.Bytes" title="(in GLib 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Bytes</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>
@@ -485,10 +485,10 @@ listitems.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>
@@ -508,7 +508,7 @@ listitems.</p>
 <dd class="field-even"><p><a class="reference internal" href="BuilderScope.html#Gtk.BuilderScope" title="Gtk.BuilderScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.BuilderScope</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>

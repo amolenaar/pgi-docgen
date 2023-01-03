@@ -251,7 +251,7 @@
 <span id="gtk-dropcontrollermotion-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (12)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -309,19 +309,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.DropControllerMotion.props.contains_pointer" title="Gtk.DropControllerMotion.props.contains_pointer"><code class="xref py py-data docutils literal notranslate"><span class="pre">contains-pointer</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Whether the pointer is in the controllers widget or a descendant</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.DropControllerMotion.props.drop" title="Gtk.DropControllerMotion.props.drop"><code class="xref py py-data docutils literal notranslate"><span class="pre">drop</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>The ongoing drop operation</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.DropControllerMotion.props.is_pointer" title="Gtk.DropControllerMotion.props.is_pointer"><code class="xref py py-data docutils literal notranslate"><span class="pre">is-pointer</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Whether the pointer is in the controllers widget</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -406,10 +406,10 @@ events during drag and drop.</p>
 <span class="sig-name descname"><span class="pre">contains_pointer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropControllerMotion.contains_pointer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a dragging pointer is within <cite>self</cite> or one of its children.</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a dragging pointer is within <cite>self</cite> or one of its children.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Returns if a Drag-and-Drop operation is within the widget
@@ -425,7 +425,7 @@ events during drag and drop.</p>
 happening within <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Returns the <code class="docutils literal notranslate"><span class="pre">GdkDrop</span></code> of a current Drag-and-Drop operation
@@ -437,11 +437,11 @@ over the widget of <cite>self</cite>.</p>
 <span class="sig-name descname"><span class="pre">is_pointer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DropControllerMotion.is_pointer" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a dragging pointer is within <cite>self</cite> but
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if a dragging pointer is within <cite>self</cite> but
 not one of its children</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Returns if a Drag-and-Drop operation is within the widget
@@ -466,8 +466,8 @@ not one of its children</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>drop_controller_motion</strong> (<a class="reference internal" href="#Gtk.DropControllerMotion" title="Gtk.DropControllerMotion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropControllerMotion</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – coordinates of pointer location</p></li>
-<li><p><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – coordinates of pointer location</p></li>
+<li><p><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – coordinates of pointer location</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – coordinates of pointer location</p></li>
 </ul>
 </dd>
 </dl>
@@ -504,8 +504,8 @@ not one of its children</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>drop_controller_motion</strong> (<a class="reference internal" href="#Gtk.DropControllerMotion" title="Gtk.DropControllerMotion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DropControllerMotion</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the x coordinate</p></li>
-<li><p><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the y coordinate</p></li>
+<li><p><strong>x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the x coordinate</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – the y coordinate</p></li>
 </ul>
 </dd>
 </dl>
@@ -523,10 +523,10 @@ not one of its children</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">contains-pointer</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
@@ -551,7 +551,7 @@ before [signal`Gtk`.DropControllerMotion::enter], but after
 <dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Drop.html#Gdk.Drop" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Drop</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
@@ -559,7 +559,7 @@ before [signal`Gtk`.DropControllerMotion::enter], but after
 </dl>
 <p>The ongoing drop operation over the controller’s widget or
 its descendant.</p>
-<p>If no drop operation is going on, this property returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+<p>If no drop operation is going on, this property returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 <p>The event controller should not modify the <cite>drop</cite>, but it might
 want to query its properties.</p>
 <p>When handling crossing events, this property is updated
@@ -575,10 +575,10 @@ before [signal`Gtk`.DropControllerMotion::enter], but after
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">is-pointer</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>

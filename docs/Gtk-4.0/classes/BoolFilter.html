@@ -307,12 +307,12 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.BoolFilter.props.expression" title="Gtk.BoolFilter.props.expression"><code class="xref py py-data docutils literal notranslate"><span class="pre">expression</span></code></a></p></td>
 <td><p><a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Expression to evaluate</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.BoolFilter.props.invert" title="Gtk.BoolFilter.props.invert"><code class="xref py py-data docutils literal notranslate"><span class="pre">invert</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>If the expression result should be inverted</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -356,7 +356,7 @@ to determine whether to include items.</p>
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BoolFilter.new" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>expression</strong> (<a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – The expression to evaluate</p>
+<dd class="field-odd"><p><strong>expression</strong> (<a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – The expression to evaluate</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkBoolFilter</span></code></p>
@@ -376,7 +376,7 @@ to determine whether to include items.</p>
 <dd class="field-odd"><p>a <code class="docutils literal notranslate"><span class="pre">GtkExpression</span></code></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the expression that the filter uses to evaluate if
@@ -388,10 +388,10 @@ an item should be filtered.</p>
 <span class="sig-name descname"><span class="pre">get_invert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BoolFilter.get_invert" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the filter inverts</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the filter inverts</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Returns whether the filter inverts the expression.</p>
@@ -402,7 +402,7 @@ an item should be filtered.</p>
 <span class="sig-name descname"><span class="pre">set_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BoolFilter.set_expression" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>expression</strong> (<a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkExpression</span></code></p>
+<dd class="field-odd"><p><strong>expression</strong> (<a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GtkExpression</span></code></p>
 </dd>
 </dl>
 <p>Sets the expression that the filter uses to check if items
@@ -415,7 +415,7 @@ should be filtered.</p>
 <span class="sig-name descname"><span class="pre">set_invert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.BoolFilter.set_invert" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>invert</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to invert</p>
+<dd class="field-odd"><p><strong>invert</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> to invert</p>
 </dd>
 </dl>
 <p>Sets whether the filter should invert the expression.</p>
@@ -437,7 +437,7 @@ should be filtered.</p>
 <dd class="field-even"><p><a class="reference internal" href="Expression.html#Gtk.Expression" title="Gtk.Expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Expression</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -454,10 +454,10 @@ should be filtered.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">invert</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>

@@ -663,6 +663,10 @@
 <dt class="sig sig-object py" id="GObject.PARAM_STATIC_STRINGS">
 <span class="sig-prename descclassname"><span class="pre">GObject.</span></span><span class="sig-name descname"><span class="pre">PARAM_STATIC_STRINGS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">224</span></em><a class="headerlink" href="#GObject.PARAM_STATIC_STRINGS" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="flags.html#GObject.ParamFlags" title="GObject.ParamFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.ParamFlags</span></code></a> value alias for <a class="reference internal" href="flags.html#GObject.ParamFlags.STATIC_NAME" title="GObject.ParamFlags.STATIC_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.ParamFlags.STATIC_NAME</span></code></a> | <a class="reference internal" href="flags.html#GObject.ParamFlags.STATIC_NICK" title="GObject.ParamFlags.STATIC_NICK"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.ParamFlags.STATIC_NICK</span></code></a> | <a class="reference internal" href="flags.html#GObject.ParamFlags.STATIC_BLURB" title="GObject.ParamFlags.STATIC_BLURB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.ParamFlags.STATIC_BLURB</span></code></a>.</p>
+<p>It is recommended to use this for all properties by default, as it allows for
+internal performance improvements in <a class="reference internal" href="classes/Object.html#GObject.Object" title="GObject.Object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>.</p>
+<p>It is very rare that a property would have a dynamically constructed name,
+nickname or blurb.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 2.13.0.</span></p>
 </div>
@@ -1010,7 +1014,7 @@ be copied if it is not ref-counted.</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="GObject.glib_version">
-<span class="sig-prename descclassname"><span class="pre">GObject.</span></span><span class="sig-name descname"><span class="pre">glib_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">(2,</span> <span class="pre">72,</span> <span class="pre">0)</span></em><a class="headerlink" href="#GObject.glib_version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">GObject.</span></span><span class="sig-name descname"><span class="pre">glib_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">(2,</span> <span class="pre">74,</span> <span class="pre">0)</span></em><a class="headerlink" href="#GObject.glib_version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py data">

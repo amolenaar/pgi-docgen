@@ -336,7 +336,7 @@
 <span id="gtk-picture-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -373,19 +373,25 @@
 <td><p><a class="reference internal" href="#Gtk.Picture.get_can_shrink" title="Gtk.Picture.get_can_shrink"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_can_shrink</span></code></a> ()</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.Picture.get_content_fit" title="Gtk.Picture.get_content_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_content_fit</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.get_file" title="Gtk.Picture.get_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_file</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.get_keep_aspect_ratio" title="Gtk.Picture.get_keep_aspect_ratio"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_keep_aspect_ratio</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.get_paintable" title="Gtk.Picture.get_paintable"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_paintable</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.set_alternative_text" title="Gtk.Picture.set_alternative_text"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_alternative_text</span></code></a> (alternative_text)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.set_can_shrink" title="Gtk.Picture.set_can_shrink"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_can_shrink</span></code></a> (can_shrink)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.Picture.set_content_fit" title="Gtk.Picture.set_content_fit"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_content_fit</span></code></a> (content_fit)</p></td>
 </tr>
 <tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.Picture.set_file" title="Gtk.Picture.set_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_file</span></code></a> (file)</p></td>
@@ -439,29 +445,37 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.Picture.props.alternative_text" title="Gtk.Picture.props.alternative_text"><code class="xref py py-data docutils literal notranslate"><span class="pre">alternative-text</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The alternative textual description</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.Picture.props.can_shrink" title="Gtk.Picture.props.can_shrink"><code class="xref py py-data docutils literal notranslate"><span class="pre">can-shrink</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Allow self to be smaller than contents</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.Picture.props.file" title="Gtk.Picture.props.file"><code class="xref py py-data docutils literal notranslate"><span class="pre">file</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.Picture.props.content_fit" title="Gtk.Picture.props.content_fit"><code class="xref py py-data docutils literal notranslate"><span class="pre">content-fit</span></code></a></p></td>
+<td><p><a class="reference internal" href="../enums.html#Gtk.ContentFit" title="Gtk.ContentFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ContentFit</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.Picture.props.file" title="Gtk.Picture.props.file"><code class="xref py py-data docutils literal notranslate"><span class="pre">file</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>File to load and display</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.Picture.props.keep_aspect_ratio" title="Gtk.Picture.props.keep_aspect_ratio"><code class="xref py py-data docutils literal notranslate"><span class="pre">keep-aspect-ratio</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
-<td><p>r/w/en</p></td>
-<td><p>Render contents respecting the aspect ratio</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.Picture.props.keep_aspect_ratio" title="Gtk.Picture.props.keep_aspect_ratio"><code class="xref py py-data docutils literal notranslate"><span class="pre">keep-aspect-ratio</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p>d/r/w/en</p></td>
+<td><blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">deprecated</span></code></p>
+</div></blockquote>
+</td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#Gtk.Picture.props.paintable" title="Gtk.Picture.props.paintable"><code class="xref py py-data docutils literal notranslate"><span class="pre">paintable</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.Picture.props.paintable" title="Gtk.Picture.props.paintable"><code class="xref py py-data docutils literal notranslate"><span class="pre">paintable</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The <a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> to display</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -521,11 +535,11 @@ if you want to display a fixed-size image, such as an icon.</p>
 <dl class="simple">
 <dt>Sizing the paintable</dt><dd></dd>
 </dl>
-<p>You can influence how the paintable is displayed inside the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>.
-By turning off [property`Gtk`.Picture:keep-aspect-ratio] you can allow the
-paintable to get stretched. [property`Gtk`.Picture:can-shrink] can be unset
-to make sure that paintables are never made smaller than their ideal size -
-but be careful if you do not know the size of the paintable in use (like
+<p>You can influence how the paintable is displayed inside the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>
+by changing [property`Gtk`.Picture:content-fit]. See [enum`Gtk`.ContentFit]
+for details. [property`Gtk`.Picture:can-shrink] can be unset to make sure
+that paintables are never made smaller than their ideal size - but
+be careful if you do not know the size of the paintable in use (like
 when displaying user-loaded images). This can easily cause the picture to
 grow larger than the screen. And [property`GtkWidget`:py:data:<cite>:halign&lt;Gtk.Picture.props.halign&gt;</cite>] and
 [property`GtkWidget`:py:data:<cite>:valign&lt;Gtk.Picture.props.valign&gt;</cite>] can be used to make sure the paintable doesn’t
@@ -557,7 +571,7 @@ fill all available space but is instead displayed at its original size.</p>
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_for_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.new_for_file" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GFile</span></code></p>
+<dd class="field-odd"><p><strong>file</strong> (<a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GFile</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code></p>
@@ -579,7 +593,7 @@ then create the <code class="docutils literal notranslate"><span class="pre">Gtk
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_for_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.new_for_filename" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a filename</p>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a filename</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code></p>
@@ -598,7 +612,7 @@ See that function for details.</p>
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_for_paintable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paintable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.new_for_paintable" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>paintable</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPaintable</span></code></p>
+<dd class="field-odd"><p><strong>paintable</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPaintable</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code></p>
@@ -617,7 +631,7 @@ its size and contents in response to it.</p>
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_for_pixbuf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixbuf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.new_for_pixbuf" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>pixbuf</strong> (<a class="reference external" href="../../GdkPixbuf-2.0/classes/Pixbuf.html#GdkPixbuf.Pixbuf" title="(in GdkPixbuf 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.Pixbuf</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code></p>
+<dd class="field-odd"><p><strong>pixbuf</strong> (<a class="reference external" href="../../GdkPixbuf-2.0/classes/Pixbuf.html#GdkPixbuf.Pixbuf" title="(in GdkPixbuf 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.Pixbuf</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code></p>
@@ -637,7 +651,7 @@ See that function for details.</p>
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_for_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.new_for_resource" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – resource path to play back</p>
+<dd class="field-odd"><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – resource path to play back</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a new <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code></p>
@@ -659,11 +673,11 @@ See that function for details.</p>
 <dd class="field-odd"><p>the alternative textual description of <cite>self</cite>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the alternative textual description of the picture.</p>
-<p>The returned string will be <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the picture cannot be described textually.</p>
+<p>The returned string will be <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the picture cannot be described textually.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -671,13 +685,31 @@ See that function for details.</p>
 <span class="sig-name descname"><span class="pre">get_can_shrink</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.get_can_shrink" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the picture can be made smaller than its contents</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the picture can be made smaller than its contents</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Returns whether the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code> respects its contents size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Gtk.Picture.get_content_fit">
+<span class="sig-name descname"><span class="pre">get_content_fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.get_content_fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the content fit mode</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../enums.html#Gtk.ContentFit" title="Gtk.ContentFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ContentFit</span></code></a></p>
+</dd>
+</dl>
+<p>Returns the fit mode for the content of the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>.</p>
+<p>See [enum`Gtk`.ContentFit] for details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -688,12 +720,12 @@ See that function for details.</p>
 <dd class="field-odd"><p>The <code class="docutils literal notranslate"><span class="pre">GFile</span></code> displayed by <cite>self</cite>.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the <code class="docutils literal notranslate"><span class="pre">GFile</span></code> currently displayed if <cite>self</cite> is displaying a file.</p>
 <p>If <cite>self</cite> is not displaying a file, for example when
-[method`Gtk`.Picture.set_paintable] was used, then <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
+[method`Gtk`.Picture.set_paintable] was used, then <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> is returned.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -701,13 +733,16 @@ See that function for details.</p>
 <span class="sig-name descname"><span class="pre">get_keep_aspect_ratio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.get_keep_aspect_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the self tries to keep the contents’ aspect ratio</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the self tries to keep the contents’ aspect ratio</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Returns whether the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code> preserves its contents aspect ratio.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 4.8: </span>Use [method`Gtk`.Picture.get_content_fit] instead. This will now return <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> only if [property`Gtk`.Picture:content-fit] is <code class="docutils literal notranslate"><span class="pre">GTK_CONTENT_FIT_FILL</span></code>. Returns <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> otherwise.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -718,7 +753,7 @@ See that function for details.</p>
 <dd class="field-odd"><p>the displayed paintable</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the <code class="docutils literal notranslate"><span class="pre">GdkPaintable</span></code> being displayed by the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>.</p>
@@ -729,13 +764,13 @@ See that function for details.</p>
 <span class="sig-name descname"><span class="pre">set_alternative_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alternative_text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_alternative_text" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>alternative_text</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a textual description of the contents</p>
+<dd class="field-odd"><p><strong>alternative_text</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a textual description of the contents</p>
 </dd>
 </dl>
 <p>Sets an alternative textual description for the picture contents.</p>
 <p>It is equivalent to the “alt” attribute for images on websites.</p>
 <p>This text will be made available to accessibility tools.</p>
-<p>If the picture cannot be described textually, set this property to <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+<p>If the picture cannot be described textually, set this property to <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -743,10 +778,10 @@ See that function for details.</p>
 <span class="sig-name descname"><span class="pre">set_can_shrink</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">can_shrink</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_can_shrink" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>can_shrink</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – if <cite>self</cite> can be made smaller than its contents</p>
+<dd class="field-odd"><p><strong>can_shrink</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – if <cite>self</cite> can be made smaller than its contents</p>
 </dd>
 </dl>
-<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the <cite>self</cite> can be made smaller than its contents.</p>
+<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the <cite>self</cite> can be made smaller than its contents.</p>
 <p>The contents will then be scaled down when rendering.</p>
 <p>If you want to still force a minimum size manually, consider using
 [method`Gtk`.Widget.set_size_request].</p>
@@ -756,11 +791,26 @@ because the grow behavior can be controlled via
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Gtk.Picture.set_content_fit">
+<span class="sig-name descname"><span class="pre">set_content_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content_fit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_content_fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>content_fit</strong> (<a class="reference internal" href="../enums.html#Gtk.ContentFit" title="Gtk.ContentFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ContentFit</span></code></a>) – the content fit mode</p>
+</dd>
+</dl>
+<p>Sets how the content should be resized to fit the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>.</p>
+<p>See [enum`Gtk`.ContentFit] for details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Gtk.Picture.set_file">
 <span class="sig-name descname"><span class="pre">set_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_file" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GFile</span></code></p>
+<dd class="field-odd"><p><strong>file</strong> (<a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GFile</span></code></p>
 </dd>
 </dl>
 <p>Makes <cite>self</cite> load and display <cite>file</cite>.</p>
@@ -772,7 +822,7 @@ because the grow behavior can be controlled via
 <span class="sig-name descname"><span class="pre">set_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_filename" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the filename to play</p>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the filename to play</p>
 </dd>
 </dl>
 <p>Makes <cite>self</cite> load and display the given <cite>filename</cite>.</p>
@@ -784,15 +834,18 @@ because the grow behavior can be controlled via
 <span class="sig-name descname"><span class="pre">set_keep_aspect_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keep_aspect_ratio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_keep_aspect_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>keep_aspect_ratio</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to keep aspect ratio</p>
+<dd class="field-odd"><p><strong>keep_aspect_ratio</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to keep aspect ratio</p>
 </dd>
 </dl>
-<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the <cite>self</cite> will render its contents according to
+<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the <cite>self</cite> will render its contents according to
 their aspect ratio.</p>
 <p>That means that empty space may show up at the top/bottom or
 left/right of <cite>self</cite>.</p>
-<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> or if the contents provide no aspect ratio,
+<p>If set to <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> or if the contents provide no aspect ratio,
 the contents will be stretched over the picture’s whole area.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 4.8: </span>Use [method`Gtk`.Picture.set_content_fit] instead. If still used, this method will always set the [property`Gtk`.Picture:content-fit] property to <code class="docutils literal notranslate"><span class="pre">GTK_CONTENT_FIT_CONTAIN</span></code> if <cite>keep_aspect_ratio</cite> is true, otherwise it will set it to <code class="docutils literal notranslate"><span class="pre">GTK_CONTENT_FIT_FILL</span></code>.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -800,11 +853,11 @@ the contents will be stretched over the picture’s whole area.</p>
 <span class="sig-name descname"><span class="pre">set_paintable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paintable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_paintable" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>paintable</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPaintable</span></code></p>
+<dd class="field-odd"><p><strong>paintable</strong> (<a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPaintable</span></code></p>
 </dd>
 </dl>
 <p>Makes <cite>self</cite> display the given <cite>paintable</cite>.</p>
-<p>If <cite>paintable</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, nothing will be displayed.</p>
+<p>If <cite>paintable</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, nothing will be displayed.</p>
 <p>See [ctor`Gtk`.Picture.new_for_paintable] for details.</p>
 </dd></dl>
 
@@ -813,7 +866,7 @@ the contents will be stretched over the picture’s whole area.</p>
 <span class="sig-name descname"><span class="pre">set_pixbuf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixbuf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_pixbuf" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>pixbuf</strong> (<a class="reference external" href="../../GdkPixbuf-2.0/classes/Pixbuf.html#GdkPixbuf.Pixbuf" title="(in GdkPixbuf 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.Pixbuf</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code></p>
+<dd class="field-odd"><p><strong>pixbuf</strong> (<a class="reference external" href="../../GdkPixbuf-2.0/classes/Pixbuf.html#GdkPixbuf.Pixbuf" title="(in GdkPixbuf 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GdkPixbuf.Pixbuf</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code></p>
 </dd>
 </dl>
 <p>Sets a <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code> to show a <code class="docutils literal notranslate"><span class="pre">GdkPixbuf</span></code>.</p>
@@ -826,7 +879,7 @@ the contents will be stretched over the picture’s whole area.</p>
 <span class="sig-name descname"><span class="pre">set_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.Picture.set_resource" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the resource to set</p>
+<dd class="field-odd"><p><strong>resource_path</strong> (<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – the resource to set</p>
 </dd>
 </dl>
 <p>Makes <cite>self</cite> load and display the resource at the given
@@ -847,10 +900,10 @@ the contents will be stretched over the picture’s whole area.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">alternative-text</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -867,16 +920,39 @@ the contents will be stretched over the picture’s whole area.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">can-shrink</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
 </dd>
 </dl>
 <p>If the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code> can be made smaller than the natural size of its contents.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Gtk.Picture.props.content_fit">
+<span class="sig-prename descclassname"><span class="pre">Gtk.Picture.props.</span></span><span class="sig-name descname"><span class="pre">content_fit</span></span><a class="headerlink" href="#Gtk.Picture.props.content_fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">content-fit</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../enums.html#Gtk.ContentFit" title="Gtk.ContentFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ContentFit</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../enums.html#Gtk.ContentFit.CONTAIN" title="Gtk.ContentFit.CONTAIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ContentFit.CONTAIN</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>How the content should be resized to fit inside the <code class="docutils literal notranslate"><span class="pre">GtkPicture</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py data">
@@ -890,13 +966,13 @@ the contents will be stretched over the picture’s whole area.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/File.html#Gio.File" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.File</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
 </dd>
 </dl>
-<p>The <code class="docutils literal notranslate"><span class="pre">GFile</span></code> that is displayed or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if none.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GFile</span></code> that is displayed or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if none.</p>
 </dd></dl>
 
 <dl class="py data">
@@ -907,17 +983,20 @@ the contents will be stretched over the picture’s whole area.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">keep-aspect-ratio</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.DEPRECATED" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEPRECATED</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
 </dd>
 </dl>
 <p>Whether the <a class="reference internal" href="#Gtk.Picture" title="Gtk.Picture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Picture</span></code></a> will render its contents trying to preserve the aspect
 ratio.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 4.8: </span>Use [property`Gtk`.Picture:content-fit] instead.</p>
+</div>
 </dd></dl>
 
 <dl class="py data">
@@ -931,7 +1010,7 @@ ratio.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Paintable.html#Gdk.Paintable" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Paintable</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>

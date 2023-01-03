@@ -251,7 +251,7 @@
 <span id="gtk-eventcontrollerscroll-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (12)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="EventController.html#gtk-eventcontroller-methods"><span class="std std-ref">Gtk.EventController (13)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -270,6 +270,9 @@
 <td><p><a class="reference internal" href="#Gtk.EventControllerScroll.get_flags" title="Gtk.EventControllerScroll.get_flags"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_flags</span></code></a> ()</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gtk.EventControllerScroll.get_unit" title="Gtk.EventControllerScroll.get_unit"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_unit</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gtk.EventControllerScroll.set_flags" title="Gtk.EventControllerScroll.set_flags"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_flags</span></code></a> (flags)</p></td>
 </tr>
 </tbody>
@@ -308,7 +311,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.EventControllerScroll.props.flags" title="Gtk.EventControllerScroll.props.flags"><code class="xref py py-data docutils literal notranslate"><span class="pre">flags</span></code></a></p></td>
 <td><p><a class="reference internal" href="../flags.html#Gtk.EventControllerScrollFlags" title="Gtk.EventControllerScrollFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.EventControllerScrollFlags</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Flags</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -430,6 +433,26 @@ motion that was received.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Gtk.EventControllerScroll.get_unit">
+<span class="sig-name descname"><span class="pre">get_unit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.EventControllerScroll.get_unit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the scroll unit.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/enums.html#Gdk.ScrollUnit" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollUnit</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the scroll unit of the last
+[signal`Gtk`.EventControllerScroll::scroll] signal received.</p>
+<p>Always returns <a class="reference external" href="../../Gdk-4.0/enums.html#Gdk.ScrollUnit.WHEEL" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollUnit.WHEEL</span></code></a> if the
+<a class="reference internal" href="../flags.html#Gtk.EventControllerScrollFlags.DISCRETE" title="Gtk.EventControllerScrollFlags.DISCRETE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.EventControllerScrollFlags.DISCRETE</span></code></a> flag is set.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Gtk.EventControllerScroll.set_flags">
 <span class="sig-name descname"><span class="pre">set_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.EventControllerScroll.set_flags" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -458,8 +481,8 @@ motion that was received.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>event_controller_scroll</strong> (<a class="reference internal" href="#Gtk.EventControllerScroll" title="Gtk.EventControllerScroll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.EventControllerScroll</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>vel_x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – X velocity</p></li>
-<li><p><strong>vel_y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – Y velocity</p></li>
+<li><p><strong>vel_x</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – X velocity</p></li>
+<li><p><strong>vel_y</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – Y velocity</p></li>
 </ul>
 </dd>
 </dl>
@@ -483,20 +506,22 @@ pixels/ms.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>event_controller_scroll</strong> (<a class="reference internal" href="#Gtk.EventControllerScroll" title="Gtk.EventControllerScroll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.EventControllerScroll</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>dx</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – X delta</p></li>
-<li><p><strong>dy</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – Y delta</p></li>
+<li><p><strong>dx</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – X delta</p></li>
+<li><p><strong>dy</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – Y delta</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the scroll event was handled,
-<a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the scroll event was handled,
+<a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> otherwise.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Signals that the widget should scroll by the
 amount specified by <cite>dx</cite> and <cite>dy</cite>.</p>
+<p>For the representation unit of the deltas, see
+[method`Gtk`.EventControllerScroll.get_unit].</p>
 </dd></dl>
 
 <dl class="py function">

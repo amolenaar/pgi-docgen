@@ -298,16 +298,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.SignalListItemFactory.signals.bind" title="Gtk.SignalListItemFactory.signals.bind"><code class="xref py py-func docutils literal notranslate"><span class="pre">bind</span></code></a></p></td>
-<td><p>Emitted when a new [property`Gtk`.ListItem:item] has been set on the <cite>listitem</cite> and should be bound for use.</p></td>
+<td><p>Emitted when an object has been bound, for example when a new [property`Gtk`.ListItem:item] has been set on a <code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> and should be bound for use.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.SignalListItemFactory.signals.setup" title="Gtk.SignalListItemFactory.signals.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup</span></code></a></p></td>
 <td><p>Emitted when a new listitem has been created and needs to be setup for use.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.SignalListItemFactory.signals.teardown" title="Gtk.SignalListItemFactory.signals.teardown"><code class="xref py py-func docutils literal notranslate"><span class="pre">teardown</span></code></a></p></td>
-<td><p>Emitted when a listitem is about to be destroyed.</p></td>
+<td><p>Emitted when an object is about to be destroyed.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.SignalListItemFactory.signals.unbind" title="Gtk.SignalListItemFactory.signals.unbind"><code class="xref py py-func docutils literal notranslate"><span class="pre">unbind</span></code></a></p></td>
-<td><p>Emitted when a listitem has been removed from use in a list widget and its new [property`Gtk`.ListItem:item] is about to be unset.</p></td>
+<td><p>Emitted when a object has been unbound from its item, for example when a listitem was removed from use in a list widget and its new [property`Gtk`.ListItem:item] is about to be unset.</p></td>
 </tr>
 </tbody>
 </table>
@@ -390,7 +390,7 @@ notifications are frozen. See <a class="reference external" href="../../GObject-
 <h2>Signal Details<a class="headerlink" href="#signal-details" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="Gtk.SignalListItemFactory.signals.bind">
-<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">bind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listitem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.bind" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">bind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.bind" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Signal Name<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">bind</span></code></p>
@@ -401,14 +401,15 @@ notifications are frozen. See <a class="reference external" href="../../GObject-
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>signal_list_item_factory</strong> (<a class="reference internal" href="#Gtk.SignalListItemFactory" title="Gtk.SignalListItemFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SignalListItemFactory</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>listitem</strong> (<a class="reference internal" href="ListItem.html#Gtk.ListItem" title="Gtk.ListItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListItem</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> to bind</p></li>
+<li><p><strong>object</strong> (<a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GObject</span></code> to bind</p></li>
 </ul>
 </dd>
 </dl>
-<p>Emitted when a new [property`Gtk`.ListItem:item] has been set
-on the <cite>listitem</cite> and should be bound for use.</p>
-<p>After this signal was emitted, the listitem might be shown in
-a [class`Gtk`.ListView] or other list widget.</p>
+<p>Emitted when an object has been bound, for example when a
+new [property`Gtk`.ListItem:item] has been set on a
+<code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> and should be bound for use.</p>
+<p>After this signal was emitted, the object might be shown in
+a [class`Gtk`.ListView] or other widget.</p>
 <p>The [signal`Gtk`.SignalListItemFactory::unbind] signal is the
 opposite of this signal and can be used to undo everything done
 in this signal.</p>
@@ -416,7 +417,7 @@ in this signal.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Gtk.SignalListItemFactory.signals.setup">
-<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listitem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.setup" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.setup" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Signal Name<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">setup</span></code></p>
@@ -427,7 +428,7 @@ in this signal.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>signal_list_item_factory</strong> (<a class="reference internal" href="#Gtk.SignalListItemFactory" title="Gtk.SignalListItemFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SignalListItemFactory</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>listitem</strong> (<a class="reference internal" href="ListItem.html#Gtk.ListItem" title="Gtk.ListItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListItem</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> to set up</p></li>
+<li><p><strong>object</strong> (<a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GObject</span></code> to set up</p></li>
 </ul>
 </dd>
 </dl>
@@ -439,7 +440,7 @@ of this signal and can be used to undo everything done in this signal.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Gtk.SignalListItemFactory.signals.teardown">
-<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listitem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.teardown" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">teardown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.teardown" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Signal Name<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">teardown</span></code></p>
@@ -450,19 +451,19 @@ of this signal and can be used to undo everything done in this signal.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>signal_list_item_factory</strong> (<a class="reference internal" href="#Gtk.SignalListItemFactory" title="Gtk.SignalListItemFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SignalListItemFactory</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>listitem</strong> (<a class="reference internal" href="ListItem.html#Gtk.ListItem" title="Gtk.ListItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListItem</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> to teardown</p></li>
+<li><p><strong>object</strong> (<a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GObject</span></code> to tear down</p></li>
 </ul>
 </dd>
 </dl>
-<p>Emitted when a listitem is about to be destroyed.</p>
-<p>It is the last signal ever emitted for this <cite>listitem</cite>.</p>
+<p>Emitted when an object is about to be destroyed.</p>
+<p>It is the last signal ever emitted for this <cite>object</cite>.</p>
 <p>This signal is the opposite of the [signal`Gtk`.SignalListItemFactory::setup]
 signal and should be used to undo everything done in that signal.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Gtk.SignalListItemFactory.signals.unbind">
-<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">unbind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listitem</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.unbind" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Gtk.SignalListItemFactory.signals.</span></span><span class="sig-name descname"><span class="pre">unbind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_list_item_factory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.SignalListItemFactory.signals.unbind" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Signal Name<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">unbind</span></code></p>
@@ -473,11 +474,12 @@ signal and should be used to undo everything done in that signal.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>signal_list_item_factory</strong> (<a class="reference internal" href="#Gtk.SignalListItemFactory" title="Gtk.SignalListItemFactory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SignalListItemFactory</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>listitem</strong> (<a class="reference internal" href="ListItem.html#Gtk.ListItem" title="Gtk.ListItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListItem</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GtkListItem</span></code> to unbind</p></li>
+<li><p><strong>object</strong> (<a class="reference external" href="../../GObject-2.0/classes/Object.html#GObject.Object" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a>) – The <code class="docutils literal notranslate"><span class="pre">GObject</span></code> to unbind</p></li>
 </ul>
 </dd>
 </dl>
-<p>Emitted when a listitem has been removed from use in a list widget
+<p>Emitted when a object has been unbound from its item, for example when
+a listitem was removed from use in a list widget
 and its new [property`Gtk`.ListItem:item] is about to be unset.</p>
 <p>This signal is the opposite of the [signal`Gtk`.SignalListItemFactory::bind]
 signal and should be used to undo everything done in that signal.</p>

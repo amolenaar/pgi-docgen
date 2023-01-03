@@ -76,7 +76,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Adw 1 Python API Docs" href="index.html"/>
         <link rel="next" title="Constants" href="constants.html"/>
-        <link rel="prev" title="Adw.SwipeableInterface" href="classes/SwipeableInterface.html"/> 
+        <link rel="prev" title="Flags" href="flags.html"/> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -100,7 +100,7 @@
 
 
 
-<td><a accesskey="p" href="classes/SwipeableInterface.html"><i class="fa fa-chevron-left"></i></a></td>
+<td><a accesskey="p" href="flags.html"><i class="fa fa-chevron-left"></i></a></td>
 
 
 
@@ -140,7 +140,7 @@
 
 
 
-<td><a accesskey="p" href="classes/SwipeableInterface.html"><i class="fa fa-chevron-left"></i></a></td>
+<td><a accesskey="p" href="flags.html"><i class="fa fa-chevron-left"></i></a></td>
 
 
 
@@ -184,6 +184,7 @@
 <li><p><a class="reference internal" href="#Adw.FoldThresholdPolicy" title="Adw.FoldThresholdPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.FoldThresholdPolicy</span></code></a></p></li>
 <li><p><a class="reference internal" href="#Adw.LeafletTransitionType" title="Adw.LeafletTransitionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.LeafletTransitionType</span></code></a></p></li>
 <li><p><a class="reference internal" href="#Adw.NavigationDirection" title="Adw.NavigationDirection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.NavigationDirection</span></code></a></p></li>
+<li><p><a class="reference internal" href="#Adw.ResponseAppearance" title="Adw.ResponseAppearance"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ResponseAppearance</span></code></a></p></li>
 <li><p><a class="reference internal" href="#Adw.SqueezerTransitionType" title="Adw.SqueezerTransitionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.SqueezerTransitionType</span></code></a></p></li>
 <li><p><a class="reference internal" href="#Adw.ToastPriority" title="Adw.ToastPriority"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ToastPriority</span></code></a></p></li>
 <li><p><a class="reference internal" href="#Adw.ViewSwitcherPolicy" title="Adw.ViewSwitcherPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Adw.ViewSwitcherPolicy</span></code></a></p></li>
@@ -310,14 +311,14 @@ prefers light colors.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> (<a class="reference internal" href="#Adw.Easing" title="Adw.Easing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.Easing</span></code></a>) – an easing value</p></li>
-<li><p><strong>value</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – a value to ease</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) – a value to ease</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the easing for <cite>value</cite></p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 <p>Computes easing with <cite>easing</cite> for <cite>value</cite>.</p>
@@ -665,6 +666,38 @@ swiped.</p>
 <dt class="sig sig-object py" id="Adw.NavigationDirection.FORWARD">
 <span class="sig-name descname"><span class="pre">FORWARD</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#Adw.NavigationDirection.FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Corresponds to end or bottom, depending on orientation and text direction</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Adw.ResponseAppearance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Adw.</span></span><span class="sig-name descname"><span class="pre">ResponseAppearance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ResponseAppearance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="../GObject-2.0/enums.html#GObject.GEnum" title="(in GObject 2.0 v2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">GObject.GEnum</span></code></a></p>
+<p>Describes the possible styles of [class`MessageDialog`] response buttons.</p>
+<p>See [method`MessageDialog`.set_response_appearance].</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Adw.ResponseAppearance.DEFAULT">
+<span class="sig-name descname"><span class="pre">DEFAULT</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#Adw.ResponseAppearance.DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>the default appearance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Adw.ResponseAppearance.SUGGESTED">
+<span class="sig-name descname"><span class="pre">SUGGESTED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#Adw.ResponseAppearance.SUGGESTED" title="Permalink to this definition">¶</a></dt>
+<dd><p>used to denote important responses such as the
+affirmative action.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Adw.ResponseAppearance.DESTRUCTIVE">
+<span class="sig-name descname"><span class="pre">DESTRUCTIVE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#Adw.ResponseAppearance.DESTRUCTIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>used to draw attention to the potentially damaging
+consequences of using the response. This appearance acts as a warning to
+the user.</p>
 </dd></dl>
 
 </dd></dl>

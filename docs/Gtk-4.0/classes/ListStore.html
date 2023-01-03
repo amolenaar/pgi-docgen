@@ -514,14 +514,14 @@ int i;</p>
 <a class="reference external" href="../../GObject-2.0/constants.html#GObject.TYPE_BOOLEAN" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TYPE_BOOLEAN</span></code></a>);</p>
 <p>for (i = 0; i &lt; 10; i++)
 {
-<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> *some_data;</p>
+<a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> *some_data;</p>
 <p>some_data = get_some_data (i);</p>
 <p>// Add a new row to the model
 <a class="reference internal" href="#Gtk.ListStore.append" title="Gtk.ListStore.append"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.append</span></code></a> (list_store, &amp;iter);
 <a class="reference internal" href="#Gtk.ListStore.set" title="Gtk.ListStore.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set</span></code></a> (list_store, &amp;iter,
 COLUMN_STRING, some_data,
 COLUMN_INT, i,
-COLUMN_BOOLEAN,  <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>,
+COLUMN_BOOLEAN,  <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>,
 -1);</p>
 <p>// As the store will keep a copy of the string internally,
 // we free some_data.
@@ -534,7 +534,7 @@ path = <a class="reference internal" href="TreePath.html#Gtk.TreePath.new_from_s
 path);
 <a class="reference internal" href="TreePath.html#Gtk.TreePath.free" title="Gtk.TreePath.free"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreePath.free</span></code></a> (path);
 <a class="reference internal" href="#Gtk.ListStore.set" title="Gtk.ListStore.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set</span></code></a> (list_store, &amp;iter,
-COLUMN_BOOLEAN, <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>,
+COLUMN_BOOLEAN, <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>,
 -1);
 }
 ```</p>
@@ -656,7 +656,7 @@ values, you need to call <a class="reference internal" href="#Gtk.ListStore.set"
 <span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ListStore.insert" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p>
+<dd class="field-odd"><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An unset <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> to set to the new row</p>
@@ -677,7 +677,7 @@ this function is called.  To fill in values, you need to call
 <span class="sig-name descname"><span class="pre">insert_after</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sibling</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ListStore.insert_after" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
+<dd class="field-odd"><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An unset <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> to set to the new row</p>
@@ -686,7 +686,7 @@ this function is called.  To fill in values, you need to call
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Inserts a new row after <cite>sibling</cite>. If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
+<p>Inserts a new row after <cite>sibling</cite>. If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will be
 prepended to the beginning of the list. <cite>iter</cite> will be changed to point to
 this new row. The row will be empty after this function is called. To fill
 in values, you need to call <a class="reference internal" href="#Gtk.ListStore.set" title="Gtk.ListStore.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set</span></code></a>() or <a class="reference internal" href="#Gtk.ListStore.set_value" title="Gtk.ListStore.set_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set_value</span></code></a>().</p>
@@ -697,7 +697,7 @@ in values, you need to call <a class="reference internal" href="#Gtk.ListStore.s
 <span class="sig-name descname"><span class="pre">insert_before</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sibling</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ListStore.insert_before" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
+<dd class="field-odd"><p><strong>sibling</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An unset <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> to set to the new row</p>
@@ -706,7 +706,7 @@ in values, you need to call <a class="reference internal" href="#Gtk.ListStore.s
 <dd class="field-odd"><p><strong>iter</strong>: <a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a></p>
 </dd>
 </dl>
-<p>Inserts a new row before <cite>sibling</cite>. If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will
+<p>Inserts a new row before <cite>sibling</cite>. If <cite>sibling</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, then the row will
 be appended to the end of the list. <cite>iter</cite> will be changed to point to this
 new row. The row will be empty after this function is called. To fill in
 values, you need to call <a class="reference internal" href="#Gtk.ListStore.set" title="Gtk.ListStore.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set</span></code></a>() or <a class="reference internal" href="#Gtk.ListStore.set_value" title="Gtk.ListStore.set_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.ListStore.set_value</span></code></a>().</p>
@@ -718,8 +718,8 @@ values, you need to call <a class="reference internal" href="#Gtk.ListStore.set"
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
-<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – position to insert the new row, or -1 for last</p></li>
+<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
 <li><p><strong>values</strong> ([<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>]) – an array of GValues</p></li>
 </ul>
 </dd>
@@ -744,10 +744,10 @@ varargs.</p>
 <dd class="field-odd"><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – the iterator to check</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the iter is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if the iter is invalid.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the iter is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if the iter is invalid.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Checks if the given iter is a valid iter for this <code class="docutils literal notranslate"><span class="pre">GtkListStore</span></code>.</p>
@@ -762,12 +762,12 @@ purposes.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <p>Moves <cite>iter</cite> in <cite>self</cite> to the position after <cite>position</cite>. Note that this
-function only works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite>
+function only works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite>
 will be moved to the start of the list.</p>
 </dd></dl>
 
@@ -778,12 +778,12 @@ will be moved to the start of the list.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
-<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
+<li><p><strong>position</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <p>Moves <cite>iter</cite> in <cite>self</cite> to the position before <cite>position</cite>. Note that this
-function only works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite>
+function only works with unsorted stores. If <cite>position</cite> is <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <cite>iter</cite>
 will be moved to the end of the list.</p>
 </dd></dl>
 
@@ -811,10 +811,10 @@ values, you need to call <a class="reference internal" href="#Gtk.ListStore.set"
 <dd class="field-odd"><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code></p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if not.</p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>iter</cite> is valid, <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> if not.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Removes the given row from the list store.  After being removed,
@@ -827,7 +827,7 @@ to the last row in <cite>self</cite>.</p>
 <span class="sig-name descname"><span class="pre">reorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_order</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.ListStore.reorder" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>new_order</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of integers mapping the new
+<dd class="field-odd"><p><strong>new_order</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of integers mapping the new
 position of each child to its old position before the re-ordering,
 i.e. <cite>new_order</cite> <code class="docutils literal notranslate"><span class="pre">[newpos]</span> <span class="pre">=</span> <span class="pre">oldpos</span></code>. It must have
 exactly as many items as the list store’s length.</p>
@@ -844,7 +844,7 @@ this function only works with unsorted stores.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> for the row being modified</p></li>
-<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
+<li><p><strong>columns</strong> ([<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]) – an array of column numbers</p></li>
 <li><p><strong>values</strong> ([<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>]) – an array of GValues</p></li>
 </ul>
 </dd>
@@ -877,7 +877,7 @@ interface is called.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iter</strong> (<a class="reference internal" href="TreeIter.html#Gtk.TreeIter" title="Gtk.TreeIter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.TreeIter</span></code></a>) – A valid <code class="docutils literal notranslate"><span class="pre">GtkTreeIter</span></code> for the row being modified</p></li>
-<li><p><strong>column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – column number to modify</p></li>
+<li><p><strong>column</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – column number to modify</p></li>
 <li><p><strong>value</strong> (<a class="reference external" href="../../GObject-2.0/classes/Value.html#GObject.Value" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Value</span></code></a>) – new value for the cell</p></li>
 </ul>
 </dd>

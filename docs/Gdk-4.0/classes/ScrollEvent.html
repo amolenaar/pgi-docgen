@@ -244,6 +244,9 @@
 <td><p><a class="reference internal" href="#Gdk.ScrollEvent.get_direction" title="Gdk.ScrollEvent.get_direction"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_direction</span></code></a> ()</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Gdk.ScrollEvent.get_unit" title="Gdk.ScrollEvent.get_unit"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_unit</span></code></a> ()</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Gdk.ScrollEvent.is_stop" title="Gdk.ScrollEvent.is_stop"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_stop</span></code></a> ()</p></td>
 </tr>
 </tbody>
@@ -287,12 +290,14 @@
 </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>(<strong>delta_x</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <strong>delta_y</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>)</p>
+<dd class="field-even"><p>(<strong>delta_x</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>, <strong>delta_y</strong>: <a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>)</p>
 </dd>
 </dl>
 <p>Extracts the scroll deltas of a scroll event.</p>
 <p>The deltas will be zero unless the scroll direction
 is <a class="reference internal" href="../enums.html#Gdk.ScrollDirection.SMOOTH" title="Gdk.ScrollDirection.SMOOTH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollDirection.SMOOTH</span></code></a>.</p>
+<p>For the representation unit of these deltas, see
+[method`Gdk`.ScrollEvent.get_unit].</p>
 </dd></dl>
 
 <dl class="py method">
@@ -310,14 +315,33 @@ is <a class="reference internal" href="../enums.html#Gdk.ScrollDirection.SMOOTH"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Gdk.ScrollEvent.get_unit">
+<span class="sig-name descname"><span class="pre">get_unit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.ScrollEvent.get_unit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the scroll unit.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../enums.html#Gdk.ScrollUnit" title="Gdk.ScrollUnit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollUnit</span></code></a></p>
+</dd>
+</dl>
+<p>Extracts the scroll delta unit of a scroll event.</p>
+<p>The unit will always be <a class="reference internal" href="../enums.html#Gdk.ScrollUnit.WHEEL" title="Gdk.ScrollUnit.WHEEL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollUnit.WHEEL</span></code></a> if the scroll direction is not
+<a class="reference internal" href="../enums.html#Gdk.ScrollDirection.SMOOTH" title="Gdk.ScrollDirection.SMOOTH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.ScrollDirection.SMOOTH</span></code></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.8.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Gdk.ScrollEvent.is_stop">
 <span class="sig-name descname"><span class="pre">is_stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gdk.ScrollEvent.is_stop" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the event is a scroll stop event</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if the event is a scroll stop event</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Check whether a scroll event is a stop scroll event.</p>

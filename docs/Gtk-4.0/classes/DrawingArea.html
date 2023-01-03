@@ -338,7 +338,7 @@
 <span id="gtk-drawingarea-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="Widget.html#gtk-widget-methods"><span class="std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference internal" href="Accessible.html#gtk-accessible-methods"><span class="std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference internal" href="Buildable.html#gtk-buildable-methods"><span class="std std-ref">Gtk.Buildable (1)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="WidgetClass.html#gtk-widgetclass-methods"><span class="std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -413,14 +413,14 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Gtk.DrawingArea.props.content_height" title="Gtk.DrawingArea.props.content_height"><code class="xref py py-data docutils literal notranslate"><span class="pre">content-height</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Desired height for displayed content</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Gtk.DrawingArea.props.content_width" title="Gtk.DrawingArea.props.content_width"><code class="xref py py-data docutils literal notranslate"><span class="pre">content-width</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Desired width for displayed content</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -520,7 +520,7 @@ draw_function (<a class="reference internal" href="#Gtk.DrawingArea" title="Gtk.
 <a class="reference external" href="https://pycairo.readthedocs.io/en/latest/reference/context.html#cairo.Context" title="(in Pycairo)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cairo.Context</span></code></a>        *cr,
 int             width,
 int             height,
-<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>        data)
+<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>        data)
 {
 <a class="reference external" href="../../Gdk-4.0/classes/RGBA.html#Gdk.RGBA" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.RGBA</span></code></a> color;
 <a class="reference internal" href="StyleContext.html#Gtk.StyleContext" title="Gtk.StyleContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.StyleContext</span></code></a> *context;</p>
@@ -535,7 +535,7 @@ MIN (width, height) / 2.0,
 <p><a class="reference external" href="https://pycairo.readthedocs.io/en/latest/reference/context.html#cairo.Context.fill" title="(in Pycairo)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cairo.Context.fill</span></code></a> (cr);
 }</p>
 <p>int
-main (int argc, <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> **argv)
+main (int argc, <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> **argv)
 {
 <a class="reference internal" href="../functions.html#Gtk.init" title="Gtk.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.init</span></code></a> ();</p>
 <p><a class="reference internal" href="Widget.html#Gtk.Widget" title="Gtk.Widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a> *area = <a class="reference internal" href="#Gtk.DrawingArea.new" title="Gtk.DrawingArea.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingArea.new</span></code></a> ();
@@ -543,7 +543,7 @@ main (int argc, <a class="reference external" href="http://docs.python.org/3/lib
 <a class="reference internal" href="#Gtk.DrawingArea.set_content_height" title="Gtk.DrawingArea.set_content_height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingArea.set_content_height</span></code></a> (GTK_DRAWING_AREA (area), 100);
 <a class="reference internal" href="#Gtk.DrawingArea.set_draw_func" title="Gtk.DrawingArea.set_draw_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingArea.set_draw_func</span></code></a> (GTK_DRAWING_AREA (area),
 draw_function,
-<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>);
+<a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>);
 return 0;
 }
 ```</p>
@@ -584,7 +584,7 @@ creating your own <code class="docutils literal notranslate"><span class="pre">G
 <dd class="field-odd"><p>The height requested for content of the drawing area</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Retrieves the content height of the <code class="docutils literal notranslate"><span class="pre">GtkDrawingArea</span></code>.</p>
@@ -598,7 +598,7 @@ creating your own <code class="docutils literal notranslate"><span class="pre">G
 <dd class="field-odd"><p>The width requested for content of the drawing area</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Retrieves the content width of the <code class="docutils literal notranslate"><span class="pre">GtkDrawingArea</span></code>.</p>
@@ -609,7 +609,7 @@ creating your own <code class="docutils literal notranslate"><span class="pre">G
 <span class="sig-name descname"><span class="pre">set_content_height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DrawingArea.set_content_height" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the height of contents</p>
+<dd class="field-odd"><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the height of contents</p>
 </dd>
 </dl>
 <p>Sets the desired height of the contents of the drawing area.</p>
@@ -625,7 +625,7 @@ function is larger than the height set here. You can use
 <span class="sig-name descname"><span class="pre">set_content_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Gtk.DrawingArea.set_content_width" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the width of contents</p>
+<dd class="field-odd"><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the width of contents</p>
 </dd>
 </dl>
 <p>Sets the desired width of the contents of the drawing area.</p>
@@ -642,9 +642,9 @@ function is larger than the width set here. You can use
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>draw_func</strong> (<a class="reference internal" href="../callbacks.html#Gtk.DrawingAreaDrawFunc" title="Gtk.DrawingAreaDrawFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingAreaDrawFunc</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – callback that lets you draw
+<li><p><strong>draw_func</strong> (<a class="reference internal" href="../callbacks.html#Gtk.DrawingAreaDrawFunc" title="Gtk.DrawingAreaDrawFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingAreaDrawFunc</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – callback that lets you draw
 the drawing area’s contents</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – user data passed to <cite>draw_func</cite></p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – user data passed to <cite>draw_func</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -667,8 +667,8 @@ on the drawing area. This will cause a redraw and will call <cite>draw_func</cit
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -692,8 +692,8 @@ on the drawing area. This will cause a redraw and will call <cite>draw_func</cit
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>drawing_area</strong> (<a class="reference internal" href="#Gtk.DrawingArea" title="Gtk.DrawingArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.DrawingArea</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the width of the viewport</p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the height of the viewport</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the width of the viewport</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the height of the viewport</p></li>
 </ul>
 </dd>
 </dl>
@@ -714,7 +714,7 @@ like for instance a backing surface.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">content-height</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
@@ -734,7 +734,7 @@ like for instance a backing surface.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">content-width</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>

@@ -273,6 +273,9 @@
 <td><p><a class="reference internal" href="#Adw.Animation.resume" title="Adw.Animation.resume"><code class="xref py py-func docutils literal notranslate"><span class="pre">resume</span></code></a> ()</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.Animation.set_target" title="Adw.Animation.set_target"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_target</span></code></a> (target)</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.Animation.skip" title="Adw.Animation.skip"><code class="xref py py-func docutils literal notranslate"><span class="pre">skip</span></code></a> ()</p></td>
 </tr>
 </tbody>
@@ -306,22 +309,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.Animation.props.state" title="Adw.Animation.props.state"><code class="xref py py-data docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
 <td><p><a class="reference internal" href="../enums.html#Adw.AnimationState" title="Adw.AnimationState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationState</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>The animation state</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.Animation.props.target" title="Adw.Animation.props.target"><code class="xref py py-data docutils literal notranslate"><span class="pre">target</span></code></a></p></td>
 <td><p><a class="reference internal" href="AnimationTarget.html#Adw.AnimationTarget" title="Adw.AnimationTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationTarget</span></code></a></p></td>
-<td><p>r/w/c</p></td>
-<td><p>The target to animate</p></td>
+<td><p>r/w/c/en</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.Animation.props.value" title="Adw.Animation.props.value"><code class="xref py py-data docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>The current value of the animation</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.Animation.props.widget" title="Adw.Animation.props.widget"><code class="xref py py-data docutils literal notranslate"><span class="pre">widget</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p></td>
 <td><p>r/w/co</p></td>
-<td><p>The animation widget</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -423,7 +426,7 @@ my_object_animate (MyObject *self)
 {
 <a class="reference internal" href="AnimationTarget.html#Adw.AnimationTarget" title="Adw.AnimationTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationTarget</span></code></a> *target =
 <a class="reference internal" href="CallbackAnimationTarget.html#Adw.CallbackAnimationTarget.new" title="Adw.CallbackAnimationTarget.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.CallbackAnimationTarget.new</span></code></a> ((<a class="reference internal" href="../callbacks.html#Adw.AnimationTargetFunc" title="Adw.AnimationTargetFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationTargetFunc</span></code></a>) animation_cb,
-self, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>);
+self, <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>);
 g_autoptr (<a class="reference internal" href="#Adw.Animation" title="Adw.Animation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.Animation</span></code></a>) animation =
 <a class="reference internal" href="TimedAnimation.html#Adw.TimedAnimation.new" title="Adw.TimedAnimation.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TimedAnimation.new</span></code></a> (widget, 0, 1, 250, target);</p>
 <p><a class="reference internal" href="#Adw.Animation.play" title="Adw.Animation.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.Animation.play</span></code></a> (animation);
@@ -479,7 +482,7 @@ hasn’t been started yet.</p>
 <dd class="field-odd"><p>the current value</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the current value of <cite>self</cite>.</p>
@@ -500,6 +503,11 @@ hasn’t been started yet.</p>
 </dd>
 </dl>
 <p>Gets the widget <cite>self</cite> was created for.</p>
+<p>It provides the frame clock for the animation. It’s not strictly necessary
+for this widget to be same as the one being animated.</p>
+<p>The widget must be mapped in order for the animation to work. If it’s not
+mapped, or if it gets unmapped during an ongoing animation, the animation
+will be automatically skipped.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -552,6 +560,20 @@ run after the animation has already finished, and not while it’s playing.</p>
 <p>This function must only be used if the animation has been paused with
 [method`Animation`.pause].</p>
 <p>Sets [property`Animation`:py:data:<cite>:state&lt;Adw.Animation.props.state&gt;</cite>] to <code class="docutils literal notranslate"><span class="pre">ADW_ANIMATION_PLAYING</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.Animation.set_target">
+<span class="sig-name descname"><span class="pre">set_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.Animation.set_target" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target</strong> (<a class="reference internal" href="AnimationTarget.html#Adw.AnimationTarget" title="Adw.AnimationTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationTarget</span></code></a>) – an animation target</p>
+</dd>
+</dl>
+<p>Sets the target <cite>self</cite> animates to <cite>target</cite>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -635,10 +657,10 @@ finished or hasn’t been started yet.</p>
 <dd class="field-even"><p><a class="reference internal" href="AnimationTarget.html#Adw.AnimationTarget" title="Adw.AnimationTarget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.AnimationTarget</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
 </dd>
 </dl>
 <p>The target to animate.</p>
@@ -655,7 +677,7 @@ finished or hasn’t been started yet.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code></p>
@@ -681,7 +703,7 @@ finished or hasn’t been started yet.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>

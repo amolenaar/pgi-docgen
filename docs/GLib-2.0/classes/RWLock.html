@@ -203,12 +203,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>i</p></td>
-<td><p>[<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]</p></td>
+<td><p>[<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]</p></td>
 <td><p>r</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>p</p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
 <td><p>r</p></td>
 <td></td>
 </tr>
@@ -268,39 +268,39 @@ simultaneous read-only access (by holding the ‘reader’ lock via
 lock when a reader already holds the lock and a writer is queued to acquire
 it.</p>
 <p>Here is an example for an array with access functions:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GRWLock</span><span class="w"> </span><span class="n">lock</span><span class="p">;</span><span class="w"></span>
-<span class="n">GPtrArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">GRWLock</span><span class="w"> </span><span class="n">lock</span><span class="p">;</span>
+<span class="n">GPtrArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">;</span>
 
-<span class="n">gpointer</span><span class="w"></span>
-<span class="nf">my_array_get</span><span class="w"> </span><span class="p">(</span><span class="n">guint</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">retval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="n">gpointer</span>
+<span class="nf">my_array_get</span><span class="w"> </span><span class="p">(</span><span class="n">guint</span><span class="w"> </span><span class="n">index</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">retval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">array</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">array</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">g_rw_lock_reader_lock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">retval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_ptr_array_index</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_rw_lock_reader_unlock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">g_rw_lock_reader_lock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">)</span>
+<span class="w">    </span><span class="n">retval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_ptr_array_index</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_rw_lock_reader_unlock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">retval</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">retval</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"></span>
-<span class="nf">my_array_set</span><span class="w"> </span><span class="p">(</span><span class="n">guint</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">gpointer</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_rw_lock_writer_lock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span>
+<span class="nf">my_array_set</span><span class="w"> </span><span class="p">(</span><span class="n">guint</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">gpointer</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_rw_lock_writer_lock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">array</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_ptr_array_new</span><span class="w"> </span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">array</span><span class="p">)</span>
+<span class="w">    </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_ptr_array_new</span><span class="w"> </span><span class="p">();</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">array</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">g_ptr_array_set_size</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_ptr_array_index</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">array</span><span class="o">-&gt;</span><span class="n">len</span><span class="p">)</span>
+<span class="w">    </span><span class="n">g_ptr_array_set_size</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">g_ptr_array_index</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">g_rw_lock_writer_unlock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">g_rw_lock_writer_unlock</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">lock</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>This example shows an array which can be accessed by many readers
@@ -324,7 +324,9 @@ without initialisation.  Otherwise, you should call
 statically allocated.</p>
 <p>Calling <a class="reference internal" href="#GLib.RWLock.clear" title="GLib.RWLock.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.RWLock.clear</span></code></a>() when any thread holds the lock
 leads to undefined behaviour.</p>
-<p>Sine: 2.32</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.32.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -335,15 +337,15 @@ leads to undefined behaviour.</p>
 allocated on the stack, or as part of a larger structure.  It is not
 necessary to initialise a reader-writer lock that has been statically
 allocated.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">GRWLock</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">Blob</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">GRWLock</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">Blob</span><span class="p">;</span>
 
-<span class="n">Blob</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">Blob</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
 
-<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_new</span><span class="w"> </span><span class="p">(</span><span class="n">Blob</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="n">g_rw_lock_init</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">);</span><span class="w"></span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_new</span><span class="w"> </span><span class="p">(</span><span class="n">Blob</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">g_rw_lock_init</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>To undo the effect of <a class="reference internal" href="#GLib.RWLock.init" title="GLib.RWLock.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.RWLock.init</span></code></a>() when a lock is no longer
@@ -381,15 +383,15 @@ or if a deadlock is detected, a critical warning will be emitted.</p>
 <span class="sig-name descname"><span class="pre">reader_trylock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GLib.RWLock.reader_trylock" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
-<p>Tries to obtain a read lock on <cite>self</cite> and returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if
+<p>Tries to obtain a read lock on <cite>self</cite> and returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if
 the read lock was successfully obtained. Otherwise it
-returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
+returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 2.32.</span></p>
 </div>
@@ -424,16 +426,16 @@ owns a read or write lock on <cite>self</cite> leads to undefined behaviour.</p>
 <span class="sig-name descname"><span class="pre">writer_trylock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GLib.RWLock.writer_trylock" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Tries to obtain a write lock on <cite>self</cite>. If another thread
 currently holds a read or write lock on <cite>self</cite>, it immediately
-returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.
-Otherwise it locks <cite>self</cite> and returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>.
+Otherwise it locks <cite>self</cite> and returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 2.32.</span></p>
 </div>

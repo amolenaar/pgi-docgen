@@ -203,12 +203,12 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>i</p></td>
-<td><p>[<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]</p></td>
+<td><p>[<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>]</p></td>
 <td><p>r</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>p</p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a></p></td>
 <td><p>r</p></td>
 <td></td>
 </tr>
@@ -254,7 +254,9 @@
 statically allocated.</p>
 <p>Calling <a class="reference internal" href="#GLib.Mutex.clear" title="GLib.Mutex.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Mutex.clear</span></code></a>() on a locked mutex leads to undefined
 behaviour.</p>
-<p>Sine: 2.32</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.32.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -265,15 +267,15 @@ behaviour.</p>
 allocated on the stack, or as part of a larger structure.
 It is not necessary to initialize a mutex that has been
 statically allocated.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">GMutex</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">Blob</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">GMutex</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n">Blob</span><span class="p">;</span>
 
-<span class="n">Blob</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">Blob</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
 
-<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_new</span><span class="w"> </span><span class="p">(</span><span class="n">Blob</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="n">g_mutex_init</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">m</span><span class="p">);</span><span class="w"></span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_new</span><span class="w"> </span><span class="p">(</span><span class="n">Blob</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">g_mutex_init</span><span class="w"> </span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">m</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>To undo the effect of <a class="reference internal" href="#GLib.Mutex.init" title="GLib.Mutex.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Mutex.init</span></code></a>() when a mutex is no longer
@@ -302,15 +304,15 @@ already been locked by the same thread results in undefined behaviour
 <span class="sig-name descname"><span class="pre">trylock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GLib.Mutex.trylock" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a> if <cite>self</cite> could be locked</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Tries to lock <cite>self</cite>. If <cite>self</cite> is already locked by another thread,
-it immediately returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>. Otherwise it locks <cite>self</cite> and returns
-<a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
+it immediately returns <a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>. Otherwise it locks <cite>self</cite> and returns
+<a class="reference external" href="http://docs.python.org/3/library/constants.html#True" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>.</p>
 <p><a class="reference internal" href="#GLib.Mutex" title="GLib.Mutex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Mutex</span></code></a> is neither guaranteed to be recursive nor to be
 non-recursive.  As such, calling <a class="reference internal" href="#GLib.Mutex.lock" title="GLib.Mutex.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Mutex.lock</span></code></a>() on a <a class="reference internal" href="#GLib.Mutex" title="GLib.Mutex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLib.Mutex</span></code></a> that has
 already been locked by the same thread results in undefined behaviour

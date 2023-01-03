@@ -301,27 +301,27 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.StyleManager.props.color_scheme" title="Adw.StyleManager.props.color_scheme"><code class="xref py py-data docutils literal notranslate"><span class="pre">color-scheme</span></code></a></p></td>
 <td><p><a class="reference internal" href="../enums.html#Adw.ColorScheme" title="Adw.ColorScheme"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ColorScheme</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The current color scheme</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.StyleManager.props.dark" title="Adw.StyleManager.props.dark"><code class="xref py py-data docutils literal notranslate"><span class="pre">dark</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Whether the application is using dark appearance</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.StyleManager.props.display" title="Adw.StyleManager.props.display"><code class="xref py py-data docutils literal notranslate"><span class="pre">display</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gdk-4.0/classes/Display.html#Gdk.Display" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Display</span></code></a></p></td>
 <td><p>r/w/co</p></td>
-<td><p>The display the style manager is associated with</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.StyleManager.props.high_contrast" title="Adw.StyleManager.props.high_contrast"><code class="xref py py-data docutils literal notranslate"><span class="pre">high-contrast</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Whether the application is using high contrast appearance</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.StyleManager.props.system_supports_color_schemes" title="Adw.StyleManager.props.system_supports_color_schemes"><code class="xref py py-data docutils literal notranslate"><span class="pre">system-supports-color-schemes</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>Whether the system supports color schemes</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -435,10 +435,12 @@ whole application.</p>
 <dd class="field-odd"><p>whether the application is using dark appearance</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Gets whether the application is using dark appearance.</p>
+<p>This can be used to query the current appearance, as requested via
+[property`StyleManager`:py:data:<cite>:color-scheme&lt;Adw.StyleManager.props.color_scheme&gt;</cite>].</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -471,10 +473,11 @@ whole application.</p>
 <dd class="field-odd"><p>whether the application is using high contrast appearance</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Gets whether the application is using high contrast appearance.</p>
+<p>This cannot be overridden by applications.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -488,10 +491,13 @@ whole application.</p>
 <dd class="field-odd"><p>whether the system supports color schemes</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Gets whether the system supports color schemes.</p>
+<p>This can be used to check if the current environment provides a color scheme
+preference. For example, applications might want to show a separate
+appearance switcher if it’s set to <code class="docutils literal notranslate"><span class="pre">FALSE</span></code>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -510,6 +516,25 @@ whole application.</p>
 scheme and the system preferred color scheme. The
 [property`StyleManager`:py:data:<cite>:dark&lt;Adw.StyleManager.props.dark&gt;</cite>] property can be used to query the current
 effective appearance.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_PREFER_LIGHT</span></code> color scheme results in the application
+using light appearance unless the system prefers dark colors. This is the
+default value.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_PREFER_DARK</span></code> color scheme results in the application
+using dark appearance, but can still switch to the light appearance if the
+system can prefers it, for example, when the high contrast preference is
+enabled.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_FORCE_LIGHT</span></code> and <code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_FORCE_DARK</span></code> values
+ignore the system preference entirely. They are useful if the application
+wants to match its UI to its content or to provide a separate color scheme
+switcher.</p>
+<p>If a per-[class`Gdk`.Display] style manager has its color scheme set to
+<code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_DEFAULT</span></code>, it will inherit the color scheme from the
+default style manager.</p>
+<p>For the default style manager, <code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_DEFAULT</span></code> is equivalent to
+<code class="docutils literal notranslate"><span class="pre">ADW_COLOR_SCHEME_PREFER_LIGHT</span></code>.</p>
+<p>The [property`StyleManager`:py:data:<cite>:system-supports-color-schemes&lt;Adw.StyleManager.props.system_supports_color_schemes&gt;</cite>] property can be
+used to check if the current environment provides a color scheme
+preference.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -574,10 +599,10 @@ preference.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">dark</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
@@ -602,7 +627,7 @@ preference.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gdk-4.0/classes/Display.html#Gdk.Display" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.Display</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.CONSTRUCT_ONLY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONSTRUCT_ONLY</span></code></a></p>
@@ -624,10 +649,10 @@ preference.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">high-contrast</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
@@ -648,10 +673,10 @@ preference.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">system-supports-color-schemes</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>

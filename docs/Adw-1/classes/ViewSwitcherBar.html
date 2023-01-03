@@ -336,7 +336,7 @@
 <span id="adw-viewswitcherbar-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a></p>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/WidgetClass.html#gtk-widgetclass-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -397,14 +397,14 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.ViewSwitcherBar.props.reveal" title="Adw.ViewSwitcherBar.props.reveal"><code class="xref py py-data docutils literal notranslate"><span class="pre">reveal</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Whether the bar should be revealed or hidden</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.ViewSwitcherBar.props.stack" title="Adw.ViewSwitcherBar.props.stack"><code class="xref py py-data docutils literal notranslate"><span class="pre">stack</span></code></a></p></td>
 <td><p><a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The stack the view switcher controls</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -460,9 +460,9 @@ switcher, as follows:</p>
 &lt;object class=”GtkWindow”&gt;</p>
 <blockquote>
 <div><dl>
-<dt>&lt;child type=”titlebar”&gt;</dt><dd><dl>
+<dt>&lt;property name=”titlebar”&gt;</dt><dd><dl>
 <dt>&lt;object class=”AdwHeaderBar”&gt;</dt><dd><p>&lt;property name=”centering-policy”&gt;strict&lt;/property&gt;
-&lt;child type=”title”&gt;</p>
+&lt;property name=”title-widget”&gt;</p>
 <blockquote>
 <div><dl class="simple">
 <dt>&lt;object class=”AdwViewSwitcherTitle” id=”title”&gt;</dt><dd><p>&lt;property name=”stack”&gt;stack&lt;/property&gt;</p>
@@ -470,14 +470,14 @@ switcher, as follows:</p>
 </dl>
 <p>&lt;/object&gt;</p>
 </div></blockquote>
-<p>&lt;/child&gt;</p>
+<p>&lt;/property&gt;</p>
 </dd>
 </dl>
 <p>&lt;/object&gt;</p>
 </dd>
 </dl>
-<p>&lt;/child&gt;
-&lt;child&gt;</p>
+<p>&lt;/property&gt;
+&lt;property&gt;</p>
 <blockquote>
 <div><dl>
 <dt>&lt;object class=”GtkBox”&gt;</dt><dd><p>&lt;property name=”orientation”&gt;vertical&lt;/property&gt;
@@ -504,7 +504,7 @@ switcher, as follows:</p>
 </dl>
 <p>&lt;/object&gt;</p>
 </div></blockquote>
-<p>&lt;/child&gt;</p>
+<p>&lt;/property&gt;</p>
 </div></blockquote>
 <p>&lt;/object&gt;
 ``</p>
@@ -540,7 +540,7 @@ switcher, as follows:</p>
 <dd class="field-odd"><p>whether <cite>self</cite> is revealed</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Gets whether <cite>self</cite> should be revealed or hidden.</p>
@@ -557,7 +557,7 @@ switcher, as follows:</p>
 <dd class="field-odd"><p>the stack</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the stack controlled by <cite>self</cite>.</p>
@@ -571,7 +571,7 @@ switcher, as follows:</p>
 <span class="sig-name descname"><span class="pre">set_reveal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reveal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ViewSwitcherBar.set_reveal" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>reveal</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to reveal <cite>self</cite></p>
+<dd class="field-odd"><p><strong>reveal</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to reveal <cite>self</cite></p>
 </dd>
 </dl>
 <p>Sets whether <cite>self</cite> should be revealed or hidden.</p>
@@ -585,7 +585,7 @@ switcher, as follows:</p>
 <span class="sig-name descname"><span class="pre">set_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.ViewSwitcherBar.set_stack" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>stack</strong> (<a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a stack</p>
+<dd class="field-odd"><p><strong>stack</strong> (<a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a stack</p>
 </dd>
 </dl>
 <p>Sets the stack controlled by <cite>self</cite>.</p>
@@ -607,10 +607,10 @@ switcher, as follows:</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">reveal</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -633,7 +633,7 @@ switcher, as follows:</p>
 <dd class="field-even"><p><a class="reference internal" href="ViewStack.html#Adw.ViewStack" title="Adw.ViewStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.ViewStack</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>

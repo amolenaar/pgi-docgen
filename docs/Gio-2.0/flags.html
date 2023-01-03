@@ -260,9 +260,19 @@
 <p><span class="versionmodified added">New in version 2.28.</span></p>
 </div>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="Gio.ApplicationFlags.DEFAULT_FLAGS">
+<span class="sig-name descname"><span class="pre">DEFAULT_FLAGS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#Gio.ApplicationFlags.DEFAULT_FLAGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default flags.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.74.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="Gio.ApplicationFlags.FLAGS_NONE">
 <span class="sig-name descname"><span class="pre">FLAGS_NONE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#Gio.ApplicationFlags.FLAGS_NONE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default</p>
+<dd><p>Default. Deprecated in 2.74, use
+<a class="reference internal" href="#Gio.ApplicationFlags.DEFAULT_FLAGS" title="Gio.ApplicationFlags.DEFAULT_FLAGS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.ApplicationFlags.DEFAULT_FLAGS</span></code></a> instead</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -602,6 +612,20 @@ as a server, require the UID of the peer to be the same as the UID of the server
 <dd><p>When
 authenticating as a server, allow the anonymous authentication
 method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gio.DBusConnectionFlags.CROSS_NAMESPACE">
+<span class="sig-name descname"><span class="pre">CROSS_NAMESPACE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">64</span></em><a class="headerlink" href="#Gio.DBusConnectionFlags.CROSS_NAMESPACE" title="Permalink to this definition">¶</a></dt>
+<dd><p>When authenticating, try to use
+protocols that work across a Linux user namespace boundary, even if this
+reduces interoperability with older D-Bus implementations. This currently
+affects client-side <code class="docutils literal notranslate"><span class="pre">EXTERNAL</span></code> authentication, for which this flag makes
+connections to a server in another user namespace succeed, but causes
+a deadlock when connecting to a GDBus server older than 2.73.3.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.74.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1544,6 +1568,15 @@ other problems exist with the certificate.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 2.28.</span></p>
 </div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Gio.TlsCertificateFlags.NO_FLAGS">
+<span class="sig-name descname"><span class="pre">NO_FLAGS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#Gio.TlsCertificateFlags.NO_FLAGS" title="Permalink to this definition">¶</a></dt>
+<dd><p>No flags set.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 2.74.</span></p>
+</div>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="Gio.TlsCertificateFlags.UNKNOWN_CA">
 <span class="sig-name descname"><span class="pre">UNKNOWN_CA</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#Gio.TlsCertificateFlags.UNKNOWN_CA" title="Permalink to this definition">¶</a></dt>

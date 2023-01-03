@@ -338,7 +338,7 @@
 <span id="adw-tabview-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Inherited<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (178)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a></p>
+<dd class="field-odd"><p><a class="reference external" href="../../Gtk-4.0/classes/Widget.html#gtk-widget-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Widget (179)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/Object.html#gobject-object-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.Object (37)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Accessible.html#gtk-accessible-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Accessible (7)</span></a>,     <a class="reference external" href="../../Gtk-4.0/classes/Buildable.html#gtk-buildable-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.Buildable (1)</span></a></p>
 </dd>
 <dt class="field-even">Structs<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/WidgetClass.html#gtk-widgetclass-methods" title="(in Gtk 4.0 v4.0)"><span class="xref std std-ref">Gtk.WidgetClass (18)</span></a>,     <a class="reference external" href="../../GObject-2.0/classes/ObjectClass.html#gobject-objectclass-methods" title="(in GObject 2.0 v2.0)"><span class="xref std std-ref">GObject.ObjectClass (5)</span></a></p>
@@ -357,55 +357,61 @@
 <td><p><a class="reference internal" href="#Adw.TabView.add_page" title="Adw.TabView.add_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_page</span></code></a> (child, parent)</p></td>
 </tr>
 <tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.TabView.add_shortcuts" title="Adw.TabView.add_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_shortcuts</span></code></a> (shortcuts)</p></td>
+</tr>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.append" title="Adw.TabView.append"><code class="xref py py-func docutils literal notranslate"><span class="pre">append</span></code></a> (child)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.append_pinned" title="Adw.TabView.append_pinned"><code class="xref py py-func docutils literal notranslate"><span class="pre">append_pinned</span></code></a> (child)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.close_other_pages" title="Adw.TabView.close_other_pages"><code class="xref py py-func docutils literal notranslate"><span class="pre">close_other_pages</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.close_page" title="Adw.TabView.close_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">close_page</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.close_page_finish" title="Adw.TabView.close_page_finish"><code class="xref py py-func docutils literal notranslate"><span class="pre">close_page_finish</span></code></a> (page, confirm)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.close_pages_after" title="Adw.TabView.close_pages_after"><code class="xref py py-func docutils literal notranslate"><span class="pre">close_pages_after</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.close_pages_before" title="Adw.TabView.close_pages_before"><code class="xref py py-func docutils literal notranslate"><span class="pre">close_pages_before</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_default_icon" title="Adw.TabView.get_default_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_default_icon</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_is_transferring_page" title="Adw.TabView.get_is_transferring_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_is_transferring_page</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_menu_model" title="Adw.TabView.get_menu_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_menu_model</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_n_pages" title="Adw.TabView.get_n_pages"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_n_pages</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_n_pinned_pages" title="Adw.TabView.get_n_pinned_pages"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_n_pinned_pages</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_nth_page" title="Adw.TabView.get_nth_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_nth_page</span></code></a> (position)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_page" title="Adw.TabView.get_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_page</span></code></a> (child)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_page_position" title="Adw.TabView.get_page_position"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_page_position</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_pages" title="Adw.TabView.get_pages"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_pages</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.get_selected_page" title="Adw.TabView.get_selected_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_selected_page</span></code></a> ()</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><a class="reference internal" href="#Adw.TabView.get_shortcuts" title="Adw.TabView.get_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_shortcuts</span></code></a> ()</p></td>
 </tr>
 <tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.insert" title="Adw.TabView.insert"><code class="xref py py-func docutils literal notranslate"><span class="pre">insert</span></code></a> (child, position)</p></td>
@@ -420,37 +426,43 @@
 <td><p><a class="reference internal" href="#Adw.TabView.prepend_pinned" title="Adw.TabView.prepend_pinned"><code class="xref py py-func docutils literal notranslate"><span class="pre">prepend_pinned</span></code></a> (child)</p></td>
 </tr>
 <tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.TabView.remove_shortcuts" title="Adw.TabView.remove_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_shortcuts</span></code></a> (shortcuts)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.reorder_backward" title="Adw.TabView.reorder_backward"><code class="xref py py-func docutils literal notranslate"><span class="pre">reorder_backward</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.reorder_first" title="Adw.TabView.reorder_first"><code class="xref py py-func docutils literal notranslate"><span class="pre">reorder_first</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.reorder_forward" title="Adw.TabView.reorder_forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">reorder_forward</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.reorder_last" title="Adw.TabView.reorder_last"><code class="xref py py-func docutils literal notranslate"><span class="pre">reorder_last</span></code></a> (page)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.reorder_page" title="Adw.TabView.reorder_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">reorder_page</span></code></a> (page, position)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.select_next_page" title="Adw.TabView.select_next_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">select_next_page</span></code></a> ()</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.select_previous_page" title="Adw.TabView.select_previous_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">select_previous_page</span></code></a> ()</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.set_default_icon" title="Adw.TabView.set_default_icon"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_default_icon</span></code></a> (default_icon)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.set_menu_model" title="Adw.TabView.set_menu_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_menu_model</span></code></a> (menu_model)</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.set_page_pinned" title="Adw.TabView.set_page_pinned"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_page_pinned</span></code></a> (page, pinned)</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.set_selected_page" title="Adw.TabView.set_selected_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_selected_page</span></code></a> (selected_page)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><a class="reference internal" href="#Adw.TabView.set_shortcuts" title="Adw.TabView.set_shortcuts"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_shortcuts</span></code></a> (shortcuts)</p></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td><p><a class="reference internal" href="#Adw.TabView.transfer_page" title="Adw.TabView.transfer_page"><code class="xref py py-func docutils literal notranslate"><span class="pre">transfer_page</span></code></a> (page, other_view, position)</p></td>
@@ -491,37 +503,42 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.TabView.props.default_icon" title="Adw.TabView.props.default_icon"><code class="xref py py-data docutils literal notranslate"><span class="pre">default-icon</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gio-2.0/classes/Icon.html#Gio.Icon" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Icon</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Default page icon</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.TabView.props.is_transferring_page" title="Adw.TabView.props.is_transferring_page"><code class="xref py py-data docutils literal notranslate"><span class="pre">is-transferring-page</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
-<td><p>r/en</p></td>
-<td><p>Whether a page is being transferred</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.TabView.props.menu_model" title="Adw.TabView.props.menu_model"><code class="xref py py-data docutils literal notranslate"><span class="pre">menu-model</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>Tab context menu model</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.TabView.props.n_pages" title="Adw.TabView.props.n_pages"><code class="xref py py-data docutils literal notranslate"><span class="pre">n-pages</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
-<td><p>r/en</p></td>
-<td><p>The number of pages in the tab view</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.TabView.props.n_pinned_pages" title="Adw.TabView.props.n_pinned_pages"><code class="xref py py-data docutils literal notranslate"><span class="pre">n-pinned-pages</span></code></a></p></td>
-<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
-<td><p>r/en</p></td>
-<td><p>The number of pinned pages in the tab view</p></td>
+<td><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p>r</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#Adw.TabView.props.pages" title="Adw.TabView.props.pages"><code class="xref py py-data docutils literal notranslate"><span class="pre">pages</span></code></a></p></td>
 <td><p><a class="reference external" href="../../Gtk-4.0/classes/SelectionModel.html#Gtk.SelectionModel" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a></p></td>
 <td><p>r</p></td>
-<td><p>A selection model with the tab view’s pages</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#Adw.TabView.props.selected_page" title="Adw.TabView.props.selected_page"><code class="xref py py-data docutils literal notranslate"><span class="pre">selected-page</span></code></a></p></td>
 <td><p><a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a></p></td>
 <td><p>r/w/en</p></td>
-<td><p>The currently selected page</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#Adw.TabView.props.shortcuts" title="Adw.TabView.props.shortcuts"><code class="xref py py-data docutils literal notranslate"><span class="pre">shortcuts</span></code></a></p></td>
+<td><p><a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a></p></td>
+<td><p>r/w/en</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -606,26 +623,18 @@ document-based applications, such as web browsers, file managers, text
 editors or terminals. It does not aim to replace [class`Gtk`.Notebook] for use
 cases such as tabbed dialogs.</p>
 <p>As such, it does not support disabling page reordering or detaching.</p>
-<p><code class="docutils literal notranslate"><span class="pre">AdwTabView</span></code> adds the following shortcuts in the managed scope:</p>
-<ul class="simple">
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Page Up&lt;/kbd&gt; - switch to the previous page</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Page Down&lt;/kbd&gt; - switch to the next page</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Home&lt;/kbd&gt; - switch to the first page</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;End&lt;/kbd&gt; - switch to the last page</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;Page Up&lt;/kbd&gt; - move the current page
-backward</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;Page Down&lt;/kbd&gt; - move the current
-page forward</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;Home&lt;/kbd&gt; - move the current page at
-the start</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;End&lt;/kbd&gt; - move the current page at
-the end</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Tab&lt;/kbd&gt; - switch to the next page, with looping</p></li>
-<li><p>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;Tab&lt;/kbd&gt; - switch to the previous
-page, with looping</p></li>
-<li><p>&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;1&lt;/kbd&gt;⋯&lt;kbd&gt;9&lt;/kbd&gt; - switch to pages 1-9</p></li>
-<li><p>&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;0&lt;/kbd&gt; - switch to page 10</p></li>
-</ul>
+<p><code class="docutils literal notranslate"><span class="pre">AdwTabView</span></code> adds a number of global page switching and reordering shortcuts.
+The [property`TabView`:py:data:<cite>:shortcuts&lt;Adw.TabView.props.shortcuts&gt;</cite>] property can be used to manage them.</p>
+<p>See [flags`TabViewShortcuts`] for the list of the available shortcuts. All of
+the shortcuts are enabled by default.</p>
+<p>[method`TabView`.add_shortcuts] and [method`TabView`.remove_shortcuts] can be
+used to manage shortcuts in a convenient way, for example:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>c
+adw_tab_view_remove_shortcuts (view, ADW_TAB_VIEW_SHORTCUT_CONTROL_HOME |</p>
+<blockquote>
+<div><p>ADW_TAB_VIEW_SHORTCUT_CONTROL_END);</p>
+</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a></p>
 <dl class="simple">
 <dt>CSS nodes</dt><dd></dd>
 </dl>
@@ -657,7 +666,7 @@ page, with looping</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>child</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget to add</p></li>
-<li><p><strong>parent</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a parent page for <cite>child</cite></p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a parent page for <cite>child</cite></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -674,6 +683,21 @@ the correct page when this page is closed while being selected (see
 <p>If <cite>parent</cite> is <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, this function is equivalent to [method`TabView`.append].</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.TabView.add_shortcuts">
+<span class="sig-name descname"><span class="pre">add_shortcuts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shortcuts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.add_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shortcuts</strong> (<a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a>) – the shortcuts to add</p>
+</dd>
+</dl>
+<p>Adds <cite>shortcuts</cite> for <cite>self</cite>.</p>
+<p>See [property`TabView`:py:data:<cite>:shortcuts&lt;Adw.TabView.props.shortcuts&gt;</cite>] for details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -767,7 +791,7 @@ are pinned, the parent will be selected instead.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>confirm</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to confirm or deny closing <cite>page</cite></p></li>
+<li><p><strong>confirm</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether to confirm or deny closing <cite>page</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -835,10 +859,14 @@ for it again.</p>
 <dd class="field-odd"><p>whether a page is being transferred</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Whether a page is being transferred.</p>
+<p>The corresponding property will be set to <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> when a drag-n-drop tab
+transfer starts on any <code class="docutils literal notranslate"><span class="pre">AdwTabView</span></code>, and to <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> after it ends.</p>
+<p>During the transfer, children cannot receive pointer input and a tab can
+be safely dropped on the tab view.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -852,7 +880,7 @@ for it again.</p>
 <dd class="field-odd"><p>the tab context menu model for <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the tab context menu model for <cite>self</cite>.</p>
@@ -869,7 +897,7 @@ for it again.</p>
 <dd class="field-odd"><p>the number of pages in <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the number of pages in <cite>self</cite>.</p>
@@ -886,10 +914,11 @@ for it again.</p>
 <dd class="field-odd"><p>the number of pinned pages in <cite>self</cite></p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the number of pinned pages in <cite>self</cite>.</p>
+<p>See [method`TabView`.set_page_pinned].</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -900,7 +929,7 @@ for it again.</p>
 <span class="sig-name descname"><span class="pre">get_nth_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.get_nth_page" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the index of the page in <cite>self</cite>, starting from 0</p>
+<dd class="field-odd"><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the index of the page in <cite>self</cite>, starting from 0</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the page object at <cite>position</cite></p>
@@ -946,7 +975,7 @@ for it again.</p>
 <dd class="field-even"><p>the position of <cite>page</cite> in <cite>self</cite></p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 </dl>
 <p>Finds the position of <cite>page</cite> in <cite>self</cite>, starting from 0.</p>
@@ -983,12 +1012,29 @@ page.</p>
 <dd class="field-odd"><p>the selected page</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Gets the currently selected page in <cite>self</cite>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Adw.TabView.get_shortcuts">
+<span class="sig-name descname"><span class="pre">get_shortcuts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.get_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the shortcut mask</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a></p>
+</dd>
+</dl>
+<p>Gets the enabled shortcuts for <cite>self</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 
@@ -999,7 +1045,7 @@ page.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>child</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget to add</p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to add <cite>child</cite> at, starting from 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to add <cite>child</cite> at, starting from 0</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1024,7 +1070,7 @@ page.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>child</strong> (<a class="reference external" href="../../Gtk-4.0/classes/Widget.html#Gtk.Widget" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.Widget</span></code></a>) – a widget to add</p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to add <cite>child</cite> at, starting from 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to add <cite>child</cite> at, starting from 0</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1083,6 +1129,21 @@ that case [method`TabView`.insert] should be used instead.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Adw.TabView.remove_shortcuts">
+<span class="sig-name descname"><span class="pre">remove_shortcuts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shortcuts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.remove_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shortcuts</strong> (<a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a>) – the shortcuts to reomve</p>
+</dd>
+</dl>
+<p>Removes <cite>shortcuts</cite> from <cite>self</cite>.</p>
+<p>See [property`TabView`:py:data:<cite>:shortcuts&lt;Adw.TabView.props.shortcuts&gt;</cite>] for details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Adw.TabView.reorder_backward">
 <span class="sig-name descname"><span class="pre">reorder_backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.reorder_backward" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -1093,7 +1154,7 @@ that case [method`TabView`.insert] should be used instead.</p>
 <dd class="field-even"><p>whether <cite>page</cite> was moved</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Reorders <cite>page</cite> to before its previous page if possible.</p>
@@ -1113,7 +1174,7 @@ that case [method`TabView`.insert] should be used instead.</p>
 <dd class="field-even"><p>whether <cite>page</cite> was moved</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Reorders <cite>page</cite> to the first possible position.</p>
@@ -1133,7 +1194,7 @@ that case [method`TabView`.insert] should be used instead.</p>
 <dd class="field-even"><p>whether <cite>page</cite> was moved</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Reorders <cite>page</cite> to after its next page if possible.</p>
@@ -1153,7 +1214,7 @@ that case [method`TabView`.insert] should be used instead.</p>
 <dd class="field-even"><p>whether <cite>page</cite> was moved</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Reorders <cite>page</cite> to the last possible position.</p>
@@ -1169,14 +1230,14 @@ that case [method`TabView`.insert] should be used instead.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to insert the page at, starting at 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to insert the page at, starting at 0</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>whether <cite>page</cite> was moved</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Reorders <cite>page</cite> to <cite>position</cite>.</p>
@@ -1195,7 +1256,7 @@ one, or a non-pinned page before a pinned one.</p>
 <dd class="field-odd"><p>whether the selected page was changed</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Selects the page after the currently selected page.</p>
@@ -1213,7 +1274,7 @@ one, or a non-pinned page before a pinned one.</p>
 <dd class="field-odd"><p>whether the selected page was changed</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Selects the page before the currently selected page.</p>
@@ -1232,6 +1293,12 @@ one, or a non-pinned page before a pinned one.</p>
 </dd>
 </dl>
 <p>Sets the default page icon for <cite>self</cite>.</p>
+<p>If a page doesn’t provide its own icon via [property`TabPage`:py:data:<cite>:icon&lt;Adw.TabView.props.icon&gt;</cite>], a default
+icon may be used instead for contexts where having an icon is necessary.</p>
+<p>[class`TabBar`] will use default icon for pinned tabs in case the page is not
+loading, doesn’t have an icon and an indicator. Default icon is never used
+for tabs that aren’t pinned.</p>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">adw-tab-icon-missing-symbolic</span></code> icon is used.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -1242,10 +1309,13 @@ one, or a non-pinned page before a pinned one.</p>
 <span class="sig-name descname"><span class="pre">set_menu_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menu_model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.set_menu_model" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>menu_model</strong> (<a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a menu model</p>
+<dd class="field-odd"><p><strong>menu_model</strong> (<a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a menu model</p>
 </dd>
 </dl>
 <p>Sets the tab context menu model for <cite>self</cite>.</p>
+<p>When a context menu is shown for a tab, it will be constructed from the
+provided menu model. Use the [signal`TabView`:py:func:<cite>::setup-menu&lt;Adw.TabView.signals.setup_menu&gt;</cite>] signal to set up
+the menu actions for the particular tab.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
 </div>
@@ -1258,7 +1328,7 @@ one, or a non-pinned page before a pinned one.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>pinned</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether <cite>page</cite> should be pinned</p></li>
+<li><p><strong>pinned</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>) – whether <cite>page</cite> should be pinned</p></li>
 </ul>
 </dd>
 </dl>
@@ -1300,6 +1370,24 @@ for how to override that behavior.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Adw.TabView.set_shortcuts">
+<span class="sig-name descname"><span class="pre">set_shortcuts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shortcuts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.set_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shortcuts</strong> (<a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a>) – the new shortcuts</p>
+</dd>
+</dl>
+<p>Sets the enabled shortcuts for <cite>self</cite>.</p>
+<p>See [flags`TabViewShortcuts`] for the list of the available shortcuts. All of
+the shortcuts are enabled by default.</p>
+<p>[method`TabView`.add_shortcuts] and [method`TabView`.remove_shortcuts] provide
+a convenient way to manage individual shortcuts.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Adw.TabView.transfer_page">
 <span class="sig-name descname"><span class="pre">transfer_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_view</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Adw.TabView.transfer_page" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -1307,7 +1395,7 @@ for how to override that behavior.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
 <li><p><strong>other_view</strong> (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a>) – the tab view to transfer the page to</p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to insert the page at, starting at 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position to insert the page at, starting at 0</p></li>
 </ul>
 </dd>
 </dl>
@@ -1342,7 +1430,7 @@ one, or a non-pinned page before a pinned one.</p>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 <p>Emitted after [method`TabView`.close_page] has been called for <cite>page</cite>.</p>
@@ -1351,10 +1439,10 @@ confirm or reject the closing.</p>
 <p>The default handler will immediately confirm closing for non-pinned pages,
 or reject it for pinned pages, equivalent to the following example:</p>
 <p>```c
-static <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>
+static <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a>
 close_page_cb (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a> *view,
 <a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> *page,
-<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>    user_data)
+<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a>    user_data)
 {
 <a class="reference internal" href="#Adw.TabView.close_page_finish" title="Adw.TabView.close_page_finish"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView.close_page_finish</span></code></a> (view, page, !:obj:<cite>Adw.TabPage.get_pinned</cite> (page));</p>
 <p>return <a class="reference external" href="../../Gdk-4.0/constants.html#Gdk.EVENT_STOP" title="(in Gdk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gdk.EVENT_STOP</span></code></a>;
@@ -1387,7 +1475,7 @@ for closing a tab.</p>
 <dd class="field-even"><p>the <code class="docutils literal notranslate"><span class="pre">AdwTabView</span></code> from the new window</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 <p>Emitted when a tab should be transferred into a new window.</p>
@@ -1438,7 +1526,7 @@ needed and return its <code class="docutils literal notranslate"><span class="pr
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tab_view</strong> (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a>) – The object which received the signal</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position of the page, starting from 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position of the page, starting from 0</p></li>
 </ul>
 </dd>
 </dl>
@@ -1464,7 +1552,7 @@ signals for things such as updating window title.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tab_view</strong> (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a>) – The object which received the signal</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position of the removed page, starting from 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position of the removed page, starting from 0</p></li>
 </ul>
 </dd>
 </dl>
@@ -1494,7 +1582,7 @@ child dispose handler for that or do it in sync with your
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tab_view</strong> (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a>) – The object which received the signal</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a>) – a page of <cite>self</cite></p></li>
-<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position <cite>page</cite> was moved to, starting at 0</p></li>
+<li><p><strong>position</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – the position <cite>page</cite> was moved to, starting at 0</p></li>
 </ul>
 </dd>
 </dl>
@@ -1517,7 +1605,7 @@ child dispose handler for that or do it in sync with your
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>tab_view</strong> (<a class="reference internal" href="#Adw.TabView" title="Adw.TabView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabView</span></code></a>) – The object which received the signal</p></li>
-<li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a page of <cite>self</cite></p></li>
+<li><p><strong>page</strong> (<a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – a page of <cite>self</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1544,7 +1632,7 @@ disable actions not applicable to <cite>page</cite>.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/Icon.html#Gio.Icon" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.Icon</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -1571,13 +1659,13 @@ used for tabs that aren’t pinned.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">is-transferring-page</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#False" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
 </dd>
 </dl>
 <p>Whether a page is being transferred.</p>
@@ -1601,7 +1689,7 @@ be safely dropped on the tab view.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gio-2.0/classes/MenuModel.html#Gio.MenuModel" title="(in Gio 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gio.MenuModel</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -1624,13 +1712,13 @@ the menu actions for the particular tab.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">n-pages</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
 </dd>
 </dl>
 <p>The number of pages in the tab view.</p>
@@ -1647,13 +1735,13 @@ the menu actions for the particular tab.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">n-pinned-pages</span></code></p>
 </dd>
 <dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
 </dd>
 </dl>
 <p>The number of pinned pages in the tab view.</p>
@@ -1674,7 +1762,7 @@ the menu actions for the particular tab.</p>
 <dd class="field-even"><p><a class="reference external" href="../../Gtk-4.0/classes/SelectionModel.html#Gtk.SelectionModel" title="(in Gtk 4.0 v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gtk.SelectionModel</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a></p>
@@ -1700,7 +1788,7 @@ page.</p>
 <dd class="field-even"><p><a class="reference internal" href="TabPage.html#Adw.TabPage" title="Adw.TabPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabPage</span></code></a></p>
 </dd>
 <dt class="field-odd">Default Value<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 <dt class="field-even">Flags<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
@@ -1709,6 +1797,33 @@ page.</p>
 <p>The currently selected page.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Adw.TabView.props.shortcuts">
+<span class="sig-prename descclassname"><span class="pre">Adw.TabView.props.</span></span><span class="sig-name descname"><span class="pre">shortcuts</span></span><a class="headerlink" href="#Adw.TabView.props.shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">shortcuts</span></code></p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../flags.html#Adw.TabViewShortcuts" title="Adw.TabViewShortcuts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts</span></code></a></p>
+</dd>
+<dt class="field-odd">Default Value<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_TAB" title="Adw.TabViewShortcuts.CONTROL_TAB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_TAB</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_SHIFT_TAB" title="Adw.TabViewShortcuts.CONTROL_SHIFT_TAB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_SHIFT_TAB</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_PAGE_UP" title="Adw.TabViewShortcuts.CONTROL_PAGE_UP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_PAGE_UP</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_PAGE_DOWN" title="Adw.TabViewShortcuts.CONTROL_PAGE_DOWN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_PAGE_DOWN</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_HOME" title="Adw.TabViewShortcuts.CONTROL_HOME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_HOME</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_END" title="Adw.TabViewShortcuts.CONTROL_END"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_END</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_UP" title="Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_UP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_UP</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_DOWN" title="Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_DOWN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_SHIFT_PAGE_DOWN</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_SHIFT_HOME" title="Adw.TabViewShortcuts.CONTROL_SHIFT_HOME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_SHIFT_HOME</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.CONTROL_SHIFT_END" title="Adw.TabViewShortcuts.CONTROL_SHIFT_END"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.CONTROL_SHIFT_END</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.ALT_DIGITS" title="Adw.TabViewShortcuts.ALT_DIGITS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.ALT_DIGITS</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.ALT_ZERO" title="Adw.TabViewShortcuts.ALT_ZERO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.ALT_ZERO</span></code></a> | <a class="reference internal" href="../flags.html#Adw.TabViewShortcuts.ALL_SHORTCUTS" title="Adw.TabViewShortcuts.ALL_SHORTCUTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Adw.TabViewShortcuts.ALL_SHORTCUTS</span></code></a></p>
+</dd>
+<dt class="field-even">Flags<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.READABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.WRITABLE" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WRITABLE</span></code></a>, <a class="reference external" href="../../GObject-2.0/flags.html#GObject.ParamFlags.EXPLICIT_NOTIFY" title="(in GObject 2.0 v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPLICIT_NOTIFY</span></code></a></p>
+</dd>
+</dl>
+<p>The enabled shortcuts.</p>
+<p>See [flags`TabViewShortcuts`] for the list of the available shortcuts. All
+of the shortcuts are enabled by default.</p>
+<p>[method`TabView`.add_shortcuts] and [method`TabView`.remove_shortcuts]
+provide a convenient way to manage individual shortcuts.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.2.</span></p>
 </div>
 </dd></dl>
 

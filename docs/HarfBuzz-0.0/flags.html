@@ -283,6 +283,17 @@ of the text without the full context.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="HarfBuzz.buffer_flags_t.PRODUCE_SAFE_TO_INSERT_TATWEEL">
+<span class="sig-name descname"><span class="pre">PRODUCE_SAFE_TO_INSERT_TATWEEL</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">128</span></em><a class="headerlink" href="#HarfBuzz.buffer_flags_t.PRODUCE_SAFE_TO_INSERT_TATWEEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>flag indicating that the <a class="reference internal" href="#HarfBuzz.glyph_flags_t.SAFE_TO_INSERT_TATWEEL" title="HarfBuzz.glyph_flags_t.SAFE_TO_INSERT_TATWEEL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HarfBuzz.glyph_flags_t.SAFE_TO_INSERT_TATWEEL</span></code></a>
+glyph-flag should be produced by the shaper. By default
+it will not be produced.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="HarfBuzz.buffer_flags_t.DO_NOT_INSERT_DOTTED_CIRCLE">
 <span class="sig-name descname"><span class="pre">DO_NOT_INSERT_DOTTED_CIRCLE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">16</span></em><a class="headerlink" href="#HarfBuzz.buffer_flags_t.DO_NOT_INSERT_DOTTED_CIRCLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>flag indicating that a dotted circle should
@@ -299,6 +310,15 @@ character sequences (such at &lt;0905 093E&gt;).</p>
 <dd><p>flag indicating that special handling of the end of text
 paragraph can be applied to this buffer, similar to
 <a class="reference internal" href="#HarfBuzz.buffer_flags_t.BOT" title="HarfBuzz.buffer_flags_t.BOT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HarfBuzz.buffer_flags_t.BOT</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="HarfBuzz.buffer_flags_t.DEFINED">
+<span class="sig-name descname"><span class="pre">DEFINED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">255</span></em><a class="headerlink" href="#HarfBuzz.buffer_flags_t.DEFINED" title="Permalink to this definition">¶</a></dt>
+<dd><p>All currently defined flags:</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.0.</span></p>
+</div>
 </dd></dl>
 
 <dl class="py attribute">
@@ -406,6 +426,15 @@ glyph offsets will reflect absolute glyph positions.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="HarfBuzz.buffer_serialize_flags_t.DEFINED">
+<span class="sig-name descname"><span class="pre">DEFINED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">63</span></em><a class="headerlink" href="#HarfBuzz.buffer_serialize_flags_t.DEFINED" title="Permalink to this definition">¶</a></dt>
+<dd><p>All currently defined flags.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="HarfBuzz.buffer_serialize_flags_t.GLYPH_EXTENTS">
 <span class="sig-name descname"><span class="pre">GLYPH_EXTENTS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">8</span></em><a class="headerlink" href="#HarfBuzz.buffer_serialize_flags_t.GLYPH_EXTENTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>serialize glyph extents.</p>
@@ -473,7 +502,7 @@ back that is clear of unsafe-to-concat and retry
 from there, and repeat.
 At the start of next line a similar algorithm can
 be implemented. That is: 1. Iterate forward from
-the line-break position untill the first cluster
+the line-break position until the first cluster
 start position that is NOT unsafe-to-concat, 2.
 shape the segment from beginning of the line to
 that position, 3. check whether the resulting
@@ -503,8 +532,24 @@ reliably produced.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="HarfBuzz.glyph_flags_t.SAFE_TO_INSERT_TATWEEL">
+<span class="sig-name descname"><span class="pre">SAFE_TO_INSERT_TATWEEL</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#HarfBuzz.glyph_flags_t.SAFE_TO_INSERT_TATWEEL" title="Permalink to this definition">¶</a></dt>
+<dd><p>In scripts that use elongation (Arabic,
+Mongolian, Syriac, etc.), this flag signifies
+that it is safe to insert a U+0640 TATWEEL
+character before this cluster for elongation.
+This flag does not determine the
+script-specific elongation places, but only
+when it is safe to do the elongation without
+interrupting text shaping.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 5.1.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="HarfBuzz.glyph_flags_t.DEFINED">
-<span class="sig-name descname"><span class="pre">DEFINED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#HarfBuzz.glyph_flags_t.DEFINED" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DEFINED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#HarfBuzz.glyph_flags_t.DEFINED" title="Permalink to this definition">¶</a></dt>
 <dd><p>All the currently defined flags.</p>
 </dd></dl>
 

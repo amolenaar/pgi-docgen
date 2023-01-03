@@ -257,8 +257,8 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>g_class</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – </p></li>
-<li><p><strong>private_size_or_offset</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
+<li><p><strong>g_class</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>) – </p></li>
+<li><p><strong>private_size_or_offset</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -273,7 +273,7 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the <a class="reference internal" href="#GObject.TypeClass" title="GObject.TypeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TypeClass</span></code></a>
-structure for the given type ID or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class does not
+structure for the given type ID or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class does not
 currently exist</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
@@ -282,7 +282,7 @@ currently exist</p>
 </dl>
 <p>This function is essentially the same as <a class="reference internal" href="#GObject.TypeClass.ref" title="GObject.TypeClass.ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TypeClass.ref</span></code></a>(),
 except that the classes reference count isn’t incremented.
-As a consequence, this function may return <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class
+As a consequence, this function may return <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class
 of the type passed in does not currently exist (hasn’t been
 referenced before).</p>
 </dd></dl>
@@ -296,7 +296,7 @@ referenced before).</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the <a class="reference internal" href="#GObject.TypeClass" title="GObject.TypeClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.TypeClass</span></code></a>
-structure for the given type ID or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class does not
+structure for the given type ID or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> if the class does not
 currently exist or is dynamically loaded</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
@@ -335,7 +335,7 @@ exist already.</p>
 <span class="sig-name descname"><span class="pre">add_private</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">private_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GObject.TypeClass.add_private" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>private_size</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – size of private structure</p>
+<dd class="field-odd"><p><strong>private_size</strong> (<a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – size of private structure</p>
 </dd>
 </dl>
 <p>Registers a private structure for an instantiatable type.</p>
@@ -353,45 +353,45 @@ MyObjectPrivate to an object MyObject defined in the standard
 <a class="reference internal" href="Object.html#GObject.Object" title="GObject.Object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.Object</span></code></a> fashion in the type’s class_init() function.</p>
 <p>Note the use of a structure member “priv” to avoid the overhead
 of repeatedly calling MY_OBJECT_GET_PRIVATE().</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MyObject</span><span class="w">        </span><span class="n">MyObject</span><span class="p">;</span><span class="w"></span>
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MyObjectPrivate</span><span class="w"> </span><span class="n">MyObjectPrivate</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MyObject</span><span class="w">        </span><span class="n">MyObject</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MyObjectPrivate</span><span class="w"> </span><span class="n">MyObjectPrivate</span><span class="p">;</span>
 
-<span class="k">struct</span><span class="w"> </span><span class="nc">_MyObject</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w"> </span><span class="n">GObject</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">_MyObject</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="n">GObject</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span>
 
-<span class="w"> </span><span class="n">MyObjectPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="w"> </span><span class="n">MyObjectPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="k">struct</span><span class="w"> </span><span class="nc">_MyObjectPrivate</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">some_field</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">_MyObjectPrivate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">some_field</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"></span>
-<span class="nf">my_object_class_init</span><span class="w"> </span><span class="p">(</span><span class="n">MyObjectClass</span><span class="w"> </span><span class="o">*</span><span class="n">klass</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">g_type_class_add_private</span><span class="w"> </span><span class="p">(</span><span class="n">klass</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">MyObjectPrivate</span><span class="p">));</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">my_object_class_init</span><span class="w"> </span><span class="p">(</span><span class="n">MyObjectClass</span><span class="w"> </span><span class="o">*</span><span class="n">klass</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">g_type_class_add_private</span><span class="w"> </span><span class="p">(</span><span class="n">klass</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="p">(</span><span class="n">MyObjectPrivate</span><span class="p">));</span>
+<span class="p">}</span>
 
-<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"></span>
-<span class="nf">my_object_init</span><span class="w"> </span><span class="p">(</span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="n">my_object</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">my_object</span><span class="o">-&gt;</span><span class="n">priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G_TYPE_INSTANCE_GET_PRIVATE</span><span class="w"> </span><span class="p">(</span><span class="n">my_object</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                 </span><span class="n">MY_TYPE_OBJECT</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                 </span><span class="n">MyObjectPrivate</span><span class="p">);</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span>
+<span class="nf">my_object_init</span><span class="w"> </span><span class="p">(</span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="n">my_object</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">my_object</span><span class="o">-&gt;</span><span class="n">priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G_TYPE_INSTANCE_GET_PRIVATE</span><span class="w"> </span><span class="p">(</span><span class="n">my_object</span><span class="p">,</span>
+<span class="w">                                                 </span><span class="n">MY_TYPE_OBJECT</span><span class="p">,</span>
+<span class="w">                                                 </span><span class="n">MyObjectPrivate</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// my_object-&gt;priv-&gt;some_field will be automatically initialised to 0</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"></span>
-<span class="nf">my_object_get_some_field</span><span class="w"> </span><span class="p">(</span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="n">my_object</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">MyObjectPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">int</span>
+<span class="nf">my_object_get_some_field</span><span class="w"> </span><span class="p">(</span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="n">my_object</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">MyObjectPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">g_return_val_if_fail</span><span class="w"> </span><span class="p">(</span><span class="n">MY_IS_OBJECT</span><span class="w"> </span><span class="p">(</span><span class="n">my_object</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">g_return_val_if_fail</span><span class="w"> </span><span class="p">(</span><span class="n">MY_IS_OBJECT</span><span class="w"> </span><span class="p">(</span><span class="n">my_object</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_object</span><span class="o">-&gt;</span><span class="n">priv</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">priv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_object</span><span class="o">-&gt;</span><span class="n">priv</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">priv</span><span class="o">-&gt;</span><span class="n">some_field</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">priv</span><span class="o">-&gt;</span><span class="n">some_field</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="versionadded">
@@ -410,7 +410,7 @@ of repeatedly calling MY_OBJECT_GET_PRIVATE().</p>
 <dd class="field-odd"><p><strong>private_type</strong> (<a class="reference internal" href="GType.html#GObject.GType" title="GObject.GType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GObject.GType</span></code></a>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-even"><p><a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></a> or <a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
