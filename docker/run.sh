@@ -2,8 +2,8 @@
 
 set -e
 
-TAG="lazka/pgi-docgen:v2"
+TAG="lazka/pgi-docgen:v4"
 
-sudo docker run --security-opt label=disable \
-    --rm  --volume "$(pwd)/..:/home/user/app" \
+podman run --security-opt label=disable \
+    --rm  --volume "$(pwd)/..:/home/user/app:Z" \
     --tty --interactive "${TAG}" bash

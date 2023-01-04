@@ -2,12 +2,12 @@
 
 set -e
 
-TAG="lazka/pgi-docgen:v3"
+TAG="lazka/pgi-docgen:v4"
 
-sudo docker run --security-opt label=disable \
+podman run --security-opt label=disable \
     --rm  --volume "$(pwd)/..:/home/user/app" \
-    -t "${TAG}" ./pgi-docgen update-debian-info
+    -t "${TAG}" python -m pgidocgen create _docs Gtk-4.0 Adw-1
 
-sudo docker run --security-opt label=disable \
+podman run --security-opt label=disable \
     --rm  --volume "$(pwd)/..:/home/user/app" \
-    -t "${TAG}" ./pgi-docgen create-debian _docs
+    -t "${TAG}" python -m pgidocgen build _docs _docs/_build
