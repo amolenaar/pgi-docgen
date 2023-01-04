@@ -1,0 +1,13 @@
+build:
+  before_script:
+    - dnf install -y gcc gtk4-devel libadwaita-devel cairo-devel cairo-gobject-devel gobject-introspection-devel python3-devel python3-pip git libxml2-devel libxslt-devel graphviz
+  script:
+    - pip3 install .
+    - ./pgi-docgen create _docs Gtk-4.0 Adw-1
+    - ./pgi-docgen build _docs _docs/_build
+    - mv _docs/_build public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
