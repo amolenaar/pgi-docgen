@@ -1,16 +1,14 @@
-# The Docker image that will be used to build your app
-image: fedora
-# Functions that should be executed before the build script is run
-before_script:
-  - dnf
-pages:
+build:
+  stage: build
+  before_script:
+    - dnf install -y gcc gtk4-devel libadwaita-devel cairo-devel cairo-gobject-devel gobject-introspection-devel python3-devel python3-pip git libxml2-devel libxslt-devel graphviz
   script:
-    - test
+    - pip3 install .
+    - ./pgi-docgen create _docs Gtk-4.0 Adw-1
+    - ./pgi-docgen build _docs _docs/_build
+    - mv _docs/_build public
   artifacts:
     paths:
-      # The folder that contains the files to be exposed at the Page URL
       - public
   rules:
-    # This ensures that only pushes to the default branch will trigger
-    # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
