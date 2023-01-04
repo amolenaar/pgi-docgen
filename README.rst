@@ -1,11 +1,9 @@
-.. image:: https://dev.azure.com/pygobject/pgi-docgen/_apis/build/status/pygobject.pgi-docgen?branchName=master
-    :target: https://dev.azure.com/pygobject/pgi-docgen/_build/latest?definitionId=2&branchName=master
+Pgi-docgen - documentation for PyGObject and friends
+====================================================
 
-.. image:: https://codecov.io/gh/pygobject/pgi-docgen/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/pygobject/pgi-docgen
 
 What is this?
-=============
+-------------
 
 A tool to create sphinx documentation for gi modules using python
 introspection.
@@ -34,8 +32,9 @@ How do I get started?
 
 ::
 
-    # API docs for Gtk/Gst:
-    ./tools/build.sh Gtk-3.0 Gst-1.0
+    # API docs for Gtk/Adw:
+    python -m pgidocgen create _docs Gtk-4.0 Adw-1.0
+    python -m pgidocgen build _docs _docs/_build
 
 The resulting docs can be found in ``_docs/_build``
 
