@@ -8,11 +8,12 @@
 # version 2.1 of the License, or (at your option) any later version.
 
 import argparse
+import sys
 
 from . import create, build, stubs, update
 
 
-def main(argv):
+def main(argv=sys.argv):
     parser = argparse.ArgumentParser(description="pgi-docgen")
     subparser = parser.add_subparsers(title="subcommands")
 
