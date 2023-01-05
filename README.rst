@@ -33,7 +33,7 @@ How do I get started?
 ::
 
     # API docs for Gtk/Adw:
-    python -m pgidocgen create _docs Gtk-4.0 Adw-1.0
+    python -m pgidocgen create _docs Gtk-4.0 Adw-1
     python -m pgidocgen build _docs _docs/_build
 
 The resulting docs can be found in ``_docs/_build``
