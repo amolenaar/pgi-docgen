@@ -7,12 +7,11 @@
 
 import os
 
+from .. import util
 from . import genutil
 
-from .. import util
-
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 ==============
 Symbol Mapping
 ==============
@@ -28,11 +27,11 @@ Symbol Mapping
     {{ line }}
 {% endfor %}
 
-""")
+"""
+)
 
 
 class MappingGenerator(genutil.Generator):
-
     def __init__(self):
         self._mapping = None
 

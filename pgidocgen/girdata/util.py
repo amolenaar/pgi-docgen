@@ -5,9 +5,8 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import os
 import json
-
+import os
 
 _BASEDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -31,9 +30,7 @@ def get_class_image_dir(namespace, version):
     The returned directory path might not exist.
     """
 
-    return os.path.join(
-        _BASEDIR, "clsimages",
-        "%s-%s" % (namespace, version))
+    return os.path.join(_BASEDIR, "clsimages", "%s-%s" % (namespace, version))
 
 
 def get_class_image_path(namespace, version, class_name):
@@ -42,8 +39,7 @@ def get_class_image_path(namespace, version, class_name):
     Might not exist.
     """
 
-    return os.path.join(get_class_image_dir(namespace, version),
-                        "%s.png" % class_name)
+    return os.path.join(get_class_image_dir(namespace, version), "%s.png" % class_name)
 
 
 def get_docref_dir():

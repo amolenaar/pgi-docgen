@@ -5,19 +5,18 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import os
-import gc
+import collections
 import ctypes
+import gc
+import inspect
+import os
 import re
 import shelve
-import inspect
-import collections
 from xml.dom import minidom
 
 from . import util
 from .girdata import load_doc_references
 from .overrides import parse_override_docs
-
 
 SHELVE_CACHE = None
 
@@ -94,8 +93,7 @@ def fixup_since(text):
         added_since[0] = version
         return ""
 
-    text = re.sub(
-        '(^|\\s+)[(@]?Since\\s*\\\\?:?\\s+([^\\s]+)(\\n|$|\\)|\\. )', fixup_since, text)
+    text = re.sub("(^|\\s+)[(@]?Since\\s*\\\\?:?\\s+([^\\s]+)(\\n|$|\\)|\\. )", fixup_since, text)
 
     return text, added_since[0]
 
@@ -120,8 +118,7 @@ def _fixup_all_added_since(all_docs):
                 changed = True
 
             if changed:
-                type_docs[k] = DocEntry(docs, version,
-                                        deprecated_version, deprecated)
+                type_docs[k] = DocEntry(docs, version, deprecated_version, deprecated)
 
 
 def get_versions(all_docs):
@@ -137,12 +134,10 @@ def get_versions(all_docs):
     return versions
 
 
-DocEntry = collections.namedtuple(
-    "DocEntry", ["docs", "version", "deprecated_version", "deprecated"])
+DocEntry = collections.namedtuple("DocEntry", ["docs", "version", "deprecated_version", "deprecated"])
 
 
 class Namespace(object):
-
     def __init__(self, namespace, version):
         self.namespace = namespace
         self.version = version
@@ -156,8 +151,9 @@ class Namespace(object):
         if self._types is not None:
             return
         dom = _get_dom(self.path)
-        self._types, self._type_structs, self._shadow_map, self._iparams = \
-            _parse_types(dom, self.import_module(), self.namespace)
+        self._types, self._type_structs, self._shadow_map, self._iparams = _parse_types(
+            dom, self.import_module(), self.namespace
+        )
 
     @util.cached_property
     def shared_libraries(self):
@@ -278,8 +274,7 @@ class Namespace(object):
         return loaded
 
     def __repr__(self):
-        return "%s(%s, %s)" % (
-            type(self).__name__, self.namespace, self.version)
+        return "%s(%s, %s)" % (type(self).__name__, self.namespace, self.version)
 
 
 def get_cairo_types():
@@ -345,8 +340,7 @@ def _parse_types(dom, module, namespace):
     def add(c_name, py_name):
         assert py_name.count(".") and c_name, (c_name, py_name)
         # escape each potential attribute
-        py_name = ".".join(
-            map(util.escape_parameter, py_name.split(".")))
+        py_name = ".".join(map(util.escape_parameter, py_name.split(".")))
         types[c_name].add(py_name)
         return py_name
 
@@ -504,8 +498,7 @@ def _parse_types(dom, module, namespace):
         # shadowed get cleared above so this should be non-introspectable.
         # but overrides might make them available using other API, so check
         # for that before deciding that it isn't available to Python
-        types[c_name] = set(
-            filter(lambda n: is_available(module, n), types[c_name]))
+        types[c_name] = set(filter(lambda n: is_available(module, n), types[c_name]))
 
     if namespace == "GObject":
         # these come from overrides and aren't in the gir

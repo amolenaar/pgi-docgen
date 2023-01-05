@@ -9,13 +9,12 @@ from multiprocessing.pool import ThreadPool
 
 import requests
 
-from ..util import get_gir_files, progress
 from ..girdata import PROJECTS, get_doap_path
+from ..util import get_gir_files, progress
 
 
 def add_parser(subparsers):
-    parser = subparsers.add_parser(
-        "update-doap", help="Update the doap files")
+    parser = subparsers.add_parser("update-doap", help="Update the doap files")
     parser.set_defaults(func=main)
 
 
@@ -39,5 +38,5 @@ def main(args):
                 update(i + 1)
                 for ns in project.namespaces:
                     path = get_doap_path(ns)
-                    with open(path, 'wb') as h:
+                    with open(path, "wb") as h:
                         h.write(content)

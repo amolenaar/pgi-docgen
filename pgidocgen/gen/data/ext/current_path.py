@@ -8,9 +8,9 @@
 
 def pgi_docgen_path(app, pagename, templatename, context, doctree):
     path = context["project"].replace(" ", "-") + "/" + pagename + ".html"
-    context['pgi_docgen_path'] = path
+    context["pgi_docgen_path"] = path
 
 
 def setup(app):
-    app.connect('html-page-context', pgi_docgen_path)
+    app.connect("html-page-context", pgi_docgen_path)
     return {"parallel_read_safe": True}

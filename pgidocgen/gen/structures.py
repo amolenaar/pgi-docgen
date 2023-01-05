@@ -7,11 +7,11 @@
 
 import os
 
-from . import genutil
 from .. import util
+from . import genutil
 
-
-_main_template = genutil.get_template("""\
+_main_template = genutil.get_template(
+    """\
 {{ "=" * title|length }}
 {{ title }}
 {{ "=" * title|length }}
@@ -23,9 +23,11 @@ _main_template = genutil.get_template("""\
     classes/{{ struct.name }}
 {% endfor %}
 
-""")
+"""
+)
 
-_sub_template = genutil.get_template("""\
+_sub_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 {{ "=" * struct.fullname|length }}
 {{ struct.fullname }}
@@ -94,11 +96,11 @@ Details
 
     {% endfor %}
 
-""")
+"""
+)
 
 
 class StructGenerator(genutil.Generator):
-
     def __init__(self, key, title):
         self._key = key
         self._title = title
@@ -139,20 +141,28 @@ class StructGenerator(genutil.Generator):
 
         summary_rows = []
         for func in methods:
-            summary_rows.append(util.get_csv_line([
-                "*class*" if func.is_static else "",
-                ":py:obj:`%s<%s>` %s" % (func.name, func.fullname,
-                                         util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "*class*" if func.is_static else "",
+                        ":py:obj:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
 
         field_rows = []
         for field in struct.fields:
-            field_rows.append(util.get_csv_line([
-                util.escape_rest(field.name), field.type_desc,
-                field.flags_string, field.info.desc]))
+            field_rows.append(
+                util.get_csv_line(
+                    [
+                        util.escape_rest(field.name),
+                        field.type_desc,
+                        field.flags_string,
+                        field.info.desc,
+                    ]
+                )
+            )
 
         with open(rst_path, "wb") as h:
-            text = _sub_template.render(
-                struct=struct,
-                summary_rows=summary_rows,
-                field_rows=field_rows)
+            text = _sub_template.render(struct=struct, summary_rows=summary_rows, field_rows=field_rows)
             h.write(text.encode("utf-8"))

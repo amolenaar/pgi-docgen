@@ -5,29 +5,28 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import os
 import io
+import os
 import shutil
 
 import requests
 
-from .klass import ClassGenerator
-from .flags import FlagsGenerator
-from .constants import ConstantsGenerator
-from .function import FunctionGenerator
-from .enum import EnumGenerator
-from .structures import StructGenerator
-from .union import UnionGenerator
-from .callback import CallbackGenerator
-from .hierarchy import HierarchyGenerator
-from .mapping import MappingGenerator
-from . import genutil
-
 from ..namespace import get_namespace
 from ..repo import Repository
+from . import genutil
+from .callback import CallbackGenerator
+from .constants import ConstantsGenerator
+from .enum import EnumGenerator
+from .flags import FlagsGenerator
+from .function import FunctionGenerator
+from .hierarchy import HierarchyGenerator
+from .klass import ClassGenerator
+from .mapping import MappingGenerator
+from .structures import StructGenerator
+from .union import UnionGenerator
 
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 
 .. _{{ namespace }}-{{ version }}:
 
@@ -80,11 +79,11 @@ API
     {{ name }}
     {% endfor %}
 
-""")
+"""
+)
 
 
 class ModuleGenerator(object):
-
     def __init__(self, namespace, version):
         self._namespace = namespace
         self._version = version
@@ -162,8 +161,7 @@ class ModuleGenerator(object):
         for struct in module.class_structures:
             class_struct_gen.add_struct(struct)
 
-        iface_struct_gen = StructGenerator("iface-structs",
-                                           "Interface Structures")
+        iface_struct_gen = StructGenerator("iface-structs", "Interface Structures")
         for struct in module.iface_structures:
             iface_struct_gen.add_struct(struct)
 
@@ -196,9 +194,20 @@ class ModuleGenerator(object):
                 title += " (%s)" % module.library_version
 
             names = []
-            gens = [func_gen, cb_gen, class_gen, hier_gen, struct_gen,
-                    class_struct_gen, iface_struct_gen,
-                    union_gen, flags_gen, enums_gen, const_gen, map_gen]
+            gens = [
+                func_gen,
+                cb_gen,
+                class_gen,
+                hier_gen,
+                struct_gen,
+                class_struct_gen,
+                iface_struct_gen,
+                union_gen,
+                flags_gen,
+                enums_gen,
+                const_gen,
+                map_gen,
+            ]
             for gen in gens:
                 if gen.is_empty():
                     continue
@@ -207,18 +216,22 @@ class ModuleGenerator(object):
                 gen.write(sub_dir)
 
             text = _template.render(
-                title=title, ps=module.project_summary, names=names,
-                namespace=namespace, version=version)
+                title=title,
+                ps=module.project_summary,
+                names=names,
+                namespace=namespace,
+                version=version,
+            )
             h.write(text)
 
         conf_path = os.path.join(dir_, "conf_data.py")
         deps = ["-".join(d) for d in module.dependencies]
         with io.open(conf_path, "w", encoding="utf-8") as conf:
-            conf.write(u"DEPS = %r\n" % deps)
+            conf.write("DEPS = %r\n" % deps)
             # for sphinx.ext.linkcode
-            conf.write(u"SOURCEURLS = %r\n" % module.symbol_mapping.source_map)
+            conf.write("SOURCEURLS = %r\n" % module.symbol_mapping.source_map)
             # for the sidebar index
-            conf.write(u"LIB_VERSION = %r\n" % module.library_version)
+            conf.write("LIB_VERSION = %r\n" % module.library_version)
 
         # make sure the generated config
         with io.open(conf_path, "r", encoding="utf-8") as h:

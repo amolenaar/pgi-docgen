@@ -6,8 +6,8 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-from sphinx.pycode import ModuleAnalyzer
 from sphinx.errors import PycodeError
+from sphinx.pycode import ModuleAnalyzer
 
 from .util import import_namespace
 

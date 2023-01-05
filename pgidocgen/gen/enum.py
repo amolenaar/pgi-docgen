@@ -9,8 +9,8 @@ import os
 
 from . import genutil
 
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 =====
 Enums
@@ -70,11 +70,11 @@ Details
 None
 
 {% endif %}
-""")
+"""
+)
 
 
 class EnumGenerator(genutil.Generator):
-
     def __init__(self):
         self._enums = set()
 

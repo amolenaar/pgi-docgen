@@ -9,10 +9,10 @@
 import unittest
 
 import pytest
-from pgidocgen.repo import Repository
-from pgidocgen.docobj import Class, Function, Flags, get_hierarchy, PyClass, \
-    Constant
+
+from pgidocgen.docobj import Class, Constant, Flags, Function, PyClass, get_hierarchy
 from pgidocgen.overrides import parse_override_docs
+from pgidocgen.repo import Repository
 
 
 def find(l, name):
@@ -23,7 +23,6 @@ def find(l, name):
 
 
 class TRepository(unittest.TestCase):
-
     @pytest.mark.xfail(reason="Currently no overrides")
     def test_parse_override_docs(self):
         docs = parse_override_docs("Gtk", "3.0")
@@ -34,7 +33,12 @@ class TRepository(unittest.TestCase):
         repo = Repository("Gtk", "3.0")
         Gtk = repo.import_module()
         func = Function.from_object(
-            "Gtk.Widget", "translate_coordinates", Gtk.Widget.translate_coordinates, repo, Gtk.Widget)
+            "Gtk.Widget",
+            "translate_coordinates",
+            Gtk.Widget.translate_coordinates,
+            repo,
+            Gtk.Widget,
+        )
         self.assertEqual(func.signature, "(dest_widget, src_x, src_y)")
 
     def test_method_inheritance(self):
@@ -43,7 +47,7 @@ class TRepository(unittest.TestCase):
         klass = Class.from_object(repo, Atk.Plug)
         self.assertEqual(
             [x[0] for x in klass.methods_inherited],
-            ['Atk.Object', 'GObject.Object', 'Atk.Component']
+            ["Atk.Object", "GObject.Object", "Atk.Component"],
         )
 
     def test_hierarchy(self):
@@ -53,12 +57,12 @@ class TRepository(unittest.TestCase):
         Atk = repo.import_module()
         hier = get_hierarchy([Atk.NoOpObjectFactory])
         self.assertEqual(list(hier.keys()), [GObject.Object])
-        self.assertEqual(list(hier[GObject.Object].keys()),
-                         [Atk.ObjectFactory])
-        self.assertEqual(list(hier[GObject.Object][Atk.ObjectFactory].keys()),
-                         [Atk.NoOpObjectFactory])
-        self.assertFalse(
-            hier[GObject.Object][Atk.ObjectFactory][Atk.NoOpObjectFactory])
+        self.assertEqual(list(hier[GObject.Object].keys()), [Atk.ObjectFactory])
+        self.assertEqual(
+            list(hier[GObject.Object][Atk.ObjectFactory].keys()),
+            [Atk.NoOpObjectFactory],
+        )
+        self.assertFalse(hier[GObject.Object][Atk.ObjectFactory][Atk.NoOpObjectFactory])
 
     def test_pango(self):
         repo = Repository("Pango", "1.0")
@@ -138,16 +142,20 @@ class TRepository(unittest.TestCase):
         PyClass.from_object(repo, Gtk.TreeModelRow)
         PyClass.from_object(repo, Gtk.TreeModelRowIter)
 
-        func = Function.from_object("Gtk.Container", "child_get", Gtk.Container.child_get, repo, Gtk.Container)
-        self.assertEqual(func.info.desc, "Returns a list of child property values for the given names.")
+        func = Function.from_object(
+            "Gtk.Container", "child_get", Gtk.Container.child_get, repo, Gtk.Container
+        )
+        self.assertEqual(
+            func.info.desc,
+            "Returns a list of child property values for the given names.",
+        )
         self.assertEqual(func.signature, "(child, *prop_names)")
 
         func = Function.from_object("Gtk", "stock_lookup", Gtk.stock_lookup, repo, Gtk)
         self.assertEqual(func.signature, "(stock_id)")
 
         klass = Class.from_object(repo, Gtk.Widget)
-        self.assertEqual(
-            klass.subclasses.count("Gtk.Container"), 1)
+        self.assertEqual(klass.subclasses.count("Gtk.Container"), 1)
 
     def test_gtk(self):
         repo = Repository("Gtk", "3.0")
@@ -172,19 +180,15 @@ class TRepository(unittest.TestCase):
         mod = repo.parse()
         find(mod.class_structures, "WidgetClass")
         find(mod.structures, "TableChild")
-        self.assertRaises(
-            LookupError, find, mod.class_structures, "TableChild")
-        self.assertRaises(
-            LookupError, find, mod.structures, "WidgetClass")
+        self.assertRaises(LookupError, find, mod.class_structures, "TableChild")
+        self.assertRaises(LookupError, find, mod.structures, "WidgetClass")
 
     def test_gobject(self):
         repo = Repository("GObject", "2.0")
         GObject = repo.import_module()
         mod = repo.parse()
 
-        self.assertEqual(
-            repo.lookup_py_id_for_type_struct("GObjectClass"),
-            "GObject.Object")
+        self.assertEqual(repo.lookup_py_id_for_type_struct("GObjectClass"), "GObject.Object")
 
         klass = Class.from_object(repo, GObject.Object)
         method = find(klass.methods, "list_properties")

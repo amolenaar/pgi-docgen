@@ -7,12 +7,11 @@
 
 import os
 
+from .. import util
 from . import genutil
 
-from .. import util
-
-
-_template = genutil.get_template(u"""\
+_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 =========
 Callbacks
@@ -49,11 +48,11 @@ None
 
 {% endif %}
 
-""")
+"""
+)
 
 
 class CallbackGenerator(genutil.Generator):
-
     def __init__(self):
         self._callbacks = set()
 
@@ -73,14 +72,16 @@ class CallbackGenerator(genutil.Generator):
 
         summary_rows = []
         for func in functions:
-            summary_rows.append(util.get_csv_line([
-                "",
-                ":py:func:`%s<%s>` %s" % (func.name, func.fullname,
-                                          util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "",
+                        ":py:func:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
 
-        text = _template.render(
-            functions=functions,
-            summary_rows=summary_rows)
+        text = _template.render(functions=functions, summary_rows=summary_rows)
 
         with open(path, "wb") as h:
             h.write(text.encode("utf-8"))

@@ -26,8 +26,7 @@ class Library(object):
     def version(self):
         """Library version as a string"""
 
-        module = util.import_namespace(
-            self.namespace.name, self.namespace.version)
+        module = util.import_namespace(self.namespace.name, self.namespace.version)
         return _get_library_version(module)
 
     @classmethod
@@ -40,7 +39,11 @@ class Library(object):
 
     def __repr__(self):
         return "<%s namespace=%r url=%r doc_id=%r>" % (
-            type(self).__name__, self.namespace, self.url, self.doc_id)
+            type(self).__name__,
+            self.namespace,
+            self.url,
+            self.doc_id,
+        )
 
 
 LIBRARIES = [
@@ -48,14 +51,30 @@ LIBRARIES = [
     Library("Gio-2.0", "https://developer.gnome.org/gio/stable/", "gio"),
     Library("GObject-2.0", "https://developer.gnome.org/gobject/stable/", "gobject"),
     Library("Pango-1.0", "https://developer.gnome.org/pango/stable/", "pango"),
-    Library("GdkPixbuf-2.0", "https://developer.gnome.org/gdk-pixbuf/unstable/", "gdk-pixbuf"),
+    Library(
+        "GdkPixbuf-2.0",
+        "https://developer.gnome.org/gdk-pixbuf/unstable/",
+        "gdk-pixbuf",
+    ),
     Library("Gdk-3.0", "https://developer.gnome.org/gdk3/stable/", "gdk3"),
     Library("Gtk-3.0", "https://developer.gnome.org/gtk3/stable/", "gtk3"),
-    Library("WebKit2-4.0", "http://webkitgtk.org/reference/webkit2gtk/stable/", "webkit2gtk-4.0"),
+    Library(
+        "WebKit2-4.0",
+        "http://webkitgtk.org/reference/webkit2gtk/stable/",
+        "webkit2gtk-4.0",
+    ),
     Library("cairo-1.0", "https://developer.gnome.org/cairo/stable/", "cairo"),
     Library("Clutter-1.0", "https://developer.gnome.org/clutter/stable/", "clutter"),
-    Library("Gst-1.0", "http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/", "gstreamer-1.0"),
-    Library("GES-1.0", "http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-editing-services/html/", "ges-1.0"),
+    Library(
+        "Gst-1.0",
+        "http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/",
+        "gstreamer-1.0",
+    ),
+    Library(
+        "GES-1.0",
+        "http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer-editing-services/html/",
+        "ges-1.0",
+    ),
     Library("UDisks-2.0", "http://storaged.org/doc/udisks2-api/latest/", "udisks2"),
 ]
 
@@ -71,14 +90,18 @@ def _get_generic_library_version(mod):
     modname = mod.__name__
     for i, (o, l) in enumerate(reversed(list(zip(modname, modname.lower())))):
         if o != l:
-            suffix = modname[-i - 1:].upper()
+            suffix = modname[-i - 1 :].upper()
             break
 
     const_version = []
     for name in ["MAJOR", "MINOR", "MICRO", "NANO"]:
-        for variant in ["VERSION_" + name, name + "_VERSION",
-                        suffix + "_" + name, suffix + "_" + name + "_VERSION",
-                        suffix + "_VERSION_" + name]:
+        for variant in [
+            "VERSION_" + name,
+            name + "_VERSION",
+            suffix + "_" + name,
+            suffix + "_" + name + "_VERSION",
+            suffix + "_VERSION_" + name,
+        ]:
             if hasattr(mod, variant):
                 value = int(getattr(mod, variant))
                 const_version.append(value)
@@ -87,9 +110,14 @@ def _get_generic_library_version(mod):
         return ".".join(map(str, const_version))
 
     func_version = ""
-    for name in ["get_version", "version", "util_get_version",
-                 "util_get_version_string", "get_version_string",
-                 "version_string"]:
+    for name in [
+        "get_version",
+        "version",
+        "util_get_version",
+        "util_get_version_string",
+        "get_version_string",
+        "version_string",
+    ]:
         if hasattr(mod, name):
             try:
                 value = getattr(mod, name)()
@@ -117,8 +145,12 @@ def _get_library_version(mod):
     version = ""
 
     if mod_name == "GstPbutils":
-        t = [mod.PLUGINS_BASE_VERSION_MAJOR, mod.PLUGINS_BASE_VERSION_MINOR,
-             mod.PLUGINS_BASE_VERSION_MICRO, mod.PLUGINS_BASE_VERSION_NANO]
+        t = [
+            mod.PLUGINS_BASE_VERSION_MAJOR,
+            mod.PLUGINS_BASE_VERSION_MINOR,
+            mod.PLUGINS_BASE_VERSION_MICRO,
+            mod.PLUGINS_BASE_VERSION_NANO,
+        ]
         return ".".join(map(str, t))
 
     version = _get_generic_library_version(mod)

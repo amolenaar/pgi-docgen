@@ -7,8 +7,8 @@
 
 import re
 
+from .rstutil import bold, field_name
 from .util import indent
-from .rstutil import field_name, bold
 
 
 def get_type_name(type_):
@@ -69,7 +69,6 @@ def arg_to_class_ref(text):
 
 
 class FuncSignature(object):
-
     def __init__(self, res, args, raises, name):
         self.res = res
         self.args = args
@@ -78,7 +77,12 @@ class FuncSignature(object):
 
     def __repr__(self):
         return "<%s res=%r args=%r, name=%r, raises=%r>" % (
-            type(self).__name__, self.res, self.args, self.name, self.raises)
+            type(self).__name__,
+            self.res,
+            self.args,
+            self.name,
+            self.raises,
+        )
 
     @property
     def arg_names(self):
@@ -171,8 +175,10 @@ class FuncSignature(object):
             else:
                 text = doc_repo.lookup_docs(
                     "signal-parameters" if signal else "parameters",
-                    param_key, current_type=current_type,
-                    current_func=full_name)[0]
+                    param_key,
+                    current_type=current_type,
+                    current_func=full_name,
+                )[0]
             docs.append("%s\n%s" % (field_name("param", key), indent(text)))
             docs.append("%s %s\n" % (field_name("type", key), arg_to_class_ref(value)))
 
@@ -186,8 +192,10 @@ class FuncSignature(object):
                 # normal return value
                 text = doc_repo.lookup_docs(
                     "signal-returns" if signal else "returns",
-                    full_name, current_type=current_type,
-                    current_func=current_func)[0]
+                    full_name,
+                    current_type=current_type,
+                    current_func=current_func,
+                )[0]
                 if text:
                     return_docs.append(text)
             else:
@@ -196,8 +204,10 @@ class FuncSignature(object):
                 pkey = full_name + "." + name
                 text = doc_repo.lookup_docs(
                     "signal-parameters" if signal else "parameters",
-                    pkey, current_type=current_type,
-                    current_func=current_func)[0]
+                    pkey,
+                    current_type=current_type,
+                    current_func=current_func,
+                )[0]
                 if text:
                     if len(self.res) != 1:
                         text = "%s\n%s" % (field_name(name), indent(text))
@@ -209,8 +219,7 @@ class FuncSignature(object):
         res_list = []
         for r in self.res:
             if len(r) > 1:
-                res_list.append(
-                    "%s: %s" % (bold(r[0]), arg_to_class_ref(r[1])))
+                res_list.append("%s: %s" % (bold(r[0]), arg_to_class_ref(r[1])))
             else:
                 res_list.append(arg_to_class_ref(r[0]))
 

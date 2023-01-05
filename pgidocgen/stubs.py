@@ -5,28 +5,25 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import sys
-import subprocess
 import os
+import subprocess
+import sys
 
+from .namespace import get_namespace, set_cache_prefix_path
 from .repo import Repository
 from .util import get_gir_files
-from .namespace import get_namespace, set_cache_prefix_path
 
 
 def add_parser(subparsers):
     parser = subparsers.add_parser("stubs", help="Create a typing stubs")
-    parser.add_argument('target',
-                        help='path to where the resulting stubs should be')
-    parser.add_argument('namespace', nargs="+",
-                        help='namespace including version e.g. Gtk-3.0')
+    parser.add_argument("target", help="path to where the resulting stubs should be")
+    parser.add_argument("namespace", nargs="+", help="namespace including version e.g. Gtk-3.0")
     parser.set_defaults(func=main)
 
 
 def _main_many(target, namespaces):
     for namespace in namespaces:
-        subprocess.check_call(
-            [sys.executable, sys.argv[0], "stubs", target, namespace])
+        subprocess.check_call([sys.executable, sys.argv[0], "stubs", target, namespace])
 
 
 def main(args):
@@ -44,7 +41,7 @@ def main(args):
         print("GIR file for %s not found, aborting." % namespace)
         raise SystemExit(1)
 
-    cache_prefix = os.path.join(args.target, ".pgidocgen.cache", 'namespace')
+    cache_prefix = os.path.join(args.target, ".pgidocgen.cache", "namespace")
     set_cache_prefix_path(cache_prefix)
 
     namespace, version = namespace.split("-", 1)
@@ -74,20 +71,31 @@ def main(args):
     for namespace, version in get_to_write(args.target, namespace, version):
         mod = Repository(namespace, version).parse()
         module_path = os.path.join(args.target, namespace + ".pyi")
-        types = mod.classes + mod.flags + mod.enums + \
-            mod.structures + mod.unions
+        types = mod.classes + mod.flags + mod.enums + mod.structures + mod.unions
         with open(module_path, "w", encoding="utf-8") as h:
             for cls in types:
-                h.write("""\
+                h.write(
+                    """\
 class {}: ...
-""".format(cls.name))
+""".format(
+                        cls.name
+                    )
+                )
 
             for func in mod.functions:
-                h.write("""\
+                h.write(
+                    """\
 def {}(*args, **kwargs): ...
-""".format(func.name))
+""".format(
+                        func.name
+                    )
+                )
 
             for const in mod.constants:
-                h.write("""\
+                h.write(
+                    """\
 {} = ...
-""".format(const.name))
+""".format(
+                        const.name
+                    )
+                )

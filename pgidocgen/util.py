@@ -6,32 +6,31 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
+import csv
+import inspect
+import io
+import keyword
 import os
 import re
-import inspect
-import keyword
-import csv
-import warnings
 import subprocess
-import io
 import sys
+import warnings
 from contextlib import contextmanager
 
 from docutils.core import publish_parts
-
 
 _KWD_RE = re.compile("^(%s)$" % "|".join(keyword.kwlist + ["print", "exec"]))
 
 
 def get_signature_string(callable_):
     if type(callable_).__name__ == "wrapper_descriptor":
-        return u"()"
+        return "()"
 
     try:
         sig = inspect.signature(callable_)
     except TypeError:
         # ... is not a Python function
-        return u"()"
+        return "()"
 
     parameters = list(sig.parameters.keys())
     if parameters and parameters[0] in ("cls", "self"):
@@ -41,7 +40,7 @@ def get_signature_string(callable_):
 
 
 def rest2html(text):
-    return publish_parts(text, writer_name='html')['html_body']
+    return publish_parts(text, writer_name="html")["html_body"]
 
 
 def shell(cmd):
@@ -50,9 +49,11 @@ def shell(cmd):
     pipe = subprocess.PIPE
     p = subprocess.Popen(cmd, shell=True, stdout=pipe, stderr=pipe, stdin=pipe)
     stdout, stderr = p.communicate()
-    return (p.returncode,
-            stdout.strip().decode("utf-8"),
-            stderr.strip().decode("utf-8"))
+    return (
+        p.returncode,
+        stdout.strip().decode("utf-8"),
+        stderr.strip().decode("utf-8"),
+    )
 
 
 def parse_gir_shared_libs(gir_path):
@@ -66,7 +67,7 @@ def parse_gir_shared_libs(gir_path):
         for line in h.read().decode("utf-8").splitlines():
             line = line.strip()
             if line.startswith("shared-library="):
-                shared_libs.extend(line.split("=")[-1].strip("\"").split(","))
+                shared_libs.extend(line.split("=")[-1].strip('"').split(","))
                 break
     return list(filter(None, shared_libs))
 
@@ -80,6 +81,7 @@ def cache_calls(func):
         if args not in _cache:
             _cache[args] = func(*args)
         return _cache[args]
+
     return wrap
 
 
@@ -164,7 +166,7 @@ def escape_identifier(text, reg=_KWD_RE):
 
     # see http://docs.python.org/reference/lexical_analysis.html#identifiers
     if not text:
-        return u"_"
+        return "_"
     if text[0].isdigit():
         text = "_" + text
     return reg.sub(r"\1_", text)
@@ -177,7 +179,7 @@ def unescape_parameter(text):
         start = 1
     if escape_parameter(text[:-1]) == text:
         end = -1
-    return text[start:len(text) + end].replace("_", "-")
+    return text[start : len(text) + end].replace("_", "-")
 
 
 def escape_parameter(text):
@@ -253,6 +255,7 @@ def is_iface(obj):
         return False
 
     from gi.repository import GObject
+
     return issubclass(obj, GObject.GInterface) and not is_object(obj)
 
 
@@ -261,6 +264,7 @@ def is_object(obj):
         return False
 
     from gi.repository import GObject
+
     return issubclass(obj, GObject.Object)
 
 
@@ -269,6 +273,7 @@ def is_flags(obj):
         return False
 
     from gi.repository import GLib
+
     return issubclass(obj, GLib.Flags)
 
 
@@ -277,6 +282,7 @@ def is_struct(obj):
         return False
 
     from gi.repository import GLib
+
     struct_base = GLib.Data.__mro__[-2]  # FIXME
     return issubclass(obj, struct_base)
 
@@ -286,6 +292,7 @@ def is_union(obj):
         return False
 
     from gi.repository import GLib
+
     union_base = GLib.DoubleIEEE754.__mro__[-2]  # FIXME
     return issubclass(obj, union_base)
 
@@ -295,6 +302,7 @@ def is_enum(obj):
         return False
 
     from gi.repository import GLib
+
     return issubclass(obj, GLib.Enum)
 
 
@@ -381,8 +389,7 @@ def fake_bases(obj, ignore_redundant=False):
     for base in obj.__bases__:
         new_bases = []
         if base.__name__ == obj.__name__ and base.__module__ == obj.__module__:
-            for upper_base in fake_bases(base,
-                                         ignore_redundant=ignore_redundant):
+            for upper_base in fake_bases(base, ignore_redundant=ignore_redundant):
                 new_bases.append(upper_base)
         else:
             new_bases.append(base)
@@ -402,7 +409,6 @@ def fake_bases(obj, ignore_redundant=False):
 
 
 def fake_mro(obj):
-
     def get_mro(obj):
         mro = [obj]
         for base in fake_bases(obj):
@@ -441,8 +447,7 @@ def is_callback(obj):
 
 
 def is_property(obj):
-    return isinstance(obj, property) or (
-        hasattr(obj, "__get__") and not callable(obj))
+    return isinstance(obj, property) or (hasattr(obj, "__get__") and not callable(obj))
 
 
 def make_rest_title(text, char="="):
@@ -480,13 +485,12 @@ def get_gir_files():
 
 
 def get_csv_line(values):
-
     class CSVDialect(csv.Dialect):
-        delimiter = ','
+        delimiter = ","
         quotechar = '"'
         doublequote = True
         skipinitialspace = False
-        lineterminator = '\n'
+        lineterminator = "\n"
         quoting = csv.QUOTE_ALL
 
     encoded = []
@@ -527,14 +531,12 @@ def instance_to_rest(cls, inst):
     if is_enum(cls):
         for k, v in cls.__dict__.items():
             if isinstance(v, cls) and v == inst:
-                return ":obj:`%s`" % (
-                    get_namespace(cls) + "." + cls.__name__ + "." + k)
+                return ":obj:`%s`" % (get_namespace(cls) + "." + cls.__name__ + "." + k)
     elif is_flags(cls):
         bits = []
         for k, v in cls.__dict__.items():
             if isinstance(v, cls) and (v & inst or (v == 0 and v == inst)):
-                bits.append(":obj:`%s`" % (
-                    get_namespace(cls) + "." + cls.__name__ + "." + k))
+                bits.append(":obj:`%s`" % (get_namespace(cls) + "." + cls.__name__ + "." + k))
         if bits:
             return " | ".join(bits)
         else:
@@ -559,8 +561,7 @@ def import_namespace(namespace, version=None, ignore_version=False):
             raise ImportError(e, version)
 
     with warnings.catch_warnings(record=True) as warns:
-        mod = getattr(
-                __import__("gi.repository." + namespace).repository, namespace)
+        mod = getattr(__import__("gi.repository." + namespace).repository, namespace)
 
         if namespace in ("Clutter", "ClutterGst", "Gst", "Grl"):
             mod.init([])
@@ -596,8 +597,7 @@ class cached_property(object):
         self.__name__ = name = fget.__name__
         # these get name mangled, so caching wont work unless
         # we mangle too
-        assert not (name.startswith("__") and not name.endswith("__")), \
-            "can't cache a dunder method"
+        assert not (name.startswith("__") and not name.endswith("__")), "can't cache a dunder method"
 
     def __get__(self, obj, cls):
         if obj is None:
@@ -607,7 +607,6 @@ class cached_property(object):
 
 
 class VersionedNamespace(str):
-
     @property
     def name(self):
         return self.split("-", 1)[0]

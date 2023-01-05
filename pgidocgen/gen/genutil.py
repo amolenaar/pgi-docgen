@@ -6,13 +6,12 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import os
 import importlib
+import os
 
 import jinja2
 
 from ..util import escape_rest
-
 
 _BASEDIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -22,7 +21,7 @@ def get_data_dir():
 
 
 def nolinebreak(text):
-    return u" ".join(text.splitlines())
+    return " ".join(text.splitlines())
 
 
 def import_source(name):
@@ -46,16 +45,18 @@ def import_source(name):
 
 
 class Loader(jinja2.BaseLoader):
-
     def get_source(self, environment, template):
         return (import_source(template), None, lambda: True)
 
 
 _RST_ENV = jinja2.Environment(
     loader=Loader(),
-    trim_blocks=True, lstrip_blocks=True, undefined=jinja2.StrictUndefined)
-_RST_ENV.filters['erest'] = escape_rest
-_RST_ENV.filters['nolinebreak'] = nolinebreak
+    trim_blocks=True,
+    lstrip_blocks=True,
+    undefined=jinja2.StrictUndefined,
+)
+_RST_ENV.filters["erest"] = escape_rest
+_RST_ENV.filters["nolinebreak"] = nolinebreak
 
 
 def get_template(source):

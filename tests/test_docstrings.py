@@ -8,8 +8,8 @@
 
 import unittest
 
-from pgidocgen.repo import docstring_to_rest
 from pgidocgen.namespace import get_base_types
+from pgidocgen.repo import docstring_to_rest
 
 
 class DummyRepo(object):
@@ -47,9 +47,7 @@ class DummyRepo(object):
             "GtkWidgetClass": "Gtk.Widget",
         }
 
-        self.instance_params = {
-            "Gtk.TreeModel.get": "tree_model"
-        }
+        self.instance_params = {"Gtk.TreeModel.get": "tree_model"}
 
     def lookup_gtkdoc_ref(self, doc_ref):
         return self.docrefs.get(doc_ref)
@@ -65,7 +63,6 @@ class DummyRepo(object):
 
 
 class TDocstring(unittest.TestCase):
-
     def setUp(self):
         self._repo = DummyRepo()
 
@@ -92,75 +89,64 @@ class TDocstring(unittest.TestCase):
         self.check("&,;", "&,;")
 
     def test_prog(self):
-        self.check("""
+        self.check(
+            """
 |[<!-- language="C" -->
 &foo
 b
-]|""", """
+]|""",
+            """
 .. code-block:: c
 
     &foo
     b\
-""")
+""",
+        )
 
     def test_field(self):
         self.check(
             "#GtkRecentFilterInfo.contains",
-            ":ref:`Gtk.RecentFilterInfo.contains <Gtk.RecentFilterInfo.fields>`")
+            ":ref:`Gtk.RecentFilterInfo.contains <Gtk.RecentFilterInfo.fields>`",
+        )
 
     def test_booleans(self):
-        self.check(
-            "%TRUE foo bar, %FALSE bar.",
-            ":obj:`True` foo bar, :obj:`False` bar.")
+        self.check("%TRUE foo bar, %FALSE bar.", ":obj:`True` foo bar, :obj:`False` bar.")
 
-        self.check(
-            "always returns %FALSE.",
-            "always returns :obj:`False`.")
+        self.check("always returns %FALSE.", "always returns :obj:`False`.")
 
         # FIXME, should have a space after "="
-        self.check(
-            "a expand=TRUE b",
-            "a expand=:obj:`True` b")
+        self.check("a expand=TRUE b", "a expand=:obj:`True` b")
 
     def test_type(self):
         self.check(
             "a #GQuark id to identify the data",
-            "a :obj:`GLib.Quark` id to identify the data")
+            "a :obj:`GLib.Quark` id to identify the data",
+        )
 
         self.check(
             "implementing a #GtkContainer: a",
-            "implementing a :obj:`Gtk.Container`\\: a")
+            "implementing a :obj:`Gtk.Container`\\: a",
+        )
 
     def test_method(self):
-        self.check(
-            "g_rand_new_with_seed()",
-            ":obj:`GLib.Rand.new_with_seed`\\()")
+        self.check("g_rand_new_with_seed()", ":obj:`GLib.Rand.new_with_seed`\\()")
 
     def test_type_unmarked(self):
-        self.check(
-            "The GTypeInterface structure",
-            "The :obj:`GObject.TypeInterface` structure")
+        self.check("The GTypeInterface structure", "The :obj:`GObject.TypeInterface` structure")
 
-        self.check(
-            "GQuark",
-            ":obj:`GLib.Quark`")
+        self.check("GQuark", ":obj:`GLib.Quark`")
 
     def test_params(self):
         self.check(
             "%TRUE if g_value_copy() with @src_type and @dest_type.",
-            ":obj:`True` if :obj:`GObject.Value.copy`\\() with `src_type` and `dest_type`.")
+            ":obj:`True` if :obj:`GObject.Value.copy`\\() with `src_type` and `dest_type`.",
+        )
 
-        self.check(
-            "@icon_set.",
-            "`icon_set`.")
+        self.check("@icon_set.", "`icon_set`.")
 
-        self.check(
-            "if @page is complete.",
-            "if `page` is complete.")
+        self.check("if @page is complete.", "if `page` is complete.")
 
-        self.check(
-            "in *@dest_x and ",
-            "in `dest_x` and ")
+        self.check("in *@dest_x and ", "in `dest_x` and ")
 
         self.check("and a @foo\nbla", "and a `foo`\nbla")
         self.check("@one@two", "`one` `two`")
@@ -172,49 +158,56 @@ b
             "a @tree_model and a @foo",
             "a `self` and a `foo`",
             "Gtk.TreeModel",
-            "Gtk.TreeModel.get")
+            "Gtk.TreeModel.get",
+        )
 
     def test_inline_code(self):
         self.check(
             "To free this list, you can use |[ g_slist_free_full (list, (GDestroyNotify) g_object_unref); ]|",
-            "To free this list, you can use ``g_slist_free_full (list, (GDestroyNotify) g_object_unref);``")
+            "To free this list, you can use ``g_slist_free_full (list, (GDestroyNotify) g_object_unref);``",
+        )
 
-        self.check(
-            "a |[ blaa()\n ]| adsad",
-            "a ``blaa()`` adsad")
+        self.check("a |[ blaa()\n ]| adsad", "a ``blaa()`` adsad")
 
     def test_escaped_xml(self):
         self.check(
             "target attribute on &lt;a&gt; elements.",
-            "target attribute on <a> elements.")
+            "target attribute on <a> elements.",
+        )
 
         self.check(
             "This is called for each unknown element under &lt;child&gt;.",
-            "This is called for each unknown element under <child>.")
+            "This is called for each unknown element under <child>.",
+        )
 
     def test_double(self):
-        self.check('to double something', 'to double something')
+        self.check("to double something", "to double something")
 
     def test_docbook_linked_maybe_prop(self):
         self.check(
             '<link linkend="AtkObject--posy">posy</link>',
-            ':obj:`posy <Atk.Object.props.posy>`')
+            ":obj:`posy <Atk.Object.props.posy>`",
+        )
 
     def test_docbook_linked(self):
         self.check(
             '<link linkend="gdouble"><type>double</type></link>',
-            ':obj:`double <float>`')
+            ":obj:`double <float>`",
+        )
 
         self.check(
             '<link linkend="GtkWidget"><type>AtkTable</type></link>',
-            ':obj:`Atk.Table <Gtk.Widget>`')
+            ":obj:`Atk.Table <Gtk.Widget>`",
+        )
 
     def test_docbook_programlisting_single(self):
-        self.check("""
+        self.check(
+            """
 <informalexample><programlisting>
 gtk_entry_buffer_get_length (gtk_entry_get_buffer (entry));
 </programlisting></informalexample>""",
-                   "``gtk_entry_buffer_get_length (gtk_entry_get_buffer (entry));``")
+            "``gtk_entry_buffer_get_length (gtk_entry_get_buffer (entry));``",
+        )
 
     def test_docbook_programlisting(self):
         self.check(
@@ -230,7 +223,8 @@ bar;
 
     foo;
     bar;\
-""")
+""",
+        )
 
     def test_docbook_programlisting_extra(self):
         self.check(
@@ -252,71 +246,68 @@ foo
     bar;
 
 bar\
-""")
+""",
+        )
 
     def test_docbook_literal(self):
         self.check(
             "the unique ID for @window, or <literal>0</literal> if the",
-            "the unique ID for `window`, or ``0`` if the")
+            "the unique ID for `window`, or ``0`` if the",
+        )
 
         self.check(
             "you would\nwrite: <literal>;gtk_tree_model_get (model, iter, 0, &amp;place_string_here, -1)</literal>,\nwhere",
-            "you would\nwrite\\: ``;gtk_tree_model_get (model, iter, 0, &place_string_here, -1)``,\nwhere")
+            "you would\nwrite\\: ``;gtk_tree_model_get (model, iter, 0, &place_string_here, -1)``,\nwhere",
+        )
 
         self.check(
             "where <literal>place_string_here</literal> is a",
-            "where ``place_string_here`` is a")
+            "where ``place_string_here`` is a",
+        )
 
         self.check(
             "a style class named <literal>level-</literal>@name",
-            "a style class named ``level-`` `name`")
+            "a style class named ``level-`` `name`",
+        )
 
     def test_signal(self):
         self.check(
             "Emits the #GtkCellEditable::editing-done signal.",
-            "Emits the :obj:`Gtk.CellEditable` :py:func:`::editing-done<Gtk.CellEditable.signals.editing_done>` signal.")
+            "Emits the :obj:`Gtk.CellEditable` :py:func:`::editing-done<Gtk.CellEditable.signals.editing_done>` signal.",
+        )
 
-        self.check(
-            "GtkWidget::foo_bar vfunc",
-            "GtkWidget\\:\\:foo\\_bar vfunc")
+        self.check("GtkWidget::foo_bar vfunc", "GtkWidget\\:\\:foo\\_bar vfunc")
 
-        self.check(
-            "GtkWidgetClass::foo",
-            "GtkWidgetClass\\:\\:foo")
+        self.check("GtkWidgetClass::foo", "GtkWidgetClass\\:\\:foo")
 
     def test_signal_no_type(self):
         self.check(
             "Returns the value of the ::columns signal.",
             "Returns the value of the :py:func:`::columns<Gtk.Widget.signals.columns>` signal.",
-            "Gtk.Widget")
+            "Gtk.Widget",
+        )
 
         self.check(
             "this is some ::signal-foo blah",
             "this is some :py:func:`::signal-foo<Gtk.Widget.signals.signal_foo>` blah",
-            "Gtk.Widget")
+            "Gtk.Widget",
+        )
 
     def test_null(self):
-        self.check(
-            "a filename or %NULL",
-            "a filename or :obj:`None`")
+        self.check("a filename or %NULL", "a filename or :obj:`None`")
 
-        self.check(
-            "the NULL state or initial state",
-            "the :obj:`None` state or initial state")
+        self.check("the NULL state or initial state", "the :obj:`None` state or initial state")
 
-        self.check(
-            "%NULL-terminated",
-            ":obj:`None`-terminated")
+        self.check("%NULL-terminated", ":obj:`None`-terminated")
 
     def test_docbook_type(self):
-        self.check(
-            "is a <type>gchar*</type>\nto be filled",
-            "is a ``gchar*``\nto be filled")
+        self.check("is a <type>gchar*</type>\nto be filled", "is a ``gchar*``\nto be filled")
 
     def test_constant(self):
         self.check(
             "Please note\nthat @GTK_TREE_VIEW_COLUMN_AUTOSIZE are inefficient",
-            "Please note\nthat :obj:`Gtk.TreeViewColumnSizing.AUTOSIZE` are inefficient")
+            "Please note\nthat :obj:`Gtk.TreeViewColumnSizing.AUTOSIZE` are inefficient",
+        )
 
     def test_list(self):
         self.check(
@@ -340,7 +331,8 @@ bla\\:
 * The channel is write-only.
 
 foo
-""")
+""",
+        )
 
     def test_docbook_itemizedlist(self):
         self.check(
@@ -361,7 +353,8 @@ foo
 * :obj:`Gtk.Widget.do_get_preferred_height_for_width`\\()
 * :obj:`Gtk.Widget.do_get_preferred_width_for_height`\\()
 * :obj:`Gtk.Widget.do_get_preferred_height_and_baseline_for_width`\\()
-""")
+""",
+        )
 
     def test_header(self):
         self.check(
@@ -393,67 +386,57 @@ vertical space it needs, depending on the amount of horizontal space
 that it is given (and similar for width-for-height). The most common
 example is a label that reflows to fill up the available width, wraps
 to fewer lines, and therefore needs less height.
-""")
+""",
+        )
 
     def test_paragraphs(self):
         self.check(
             "foo,\nbar.\n\nfoo,\nbar.\n\nfoo,\nbar.\n",
-            "foo,\nbar.\n\nfoo,\nbar.\n\nfoo,\nbar.\n")
+            "foo,\nbar.\n\nfoo,\nbar.\n\nfoo,\nbar.\n",
+        )
 
     def test_unknown(self):
         self.check(
             " or #ATK_TEXT_ATTRIBUTE_INVALID if no match",
-            "or #ATK\\_TEXT\\_ATTRIBUTE\\_INVALID if no match")
+            "or #ATK\\_TEXT\\_ATTRIBUTE\\_INVALID if no match",
+        )
 
     def test_enum(self):
-        self.check(
-            "or #ATK_RELATION_NULL if",
-            "or :obj:`Atk.RelationType.NULL` if")
+        self.check("or #ATK_RELATION_NULL if", "or :obj:`Atk.RelationType.NULL` if")
 
     def test_escape_rest(self):
-        self.check(
-            "table by initializing **selected",
-            "table by initializing \\*\\*selected")
+        self.check("table by initializing **selected", "table by initializing \\*\\*selected")
 
-        self.check(
-            "Since: this is",
-            "Since\\: this is")
+        self.check("Since: this is", "Since\\: this is")
 
         self.check(
             "unless it has handled or blocked `SIGPIPE'.",
-            "unless it has handled or blocked \\`SIGPIPE'.")
+            "unless it has handled or blocked \\`SIGPIPE'.",
+        )
 
     def test_type_plural(self):
-        self.check(
-            "captions are #AtkObjects",
-            "captions are :obj:`Atk.Objects <Atk.Object>`")
+        self.check("captions are #AtkObjects", "captions are :obj:`Atk.Objects <Atk.Object>`")
 
-        self.check(
-            "foo #GdkFrameTiming",
-            "foo :obj:`Gdk.FrameTiming <Gdk.FrameTimings>`")
+        self.check("foo #GdkFrameTiming", "foo :obj:`Gdk.FrameTiming <Gdk.FrameTimings>`")
 
     def test_property(self):
         self.check(
             "the #GtkSettings:gtk-error-bell setting",
-            "the :obj:`Gtk.Settings` :py:data:`:gtk-error-bell<Gtk.Settings.props.gtk_error_bell>` setting")
+            "the :obj:`Gtk.Settings` :py:data:`:gtk-error-bell<Gtk.Settings.props.gtk_error_bell>` setting",
+        )
 
     def test_base_types(self):
-        self.check(
-            "returns a gint*.",
-            "returns a :obj:`int`.")
+        self.check("returns a gint*.", "returns a :obj:`int`.")
 
-        self.check(
-            "a #gint** that",
-            "a :obj:`int` that")
+        self.check("a #gint** that", "a :obj:`int` that")
 
-        self.check(
-            "returns a #gpointer",
-            "returns a :obj:`object`")
+        self.check("returns a #gpointer", "returns a :obj:`object`")
 
     def test_docbook_keycombo(self):
         self.check(
             "<keycombo><keycap>Control</keycap><keycap>L</keycap></keycombo>",
-            "Control + L")
+            "Control + L",
+        )
 
     def test_docbook_variablelist(self):
         self.check(
@@ -470,51 +453,38 @@ path\\:
 
 user\\_data\\:
     user data set when the signal handler was connected.\
-""")
+""",
+        )
 
     def test_varlistentry(self):
         self.check(
             "<varlistentry><term>#POPPLER_ANNOT_TEXT_ICON_NOTE</term></varlistentry>",
-            "\n#POPPLER\\_ANNOT\\_TEXT\\_ICON\\_NOTE")
+            "\n#POPPLER\\_ANNOT\\_TEXT\\_ICON\\_NOTE",
+        )
 
     def test_markdown_references(self):
-        self.check(
-            "a [foo][bar] b [quux][baz]",
-            "a 'foo [bar]' b 'quux [baz]'")
+        self.check("a [foo][bar] b [quux][baz]", "a 'foo [bar]' b 'quux [baz]'")
 
-        self.check(
-            "a [foo][AtkObject]",
-            "a :obj:`foo <Atk.Object>`")
+        self.check("a [foo][AtkObject]", "a :obj:`foo <Atk.Object>`")
 
-        self.check(
-            "[gint][gint]",
-            ":obj:`int`")
+        self.check("[gint][gint]", ":obj:`int`")
 
-        self.check(
-            "a [foo][im-a-ref]",
-            "a `foo <http://example.com>`__")
+        self.check("a [foo][im-a-ref]", "a `foo <http://example.com>`__")
 
-        self.check(
-            "a [foo][gtk-tree-model-get]",
-            "a :obj:`foo <Gtk.TreeModel.get>`")
+        self.check("a [foo][gtk-tree-model-get]", "a :obj:`foo <Gtk.TreeModel.get>`")
 
         self.check(
             "a [foo][GtkContainer--border-width]",
-            "a :obj:`foo <Gtk.Container.props.border_width>`")
+            "a :obj:`foo <Gtk.Container.props.border_width>`",
+        )
 
     def test_markdown_literal(self):
-        self.check(
-            "`bla[0][1] = 3`",
-            "``bla[0][1] = 3``")
+        self.check("`bla[0][1] = 3`", "``bla[0][1] = 3``")
 
-        self.check(
-            "`<sadaf>`",
-            "``<sadaf>``")
+        self.check("`<sadaf>`", "``<sadaf>``")
 
     def test_vfuncs(self):
-        self.check(
-            "#GtkWidget.get_request_mode()",
-            ":obj:`Gtk.Widget.do_get_request_mode`\\()")
+        self.check("#GtkWidget.get_request_mode()", ":obj:`Gtk.Widget.do_get_request_mode`\\()")
 
     def test_various(self):
 
@@ -522,12 +492,10 @@ user\\_data\\:
 
         self.check(
             "appropriate.  #AtkTable summaries may themselves be (simplified) #AtkTables, etc.",
-            "appropriate.  :obj:`Atk.Table` summaries may themselves be (simplified) :obj:`Atk.Tables <Atk.Table>`, etc.")
+            "appropriate.  :obj:`Atk.Table` summaries may themselves be (simplified) :obj:`Atk.Tables <Atk.Table>`, etc.",
+        )
 
-        self.check(
-            "02:30 on March 14th 2010",
-            "02\\:30 on March 14th 2010",
-            "Gtk.Widget")
+        self.check("02:30 on March 14th 2010", "02\\:30 on March 14th 2010", "Gtk.Widget")
 
     def test_markdown_code(self):
         self.check(
@@ -546,20 +514,24 @@ user\\_data\\:
     GdkEventType type;
     \n\
     type = event->type;
-""")
+""",
+        )
 
-        self.check(u"""\
+        self.check(
+            """\
 |[<!-- language="plain" -->
 frame
 ├── border
 ├── <label widget>
 ╰── <child>
 ]|
-""", u"""
+""",
+            """
 .. code-block:: none
 
     frame
     ├── border
     ├── <label widget>
     ╰── <child>
-""")
+""",
+        )

@@ -13,5 +13,4 @@ def bold(text):
 
 def field_name(*parts):
     text = " ".join(parts)
-    return ":%s:" % text.replace(
-        "\\", "\\\\").replace(":", "\\:").replace("*", "\\*")
+    return ":%s:" % text.replace("\\", "\\\\").replace(":", "\\:").replace("*", "\\*")

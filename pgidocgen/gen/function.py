@@ -8,12 +8,11 @@
 
 import os
 
+from .. import util
 from . import genutil
 
-from .. import util
-
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 =========
 Functions
@@ -48,11 +47,11 @@ Details
 None
 
 {% endif %}
-""")
+"""
+)
 
 
 class FunctionGenerator(genutil.Generator):
-
     def __init__(self):
         self._funcs = set()
 
@@ -72,13 +71,15 @@ class FunctionGenerator(genutil.Generator):
 
         summary_rows = []
         for func in functions:
-            summary_rows.append(util.get_csv_line([
-                "",
-                ":py:func:`%s<%s>` %s" % (func.name, func.fullname,
-                                          util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "",
+                        ":py:func:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
 
         with open(path, "wb") as h:
-            text = _template.render(
-                functions=functions,
-                summary_rows=summary_rows)
+            text = _template.render(functions=functions, summary_rows=summary_rows)
             h.write(text.encode("utf-8"))

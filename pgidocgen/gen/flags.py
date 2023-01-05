@@ -9,8 +9,8 @@ import os
 
 from . import genutil
 
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 =====
 Flags
@@ -52,11 +52,11 @@ Details
 None
 
 {% endif %}
-""")
+"""
+)
 
 
 class FlagsGenerator(genutil.Generator):
-
     def __init__(self):
         self._flags = set()
 

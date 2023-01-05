@@ -12,8 +12,8 @@ creates a new custom search index (with a different structure) containing
 all symbols.
 """
 
-import os
 import io
+import os
 
 from sphinx.search import js_index
 
@@ -21,7 +21,6 @@ from .util import unescape_parameter
 
 
 class SearchIndexMerger(object):
-
     def __init__(self):
         self._indices = {}
 
@@ -51,12 +50,9 @@ class SearchIndexMerger(object):
                 if pair not in pairs:
                     pairs.append(pair)
 
-        pairs.append(
-            ("gobject:vfunc", ["gobject", "vfunc", "Virtual Function"]))
-        pairs.append(
-            ("gobject:signal", ["gobject", "signal", "GObject Signal"]))
-        pairs.append(
-            ("gobject:property", ["gobject", "property", "GObject Property"]))
+        pairs.append(("gobject:vfunc", ["gobject", "vfunc", "Virtual Function"]))
+        pairs.append(("gobject:signal", ["gobject", "signal", "GObject Signal"]))
+        pairs.append(("gobject:property", ["gobject", "property", "GObject Property"]))
 
         # OBJNAMES/OBJTYPES
         new_objnames = {}
@@ -87,8 +83,7 @@ class SearchIndexMerger(object):
             new_titles = []
             new_filenames = []
             new_docnames = []
-            for docname, fn, title in zip(index["docnames"],
-                                          index["filenames"], index["titles"]):
+            for docname, fn, title in zip(index["docnames"], index["filenames"], index["titles"]):
                 new_filenames.append(fn)
                 new_docnames.append(docname)
                 # add the namespace to title not containing the module name
@@ -130,12 +125,16 @@ class SearchIndexMerger(object):
                         new_v[1] = objtype_indizes["gobject:property"]
                         new_v[3] = orig_k + "." + attr
                         attr = "%s:%s" % (
-                            orig_k.rsplit(".", 1)[0], unescape_parameter(attr))
+                            orig_k.rsplit(".", 1)[0],
+                            unescape_parameter(attr),
+                        )
                     elif is_signals:
                         new_v[1] = objtype_indizes["gobject:signal"]
                         new_v[3] = orig_k + "." + attr
                         attr = "%s::%s" % (
-                            orig_k.rsplit(".", 1)[0], unescape_parameter(attr))
+                            orig_k.rsplit(".", 1)[0],
+                            unescape_parameter(attr),
+                        )
                     elif attr.startswith("do_"):
                         # change vfunc object type
                         # XXX: there could be methods called "do_XXX"..

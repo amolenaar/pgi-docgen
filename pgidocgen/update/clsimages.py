@@ -7,16 +7,16 @@
 
 import os
 import re
-import requests
 from multiprocessing.pool import ThreadPool
+
+import requests
 
 from ..girdata import get_class_image_dir
 from ..util import progress
 
 
 def add_parser(subparsers):
-    parser = subparsers.add_parser(
-        "update-images", help="Update the class images")
+    parser = subparsers.add_parser("update-images", help="Update the class images")
     parser.set_defaults(func=main)
 
 
@@ -84,8 +84,7 @@ GTK_MAPPING = {
     "LockButton": "lockbutton",
 }
 
-GTK_URL = ("https://gitlab.gnome.org/GNOME/gtk/raw/master/docs/"
-           "reference/gtk/images/%s.png")
+GTK_URL = "https://gitlab.gnome.org/GNOME/gtk/raw/master/docs/" "reference/gtk/images/%s.png"
 
 MAPPING = dict([(k, GTK_URL % v) for k, v in GTK_MAPPING.items()])
 
@@ -99,6 +98,7 @@ def fetch(args):
 
 def main(args):
     import pgi
+
     pgi.require_version("Gtk", "3.0")
 
     from pgi.repository import Gtk

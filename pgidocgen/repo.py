@@ -8,9 +8,9 @@
 
 import jinja2
 
+from .docobj import Module
 from .namespace import get_namespace
 from .parser import docstring_to_rest
-from .docobj import Module
 
 
 class Repository(object):
@@ -48,7 +48,7 @@ class Repository(object):
         for ns in self._namespaces:
             if fullname in ns.override_docs:
                 return ns.override_docs[fullname]
-        return u""
+        return ""
 
     def lookup_py_id(self, c_id, shadowed=True):
         """Given a C identifier will return a Python identifier which
@@ -113,16 +113,15 @@ class Repository(object):
         for ns in self._namespaces:
             source = ns.docs[type_]
             if name in source:
-                return docstring_to_rest(self, source[name].docs,
-                                         current_type, current_func)
-        return u""
+                return docstring_to_rest(self, source[name].docs, current_type, current_func)
+        return ""
 
     def lookup_docs(self, type_, *args, **kwargs):
         docs = self._lookup_docs(type_, *args, **kwargs)
         if type_ == "all":
             shadowed = self._lookup_docs("all_shadowed", *args, **kwargs)
         else:
-            shadowed = u""
+            shadowed = ""
 
         return docs, shadowed
 
@@ -135,7 +134,7 @@ class Repository(object):
                 dep = docstring_to_rest(self, dep)
                 return version_added, dep_version, dep
 
-        return u"", u"", u""
+        return "", "", ""
 
     def lookup_instance_param(self, py_id):
         """Returns the name of the instance parameter for the Python identifier

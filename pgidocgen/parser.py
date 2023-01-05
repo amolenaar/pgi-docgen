@@ -7,29 +7,42 @@
 # version 2.1 of the License, or (at your option) any later version.
 
 import re
-
-from lxml import etree
 from xml.sax.saxutils import escape
+
 from bs4 import BeautifulSoup, Tag
+from lxml import etree
 
 from . import util
-from .util import escape_rest, force_unindent
-from .gtkdoc import ConvertMarkDown
 from .docbook_escape import docbook_escape
+from .gtkdoc import ConvertMarkDown
+from .util import escape_rest, force_unindent
 
-
-_scanner = re.Scanner([
-    (r"\*?@[A-Za-z0-9_]+", lambda scanner, token:("PARAM", token)),
-    (r"[#%]?[A-Za-z0-9_:\-]+\.[A-Za-z0-9_:\-]+\(\)", lambda scanner, token:("VFUNC", token)),
-    (r"[#%]?[A-Za-z0-9_:\-]+\.[A-Za-z0-9_:\-]+", lambda scanner, token:("FIELD", token)),
-    (r"[#%]?[A-Za-z_]+[A-Za-z0-9_]*::[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token:("FULLSIG", token)),
-    (r"::[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token:("SIG", token)),
-    (r"[#%]?[A-Za-z_]+[A-Za-z0-9_]*:[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token:("FULLPROP", token)),
-    (r":[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token:("PROP", token)),
-    (r"[#%]?[A-Za-z0-9_]+\**", lambda scanner, token:("ID", token)),
-    (r"\s+", lambda scanner, token:("SPACE", token)),
-    (r".", lambda scanner, token:("OTHER", token)),
-])
+_scanner = re.Scanner(
+    [
+        (r"\*?@[A-Za-z0-9_]+", lambda scanner, token: ("PARAM", token)),
+        (
+            r"[#%]?[A-Za-z0-9_:\-]+\.[A-Za-z0-9_:\-]+\(\)",
+            lambda scanner, token: ("VFUNC", token),
+        ),
+        (
+            r"[#%]?[A-Za-z0-9_:\-]+\.[A-Za-z0-9_:\-]+",
+            lambda scanner, token: ("FIELD", token),
+        ),
+        (
+            r"[#%]?[A-Za-z_]+[A-Za-z0-9_]*::[A-Za-z\-]+[A-Za-z0-9\-_]*",
+            lambda scanner, token: ("FULLSIG", token),
+        ),
+        (r"::[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token: ("SIG", token)),
+        (
+            r"[#%]?[A-Za-z_]+[A-Za-z0-9_]*:[A-Za-z\-]+[A-Za-z0-9\-_]*",
+            lambda scanner, token: ("FULLPROP", token),
+        ),
+        (r":[A-Za-z\-]+[A-Za-z0-9\-_]*", lambda scanner, token: ("PROP", token)),
+        (r"[#%]?[A-Za-z0-9_]+\**", lambda scanner, token: ("ID", token)),
+        (r"\s+", lambda scanner, token: ("SPACE", token)),
+        (r".", lambda scanner, token: ("OTHER", token)),
+    ]
+)
 
 
 def _handle_data(repo, current_type, current_func, d):
@@ -107,8 +120,7 @@ def _handle_data(repo, current_type, current_func, d):
             c_id, field_name = field.split(".", 1)
             objtype = repo.lookup_py_id(c_id)
             if objtype is not None:
-                token = ":ref:`%s.%s <%s.fields>`" % (
-                    objtype, field_name, objtype)
+                token = ":ref:`%s.%s <%s.fields>`" % (objtype, field_name, objtype)
         elif type_ == "FULLPROP" or type_ == "PROP":
             c_id, prop_name = token.split(":")
             if c_id.startswith(("#", "%")):
@@ -127,8 +139,7 @@ def _handle_data(repo, current_type, current_func, d):
                     token += " "
 
                 rst_target = py_id + ".props." + prop_attr
-                token += ":py:data:`:%s<%s>`" % (
-                    prop_name, rst_target)
+                token += ":py:data:`:%s<%s>`" % (prop_name, rst_target)
         elif type_ == "FULLSIG" or type_ == "SIG":
             c_id, sig_name = token.split("::")
             if c_id.startswith(("#", "%")):
@@ -152,8 +163,7 @@ def _handle_data(repo, current_type, current_func, d):
                     token += " "
 
                 rst_target = py_id + ".signals." + sig_attr
-                token += ":py:func:`::%s<%s>`" % (
-                    sig_name, rst_target)
+                token += ":py:func:`::%s<%s>`" % (sig_name, rst_target)
         elif type_ == "ID":
             token = id_ref(token)
 
@@ -223,7 +233,6 @@ def docref_to_pyref(repo, ref, text):
 
 
 def _handle_xml(repo, current_type, current_func, out, item):
-
     def handle_next(out, item):
         return _handle_xml(repo, current_type, current_func, out, item)
 
@@ -278,8 +287,8 @@ def _handle_xml(repo, current_type, current_func, out, item):
                 language = item.get("language", "none").lower()
                 code = "\n.. code-block:: %s\n\n%s\n" % (
                     language,
-                    util.indent(
-                        util.unindent(item_text, ignore_first_line=True)))
+                    util.indent(util.unindent(item_text, ignore_first_line=True)),
+                )
                 out.append(code)
         elif item.name == "para":
             for item in item.contents:
@@ -290,8 +299,7 @@ def _handle_xml(repo, current_type, current_func, out, item):
             # inline markup and is bold in the default theme. Only restriction
             # is it doesn't allow newlines, but we can live with that for
             # titles
-            title_text = " ".join(
-                handle_data(item_text).splitlines())
+            title_text = " ".join(handle_data(item_text).splitlines())
             code = "\n%s\n    ..\n        .\n\n" % title_text
             out.append(code)
         elif item.name == "keycombo":
@@ -322,12 +330,10 @@ def _handle_xml(repo, current_type, current_func, out, item):
             assert terms
 
             lines = []
-            terms_line = ", ".join(
-                [handle_data(t) for t in terms])
+            terms_line = ", ".join([handle_data(t) for t in terms])
             lines.append("%s\n" % terms_line)
             listitem = force_unindent(listitem, ignore_first_line=True)
-            lines.append(
-                util.indent(handle_data(listitem)) + "\n")
+            lines.append(util.indent(handle_data(listitem)) + "\n")
             out.append("\n")
             out.extend(lines)
         else:
@@ -356,19 +362,18 @@ def _docstring_to_docbook(docstring):
     # inline code for now
     def to_programlisting(match):
         from xml.sax.saxutils import escape
+
         escaped = escape(match.group(1))
         return "<programlisting>%s</programlisting>" % escaped
 
-    docstring = re.sub(r"\|\[(.*?)\]\|", to_programlisting,
-                       docstring, flags=re.MULTILINE | re.DOTALL)
+    docstring = re.sub(r"\|\[(.*?)\]\|", to_programlisting, docstring, flags=re.MULTILINE | re.DOTALL)
 
     return docstring
 
 
 def _docbook_to_rest(repo, docbook, current_type, current_func):
     dummy = "<dummy>" + docbook + "</dummy>"
-    dummy = etree.tostring(
-        etree.fromstring(dummy, parser=etree.XMLParser(recover=True)))
+    dummy = etree.tostring(etree.fromstring(dummy, parser=etree.XMLParser(recover=True)))
     soup = BeautifulSoup(dummy, "xml")
 
     out = []
@@ -418,17 +423,14 @@ def docstring_to_rest(repo, docstring, current_type=None, current_func=None):
     def esc_xml(text):
         # in case it's not valid xml, assume markdown and escape
         try:
-            etree.tostring(etree.fromstring(
-                "<dummy>%s</dummy>" % text.replace(
-                    "&nbsp;", "&#160;")))
+            etree.tostring(etree.fromstring("<dummy>%s</dummy>" % text.replace("&nbsp;", "&#160;")))
         except etree.XMLSyntaxError:
             text = escape(text)
         return text
 
     # skip inline code when escaping xml
     reg = re.compile(r"(\|\[.*?\]\|)", flags=re.MULTILINE | re.DOTALL)
-    docstring = "".join([
-        p if reg.match(p) else esc_xml(p) for p in reg.split(docstring)])
+    docstring = "".join([p if reg.match(p) else esc_xml(p) for p in reg.split(docstring)])
 
     docbook = _docstring_to_docbook(docstring)
     rst = _docbook_to_rest(repo, docbook, current_type, current_func)

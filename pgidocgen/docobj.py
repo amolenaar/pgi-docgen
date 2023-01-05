@@ -6,21 +6,21 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
+import copy
+import inspect
 import os
 import re
 import types
-import inspect
-import copy
 import warnings
 
 import gi
 from gi.repository import GObject
 
 from . import util
-from .funcsig import FuncSignature, py_type_to_class_ref, get_type_name
-from .girdata import get_project_summary, get_class_image_path, Project
-from .util import escape_parameter, get_signature_string
+from .funcsig import FuncSignature, get_type_name, py_type_to_class_ref
+from .girdata import Project, get_class_image_path, get_project_summary
 from .parser import docstring_to_rest
+from .util import escape_parameter, get_signature_string
 
 
 def get_hierarchy(type_seq):
@@ -51,8 +51,7 @@ def class_name(cls):
 
 def to_names(hierarchy):
 
-    return sorted(
-            [(class_name(k), to_names(v)) for (k, v) in hierarchy.items()])
+    return sorted([(class_name(k), to_names(v)) for (k, v) in hierarchy.items()])
 
 
 def to_short_desc(docs):
@@ -72,11 +71,13 @@ class BaseDocObject(object):
 
     def __repr__(self):
         return "<%s fullname=%s name=%s>" % (
-            type(self).__name__, self.fullname, self.name)
+            type(self).__name__,
+            self.fullname,
+            self.name,
+        )
 
 
 class SignalsMixin(object):
-
     def _parse_signals(self, repo, obj):
         if not hasattr(obj, "signals"):
             self.signals = []
@@ -90,7 +91,6 @@ class SignalsMixin(object):
 
 
 class MethodsMixin(object):
-
     def get_methods(self, static=False):
         methods = []
         for m in self.methods:
@@ -109,8 +109,7 @@ class MethodsMixin(object):
             if not util.is_method_owner(obj, attr):
                 continue
 
-            func = Function.from_object(
-                self.fullname, attr, attr_obj, repo, obj)
+            func = Function.from_object(self.fullname, attr, attr_obj, repo, obj)
             if func.is_vfunc:
                 vfuncs.append(func)
             else:
@@ -123,7 +122,6 @@ class MethodsMixin(object):
 
 
 class PropertiesMixin(object):
-
     def _parse_properties(self, repo, obj):
         if not hasattr(obj, "props"):
             self.properties = []
@@ -138,14 +136,12 @@ class PropertiesMixin(object):
 
         props = []
         for attr_name, spec in specs:
-            prop = Property.from_prop_spec(
-                repo, self.fullname, attr_name, spec)
+            prop = Property.from_prop_spec(repo, self.fullname, attr_name, spec)
             props.append(prop)
         self.properties = props
 
 
 class ChildPropertiesMixin(object):
-
     def _parse_child_properties(self, repo, obj):
         props = []
         for spec in util.get_child_properties(obj):
@@ -156,7 +152,6 @@ class ChildPropertiesMixin(object):
 
 
 class StylePropertiesMixin(object):
-
     def _parse_style_properties(self, repo, obj):
         props = []
         for spec in util.get_style_properties(obj):
@@ -167,7 +162,6 @@ class StylePropertiesMixin(object):
 
 
 class FieldsMixin(object):
-
     def _parse_fields(self, repo, obj):
         fields = []
         for attr, field_info in util.iter_public_attr(obj):
@@ -181,17 +175,14 @@ class FieldsMixin(object):
             if "." in type_name and repo.is_private(type_name):
                 continue
 
-            fields.append(
-                Field.from_object(repo, self.fullname, field_info))
+            fields.append(Field.from_object(repo, self.fullname, field_info))
 
         fields.sort(key=lambda f: f.name)
         self.fields = fields
 
 
 class Property(BaseDocObject):
-
-    def __init__(self, parent_fullname, name, prop_name, flags,
-                 type_desc, value_desc):
+    def __init__(self, parent_fullname, name, prop_name, flags, type_desc, value_desc):
         self.fullname = parent_fullname + "." + name
         self.name = name
         self.info = None
@@ -215,8 +206,7 @@ class Property(BaseDocObject):
                 continue
 
             if self.flags & flag:
-                flags.append((
-                    flag, "".join([p[:1] for p in key.split("_")]).lower()))
+                flags.append((flag, "".join([p[:1] for p in key.split("_")]).lower()))
         return "/".join([x[1] for x in sorted(flags)])
 
     @property
@@ -248,12 +238,17 @@ class Property(BaseDocObject):
         default_value = spec.get_default_value()
         if isinstance(default_value, GObject.Value):
             default_value = default_value.get_value()
-        value_desc = util.instance_to_rest(
-            spec.value_type.pytype, default_value)
+        value_desc = util.instance_to_rest(spec.value_type.pytype, default_value)
         type_desc = py_type_to_class_ref(spec.value_type.pytype)
 
-        prop = cls(parent_fullname, escape_parameter(name), name, spec.flags,
-                   type_desc, value_desc)
+        prop = cls(
+            parent_fullname,
+            escape_parameter(name),
+            name,
+            spec.flags,
+            type_desc,
+            value_desc,
+        )
 
         prop.info = DocInfo(prop.fullname, prop.name)
 
@@ -264,10 +259,9 @@ class Property(BaseDocObject):
         if blurb is not None:
             if isinstance(blurb, bytes):
                 blurb = blurb.decode("utf-8")
-            short_desc = docstring_to_rest(
-                repo, blurb, current_type=parent_fullname)
+            short_desc = docstring_to_rest(repo, blurb, current_type=parent_fullname)
         else:
-            short_desc = u""
+            short_desc = ""
 
         prop.short_desc = short_desc
         return prop
@@ -275,24 +269,27 @@ class Property(BaseDocObject):
     @classmethod
     def from_prop_spec(cls, repo, parent_fullname, attr_name, spec):
         name = spec.name
-        value_desc = util.instance_to_rest(
-            spec.value_type.pytype, spec.default_value)
+        value_desc = util.instance_to_rest(spec.value_type.pytype, spec.default_value)
         type_desc = py_type_to_class_ref(spec.value_type.pytype)
 
-        prop = cls(parent_fullname, escape_parameter(name), name, spec.flags,
-                   type_desc, value_desc)
+        prop = cls(
+            parent_fullname,
+            escape_parameter(name),
+            name,
+            spec.flags,
+            type_desc,
+            value_desc,
+        )
 
         if spec.blurb is not None:
             blurb = spec.blurb
             if isinstance(blurb, bytes):
                 blurb = blurb.decode("utf-8")
-            short_desc = docstring_to_rest(
-                repo, blurb, current_type=parent_fullname)
+            short_desc = docstring_to_rest(repo, blurb, current_type=parent_fullname)
         else:
-            short_desc = u""
+            short_desc = ""
 
-        prop.info = DocInfo.from_object(repo, "properties", prop,
-                                        current_type=parent_fullname)
+        prop.info = DocInfo.from_object(repo, "properties", prop, current_type=parent_fullname)
         if spec.flags & GObject.ParamFlags.DEPRECATED:
             prop.info.deprecated = True
         if not prop.info.desc:
@@ -303,7 +300,6 @@ class Property(BaseDocObject):
 
 
 class Signal(BaseDocObject):
-
     def __init__(self, parent_fullname, name, sig_name, flags):
         self.fullname = parent_fullname + "." + name
         self.name = name
@@ -331,16 +327,14 @@ class Signal(BaseDocObject):
         inst.signature = ssig
 
         if fsig:
-            signature_desc = fsig.to_rest_listing(
-                repo, inst.fullname, signal=True)
+            signature_desc = fsig.to_rest_listing(repo, inst.fullname, signal=True)
         else:
             # FIXME pgi
             print("FIXME: signal: %s " % inst.fullname)
             signature_desc = "(FIXME pgi-docgen: arguments are missing here)"
 
         inst.signature_desc = signature_desc
-        inst.info = DocInfo.from_object(repo, "signals", inst,
-                                        current_type=parent_fullname)
+        inst.info = DocInfo.from_object(repo, "signals", inst, current_type=parent_fullname)
         if sig.flags & GObject.SignalFlags.DEPRECATED:
             inst.info.deprecated = True
         inst.short_desc = to_short_desc(inst.info.desc)
@@ -362,7 +356,6 @@ class Signal(BaseDocObject):
 
 
 class PyProperty(BaseDocObject):
-
     def __init__(self, parent_fullname, name):
         self.fullname = parent_fullname + "." + name
         self.name = name
@@ -373,26 +366,24 @@ class PyProperty(BaseDocObject):
         klass = cls(parent_fullname, name)
 
         # don't take __doc__ from any value
-        obj_doc = u""
+        obj_doc = ""
         if util.is_property(obj):
             obj_doc = obj.__doc__
 
         # override docs
         docs = repo.lookup_override_docs(klass.fullname) or obj_doc
         if docs:
-            klass.info.desc = repo.render_override_docs(
-                util.unindent(docs, True), all="", docs="")
+            klass.info.desc = repo.render_override_docs(util.unindent(docs, True), all="", docs="")
 
         return klass
 
 
 class PyClass(BaseDocObject, MethodsMixin):
-
     def __init__(self, namespace, name):
         self.fullname = namespace + "." + name
         self.name = name
 
-        self.signature = u"()"
+        self.signature = "()"
         self.info = DocInfo(self.fullname, self.name)
         self.methods = []
         self.pyprops = []
@@ -408,21 +399,17 @@ class PyClass(BaseDocObject, MethodsMixin):
 
         for attr, attr_obj in util.iter_public_attr(obj):
             if util.is_property(attr_obj) or not callable(attr_obj):
-                klass.pyprops.append(
-                    PyProperty.from_object(
-                        repo, klass.fullname, attr, attr_obj))
+                klass.pyprops.append(PyProperty.from_object(repo, klass.fullname, attr, attr_obj))
         klass.pyprops.sort(key=lambda p: p.name)
 
         # override docs
         if obj.__doc__:
-            klass.info.desc = repo.render_override_docs(
-                util.unindent(obj.__doc__, True), all="", docs="")
+            klass.info.desc = repo.render_override_docs(util.unindent(obj.__doc__, True), all="", docs="")
 
         return klass
 
 
 class ClassNode(object):
-
     def __init__(self, name, is_interface, is_abstract):
         self.name = name
         self.is_interface = is_interface
@@ -432,9 +419,11 @@ class ClassNode(object):
         return hash((self.name, self.is_interface, self.is_abstract))
 
     def __eq__(self, other):
-        return self.name == other.name and \
-            self.is_interface == other.is_interface and \
-            self.is_abstract == other.is_abstract
+        return (
+            self.name == other.name
+            and self.is_interface == other.is_interface
+            and self.is_abstract == other.is_abstract
+        )
 
     @classmethod
     def from_class(cls, obj):
@@ -451,9 +440,15 @@ class ClassNode(object):
         return "<%s name=%r>" % (type(self).__name__, self.name)
 
 
-class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin,
-            ChildPropertiesMixin, StylePropertiesMixin, FieldsMixin):
-
+class Class(
+    BaseDocObject,
+    MethodsMixin,
+    PropertiesMixin,
+    SignalsMixin,
+    ChildPropertiesMixin,
+    StylePropertiesMixin,
+    FieldsMixin,
+):
     def __init__(self, namespace, name):
         self.fullname = namespace + "." + name
         self.name = name
@@ -536,8 +531,7 @@ class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin,
         klass._parse_signals(repo, obj)
         klass._parse_fields(repo, obj)
 
-        klass.info = DocInfo.from_object(repo, "all", klass,
-                                         current_type=klass.fullname)
+        klass.info = DocInfo.from_object(repo, "all", klass, current_type=klass.fullname)
 
         gtype_struct = None
         if util.is_iface(obj):
@@ -579,8 +573,7 @@ class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin,
             method_count = len(struct.methods)
             if not method_count:
                 continue
-            klass.gtype_struct_methods_inherited.append(
-                (struct.fullname, method_count))
+            klass.gtype_struct_methods_inherited.append((struct.fullname, method_count))
 
         klass.base_tree = get_base_tree(obj)
 
@@ -591,14 +584,20 @@ class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin,
                 yield Class.from_object(repo, base)
 
         inherited = {}
-        inherit_types = ["vfuncs", "methods", "properties", "signals",
-                         "fields", "child_properties", "style_properties"]
+        inherit_types = [
+            "vfuncs",
+            "methods",
+            "properties",
+            "signals",
+            "fields",
+            "child_properties",
+            "style_properties",
+        ]
         for base in iter_bases(obj):
             for type_ in inherit_types:
                 attr = getattr(base, type_)
                 if len(attr):
-                    inherited.setdefault(type_, []).append(
-                        (base.fullname, len(attr)))
+                    inherited.setdefault(type_, []).append((base.fullname, len(attr)))
         for type_ in inherit_types:
             setattr(klass, type_ + "_inherited", inherited.get(type_, []))
 
@@ -621,15 +620,13 @@ class Class(BaseDocObject, MethodsMixin, PropertiesMixin, SignalsMixin,
         # override docs
         if obj.__doc__:
             all_ = docs = klass.info.desc
-            klass.info.desc = repo.render_override_docs(
-                util.unindent(obj.__doc__, True), all=all_, docs=docs)
+            klass.info.desc = repo.render_override_docs(util.unindent(obj.__doc__, True), all=all_, docs=docs)
 
         cls._cache[cache_key] = klass
         return klass
 
 
 class Field(BaseDocObject):
-
     def __init__(self, parent_fullname, name):
         self.fullname = parent_fullname + "." + name
         self.name = name
@@ -657,14 +654,12 @@ class Field(BaseDocObject):
         field.readable = field_info.readable
         field.writable = field_info.writeable
 
-        field.info = DocInfo.from_object(repo, "fields", field,
-                                         current_type=parent_fullname)
+        field.info = DocInfo.from_object(repo, "fields", field, current_type=parent_fullname)
 
         return field
 
 
 class Function(BaseDocObject):
-
     def __init__(self, parent_fullname, name, is_method, is_static, is_vfunc):
         self.fullname = parent_fullname + "." + name
         self.name = name
@@ -674,8 +669,8 @@ class Function(BaseDocObject):
         self.is_static = is_static
         self.is_vfunc = is_vfunc
 
-        self.signature = u"()"
-        self.signature_desc = u""
+        self.signature = "()"
+        self.signature_desc = ""
 
     def copy_for_new(self, parent_fullname):
         new = copy.copy(self)
@@ -702,7 +697,7 @@ class Function(BaseDocObject):
             """Get all non-empty docstring following the MRO"""
 
             docs = [repo.lookup_override_docs(fullname)]
-            docs.append(str(obj.__doc__ or u""))
+            docs.append(str(obj.__doc__ or ""))
 
             # no docstring, try to get it from base classes
             if not owner_is_module:
@@ -713,7 +708,7 @@ class Function(BaseDocObject):
                         # function not implemented in pgi
                         continue
                     else:
-                        docs.append(str(base_obj.__doc__ or u""))
+                        docs.append(str(base_obj.__doc__ or ""))
             else:
                 im = getattr(owner, "_introspection_module", None)
                 if im:
@@ -723,7 +718,7 @@ class Function(BaseDocObject):
                         # function not implemented in pgi
                         pass
                     else:
-                        docs.append(str(base_obj.__doc__ or u""))
+                        docs.append(str(base_obj.__doc__ or ""))
 
             return list(filter(None, docs))
 
@@ -738,12 +733,15 @@ class Function(BaseDocObject):
         docstrings = get_docstrings()
 
         def get_instance():
-            instance = cls(
-                parent_fullname, name, is_method, is_static, is_vfunc)
+            instance = cls(parent_fullname, name, is_method, is_static, is_vfunc)
             current_type = parent_fullname if is_method else None
             instance.info = DocInfo.from_object(
-                repo, "all", instance,
-                current_type=current_type, current_func=instance.fullname)
+                repo,
+                "all",
+                instance,
+                current_type=current_type,
+                current_func=instance.fullname,
+            )
             return instance
 
         instance = get_instance()
@@ -777,7 +775,7 @@ class Function(BaseDocObject):
                 if first_line.startswith("%s(" % name):
                     desc = render(util.unindent(rest, False))
                     signature_desc = ""
-                    signature = first_line[len(name):]
+                    signature = first_line[len(name) :]
                 else:
                     desc = render(util.unindent(docstrings[0], True))
                     signature_desc = ""
@@ -801,7 +799,6 @@ class Function(BaseDocObject):
 
 
 class Structure(BaseDocObject, MethodsMixin, FieldsMixin):
-
     def __init__(self, namespace, name, signature):
         self.fullname = namespace + "." + name
         self.name = name
@@ -824,8 +821,7 @@ class Structure(BaseDocObject, MethodsMixin, FieldsMixin):
 
         signature = get_signature_string(obj.__init__)
         instance = cls(namespace, obj.__name__, signature)
-        instance.info = DocInfo.from_object(repo, "all", instance,
-                                            current_type=instance.fullname)
+        instance.info = DocInfo.from_object(repo, "all", instance, current_type=instance.fullname)
         instance._parse_methods(repo, obj)
         instance._parse_fields(repo, obj)
 
@@ -838,7 +834,6 @@ class Union(Structure):
 
 
 class Flags(BaseDocObject, MethodsMixin):
-
     def __init__(self, namespace, name):
         self.fullname = namespace + "." + name
         self.name = name
@@ -858,8 +853,7 @@ class Flags(BaseDocObject, MethodsMixin):
             if not isinstance(attr, obj):
                 continue
 
-            flag_value = Constant.from_object(
-                repo, self.fullname, attr_name, int(attr))
+            flag_value = Constant.from_object(repo, self.fullname, attr_name, int(attr))
             values.append(flag_value)
 
         values.sort(key=lambda c: (c.value, c.fullname))
@@ -868,8 +862,7 @@ class Flags(BaseDocObject, MethodsMixin):
     @classmethod
     def from_object(cls, repo, obj):
         instance = cls(util.get_namespace(obj), obj.__name__)
-        instance.info = DocInfo.from_object(repo, "all", instance,
-                                            current_type=instance.fullname)
+        instance.info = DocInfo.from_object(repo, "all", instance, current_type=instance.fullname)
         instance._parse_values(repo, obj)
         instance._parse_methods(repo, obj)
         if obj.__bases__[0] is not int:
@@ -879,14 +872,12 @@ class Flags(BaseDocObject, MethodsMixin):
 
         # override docs
         if obj.__doc__:
-            instance.info.desc = repo.render_override_docs(
-                util.unindent(obj.__doc__, True), all="", docs="")
+            instance.info.desc = repo.render_override_docs(util.unindent(obj.__doc__, True), all="", docs="")
 
         return instance
 
 
 class Constant(BaseDocObject):
-
     def __init__(self, parent_fullname, name, value):
         self.fullname = parent_fullname + "." + name
         self.name = name
@@ -910,7 +901,6 @@ class Constant(BaseDocObject):
 
 
 class SymbolMapping(object):
-
     def __init__(self, symbol_map, source_map):
         self.symbol_map = symbol_map  # [(c sym, url, py sym, is_shadowed)]
         self.source_map = source_map  # {py sym: git url}
@@ -926,24 +916,23 @@ class SymbolMapping(object):
         items = repo.get_types().items()
         for key, values in sorted(items, key=lambda x: (x[0].lower(), x[0])):
             if func:
-                source_path = source_map.get(key, u"")
-                source_url = func(source_path) if source_path else u""
+                source_path = source_map.get(key, "")
+                source_url = func(source_path) if source_path else ""
             else:
-                source_url = u""
+                source_url = ""
             for value in sorted(values):
                 if not value.startswith(repo.namespace + "."):
                     continue
                 if repo.is_private(value):
                     continue
-                symbol_map.append((key, source_url, value, u""))
+                symbol_map.append((key, source_url, value, ""))
             if not values:
                 is_shadowed = repo.get_shadowed(key)
-                symbol_map.append((key, source_url, u"", is_shadowed))
+                symbol_map.append((key, source_url, "", is_shadowed))
         return cls(symbol_map, pysource_map)
 
 
 class Module(BaseDocObject):
-
     def __init__(self, namespace):
         self.fullname = namespace
         self.name = namespace
@@ -989,8 +978,7 @@ class Module(BaseDocObject):
                         # originated from other namespace
                         continue
 
-                func = Function.from_object(
-                    repo.namespace, key, obj, repo, pymod)
+                func = Function.from_object(repo.namespace, key, obj, repo, pymod)
                 if util.is_callback(obj):
                     mod.callbacks.append(func)
                 else:
@@ -1039,21 +1027,17 @@ class Module(BaseDocObject):
                 const = Constant.from_object(repo, repo.namespace, key, obj)
                 mod.constants.append(const)
 
-        gtype_structs = set(
-            [(c.gtype_struct, c.is_interface) for c in mod.classes
-             if c.gtype_struct])
+        gtype_structs = set([(c.gtype_struct, c.is_interface) for c in mod.classes if c.gtype_struct])
 
         def is_gtype_struct(obj, is_iface):
             return (obj.fullname, is_iface) in gtype_structs
 
-        mod.class_structures = [
-            c for c in mod.structures if is_gtype_struct(c, False)]
-        mod.iface_structures = [
-            c for c in mod.structures if is_gtype_struct(c, True)]
+        mod.class_structures = [c for c in mod.structures if is_gtype_struct(c, False)]
+        mod.iface_structures = [c for c in mod.structures if is_gtype_struct(c, True)]
 
         mod.structures = [
-            c for c in mod.structures
-            if c not in mod.class_structures and c not in mod.iface_structures]
+            c for c in mod.structures if c not in mod.class_structures and c not in mod.iface_structures
+        ]
 
         mod.symbol_mapping = SymbolMapping.from_module(repo, pymod)
 
@@ -1061,39 +1045,38 @@ class Module(BaseDocObject):
         mod.project_summary = get_project_summary(repo.namespace, repo.version)
         mod.project_summary.dependencies = repo.get_dependencies()
 
-        print("%s-%s: unresolved links: %d" % (repo.namespace, repo.version,
-                                               repo.missed_links))
+        print("%s-%s: unresolved links: %d" % (repo.namespace, repo.version, repo.missed_links))
 
         return mod
 
 
 class DocInfo(BaseDocObject):
-
     def __init__(self, fullname, name):
         self.fullname = fullname
         self.name = name
 
-        self.desc = u""
-        self.shadowed_desc = u""
+        self.desc = ""
+        self.shadowed_desc = ""
 
-        self.version_added = u""
+        self.version_added = ""
 
         self.deprecated = False
-        self.version_deprecated = u""
-        self.deprecation_desc = u""
+        self.version_deprecated = ""
+        self.deprecation_desc = ""
 
     def copy(self):
         return copy.copy(self)
 
     @classmethod
-    def from_object(cls, repo, type_, doc_object,
-                    current_type=None, current_func=None):
+    def from_object(cls, repo, type_, doc_object, current_type=None, current_func=None):
         info = cls(doc_object.fullname, doc_object.name)
         info.desc, info.shadowed_desc = repo.lookup_docs(
-            type_, info.fullname,
-            current_type=current_type, current_func=current_func)
-        info.version_added, info.version_deprecated, info.deprecation_desc = \
-            repo.lookup_meta(type_, info.fullname)
-        info.deprecated = bool(
-            info.version_deprecated or info.deprecation_desc)
+            type_, info.fullname, current_type=current_type, current_func=current_func
+        )
+        (
+            info.version_added,
+            info.version_deprecated,
+            info.deprecation_desc,
+        ) = repo.lookup_meta(type_, info.fullname)
+        info.deprecated = bool(info.version_deprecated or info.deprecation_desc)
         return info

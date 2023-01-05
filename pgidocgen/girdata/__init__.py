@@ -4,6 +4,7 @@
 # modify it under the terms of the GNU Lesser General Public
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
+# flake8: noqa F401
 
 """Database containing additional optional info about common gir files.
 
@@ -15,9 +16,15 @@ See tools/fetch-*.py for scripts which updates some of this info from external
 sources.
 """
 
-from .summary import get_project_summary
-from .project import Project, PROJECTS
 from .library import Library
-from .util import get_doap_dir, get_doap_path, \
-    get_docref_dir, get_docref_path, get_class_image_dir, \
-    get_class_image_path, load_doc_references
+from .project import PROJECTS, Project
+from .summary import get_project_summary
+from .util import (
+    get_class_image_dir,
+    get_class_image_path,
+    get_doap_dir,
+    get_doap_path,
+    get_docref_dir,
+    get_docref_path,
+    load_doc_references,
+)

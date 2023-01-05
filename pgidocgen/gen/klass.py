@@ -8,13 +8,12 @@
 import os
 import shutil
 
-from . import genutil
-
 from .. import util
 from ..util import get_csv_line
+from . import genutil
 
-
-_main_template = genutil.get_template("""\
+_main_template = genutil.get_template(
+    """\
 {% if is_interface %}
 ==========
 Interfaces
@@ -32,10 +31,12 @@ Classes
     classes/{{ class.name }}
     {% endfor %}
 
-""")
+"""
+)
 
 
-_py_template = genutil.get_template("""\
+_py_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 {{ "=" * cls.fullname|length }}
 {{ cls.fullname }}
@@ -74,10 +75,12 @@ Class Details
 
     {% endfor %}
 
-""")
+"""
+)
 
 
-_sub_template = genutil.get_template("""\
+_sub_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 {{ "=" * cls.fullname|length }}
 {{ cls.fullname }}
@@ -429,7 +432,8 @@ Property Details
 {% endfor %}
 {% endif %}
 
-""")
+"""
+)
 
 
 class ClassGenerator(genutil.Generator):
@@ -458,8 +462,7 @@ class ClassGenerator(genutil.Generator):
         return names
 
     def is_empty(self):
-        return not bool(self._classes) and not bool(self._ifaces) and \
-            not bool(self._pyclasses)
+        return not bool(self._classes) and not bool(self._ifaces) and not bool(self._pyclasses)
 
     def write(self, dir_):
         sub_dir = os.path.join(dir_, "classes")
@@ -487,8 +490,7 @@ class ClassGenerator(genutil.Generator):
 
         # index rst
         with open(index_path, "wb") as h:
-            text = _main_template.render(
-                is_interface=is_interface, classes=classes)
+            text = _main_template.render(is_interface=is_interface, classes=classes)
             h.write(text.encode("utf-8"))
 
         for cls in classes:
@@ -512,19 +514,27 @@ class ClassGenerator(genutil.Generator):
 
         summary_rows = []
         for func in methods:
-            summary_rows.append(util.get_csv_line([
-                "*class*" if func.is_static else "",
-                ":py:func:`%s<%s>` %s" % (func.name, func.fullname,
-                                          util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "*class*" if func.is_static else "",
+                        ":py:func:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
         methods_summary_rows = summary_rows
 
         # vfuncs
         summary_rows = []
         for func in cls.vfuncs:
-            summary_rows.append(util.get_csv_line([
-                "",
-                ":py:func:`%s<%s>` %s" % (func.name, func.fullname,
-                                          util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "",
+                        ":py:func:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
         vfuncs_summary_rows = summary_rows
 
         # props
@@ -535,8 +545,7 @@ class ClassGenerator(genutil.Generator):
             short_desc = p.short_desc
             if p.info.deprecated:
                 short_desc += " ``deprecated``"
-            line = get_csv_line(
-                [name, p.type_desc, p.flags_short, short_desc])
+            line = get_csv_line([name, p.type_desc, p.flags_short, short_desc])
             prop_lines.append(line)
 
         # child props
@@ -546,9 +555,7 @@ class ClassGenerator(genutil.Generator):
             short_desc = p.short_desc
             if p.info.deprecated:
                 short_desc += " ``deprecated``"
-            line = get_csv_line(
-                [name, p.type_desc, p.value_desc,
-                 p.flags_short, short_desc])
+            line = get_csv_line([name, p.type_desc, p.value_desc, p.flags_short, short_desc])
             child_prop_lines.append(line)
 
         # style props
@@ -558,9 +565,7 @@ class ClassGenerator(genutil.Generator):
             short_desc = p.short_desc
             if p.info.deprecated:
                 short_desc += " ``deprecated``"
-            line = get_csv_line(
-                [name, p.type_desc, p.value_desc,
-                 p.flags_short, short_desc])
+            line = get_csv_line([name, p.type_desc, p.value_desc, p.flags_short, short_desc])
             style_prop_lines.append(line)
 
         # signals
@@ -577,9 +582,9 @@ class ClassGenerator(genutil.Generator):
         # fields
         field_lines = []
         for field in cls.fields:
-            field_lines.append(util.get_csv_line([
-                field.name, field.type_desc, field.flags_string,
-                field.info.desc]))
+            field_lines.append(
+                util.get_csv_line([field.name, field.type_desc, field.flags_string, field.info.desc])
+            )
 
         def get_edges(tree):
             edges = []

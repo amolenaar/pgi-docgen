@@ -5,24 +5,23 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import os
-import io
 import glob
-import re
-import subprocess
-from multiprocessing.pool import ThreadPool
+import io
 import multiprocessing
-import threading
+import os
+import re
 import shutil
+import subprocess
 import sys
+import threading
+from multiprocessing.pool import ThreadPool
 
 import jinja2
 import sphinx
 
+from .gen.genutil import get_data_dir
 from .mergeindex import mergeindex
 from .util import rest2html
-from .gen.genutil import get_data_dir
-
 
 DEVHELP_PREFIX = "python-"
 
@@ -117,12 +116,12 @@ def do_build(package):
         sphinx_args = ["-b", "html"] + sphinx_args
         copy_env["PGIDOCGEN_TARGET_PREFIX"] = ""
 
-    copy_env["PGIDOCGEN_TARGET_BASE_PATH"] = \
-        os.path.dirname(package.build_path)
+    copy_env["PGIDOCGEN_TARGET_BASE_PATH"] = os.path.dirname(package.build_path)
 
     subprocess.check_call(
         [sys.executable, "-m", "sphinx", "-n", "-q", "-a", "-E"] + sphinx_args,
-        env=copy_env)
+        env=copy_env,
+    )
 
     # we don't rebuild, remove all caches
     shutil.rmtree(os.path.join(package.build_path, ".doctrees"))
@@ -133,17 +132,14 @@ def do_build(package):
     os.remove(os.path.join(package.build_path, "search.html"))
 
     if os.name != "nt":
-        for d in ["structs", "unions", "interfaces", "iface-structs",
-                  "class-structs"]:
+        for d in ["structs", "unions", "interfaces", "iface-structs", "class-structs"]:
             os.symlink("classes", os.path.join(package.build_path, d))
 
     return package
 
 
 class Package(object):
-
-    def __init__(self, name, lib_version, path, build_path, deps,
-                 devhelp=False):
+    def __init__(self, name, lib_version, path, build_path, deps, devhelp=False):
         self.name = name
         self.lib_version = lib_version
         self.path = path
@@ -159,13 +155,10 @@ class Package(object):
 
 
 def add_parser(subparsers):
-    parser = subparsers.add_parser(
-        "build",
-        help="build the sphinx environ created with pgi-docgen")
-    parser.add_argument('source', help='path to the sphinx environ base dir')
-    parser.add_argument('target',
-                        help='path to where the resulting build should be')
-    parser.add_argument('--devhelp', action='store_true')
+    parser = subparsers.add_parser("build", help="build the sphinx environ created with pgi-docgen")
+    parser.add_argument("source", help="path to the sphinx environ base dir")
+    parser.add_argument("target", help="path to where the resulting build should be")
+    parser.add_argument("--devhelp", action="store_true")
     parser.set_defaults(func=main)
 
 
@@ -224,8 +217,7 @@ def main(args):
     def job_cb(package=None):
         if package is not None:
             done.add(package)
-            print("%s finished: %d/%d done" % (
-                  package.name, len(done), num_to_build))
+            print("%s finished: %d/%d done" % (package.name, len(done), num_to_build))
 
         for package in get_new_jobs():
             print("Queue build for %s" % package.name)
@@ -266,9 +258,15 @@ def main(args):
             shutil.copyfile(src, dst)
 
         done_sorted = sorted(done, key=lambda d: d.name.lower())
-        results = [(d.name + "/index.html", d.name.split("-")[0],
-                    d.name.split("-")[-1], d.lib_version)
-                   for d in done_sorted]
+        results = [
+            (
+                d.name + "/index.html",
+                d.name.split("-")[0],
+                d.name.split("-")[-1],
+                d.lib_version,
+            )
+            for d in done_sorted
+        ]
         with io.open(os.path.join(index_path, "sidebar.html"), "r", encoding="utf-8") as h:
             data = h.read()
         with io.open(os.path.join(target_path, "sidebar.html"), "w", encoding="utf-8") as t:
@@ -302,7 +300,6 @@ def main(args):
         for package in done:
             path = package.build_path
             dh = glob.glob(os.path.join(path, "*.devhelp2.gz"))[0]
-            dh_name = os.path.join(
-                os.path.dirname(dh), os.path.basename(path) + ".devhelp2.gz")
+            dh_name = os.path.join(os.path.dirname(dh), os.path.basename(path) + ".devhelp2.gz")
             if not os.path.exists(dh_name):
                 os.rename(dh, dh_name)

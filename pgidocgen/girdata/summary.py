@@ -68,8 +68,7 @@ def get_project_summary(namespace, version):
         if bug_database is not None:
             ps.bugtracker = bug_database.attrib["resource"]
 
-        ps.repositories = [
-            (r.attrib["resource"], r.attrib["resource"]) for r in repositories]
+        ps.repositories = [(r.attrib["resource"], r.attrib["resource"]) for r in repositories]
 
         def strip_mailto(s):
             if s.startswith("mailto:"):
@@ -78,8 +77,6 @@ def get_project_summary(namespace, version):
 
         ps.mailinglists = []
         for r in mailing_lists:
-            ps.mailinglists.append(
-                (strip_mailto(r.attrib["resource"]), r.attrib["resource"])
-            )
+            ps.mailinglists.append((strip_mailto(r.attrib["resource"]), r.attrib["resource"]))
 
     return ps

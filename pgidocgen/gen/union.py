@@ -7,11 +7,11 @@
 
 import os
 
-from . import genutil
 from .. import util
+from . import genutil
 
-
-_main_template = genutil.get_template("""\
+_main_template = genutil.get_template(
+    """\
 ======
 Unions
 ======
@@ -23,9 +23,11 @@ Unions
     classes/{{ union.name }}
 {% endfor %}
 
-""")
+"""
+)
 
-_sub_template = genutil.get_template("""\
+_sub_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 {{ "=" * union.fullname|length }}
 {{ union.fullname }}
@@ -93,11 +95,11 @@ Details
 
     {% endfor %}
 
-""")
+"""
+)
 
 
 class UnionGenerator(genutil.Generator):
-
     def __init__(self):
         self._unions = set()
 
@@ -136,20 +138,21 @@ class UnionGenerator(genutil.Generator):
 
         summary_rows = []
         for func in methods:
-            summary_rows.append(util.get_csv_line([
-                "*class*" if func.is_static else "",
-                ":py:func:`%s<%s>` %s" % (func.name, func.fullname,
-                                          util.escape_rest(func.signature))]))
+            summary_rows.append(
+                util.get_csv_line(
+                    [
+                        "*class*" if func.is_static else "",
+                        ":py:func:`%s<%s>` %s" % (func.name, func.fullname, util.escape_rest(func.signature)),
+                    ]
+                )
+            )
 
         field_rows = []
         for field in union.fields:
-            field_rows.append(util.get_csv_line([
-                field.name, field.type_desc, field.flags_string,
-                field.info.desc]))
+            field_rows.append(
+                util.get_csv_line([field.name, field.type_desc, field.flags_string, field.info.desc])
+            )
 
         with open(rst_path, "wb") as h:
-            text = _sub_template.render(
-                union=union,
-                summary_rows=summary_rows,
-                field_rows=field_rows)
+            text = _sub_template.render(union=union, summary_rows=summary_rows, field_rows=field_rows)
             h.write(text.encode("utf-8"))

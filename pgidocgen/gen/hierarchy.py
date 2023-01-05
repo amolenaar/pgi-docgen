@@ -9,8 +9,8 @@ import os
 
 from . import genutil
 
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 =========
 Hierarchy
 =========
@@ -27,7 +27,8 @@ Hierarchy
 None
 {% endif %}
 
-""")
+"""
+)
 
 
 class HierarchyGenerator(genutil.Generator):

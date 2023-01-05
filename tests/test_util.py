@@ -9,37 +9,45 @@
 import os
 import unittest
 
-import pytest
 import pgi
+import pytest
+
 pgi.require_version("Gtk", "3.0")
 
-from pgidocgen.util import is_staticmethod, \
-    is_method_owner, is_fundamental, is_object, instance_to_rest, \
-    get_child_properties, fake_subclasses, get_style_properties, \
-    unescape_parameter, fake_bases, is_attribute_owner, unindent, \
-    get_csv_line, get_signature_string, sanitize_instance_repr
+from pgidocgen.util import (
+    fake_bases,
+    fake_subclasses,
+    get_child_properties,
+    get_csv_line,
+    get_signature_string,
+    get_style_properties,
+    instance_to_rest,
+    is_attribute_owner,
+    is_fundamental,
+    is_method_owner,
+    is_object,
+    is_staticmethod,
+    sanitize_instance_repr,
+    unescape_parameter,
+    unindent,
+)
 
 
 class TUtil(unittest.TestCase):
-
     def test_get_signature_string(self):
-        from pgi.repository import GLib, Gio
+        from pgi.repository import Gio, GLib
 
         func = GLib.Error.__init__
         assert get_signature_string(func) == "()"
-        assert get_signature_string(GLib.IOChannel.new_file) == \
-            "(filename, mode)"
-        assert get_signature_string(GLib.IOChannel) == \
-            "(filedes=None, filename=None, mode=None, hwnd=None)"
-        assert get_signature_string(GLib.MainLoop) == \
-            "(context=None)"
-        assert get_signature_string(Gio.Menu.append) == \
-            "(label, detailed_action)"
+        assert get_signature_string(GLib.IOChannel.new_file) == "(filename, mode)"
+        assert get_signature_string(GLib.IOChannel) == "(filedes=None, filename=None, mode=None, hwnd=None)"
+        assert get_signature_string(GLib.MainLoop) == "(context=None)"
+        assert get_signature_string(Gio.Menu.append) == "(label, detailed_action)"
 
     def test_get_csv_line(self):
         assert get_csv_line(["foo"]) == '"foo"'
         assert get_csv_line(["foo", "bla\n"]) == '"foo","bla "'
-        assert get_csv_line([u"ä"]) == u'"ä"'
+        assert get_csv_line(["ä"]) == '"ä"'
 
     def test_unindent(self):
         self.assertEqual(unindent("foo bar.", True), "foo bar.")
@@ -55,7 +63,7 @@ class TUtil(unittest.TestCase):
         assert is_staticmethod(GLib.Variant, "split_signature")
 
     def test_is_method_owner(self):
-        from pgi.repository import Gtk, GLib
+        from pgi.repository import GLib, Gtk
 
         assert not is_method_owner(GLib.IOError, "from_bytes")
 
@@ -71,11 +79,10 @@ class TUtil(unittest.TestCase):
         from pgi.repository import GdkPixbuf
 
         getattr(GdkPixbuf.PixbufAnimation, "ref")
-        self.assertFalse(
-            is_attribute_owner(GdkPixbuf.PixbufAnimation, "ref"))
+        self.assertFalse(is_attribute_owner(GdkPixbuf.PixbufAnimation, "ref"))
 
     def test_class_checks(self):
-        from pgi.repository import GObject, GLib
+        from pgi.repository import GLib, GObject
 
         self.assertFalse(is_fundamental(GLib.Error))
         self.assertTrue(is_fundamental(GObject.Object))
@@ -94,8 +101,7 @@ class TUtil(unittest.TestCase):
             return instance_to_rest(gprop.value_type.pytype, gprop.default_value)
 
         v = instance_to_rest(Gtk.AccelFlags, Gtk.AccelFlags.LOCKED)
-        self.assertEqual(
-            v, ":obj:`Gtk.AccelFlags.LOCKED` | :obj:`Gtk.AccelFlags.MASK`")
+        self.assertEqual(v, ":obj:`Gtk.AccelFlags.LOCKED` | :obj:`Gtk.AccelFlags.MASK`")
 
         v = instance_to_rest(int, 42)
         self.assertEqual(v, "``42``")
@@ -106,8 +112,7 @@ class TUtil(unittest.TestCase):
         v = itr(Gtk.Widget.props.no_show_all)
         self.assertEqual(v, ":obj:`False`")
 
-        v = instance_to_rest(
-            Gtk.ImageType, Gtk.ImageType(int(Gtk.ImageType.EMPTY)))
+        v = instance_to_rest(Gtk.ImageType, Gtk.ImageType(int(Gtk.ImageType.EMPTY)))
         self.assertEqual(v, ":obj:`Gtk.ImageType.EMPTY`")
 
         v = itr(Gtk.AboutDialog.props.program_name)
@@ -150,19 +155,20 @@ class TUtil(unittest.TestCase):
     def test_fake_bases(self):
         from pgi.repository import Atk, GObject
 
-        self.assertEqual(
-            fake_bases(Atk.ImplementorIface), [GObject.GInterface])
+        self.assertEqual(fake_bases(Atk.ImplementorIface), [GObject.GInterface])
 
     def test_fake_bases_ignore_redundant(self):
         from pgi.repository import Gtk
 
-        self.assertEqual(
-            fake_bases(Gtk.Dialog, ignore_redundant=True), [Gtk.Window])
+        self.assertEqual(fake_bases(Gtk.Dialog, ignore_redundant=True), [Gtk.Window])
 
     def test_sanitize_instance_repr(self):
         san = sanitize_instance_repr
         assert san("") == ""
         assert san("42") == "42"
-        assert san("<Color structure at 0x7f805e890b38 (ClutterColor at 0x2d028b0)>") == "<Color structure at 0x000000000000 (ClutterColor at 0x0000000)>"
+        assert (
+            san("<Color structure at 0x7f805e890b38 (ClutterColor at 0x2d028b0)>")
+            == "<Color structure at 0x000000000000 (ClutterColor at 0x0000000)>"
+        )
 
         assert san("<GType EvdConnection (31362256)>") == "<GType EvdConnection>"

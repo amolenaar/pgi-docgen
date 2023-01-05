@@ -12,7 +12,6 @@ from pgidocgen.gtkdoc import ConvertMarkDown
 
 
 class TGTKDoc(unittest.TestCase):
-
     def test_main(self):
         input_ = """\
 SUPPORTED MARKDOWN
@@ -188,13 +187,13 @@ accessed via the following functions.</para>
 
     def test_inline_code(self):
         input_ = "a `abc`"
-        expected = '<para>a <literal>abc</literal></para>\n'
+        expected = "<para>a <literal>abc</literal></para>\n"
         output = ConvertMarkDown("", input_)
         self.assertEqual(expected, output)
 
     def test_inline_code2(self):
         input_ = "a `[][]`"
-        expected = '<para>a <literal>[][]</literal></para>\n'
+        expected = "<para>a <literal>[][]</literal></para>\n"
         output = ConvertMarkDown("", input_)
         self.assertEqual(expected, output)
 
@@ -208,7 +207,7 @@ accessed via the following functions.</para>
 ]|
 """
 
-        expected = '''\
+        expected = """\
 <informalexample><programlisting language="C"><![CDATA[
     GdkEvent *event;
     GdkEventType type;
@@ -216,12 +215,12 @@ accessed via the following functions.</para>
     type = event->type;
 ]]></programlisting></informalexample>
 <para></para>
-'''
+"""
         output = ConvertMarkDown("", input_)
         self.assertEqual(expected, output)
 
     def test_plain(self):
-        input_ = u"""\
+        input_ = """\
 |[<!-- language="plain" -->
 frame
 ├── border
@@ -230,7 +229,7 @@ frame
 ]|
 """
 
-        expected = u"""\
+        expected = """\
 <informalexample><screen><![CDATA[
 frame
 ├── border

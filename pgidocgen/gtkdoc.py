@@ -16,11 +16,21 @@ See https://gitlab.gnome.org/GNOME/gtk-doc/commit/c567d9e28c355f43faeba61fb81fd1
 
 import re
 
-
 MD_TEXT_LEVEL_ELEMENTS = {
-    "literal", "emphasis", "envar", "filename", "firstterm", "footnote",
-    "function", "manvolnum", "option", "replaceable", "structfield",
-    "structname", "title", "varname",
+    "literal",
+    "emphasis",
+    "envar",
+    "filename",
+    "firstterm",
+    "footnote",
+    "function",
+    "manvolnum",
+    "option",
+    "replaceable",
+    "structfield",
+    "structname",
+    "title",
+    "varname",
 }
 
 
@@ -33,8 +43,8 @@ def MarkDownParse(text, symbol):
     text = re.sub(r"\r\n", r"\n", text)
     text = re.sub(r"\r", r"\n", text)
 
-    lines = text.split(u"\n")
-    text = MarkDownParseLines(lines, symbol, u"")
+    lines = text.split("\n")
+    text = MarkDownParseLines(lines, symbol, "")
 
     return text
 
@@ -74,9 +84,7 @@ def MarkDownParseBlocks(linesref, symbol, context):
         deindented_line = re.sub(r"^\s+", "", deindented_line)
 
         if md_block["type"] == "heading":
-            heading_match = re.search(
-                r"^[#][ \t]+(.+?)[ \t]*[#]*[ \t]*(?:{#([^}]+)})?[ \t]*$",
-                line)
+            heading_match = re.search(r"^[#][ \t]+(.+?)[ \t]*[#]*[ \t]*(?:{#([^}]+)})?[ \t]*$", line)
             # a heading is ended by any level less than or equal
             if md_block["level"] == 1:
                 if re.search(r"^={4,}[ \t]*$", line):
@@ -109,7 +117,8 @@ def MarkDownParseBlocks(linesref, symbol, context):
             else:
                 heading_match = re.search(
                     r"^([#]{1,2})[ \t]+(.+?)[ \t]*[#]*[ \t]*(?:{#([^}]+)})?[ \t]*$",
-                    line)
+                    line,
+                )
                 if re.search(r"^[=]{4,}[ \t]*$", line):
                     text = md_block["lines"].pop()
                     md_block["interrupted"] = 0
@@ -210,11 +219,8 @@ def MarkDownParseBlocks(linesref, symbol, context):
         # indentation sensitive types
         # ("parsing '$line'");
 
-        heading_match = re.search(
-            r"^([#]{1,2})[ \t]+(.+?)[ \t]*[#]*[ \t]*(?:{#([^}]+)})?[ \t]*$",
-            line)
-        code_match = re.search(
-            r'^[ \t]*\|\[[ ]*(?:<!-- language="([^"]+?)" -->)?', line)
+        heading_match = re.search(r"^([#]{1,2})[ \t]+(.+?)[ \t]*[#]*[ \t]*(?:{#([^}]+)})?[ \t]*$", line)
+        code_match = re.search(r'^[ \t]*\|\[[ ]*(?:<!-- language="([^"]+?)" -->)?', line)
 
         if heading_match:
             # atx heading (#)
@@ -286,9 +292,8 @@ def MarkDownParseBlocks(linesref, symbol, context):
                 # for TEXT_LEVEL_ELEMENTS, we want to keep them as-is in the
                 # paragraph instead of creation a markdown block.
                 scanning_for_end_of_text_level_tag = (
-                    md_block["type"] == "paragraph" and
-                    "start" in md_block and
-                    not md_block.get("closed"))
+                    md_block["type"] == "paragraph" and "start" in md_block and not md_block.get("closed")
+                )
                 # ("markup found '$tag', scanning $scanning_for_end_of_text_level_tag ?");
                 if tag not in MD_TEXT_LEVEL_ELEMENTS and not scanning_for_end_of_text_level_tag:
                     md_blocks.append(md_block)
@@ -408,7 +413,7 @@ def ReplaceEntities(text, symbol):
         ["&num;", "#"],
         ["&percnt;", "%"],
         ["&colon;", ":"],
-        ["&quot;", "\""],
+        ["&quot;", '"'],
         ["&apos;", "'"],
         ["&nbsp;", " "],
         ["&amp;", "&"],  # Do this last, or the others get messed up.
@@ -483,7 +488,9 @@ def MarkDownParseSpanElementsInner(text, markersref):
                     offset += 1
 
                 remaining_text = text[offset:]
-                remaining_match = re.search(r"^\([ ]*([^)'\"]*?)(?:[ ]+['\"](.+?)['\"])?[ ]*\)", remaining_text)
+                remaining_match = re.search(
+                    r"^\([ ]*([^)'\"]*?)(?:[ ]+['\"](.+?)['\"])?[ ]*\)", remaining_text
+                )
                 remaining_match2 = re.search(r"^\s*\[([^\]<]*?)\]", remaining_text)
                 if remaining_match is not None:
                     element["»"] = remaining_match.group(1)
@@ -504,20 +511,20 @@ def MarkDownParseSpanElementsInner(text, markersref):
                     element["»"] = element["»"].replace("<", "&lt;")
 
                 if element.get("!"):
-                    markup += "<inlinemediaobject><imageobject><imagedata fileref=\"" + element["»"] + "\"></imagedata></imageobject>"
+                    markup += f'<inlinemediaobject><imageobject><imagedata fileref="{element["»"]}"></imagedata></imageobject>'
                     if "a" in element:
                         markup += "<textobject><phrase>" + element["a"] + "</phrase></textobject>"
                     markup += "</inlinemediaobject>"
                 elif element.get("ref"):
                     element["a"] = MarkDownParseSpanElementsInner(element["a"], markers_rest)
-                    markup += "<link linkend=\"" + element["ref"] + "\""
+                    markup += '<link linkend="' + element["ref"] + '"'
                     if "#" in element:
                         # title attribute not supported
                         pass
                     markup += ">" + element["a"] + "</link>"
                 else:
                     element["a"] = MarkDownParseSpanElementsInner(element["a"], markers_rest)
-                    markup += "<ulink url=\"" + element.get("»", "") + "\""
+                    markup += '<ulink url="' + element.get("»", "") + '"'
                     if "#" in element:
                         # title attribute not supported
                         pass
@@ -561,7 +568,7 @@ def ExpandAbbreviations(symbol, text):
 
 
 def MarkDownOutputDocBook(blocksref, symbol, context):
-    output = u""
+    output = ""
     blocks = blocksref
 
     for block in blocks:
@@ -585,7 +592,7 @@ def MarkDownOutputDocBook(blocksref, symbol, context):
 
             text = MarkDownParseLines(block["lines"], symbol, "heading")
             if block.get("id"):
-                output += ("<%s id=\"" % tag) + block["id"] + "\">"
+                output += ('<%s id="' % tag) + block["id"] + '">'
             else:
                 output += "<%s>" % tag
 
@@ -620,7 +627,7 @@ def MarkDownOutputDocBook(blocksref, symbol, context):
                     output += "<informalexample><screen><![CDATA[\n"
                     tag = "screen"
                 else:
-                    output += "<informalexample><programlisting language=\"%s\"><![CDATA[\n" % block["language"]
+                    output += '<informalexample><programlisting language="%s"><![CDATA[\n' % block["language"]
             else:
                 output += "<informalexample><programlisting><![CDATA[\n"
 

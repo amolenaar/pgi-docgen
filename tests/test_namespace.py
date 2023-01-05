@@ -8,12 +8,10 @@
 
 import unittest
 
-from pgidocgen.namespace import get_cairo_types, \
-    fixup_since, get_versions, get_namespace
+from pgidocgen.namespace import fixup_since, get_cairo_types, get_namespace, get_versions
 
 
 class TNamespace(unittest.TestCase):
-
     def test_gtk(self):
         ns = get_namespace("Gtk", "3.0")
         types = ns.types
@@ -42,8 +40,7 @@ class TNamespace(unittest.TestCase):
         self.assertTrue("3.0" in versions)
 
         self.assertEqual(types["GdkModifierType"], ["Gdk.ModifierType"])
-        self.assertEqual(
-            ns.instance_params["Gdk.Window.begin_paint_region"], "window")
+        self.assertEqual(ns.instance_params["Gdk.Window.begin_paint_region"], "window")
 
     def test_gdkpixbuf(self):
         ns = get_namespace("GdkPixbuf", "2.0")
@@ -66,8 +63,7 @@ class TNamespace(unittest.TestCase):
         types = ns.types
         ns.docs
 
-        self.assertEqual(types["GBookmarkFileError"],
-                         ["GLib.BookmarkFileError"])
+        self.assertEqual(types["GBookmarkFileError"], ["GLib.BookmarkFileError"])
 
         self.assertEqual(types["G_MININT8"], ["GLib.MININT8"])
 
@@ -94,11 +90,9 @@ class TNamespace(unittest.TestCase):
 
     def test_pycairo(self):
         types = get_cairo_types()
-        self.assertEqual(
-            types["cairo_set_operator"], ["cairo.Context.set_operator"])
+        self.assertEqual(types["cairo_set_operator"], ["cairo.Context.set_operator"])
 
-        self.assertEqual(
-            types["cairo_surface_get_content"], ["cairo.Surface.get_content"])
+        self.assertEqual(types["cairo_surface_get_content"], ["cairo.Surface.get_content"])
 
     def test_pango(self):
         ns = get_namespace("Pango", "1.0")
@@ -127,17 +121,13 @@ class TNamespace(unittest.TestCase):
         self.assertTrue(("GLib", "2.0") in deps)
 
     def test_fixup_added_since(self):
-        self.assertEqual(
-            fixup_since("Foo\nSince: 3.14"), ("Foo", "3.14"))
-        self.assertEqual(
-            fixup_since("Foo\n(Since: 3.14)"), ("Foo", "3.14"))
-        self.assertEqual(
-            fixup_since("Foo\n@Since: ATK-3.14"), ("Foo", "3.14"))
-        self.assertEqual(
-            fixup_since("to the baseline. Since 3.10."),
-            ("to the baseline.", "3.10"))
+        self.assertEqual(fixup_since("Foo\nSince: 3.14"), ("Foo", "3.14"))
+        self.assertEqual(fixup_since("Foo\n(Since: 3.14)"), ("Foo", "3.14"))
+        self.assertEqual(fixup_since("Foo\n@Since: ATK-3.14"), ("Foo", "3.14"))
+        self.assertEqual(fixup_since("to the baseline. Since 3.10."), ("to the baseline.", "3.10"))
 
     def test_fixup_deprecated_since(self):
         self.assertEqual(
             fixup_since("Since 2.12. Use atk_component_get_extents()."),
-            ("Use atk_component_get_extents().", "2.12"))
+            ("Use atk_component_get_extents().", "2.12"),
+        )

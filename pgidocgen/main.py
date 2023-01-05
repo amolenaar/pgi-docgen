@@ -10,7 +10,7 @@
 import argparse
 import sys
 
-from . import create, build, stubs, update
+from . import build, create, stubs, update
 
 
 def main(argv=sys.argv):

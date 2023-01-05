@@ -10,8 +10,8 @@ import os
 
 from . import genutil
 
-
-_template = genutil.get_template("""\
+_template = genutil.get_template(
+    """\
 {% import '.genutil.UTIL' as util %}
 =========
 Constants
@@ -42,11 +42,11 @@ Details
 None
 
 {% endif %}
-""")
+"""
+)
 
 
 class ConstantsGenerator(genutil.Generator):
-
     def __init__(self):
         self._consts = set()
 
