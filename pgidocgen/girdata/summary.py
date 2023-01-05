@@ -17,9 +17,9 @@ class ProjectSummary(object):
     description = None
     homepage = None
     bugtracker = None
-    repositories = []
-    mailinglists = []
-    dependencies = []
+    repositories: list[tuple[str, str]] = []
+    mailinglists: list[tuple[str, str]] = []
+    dependencies: list[tuple[str, str]] = []
 
 
 def get_project_summary(namespace, version):

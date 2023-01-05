@@ -6,6 +6,8 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
+from __future__ import annotations
+
 import copy
 import inspect
 import os
@@ -491,8 +493,8 @@ class Class(
     def bases(self):
         return [c[0] for c in self.base_tree[0][1]]
 
-    _cache = {}
-    _inspected = set()
+    _cache: dict[str, type[Class]] = {}
+    _inspected: set[type] = set()
 
     @classmethod
     def from_object(cls, repo, obj):
@@ -808,7 +810,7 @@ class Structure(BaseDocObject, MethodsMixin, FieldsMixin):
         self.methods = []
         self.fields = []
 
-    _cache = {}
+    _cache: dict[str, Structure] = {}
 
     @classmethod
     def from_object(cls, repo, obj):

@@ -17,7 +17,7 @@ from .docbook_escape import docbook_escape
 from .gtkdoc import ConvertMarkDown
 from .util import escape_rest, force_unindent
 
-_scanner = re.Scanner(
+_scanner = re.Scanner(  # type: ignore[attr-defined]
     [
         (r"\*?@[A-Za-z0-9_]+", lambda scanner, token: ("PARAM", token)),
         (

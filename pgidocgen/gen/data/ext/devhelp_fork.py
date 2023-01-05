@@ -67,7 +67,7 @@ class DevhelpBuilder(StandaloneHTMLBuilder):
         self.dump_inventory()
 
     def build_devhelp(self, outdir, outname):
-        # type: (unicode, unicode) -> None
+        # type: (str, str) -> None
         logger.info("dumping devhelp index...")
 
         # Basic info
@@ -87,7 +87,7 @@ class DevhelpBuilder(StandaloneHTMLBuilder):
         tocdoc = self.env.get_and_resolve_doctree(self.config.master_doc, self, prune_toctrees=False)
 
         def write_toc(node, parent):
-            # type: (nodes.Node, nodes.Node) -> None
+            # type: (nodes.Node, etree.Element) -> None
             if isinstance(node, addnodes.compact_paragraph) or isinstance(node, nodes.bullet_list):
                 for subnode in node:
                     write_toc(subnode, parent)
@@ -111,7 +111,7 @@ class DevhelpBuilder(StandaloneHTMLBuilder):
         index = IndexEntries(self.env).create_index(self)
 
         def write_index(title, refs, subitems):
-            # type: (unicode, List[Any], Any) -> None
+            # type: (str, list[Any], Any) -> None
             if len(refs) == 0:
                 pass
             elif len(refs) == 1:
@@ -142,7 +142,7 @@ class DevhelpBuilder(StandaloneHTMLBuilder):
 
 
 def setup(app):
-    # type: (Sphinx) -> Dict[unicode, Any]
+    # type: (Sphinx) -> Dict[str, Any]
     app.setup_extension("sphinx.builders.html")
     app.add_builder(DevhelpBuilder)
 

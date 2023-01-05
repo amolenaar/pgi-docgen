@@ -8,7 +8,9 @@ repos:
     rev: v0.990
     hooks:
       - id: mypy
-        additional_dependencies: [ types-setuptools ]
+        additional_dependencies: 
+          - types-setuptools
+          - types-requests
   - repo: https://github.com/PyCQA/flake8
     rev: 5.0.4
     hooks:

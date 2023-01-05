@@ -64,7 +64,7 @@ class InheritanceGraph(Directive):
     required_arguments = 1
     optional_arguments = 0
     final_argument_whitespace = False
-    option_spec = {}
+    option_spec: dict[str, str] = {}
 
     def run(self):
         node = inheritance_graph()

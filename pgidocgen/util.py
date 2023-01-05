@@ -19,7 +19,7 @@ from contextlib import contextmanager
 
 from docutils.core import publish_parts
 
-_KWD_RE = re.compile("^(%s)$" % "|".join(keyword.kwlist + ["print", "exec"]))
+_KWD_RE = re.compile(f'^({"|".join(list(keyword.kwlist) + ["print", "exec"])})$')
 
 
 def get_signature_string(callable_):
