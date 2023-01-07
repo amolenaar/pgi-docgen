@@ -7,7 +7,6 @@
 # version 2.1 of the License, or (at your option) any later version.
 
 import os
-import unittest
 
 import pgi
 import pytest
@@ -33,142 +32,156 @@ from pgidocgen.util import (
 )
 
 
-class TUtil(unittest.TestCase):
-    def test_get_signature_string(self):
-        from pgi.repository import Gio, GLib
+def test_get_signature_string():
+    from pgi.repository import Gio, GLib
 
-        func = GLib.Error.__init__
-        assert get_signature_string(func) == "()"
-        assert get_signature_string(GLib.IOChannel.new_file) == "(filename, mode)"
-        assert get_signature_string(GLib.IOChannel) == "(filedes=None, filename=None, mode=None, hwnd=None)"
-        assert get_signature_string(GLib.MainLoop) == "(context=None)"
-        assert get_signature_string(Gio.Menu.append) == "(label, detailed_action)"
+    func = GLib.Error.__init__
+    assert get_signature_string(func) == "()"
+    assert get_signature_string(GLib.IOChannel.new_file) == "(filename, mode)"
+    assert get_signature_string(GLib.IOChannel) == "(filedes=None, filename=None, mode=None, hwnd=None)"
+    assert get_signature_string(GLib.MainLoop) == "(context=None)"
+    assert get_signature_string(Gio.Menu.append) == "(label, detailed_action)"
 
-    def test_get_csv_line(self):
-        assert get_csv_line(["foo"]) == '"foo"'
-        assert get_csv_line(["foo", "bla\n"]) == '"foo","bla "'
-        assert get_csv_line(["ä"]) == '"ä"'
 
-    def test_unindent(self):
-        self.assertEqual(unindent("foo bar.", True), "foo bar.")
-        self.assertEqual(unindent("foo bar.", False), "foo bar.")
+def test_get_csv_line():
+    assert get_csv_line(["foo"]) == '"foo"'
+    assert get_csv_line(["foo", "bla\n"]) == '"foo","bla "'
+    assert get_csv_line(["ä"]) == '"ä"'
 
-    def test_method_checks(self):
-        from pgi.repository import GLib
 
-        assert not is_staticmethod(GLib.AsyncQueue, "push")
-        assert is_staticmethod(GLib.Date, "new")
-        assert is_staticmethod(GLib.IOChannel, "new_file")
-        assert is_staticmethod(GLib.IOChannel, "new_file")
-        assert is_staticmethod(GLib.Variant, "split_signature")
+def test_unindent():
+    assert unindent("foo bar.", True) == "foo bar."
+    assert unindent("foo bar.", False) == "foo bar."
 
-    def test_is_method_owner(self):
-        from pgi.repository import GLib, Gtk
 
-        assert not is_method_owner(GLib.IOError, "from_bytes")
+def test_method_checks():
+    from pgi.repository import GLib
 
-        assert is_method_owner(Gtk.ActionGroup, "add_action")
-        self.assertFalse(is_method_owner(Gtk.Range, "get_has_tooltip"))
-        if os.name != "nt":
-            self.assertTrue(is_method_owner(Gtk.Plug, "new"))
-        self.assertTrue(is_method_owner(Gtk.Viewport, "get_vadjustment"))
-        self.assertTrue(is_method_owner(Gtk.AccelGroup, "connect"))
-        self.assertFalse(is_method_owner(Gtk.AboutDialog, "get_focus_on_map"))
+    assert not is_staticmethod(GLib.AsyncQueue, "push")
+    assert is_staticmethod(GLib.Date, "new")
+    assert is_staticmethod(GLib.IOChannel, "new_file")
+    assert is_staticmethod(GLib.IOChannel, "new_file")
+    assert is_staticmethod(GLib.Variant, "split_signature")
 
-    def test_is_attribute_owner(self):
-        from pgi.repository import GdkPixbuf
 
-        getattr(GdkPixbuf.PixbufAnimation, "ref")
-        self.assertFalse(is_attribute_owner(GdkPixbuf.PixbufAnimation, "ref"))
+def test_is_method_owner():
+    from pgi.repository import GLib, Gtk
 
-    def test_class_checks(self):
-        from pgi.repository import GLib, GObject
+    assert not is_method_owner(GLib.IOError, "from_bytes")
 
-        self.assertFalse(is_fundamental(GLib.Error))
-        self.assertTrue(is_fundamental(GObject.Object))
-        self.assertTrue(is_fundamental(GObject.ParamSpec))
-        self.assertFalse(is_fundamental(object))
+    assert is_method_owner(Gtk.ActionGroup, "add_action")
+    assert not is_method_owner(Gtk.Range, "get_has_tooltip")
+    if os.name != "nt":
+        assert is_method_owner(Gtk.Plug, "new")
+    assert is_method_owner(Gtk.Viewport, "get_vadjustment")
+    assert is_method_owner(Gtk.AccelGroup, "connect")
+    assert not is_method_owner(Gtk.AboutDialog, "get_focus_on_map")
 
-    def test_is_object(self):
-        from pgi.repository import Gtk
 
-        self.assertTrue(is_object(Gtk.Button))
+def test_is_attribute_owner():
+    from pgi.repository import GdkPixbuf
 
-    def test_instance_to_rest(self):
-        from pgi.repository import Gtk
+    getattr(GdkPixbuf.PixbufAnimation, "ref")
+    assert not is_attribute_owner(GdkPixbuf.PixbufAnimation, "ref")
 
-        def itr(gprop):
-            return instance_to_rest(gprop.value_type.pytype, gprop.default_value)
 
-        v = instance_to_rest(Gtk.AccelFlags, Gtk.AccelFlags.LOCKED)
-        self.assertEqual(v, ":obj:`Gtk.AccelFlags.LOCKED` | :obj:`Gtk.AccelFlags.MASK`")
+def test_class_checks():
+    from pgi.repository import GLib, GObject
 
-        v = instance_to_rest(int, 42)
-        self.assertEqual(v, "``42``")
+    assert not is_fundamental(GLib.Error)
+    assert is_fundamental(GObject.Object)
+    assert is_fundamental(GObject.ParamSpec)
+    assert not is_fundamental(object)
 
-        v = instance_to_rest(Gtk.Button, None)
-        self.assertEqual(v, ":obj:`None`")
 
-        v = itr(Gtk.Widget.props.no_show_all)
-        self.assertEqual(v, ":obj:`False`")
+def test_is_object():
+    from pgi.repository import Gtk
 
-        v = instance_to_rest(Gtk.ImageType, Gtk.ImageType(int(Gtk.ImageType.EMPTY)))
-        self.assertEqual(v, ":obj:`Gtk.ImageType.EMPTY`")
+    assert is_object(Gtk.Button)
 
-        v = itr(Gtk.AboutDialog.props.program_name)
-        self.assertEqual(v, ":obj:`None`")
 
-        v = itr(Gtk.IMContext.props.input_hints)
-        self.assertEqual(v, ":obj:`Gtk.InputHints.NONE`")
+def test_instance_to_rest():
+    from pgi.repository import Gtk
 
-        v = itr(Gtk.CellRendererAccel.props.accel_mods)
-        self.assertEqual(v, "``0``")
+    def itr(gprop):
+        return instance_to_rest(gprop.value_type.pytype, gprop.default_value)
 
-    def test_child_properties(self):
-        from pgi.repository import Gtk
+    v = instance_to_rest(Gtk.AccelFlags, Gtk.AccelFlags.LOCKED)
+    assert v == ":obj:`Gtk.AccelFlags.LOCKED` | :obj:`Gtk.AccelFlags.MASK`"
 
-        self.assertEqual(len(get_child_properties(Gtk.Paned)), 2)
-        self.assertFalse(get_child_properties(Gtk.Bin))
-        self.assertEqual(len(get_child_properties(Gtk.ActionBar)), 2)
-        self.assertEqual(len(get_child_properties(Gtk.Box)), 5)
-        self.assertFalse(get_child_properties(Gtk.Statusbar))
+    v = instance_to_rest(int, 42)
+    assert v == "``42``"
 
-    def test_style_properties(self):
-        from pgi.repository import Gtk
+    v = instance_to_rest(Gtk.Button, None)
+    assert v == ":obj:`None`"
 
-        self.assertEqual(len(get_style_properties(Gtk.Paned)), 1)
-        self.assertEqual(len(get_style_properties(Gtk.Widget)), 17)
-        self.assertEqual(len(get_style_properties(Gtk.TreeView)), 11)
+    v = itr(Gtk.Widget.props.no_show_all)
+    assert v == ":obj:`False`"
 
-    @pytest.mark.xfail
-    def test_fake_subclasses(self):
-        from pgi.repository import Gtk
+    v = instance_to_rest(Gtk.ImageType, Gtk.ImageType(int(Gtk.ImageType.EMPTY)))
+    assert v == ":obj:`Gtk.ImageType.EMPTY`"
 
-        self.assertIs(fake_subclasses(Gtk.Scrollable)[1], Gtk.TreeView)
+    v = itr(Gtk.AboutDialog.props.program_name)
+    assert v == ":obj:`None`"
 
-    def test_unescape(self):
-        self.assertEqual(unescape_parameter("print_"), "print")
-        self.assertEqual(unescape_parameter("exec_"), "exec")
-        self.assertEqual(unescape_parameter("_print"), "-print")
-        self.assertEqual(unescape_parameter("_3"), "3")
+    v = itr(Gtk.IMContext.props.input_hints)
+    assert v == ":obj:`Gtk.InputHints.NONE`"
 
-    def test_fake_bases(self):
-        from pgi.repository import Atk, GObject
+    v = itr(Gtk.CellRendererAccel.props.accel_mods)
+    assert v == "``0``"
 
-        self.assertEqual(fake_bases(Atk.ImplementorIface), [GObject.GInterface])
 
-    def test_fake_bases_ignore_redundant(self):
-        from pgi.repository import Gtk
+def test_child_properties():
+    from pgi.repository import Gtk
 
-        self.assertEqual(fake_bases(Gtk.Dialog, ignore_redundant=True), [Gtk.Window])
+    assert len(get_child_properties(Gtk.Paned)) == 2
+    assert not get_child_properties(Gtk.Bin)
+    assert len(get_child_properties(Gtk.ActionBar)) == 2
+    assert len(get_child_properties(Gtk.Box)) == 5
+    assert not get_child_properties(Gtk.Statusbar)
 
-    def test_sanitize_instance_repr(self):
-        san = sanitize_instance_repr
-        assert san("") == ""
-        assert san("42") == "42"
-        assert (
-            san("<Color structure at 0x7f805e890b38 (ClutterColor at 0x2d028b0)>")
-            == "<Color structure at 0x000000000000 (ClutterColor at 0x0000000)>"
-        )
 
-        assert san("<GType EvdConnection (31362256)>") == "<GType EvdConnection>"
+def test_style_properties():
+    from pgi.repository import Gtk
+
+    assert len(get_style_properties(Gtk.Paned)) == 1
+    assert len(get_style_properties(Gtk.Widget)) == 17
+    assert len(get_style_properties(Gtk.TreeView)) == 11
+
+
+@pytest.mark.xfail
+def test_fake_subclasses():
+    from pgi.repository import Gtk
+
+    assert fake_subclasses(Gtk.Scrollable)[1] is Gtk.TreeView
+
+
+def test_unescape():
+    assert unescape_parameter("print_") == "print"
+    assert unescape_parameter("exec_") == "exec"
+    assert unescape_parameter("_print") == "-print"
+    assert unescape_parameter("_3") == "3"
+
+
+def test_fake_bases():
+    from pgi.repository import Atk, GObject
+
+    assert fake_bases(Atk.ImplementorIface) == [GObject.GInterface]
+
+
+def test_fake_bases_ignore_redundant():
+    from pgi.repository import Gtk
+
+    assert fake_bases(Gtk.Dialog, ignore_redundant=True) == [Gtk.Window]
+
+
+def test_sanitize_instance_repr():
+    san = sanitize_instance_repr
+    assert san("") == ""
+    assert san("42") == "42"
+    assert (
+        san("<Color structure at 0x7f805e890b38 (ClutterColor at 0x2d028b0)>")
+        == "<Color structure at 0x000000000000 (ClutterColor at 0x0000000)>"
+    )
+
+    assert san("<GType EvdConnection (31362256)>") == "<GType EvdConnection>"

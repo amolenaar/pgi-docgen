@@ -6,14 +6,11 @@
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 
-import unittest
-
 from pgidocgen.gtkdoc import ConvertMarkDown
 
 
-class TGTKDoc(unittest.TestCase):
-    def test_main(self):
-        input_ = """\
+def test_main():
+    input_ = """\
 SUPPORTED MARKDOWN
 ==================
 
@@ -46,7 +43,7 @@ Ordered (unnested) Lists
 Note: we require a blank line above the list items
 """
 
-        expexted = """\
+    expexted = """\
 <para>SUPPORTED MARKDOWN</para>
 <para>Atx-style Headers</para>
 <refsect2><title>Header 1</title><refsect3><title>Header 2</title></refsect3>
@@ -70,11 +67,12 @@ description</para>
 </refsect2>
 """
 
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expexted, output)
+    output = ConvertMarkDown("", input_)
+    assert expexted == output
 
-    def test_docbook(self):
-        input_ = """\
+
+def test_docbook():
+    input_ = """\
 <itemizedlist>
   <listitem>#GtkWidgetClass.get_request_mode()</listitem>
   <listitem>#GtkWidgetClass.get_preferred_width()</listitem>
@@ -85,12 +83,13 @@ description</para>
 </itemizedlist>
 """
 
-        # docbook should stay the same
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(input_, output)
+    # docbook should stay the same
+    output = ConvertMarkDown("", input_)
+    assert input_ == output
 
-    def test_header(self):
-        input_ = """
+
+def test_header():
+    input_ = """
 widget lifecycle, states and style.
 
 # Height-for-width Geometry Management # {#geometry-management}
@@ -98,17 +97,18 @@ widget lifecycle, states and style.
 GTK+ uses a height-for-width (and wid
 """
 
-        expected = """\
+    expected = """\
 <para>widget lifecycle, states and style.</para>
 <refsect2 id="geometry-management"><title>Height-for-width Geometry Management</title><para>GTK+ uses a height-for-width (and wid</para>
 </refsect2>
 """
 
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_lists(self):
-        input_ = """\
+
+def test_lists():
+    input_ = """\
 bla bla
 bla:
 
@@ -119,7 +119,7 @@ bla:
 
 foo
 """
-        expected = """\
+    expected = """\
 <para>bla bla
 bla:</para>
 <itemizedlist>
@@ -133,11 +133,12 @@ bla</para>
 </itemizedlist>
 <para>foo</para>
 """
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_paragraphs(self):
-        input_ = """\
+
+def test_paragraphs():
+    input_ = """\
 foo,
 bar.
 
@@ -147,7 +148,7 @@ bar.
 foo,
 bar.
 """
-        expected = """\
+    expected = """\
 <para>foo,
 bar.</para>
 <para>foo,
@@ -155,50 +156,56 @@ bar.</para>
 <para>foo,
 bar.</para>
 """
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_reference(self):
-        input_ = """\
+
+def test_reference():
+    input_ = """\
 The #GData struct is an opaque data structure to represent a
 [Keyed Data List][glib-Keyed-Data-Lists]. It should only be
 accessed via the following functions."""
 
-        expected = """\
+    expected = """\
 <para>The #GData struct is an opaque data structure to represent a
 <link linkend="glib-Keyed-Data-Lists">Keyed Data List</link>. It should only be
 accessed via the following functions.</para>
 """
 
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_reference2(self):
-        input_ = "a [foo][bar] b [quux][baz]"
-        expected = '<para>a <link linkend="bar">foo</link> b <link linkend="baz">quux</link></para>\n'
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
 
-    def test_reference_empty(self):
-        input_ = "[][]"
-        expected = '<para><ulink url=""></ulink></para>\n'
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+def test_reference2():
+    input_ = "a [foo][bar] b [quux][baz]"
+    expected = '<para>a <link linkend="bar">foo</link> b <link linkend="baz">quux</link></para>\n'
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_inline_code(self):
-        input_ = "a `abc`"
-        expected = "<para>a <literal>abc</literal></para>\n"
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
 
-    def test_inline_code2(self):
-        input_ = "a `[][]`"
-        expected = "<para>a <literal>[][]</literal></para>\n"
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+def test_reference_empty():
+    input_ = "[][]"
+    expected = '<para><ulink url=""></ulink></para>\n'
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_code(self):
-        input_ = """\
+
+def test_inline_code():
+    input_ = "a `abc`"
+    expected = "<para>a <literal>abc</literal></para>\n"
+    output = ConvertMarkDown("", input_)
+    assert expected == output
+
+
+def test_inline_code2():
+    input_ = "a `[][]`"
+    expected = "<para>a <literal>[][]</literal></para>\n"
+    output = ConvertMarkDown("", input_)
+    assert expected == output
+
+
+def test_code():
+    input_ = """\
 |[<!-- language="C" -->
     GdkEvent *event;
     GdkEventType type;
@@ -207,7 +214,7 @@ accessed via the following functions.</para>
 ]|
 """
 
-        expected = """\
+    expected = """\
 <informalexample><programlisting language="C"><![CDATA[
     GdkEvent *event;
     GdkEventType type;
@@ -216,11 +223,12 @@ accessed via the following functions.</para>
 ]]></programlisting></informalexample>
 <para></para>
 """
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
 
-    def test_plain(self):
-        input_ = """\
+
+def test_plain():
+    input_ = """\
 |[<!-- language="plain" -->
 frame
 ├── border
@@ -229,7 +237,7 @@ frame
 ]|
 """
 
-        expected = """\
+    expected = """\
 <informalexample><screen><![CDATA[
 frame
 ├── border
@@ -239,5 +247,5 @@ frame
 <para></para>
 """
 
-        output = ConvertMarkDown("", input_)
-        self.assertEqual(expected, output)
+    output = ConvertMarkDown("", input_)
+    assert expected == output
